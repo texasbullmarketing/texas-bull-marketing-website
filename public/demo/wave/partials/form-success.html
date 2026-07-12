@@ -1,0 +1,17 @@
+<div class="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-8 text-center animate-in">
+    <div class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-emerald-500/20">
+        <svg class="h-7 w-7 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+        </svg>
+    </div>
+    <h3 class="text-xl font-semibold text-white">Message sent!</h3>
+    <p class="mt-2 text-slate-400">Thanks for reaching out. We'll get back to you within one business day.</p>
+    <button
+        type="button"
+        class="mt-6 text-sm font-medium text-cyan-400 transition hover:text-cyan-300"
+        hx-get="partials/contact-form.html"
+        hx-target="#contact-form-container"
+        hx-swap="innerHTML">
+        Send another message
+    </button>
+</div>

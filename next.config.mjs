@@ -6,13 +6,23 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  // beforeFiles so /index.html wins over app/page.tsx (default rewrites run after routes)
+  // Required so /demo/efs/ keeps a trailing slash and relative assets
+  // (images/, partials/) resolve under the demo folder — not /demo/.
+  trailingSlash: true,
   async rewrites() {
     return {
       beforeFiles: [
         {
           source: '/',
           destination: '/index.html',
+        },
+        {
+          source: '/demo/',
+          destination: '/demo/index.html',
+        },
+        {
+          source: '/demo/:slug/',
+          destination: '/demo/:slug/index.html',
         },
       ],
     }

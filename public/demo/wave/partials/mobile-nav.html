@@ -1,0 +1,16 @@
+<div class="glass mx-4 mt-2 rounded-2xl border border-white/10 p-4 shadow-2xl md:hidden">
+    <nav class="flex flex-col gap-1">
+        <a href="#about" class="rounded-xl px-4 py-3 text-sm font-medium text-slate-300 transition hover:bg-white/5 hover:text-white">About</a>
+        <a href="#services" class="rounded-xl px-4 py-3 text-sm font-medium text-slate-300 transition hover:bg-white/5 hover:text-white">Services</a>
+        <a href="#coverage" class="rounded-xl px-4 py-3 text-sm font-medium text-slate-300 transition hover:bg-white/5 hover:text-white">Coverage</a>
+        <a href="#contact" class="rounded-xl px-4 py-3 text-sm font-medium text-slate-300 transition hover:bg-white/5 hover:text-white">Contact</a>
+        <a href="tel:8303035158" class="mt-2 rounded-xl bg-cyan-500/10 px-4 py-3 text-center text-sm font-semibold text-cyan-400">(830) 303-5158</a>
+    </nav>
+    <button
+        class="mt-3 w-full rounded-xl border border-white/10 py-2 text-xs text-slate-500 transition hover:text-white"
+        hx-target="#mobile-nav"
+        hx-swap="innerHTML"
+        onclick="document.getElementById('mobile-nav').innerHTML=''">
+        Close
+    </button>
+</div>

@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Enchiladita • Authentic Tex-Mex • Nixon, TX</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Inter:wght@400;500;600&amp;display=swap');
+        
+        :root {
+            --warm-red: #9F2D1F;
+            --golden: #D97706;
+        }
+        
+        .tail-container {
+            max-width: 1280px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.35)), url('images/menu-cover-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .section-header {
+            font-family: 'Playfair Display', Georgia, serif;
+            letter-spacing: -0.025em;
+        }
+
+        .nav-link {
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .nav-link:hover {
+            color: #9F2D1F;
+            transform: translateY(-1px);
+        }
+
+        .menu-item {
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .menu-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+
+        .food-card {
+            overflow: hidden;
+            transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1), box-shadow 0.3s;
+        }
+        
+        .food-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        .gallery-img {
+            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s;
+            cursor: pointer;
+        }
+        
+        .gallery-img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        .warm-bg {
+            background-color: #FDF8F0;
+        }
+
+        .accent-red {
+            color: #9F2D1F;
+        }
+
+        .accent-gold {
+            color: #B45309;
+        }
+
+        .menu-category {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: #9F2D1F;
+            border-bottom: 2px solid #F5D0A9;
+            padding-bottom: 4px;
+            margin-bottom: 12px;
+        }
+
+        .price {
+            font-weight: 700;
+            color: #9F2D1F;
+            font-size: 1.05rem;
+        }
+
+        .nav-scrolled {
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            background-color: rgba(253, 248, 240, 0.97);
+            backdrop-filter: blur(12px);
+        }
+
+        .mexican-flag {
+            background: linear-gradient(to right, #006341 33%, white 33%, white 66%, #CE1126 66%);
+        }
+
+        .serape {
+            background: repeating-linear-gradient(
+                90deg,
+                #9F2D1F,
+                #9F2D1F 8px,
+                #F59E0B 8px,
+                #F59E0B 16px,
+                #166534 16px,
+                #166534 24px,
+                #F59E0B 24px,
+                #F59E0B 32px
+            );
+        }
+
+        .simple-shadow {
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.08);
+        }
+
+        .realistic-photo {
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+
+        /* Mobile-only refinements (desktop completely untouched) */
+        @media (max-width: 640px) {
+            .hero-bg {
+                background-attachment: scroll; /* smoother on mobile */
+                background-position: center 35%; /* better focus on food */
+            }
+            
+            .tail-container {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
+            /* Larger, friendlier tap targets on mobile */
+            .mobile-nav-link {
+                min-height: 44px;
+                display: flex;
+                align-items: center;
+            }
+
+            /* Gallery tighter on phones */
+            #photos .grid {
+                gap: 0.5rem;
+            }
+
+            /* Menu lists breathe a bit more on small screens */
+            .menu-item {
+                padding-top: 6px;
+                padding-bottom: 6px;
+            }
+
+            /* Make sure price stays aligned on very narrow screens */
+            .price {
+                font-size: 1rem;
+            }
+
+            /* Subtle extra contrast on mobile hero text */
+            header .max-w-xl > p {
+                text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+            }
+        }
+    </style>
+</head>
+<body class="bg-[#FDF8F0] text-[#3F2A1D] font-sans antialiased">
+    <!-- Top bar -->
+    <div class="bg-[#9F2D1F] text-white text-sm py-1.5">
+        <div class="tail-container px-6 flex items-center justify-between text-center sm:text-left">
+            <div class="flex items-center justify-center sm:justify-start gap-x-2 text-xs sm:text-sm">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>105 W 2nd St, Nixon, TX 78140</span>
+            </div>
+            <div class="hidden sm:flex items-center gap-x-4 text-xs">
+                <a href="tel:8305821147" class="flex items-center gap-x-1.5 hover:text-amber-200 transition-colors">
+                    <i class="fas fa-phone"></i>
+                    <span class="font-medium">(830) 582-1147</span>
+                </a>
+                <span class="text-white/50">•</span>
+                <span class="font-medium">Orders to go welcome</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="nav" class="bg-[#FDF8F0] sticky top-0 z-50 border-b border-[#F5D0A9]">
+        <div class="tail-container px-6">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center gap-x-3">
+                    <div class="w-9 h-9 bg-[#9F2D1F] rounded-full flex items-center justify-center shadow-inner">
+                        <span class="text-white text-2xl font-bold tracking-tighter" style="font-family: 'Playfair Display', Georgia, serif;">LE</span>
+                    </div>
+                    <div>
+                        <div class="font-bold text-2xl tracking-tighter section-header text-[#9F2D1F]">La Enchiladita</div>
+                        <div class="text-[10px] text-[#9F2D1F]/70 -mt-1.5 font-medium">NIXON, TEXAS</div>
+                    </div>
+                </div>
+
+                <!-- Desktop Nav -->
+                <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+                    <a href="#about" class="nav-link text-[#3F2A1D]">About</a>
+                    <a href="#menu" class="nav-link text-[#3F2A1D]">Menu</a>
+                    <a href="#photos" class="nav-link text-[#3F2A1D]">Photos</a>
+                    <a href="#hours" class="nav-link text-[#3F2A1D]">Visit Us</a>
+                </div>
+
+                <div class="flex items-center gap-x-3">
+                    <!-- Phone CTA -->
+                    <a href="tel:8305821147" 
+                       class="hidden sm:flex items-center gap-x-2 bg-white border border-[#F5D0A9] hover:bg-[#9F2D1F] hover:text-white hover:border-[#9F2D1F] transition-all px-4 py-2 rounded-full text-sm font-semibold shadow-sm">
+                        <i class="fas fa-phone text-[#9F2D1F] group-hover:text-white"></i>
+                        <span class="font-semibold">(830) 582-1147</span>
+                    </a>
+                    
+                    <!-- Mobile menu button -->
+                    <button id="mobile-menu-btn"
+                            class="md:hidden w-10 h-10 flex items-center justify-center text-[#9F2D1F] hover:bg-white/70 rounded-full transition-colors">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-[#F5D0A9] shadow-sm">
+        <div class="px-5 py-3 flex flex-col gap-y-0.5 text-[15px]">
+            <a href="#about" class="mobile-nav-link py-2.5 px-2 font-medium rounded active:bg-[#FDF8F0]">About Us</a>
+            <a href="#menu" class="mobile-nav-link py-2.5 px-2 font-medium rounded active:bg-[#FDF8F0]">Our Menu</a>
+            <a href="#photos" class="mobile-nav-link py-2.5 px-2 font-medium rounded active:bg-[#FDF8F0]">Photos</a>
+            <a href="#hours" class="mobile-nav-link py-2.5 px-2 font-medium rounded active:bg-[#FDF8F0]">Hours &amp; Location</a>
+            <div class="pt-2 mt-1 border-t border-[#F5D0A9]">
+                <a href="tel:8305821147" class="flex items-center justify-center gap-x-2 bg-[#9F2D1F] active:bg-[#7C2418] text-white py-3 px-4 rounded-full font-semibold text-sm">
+                    <i class="fas fa-phone"></i> <span>Call (830) 582-1147</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- HERO -->
+    <header class="hero-bg h-[92vh] min-h-[620px] flex items-center relative">
+        <div class="tail-container px-5 sm:px-6 relative z-10">
+            <div class="max-w-xl">
+                <div class="inline-flex items-center gap-x-2 bg-white/90 backdrop-blur px-4 py-1 rounded-full mb-4 sm:mb-5 shadow-sm border border-white">
+                    <div class="w-2.5 h-2.5 bg-green-600 rounded-full animate-pulse"></div>
+                    <span class="text-sm font-semibold text-[#3F2A1D]">Open today for breakfast &amp; lunch</span>
+                </div>
+                
+                <h1 class="text-white text-5xl sm:text-6xl md:text-7xl leading-[0.96] font-bold tracking-tighter section-header mb-2 sm:mb-3">
+                    La Enchiladita
+                </h1>
+                <p class="text-white/95 text-xl sm:text-2xl md:text-3xl font-medium tracking-tight mb-2">
+                    Homemade tortillas.<br>Real Tex-Mex.
+                </p>
+                <p class="max-w-md text-white/90 text-base sm:text-lg mb-6 sm:mb-7">
+                    A cozy local favorite in Nixon, Texas serving generous plates and fresh breakfast tacos since the beginning.
+                </p>
+
+                <div class="flex flex-col sm:flex-row flex-wrap gap-3">
+                    <a href="#menu" 
+                       class="inline-flex items-center justify-center gap-x-2 bg-white hover:bg-amber-50 active:bg-amber-100 transition-all font-semibold text-[#9F2D1F] px-8 py-3.5 sm:py-3.5 rounded-full text-lg shadow-md w-full sm:w-auto">
+                        <span>See the Menu</span>
+                        <i class="fas fa-arrow-down ml-1"></i>
+                    </a>
+                    <a href="tel:8305821147" 
+                       class="inline-flex items-center justify-center gap-x-2 bg-[#9F2D1F]/90 hover:bg-[#9F2D1F] transition-all font-semibold text-white border border-white/40 px-7 py-3.5 sm:py-3.5 rounded-full text-lg w-full sm:w-auto">
+                        <i class="fas fa-phone"></i>
+                        <span>Call for Takeout</span>
+                    </a>
+                </div>
+                <div class="mt-4 sm:mt-5 text-white/80 text-xs sm:text-sm flex items-center gap-x-2">
+                    <i class="fas fa-clock"></i> 
+                    <span>Mon–Tue, Thu, Sat: 7am–2pm • Fri 7am–2pm &amp; 7pm–9pm • Sun 8am–2pm • <span class="font-medium">Wed closed</span></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center text-white/70 text-xs tracking-widest hidden sm:flex">
+            <span>SCROLL TO EXPLORE</span>
+            <i class="fas fa-chevron-down mt-1"></i>
+        </div>
+    </header>
+
+    <!-- TRUST / QUICK FACTS -->
+    <div class="border-b border-[#F5D0A9]">
+        <div class="tail-container px-6 py-5">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-y-4 text-center text-sm">
+                <div class="flex flex-col items-center">
+                    <div class="font-semibold text-[#9F2D1F]">Homemade daily</div>
+                    <div class="text-[#3F2A1D]/70">Flour &amp; corn tortillas</div>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="font-semibold text-[#9F2D1F]">Breakfast &amp; Lunch</div>
+                    <div class="text-[#3F2A1D]/70">Casual &amp; welcoming</div>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="font-semibold text-[#9F2D1F]">Generous portions</div>
+                    <div class="text-[#3F2A1D]/70">Fair prices for the area</div>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="font-semibold text-[#9F2D1F]">Dine-in • Takeout</div>
+                    <div class="text-[#3F2A1D]/70">Call ahead for to-go orders</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section id="about" class="tail-container px-6 pt-14 pb-10">
+        <div class="grid md:grid-cols-12 gap-x-8 items-center">
+            <div class="md:col-span-7">
+                <div class="uppercase tracking-[2px] text-xs font-bold text-[#9F2D1F] mb-2">Since day one</div>
+                <h2 class="section-header text-5xl leading-none tracking-tighter font-bold mb-5">A true local spot in Nixon.</h2>
+                
+                <div class="prose prose-stone max-w-[46ch] text-[#3F2A1D]/90">
+                    <p class="text-lg">La Enchiladita is the kind of place locals count on — warm, no-frills, and full of flavor. We make our tortillas fresh and serve up the classics the way folks around here like them: hearty cheese enchiladas, carne guisada, puffy tacos, and breakfast tacos that hit the spot.</p>
+                    
+                    <p>Nothing fancy. Just good, honest Tex-Mex in a cozy dining room with friendly faces and plenty of coffee. Perfect for breakfast on the way to work, a quick lunch, or Friday evening when we open back up for dinner.</p>
+                </div>
+
+                <div class="mt-6 flex flex-wrap gap-3">
+                    <div class="inline-flex items-center text-sm bg-white border border-[#F5D0A9] px-4 py-1.5 rounded-full">
+                        <i class="fas fa-users mr-2 text-[#9F2D1F]"></i> 
+                        <span class="font-medium">Family friendly • Kids menu available</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="md:col-span-5 mt-8 md:mt-0">
+                <div class="relative">
+                    <img src="images/interior-enhanced.jpg" 
+                         alt="Cozy dining room at La Enchiladita with yellow and orange walls, colorful table runners and decorative plates — real photo from the restaurant"
+                         class="realistic-photo w-full rounded-2xl shadow-xl object-cover aspect-[16/13]">
+                    <div class="absolute -bottom-3 -right-3 bg-white px-4 py-1.5 rounded-full text-sm font-semibold border shadow flex items-center gap-x-2">
+                        <i class="fas fa-heart text-[#9F2D1F]"></i>
+                        <span class="text-[#3F2A1D]">Real local favorite</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MENU -->
+    <section id="menu" class="bg-white border-y border-[#F5D0A9]">
+        <div class="tail-container px-6 py-14">
+            <div class="flex flex-col md:flex-row md:items-end md:justify-between mb-8">
+                <div>
+                    <div class="uppercase tracking-[2px] text-xs font-bold text-[#9F2D1F]">What we're serving</div>
+                    <h2 class="section-header text-5xl tracking-tighter font-bold">Our Menu</h2>
+                </div>
+                <p class="text-[#3F2A1D]/70 mt-2 md:mt-0 md:max-w-sm text-sm">Prices taken directly from our current in-house menu. Most plates include rice, beans &amp; two homemade tortillas. Substitutions $2 extra. All meat may contain bone.</p>
+            </div>
+
+            <!-- Menu Categories -->
+            <div class="grid lg:grid-cols-2 gap-x-9 gap-y-10">
+                
+                <!-- Breakfast -->
+                <div>
+                    <div class="menu-category text-xl font-bold flex items-center gap-x-2">
+                        <span>Breakfast Tacos</span>
+                        <span class="text-xs px-2.5 py-px bg-[#F5D0A9] text-[#9F2D1F] rounded font-sans tracking-normal">Popular</span>
+                    </div>
+                    <div class="text-sm text-[#3F2A1D]/75 mb-3">Made fresh with our homemade flour tortillas. Ask about today's fillings.</div>
+                    
+                    <div class="space-y-[3px] text-[15px]">
+                        <div class="flex justify-between menu-item py-1.5 px-1 border-b border-[#F5D0A9]/70">
+                            <div>Potato &amp; Egg</div>
+                            <div class="price">$3.25</div>
+                        </div>
+                        <div class="flex justify-between menu-item py-1.5 px-1 border-b border-[#F5D0A9]/70">
+                            <div>Chorizo &amp; Egg</div>
+                            <div class="price">$3.75</div>
+                        </div>
+                        <div class="flex justify-between menu-item py-1.5 px-1 border-b border-[#F5D0A9]/70">
+                            <div>Bacon &amp; Egg</div>
+                            <div class="price">$3.50</div>
+                        </div>
+                        <div class="flex justify-between menu-item py-1.5 px-1 border-b border-[#F5D0A9]/70">
+                            <div>Bean &amp; Cheese</div>
+                            <div class="price">$2.99</div>
+                        </div>
+                        <div class="flex justify-between menu-item py-1.5 px-1">
+                            <div>Ham &amp; Egg or Sausage &amp; Egg</div>
+                            <div class="price">$3.50</div>
+                        </div>
+                    </div>
+                    <div class="mt-2 text-xs text-[#3F2A1D]/60">Breakfast served all morning while we’re open.</div>
+                </div>
+
+                <!-- Mexican Plates -->
+                <div>
+                    <div class="menu-category text-xl font-bold">Mexican Plates</div>
+                    <div class="text-xs text-[#3F2A1D]/60 mb-3">All plates include rice, beans &amp; 2 tortillas</div>
+                    
+                    <div class="space-y-[2px] text-[15px]">
+                        <div class="flex justify-between menu-item py-[5px] px-1 border-b border-[#F5D0A9]/60">
+                            <div class="pr-3">No. 1 — 2 Cheese Enchiladas, 1 Steak, 1 Puffy Taco, Rice &amp; Beans</div>
+                            <div class="price whitespace-nowrap">$11.99</div>
+                        </div>
+                        <div class="flex justify-between menu-item py-[5px] px-1 border-b border-[#F5D0A9]/60">
+                            <div class="pr-3">No. 2 — 2 Cheese Enchiladas, 2 Puffy Beef Tacos &amp; Avocado</div>
+                            <div class="price whitespace-nowrap">$9.59</div>
+                        </div>
+                        <div class="flex justify-between menu-item py-[5px] px-1 border-b border-[#F5D0A9]/60">
+                            <div class="pr-3">No. 3 — Carne Guisada Plate</div>
+                            <div class="price whitespace-nowrap">$8.49</div>
+                        </div>
+                        <div class="flex justify-between menu-item py-[5px] px-1 border-b border-[#F5D0A9]/60">
+                            <div class="pr-3">No. 4 — Texas Plate (1 Enchilada, 1 Steak, Carne Guisada)</div>
+                            <div class="price whitespace-nowrap">$9.25</div>
+                        </div>
+                        <div class="flex justify-between menu-item py-[5px] px-1 border-b border-[#F5D0A9]/60">
+                            <div class="pr-3">No. 5 — Fajita Plate (Chicken or Beef) w/ Pico &amp; Avocado</div>
+                            <div class="price whitespace-nowrap">$9.99</div>
+                        </div>
+                        <div class="flex justify-between menu-item py-[5px] px-1 border-b border-[#F5D0A9]/60">
+                            <div class="pr-3">No. 5 — Mixed Fajita Plate w/ Pico &amp; Avocado</div>
+                            <div class="price whitespace-nowrap">$10.99</div>
+                        </div>
+                        <div class="flex justify-between menu-item py-[5px] px-1 border-b border-[#F5D0A9]/60">
+                            <div class="pr-3">No. 6 — 2 Enchiladas, 1 Puffy Taco &amp; Bean &amp; Cheese Chalupa</div>
+                            <div class="price whitespace-nowrap">$9.99</div>
+                        </div>
+                        <div class="flex justify-between menu-item py-[5px] px-1 border-b border-[#F5D0A9]/60">
+                            <div class="pr-3">No. 7 — 2 Enchiladas &amp; Avocado</div>
+                            <div class="price whitespace-nowrap">$9.99</div>
+                        </div>
+                        <div class="flex justify-between menu-item py-[5px] px-1 border-b border-[#F5D0A9]/60">
+                            <div class="pr-3">No. 8 — 1 Chile Relleno &amp; 1 Cheese Enchilada</div>
+                            <div class="price whitespace-nowrap">$8.29</div>
+                        </div>
+                        <div class="flex justify-between menu-item py-[5px] px-1 border-b border-[#F5D0A9]/60">
+                            <div class="pr-3">No. 9 — 3 Cheese Enchiladas</div>
+                            <div class="price whitespace-nowrap">$10.79</div>
+                        </div>
+                        <div class="flex justify-between menu-item py-[5px] px-1 border-b border-[#F5D0A9]/60">
+                            <div class="pr-3">No. 10 — 3 Puffy Beef Tacos</div>
+                            <div class="price whitespace-nowrap">$8.79</div>
+                        </div>
+                        <div class="flex justify-between menu-item py-[5px] px-1 border-b border-[#F5D0A9]/60">
+                            <div class="pr-3">No. 11 — 3 Crispy Tacos</div>
+                            <div class="price whitespace-nowrap">$8.79</div>
+                        </div>
+                        <div class="flex justify-between menu-item py-[5px] px-1 border-b border-[#F5D0A9]/60">
+                            <div class="pr-3">No. 12 — Chicken Flautas w/ Sour Cream &amp; Avocado</div>
+                            <div class="price whitespace-nowrap">$8.79</div>
+                        </div>
+                        <div class="flex justify-between menu-item py-[5px] px-1 border-b border-[#F5D0A9]/60">
+                            <div class="pr-3">No. 13 — 3 Soft Tacos (Chicken or Beef)</div>
+                            <div class="price whitespace-nowrap">$8.79</div>
+                        </div>
+                        <div class="flex justify-between menu-item py-[5px] px-1 border-b border-[#F5D0A9]/60">
+                            <div class="pr-3">No. 14 — Gordita Plate (2 Beef or Chicken)</div>
+                            <div class="price whitespace-nowrap">$10.79</div>
+                        </div>
+                        <div class="flex justify-between menu-item py-[5px] px-1">
+                            <div class="pr-3">No. 15 — Chalupa Plate or 3 Chicken Enchiladas Verdes Plate</div>
+                            <div class="price whitespace-nowrap">$9.29–$10.79</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Steaks &amp; Combinations -->
+                <div>
+                    <div class="menu-category text-xl font-bold">Steaks</div>
+                    <div class="space-y-[2px] text-[15px]">
+                        <div class="flex justify-between menu-item py-[5px] px-1 border-b border-[#F5D0A9]/60">
+                            <div class="pr-3">No. 17 — Steak Ranchero, Rice, Beans &amp; Guacamole Salad</div>
+                            <div class="price">$10.99</div>
+                        </div>
+                        <div class="flex justify-between menu-item py-[5px] px-1 border-b border-[#F5D0A9]/60">
+                            <div class="pr-3">No. 18 — Steak a la Mexicana, Rice, Beans &amp; Guacamole</div>
+                            <div class="price">$10.99</div>
+                        </div>
+                        <div class="flex justify-between menu-item py-[5px] px-1 border-b border-[#F5D0A9]/60">
+                            <div class="pr-3">No. 19 — Carne Asada Ensebollada, Rice, Beans &amp; Guacamole</div>
+                            <div class="price">$10.99</div>
+                        </div>
+                        <div class="flex justify-between menu-item py-[5px] px-1 border-b border-[#F5D0A9]/60">
+                            <div class="pr-3">No. 20 — Chicken Breast Plate (grilled peppers, onions &amp; cheese)</div>
+                            <div class="price">$10.49</div>
+                        </div>
+                        <div class="flex justify-between menu-item py-[5px] px-1 border-b border-[#F5D0A9]/60">
+                            <div class="pr-3">No. 21 — 2 Pork Chops, Rice, Beans &amp; Guacamole Salad</div>
+                            <div class="price">$10.99</div>
+                        </div>
+                        <div class="flex justify-between menu-item py-[5px] px-1 border-b border-[#F5D0A9]/60">
+                            <div class="pr-3">No. 22 — Chicken Fried Steak, Fries, Toast &amp; Salad</div>
+                            <div class="price">$11.99</div>
+                        </div>
+                        <div class="flex justify-between menu-item py-[5px] px-1">
+                            <div class="pr-3">No. 23 — Catfish Plate (2 pcs), Fries &amp; Salad</div>
+                            <div class="price">$11.49</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="menu-category text-xl font-bold">Combinations <span class="text-xs font-sans text-[#3F2A1D]/60">(no rice/beans/tortillas)</span></div>
+                    <div class="space-y-[2px] text-[15px]">
+                        <div class="flex justify-between menu-item py-[5px] px-1 border-b border-[#F5D0A9]/60">
+                            <div>#1 — 1 Cheese Enchilada + 1 Puffy Beef Taco</div>
+                            <div class="price">$6.25</div>
+                        </div>
+                        <div class="flex justify-between menu-item py-[5px] px-1 border-b border-[#F5D0A9]/60">
+                            <div>#2 — 2 Cheese Enchiladas + 2 Puffy Beef Tacos</div>
+                            <div class="price">$7.25</div>
+                        </div>
+                        <div class="flex justify-between menu-item py-[5px] px-1">
+                            <div>#3 — 2 Cheese Enchiladas + 3 Puffy Beef Tacos</div>
+                            <div class="price">$9.49</div>
+                        </div>
+                    </div>
+
+                    <!-- Lunch Specials -->
+                    <div class="mt-8">
+                        <div class="menu-category text-xl font-bold flex items-center gap-x-2">
+                            <span>Lunch Specials</span> 
+                            <span class="text-base text-[#9F2D1F] font-sans">$6.99</span>
+                        </div>
+                        <div class="text-xs text-[#3F2A1D]/60 mb-2">Monday–Friday only (while available)</div>
+                        <div class="text-[14.2px] leading-snug bg-[#FDF8F0] border border-[#F5D0A9] rounded-xl px-4 py-3 space-y-1.5">
+                            <div><span class="font-semibold">Monday:</span> #2 Two Cheese Enchiladas, 1 Puffy Taco, Rice, Beans &amp; 2 Tortillas</div>
+                            <div><span class="font-semibold">Tuesday:</span> #5 Fajita Plate (Chicken), Pico de Gallo, Rice, Beans &amp; Avocado</div>
+                            <div><span class="font-semibold">Thursday:</span> 3 Green Chicken Enchiladas Plate w/ rice, beans &amp; 2 tortillas</div>
+                            <div><span class="font-semibold">Friday:</span> #23 Catfish Plate (2 pcs fish, French Fries &amp; Salad)</div>
+                            <div class="pt-1 text-[#9F2D1F]/70 text-xs italic">Wednesday closed • Friday dinner service reopens at 7pm</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 pt-5 border-t border-[#F5D0A9] text-sm flex flex-wrap gap-x-5 gap-y-1 text-[#3F2A1D]/75">
+                <div><span class="font-semibold">To-go plate:</span> 35¢ extra</div>
+                <div><span class="font-semibold">To-go cups:</span> 35¢</div>
+                <div>Only 2 servings of chips per table</div>
+                <div class="text-xs w-full sm:w-auto sm:inline">Any substitutions $2.00 extra</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HIGHLIGHT FOOD PHOTO -->
+    <div class="tail-container px-6 py-7">
+        <div class="grid md:grid-cols-5 gap-4 items-center">
+            <div class="md:col-span-3">
+                <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-[#F5D0A9]">
+                    <img src="images/taco-enhanced.jpg" alt="Fresh homemade breakfast taco with egg, potato and chorizo filling on a white plate — actual photo from La Enchiladita" 
+                         class="w-full aspect-[16/10] object-cover">
+                    <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/70 p-5 text-white">
+                        <div class="uppercase tracking-wider text-xs">Customer favorite</div>
+                        <div class="text-2xl font-semibold tracking-tight">Fresh breakfast tacos</div>
+                    </div>
+                </div>
+            </div>
+            <div class="md:col-span-2 text-lg leading-tight">
+                <p class="font-medium text-xl">Everything is made to order with our fresh homemade tortillas.</p>
+                <p class="mt-2 text-[#3F2A1D]/75">Whether it’s a quick potato &amp; egg on your way out the door or a big carne guisada plate for lunch, we keep it simple and satisfying.</p>
+                
+                <div class="mt-5 text-sm">
+                    <a href="#hours" class="inline-flex items-center font-semibold accent-red hover:underline">Come see us in Nixon <i class="fas fa-arrow-right ml-2 text-xs"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PHOTOS / GALLERY -->
+    <section id="photos" class="bg-white py-12 border-y border-[#F5D0A9]">
+        <div class="tail-container px-6">
+            <div class="mb-6 flex items-end justify-between">
+                <div>
+                    <div class="uppercase text-xs tracking-[2px] font-bold text-[#9F2D1F]">From inside &amp; out</div>
+                    <h3 class="section-header text-4xl font-bold tracking-tighter">Real photos of the place</h3>
+                </div>
+                <div class="hidden sm:block text-sm text-[#3F2A1D]/70">Tap any photo to enlarge</div>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3">
+                <!-- Gallery items using real photos -->
+                <div onclick="showLightbox(this)" class="food-card bg-white rounded-xl overflow-hidden border border-[#F5D0A9]/70">
+                    <img src="images/exterior-enhanced.jpg" class="gallery-img w-full aspect-[4/3] object-cover" alt="Front of La Enchiladita in Nixon, Texas — simple storefront with big windows and 'OPEN' sign">
+                </div>
+                <div onclick="showLightbox(this)" class="food-card bg-white rounded-xl overflow-hidden border border-[#F5D0A9]/70">
+                    <img src="images/interior-enhanced.jpg" class="gallery-img w-full aspect-[4/3] object-cover" alt="Bright cozy dining room with orange and yellow walls, white tablecloths with colorful runners and decorative plates">
+                </div>
+                <div onclick="showLightbox(this)" class="food-card bg-white rounded-xl overflow-hidden border border-[#F5D0A9]/70">
+                    <img src="images/taco-enhanced.jpg" class="gallery-img w-full aspect-[4/3] object-cover" alt="Close-up of a fresh breakfast taco with homemade tortilla">
+                </div>
+                <div onclick="showLightbox(this)" class="food-card bg-white rounded-xl overflow-hidden border border-[#F5D0A9]/70">
+                    <img src="images/Enchiladita_663b3309a11c0a80959a50d27713e95f.jpg" class="gallery-img w-full aspect-[4/3] object-cover" alt="Dining room interior at La Enchiladita">
+                </div>
+                <div onclick="showLightbox(this)" class="food-card bg-white rounded-xl overflow-hidden border border-[#F5D0A9]/70">
+                    <img src="images/Enchiladita_ab5d6402f8bdc7f8a719cecbe9cbc421.jpg" class="gallery-img w-full aspect-[4/3] object-cover" alt="Festive holiday decorations inside the restaurant">
+                </div>
+                <div onclick="showLightbox(this)" class="food-card bg-white rounded-xl overflow-hidden border border-[#F5D0A9]/70">
+                    <img src="images/menu-cover-hero.jpg" class="gallery-img w-full aspect-[4/3] object-cover" alt="Colorful La Enchiladita menu cover with vibrant food photography — tacos, enchiladas and more">
+                </div>
+            </div>
+            <p class="text-center text-xs mt-4 text-[#3F2A1D]/60">All photographs are from La Enchiladita • Enhanced slightly for web presentation</p>
+        </div>
+    </section>
+
+    <!-- HOURS + LOCATION -->
+    <section id="hours" class="tail-container px-6 py-14">
+        <div class="grid lg:grid-cols-12 gap-x-10 gap-y-10">
+            
+            <!-- Hours -->
+            <div class="lg:col-span-5">
+                <div class="uppercase tracking-[2px] text-xs font-bold text-[#9F2D1F] mb-2">When to visit</div>
+                <h3 class="section-header text-4xl font-bold tracking-tight mb-5">Hours</h3>
+                
+                <div class="bg-white rounded-2xl border border-[#F5D0A9] p-5 text-sm">
+                    <table class="w-full">
+                        <tbody class="divide-y divide-[#F5D0A9]/60">
+                            <tr><td class="py-2.5 font-medium">Monday</td><td class="py-2.5 text-right font-semibold">7:00 am – 2:00 pm</td></tr>
+                            <tr><td class="py-2.5 font-medium">Tuesday</td><td class="py-2.5 text-right font-semibold">7:00 am – 2:00 pm</td></tr>
+                            <tr><td class="py-2.5 font-medium">Wednesday</td><td class="py-2.5 text-right font-semibold text-red-800">Closed</td></tr>
+                            <tr><td class="py-2.5 font-medium">Thursday</td><td class="py-2.5 text-right font-semibold">7:00 am – 2:00 pm</td></tr>
+                            <tr><td class="py-2.5 font-medium">Friday</td><td class="py-2.5 text-right font-semibold">7:00 am – 2:00 pm<br><span class="font-normal text-xs">+ 7:00 pm – 9:00 pm</span></td></tr>
+                            <tr><td class="py-2.5 font-medium">Saturday</td><td class="py-2.5 text-right font-semibold">7:00 am – 2:00 pm</td></tr>
+                            <tr><td class="py-2.5 font-medium">Sunday</td><td class="py-2.5 text-right font-semibold">8:00 am – 2:00 pm</td></tr>
+                        </tbody>
+                    </table>
+                    <div class="pt-4 mt-4 border-t border-[#F5D0A9] text-xs leading-snug text-[#3F2A1D]/70">
+                        Breakfast &amp; lunch most days. Friday evening dinner service available. 
+                        Hours may change — call to confirm.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Location -->
+            <div class="lg:col-span-7">
+                <div class="uppercase tracking-[2px] text-xs font-bold text-[#9F2D1F] mb-2">Find us</div>
+                <h3 class="section-header text-4xl font-bold tracking-tight mb-4">105 W 2nd St<br>Nixon, TX 78140</h3>
+                
+                <div class="flex flex-wrap gap-3 mb-4">
+                    <a href="tel:8305821147" class="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-5 py-[13px] bg-[#9F2D1F] hover:bg-[#7C2418] transition-colors text-white rounded-2xl font-semibold text-sm">
+                        <i class="fas fa-phone"></i> <span>(830) 582-1147</span>
+                    </a>
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=105+W+2nd+St+Nixon+TX+78140" target="_blank"
+                       class="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-5 py-[13px] border-2 border-[#9F2D1F] hover:bg-[#9F2D1F] hover:text-white text-[#9F2D1F] transition-colors rounded-2xl font-semibold text-sm">
+                        <i class="fas fa-map-marker-alt"></i> <span>Open in Google Maps</span>
+                    </a>
+                </div>
+
+                <!-- Google Map -->
+                <div class="rounded-2xl overflow-hidden border border-[#F5D0A9] shadow-sm">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3475.8!2d-97.767685!3d29.2682004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86432b44000e1729%3A0x853811450654adb4!2s105%20W%202nd%20St%2C%20Nixon%2C%20TX%2078140!5e0!3m2!1sen!2sus!4v1700000000000" 
+                        width="100%" 
+                        height="300" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <p class="text-xs text-[#3F2A1D]/60 mt-2">Free parking available • Wheelchair accessible entrance &amp; seating</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="tail-container px-6 pb-16">
+        <div class="max-w-2xl mx-auto text-center mb-8">
+            <div class="uppercase tracking-[1.5px] text-xs font-bold text-[#9F2D1F]">What folks say</div>
+            <h3 class="section-header text-4xl font-bold tracking-tighter mt-1">Real words from real customers</h3>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-4">
+            <div class="bg-white border border-[#F5D0A9] p-5 rounded-2xl">
+                <div class="flex text-amber-500 mb-2">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p class="text-sm leading-snug">"The tacos are to die for — authentic and bursting with flavor. I especially loved the handmade tortillas. Service was friendly and the place has a laid-back vibe. I left with a happy belly and will definitely be back."</p>
+                <div class="mt-4 text-xs font-semibold">— Sharon W.</div>
+            </div>
+            <div class="bg-white border border-[#F5D0A9] p-5 rounded-2xl">
+                <div class="flex text-amber-500 mb-2">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p class="text-sm leading-snug">"I ordered the enchiladas and they were packed with flavor. The homemade sauce had just the right kick and the portions were generous. Staff was attentive and friendly. A fantastic evening at a great local spot."</p>
+                <div class="mt-4 text-xs font-semibold">— Kevin B.</div>
+            </div>
+            <div class="bg-white border border-[#F5D0A9] p-5 rounded-2xl">
+                <div class="flex text-amber-500 mb-2">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                </div>
+                <p class="text-sm leading-snug">"Carne guisada and fresh tortillas are the stars here. It feels like home. Great stop when passing through. Friendly service every time and the prices are fair for the amount of food you get."</p>
+                <div class="mt-4 text-xs font-semibold">— Local regular</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <div class="bg-[#9F2D1F] text-white">
+        <div class="tail-container px-6 py-9 text-center">
+            <div class="max-w-md mx-auto">
+                <div class="text-xl font-semibold tracking-tight mb-1">Ready to eat?</div>
+                <p class="text-white/85 mb-5 text-sm">Call ahead for takeout or just swing by. We look forward to feeding you.</p>
+                
+                <div class="flex flex-col sm:flex-row gap-3 justify-center">
+                    <a href="tel:8305821147" class="flex-1 sm:flex-none bg-white text-[#9F2D1F] px-9 py-3 rounded-full font-bold text-lg flex items-center justify-center gap-x-3 shadow-md hover:bg-amber-50 transition-colors">
+                        <i class="fas fa-phone"></i> (830) 582-1147
+                    </a>
+                    <a href="https://www.google.com/maps/dir/?api=1&amp;destination=105+W+2nd+St,+Nixon,+TX+78140" target="_blank"
+                       class="flex-1 sm:flex-none border border-white/70 hover:bg-white/10 transition-colors px-7 py-3 rounded-full font-semibold text-lg flex items-center justify-center gap-x-3">
+                        <i class="fas fa-directions"></i> Get Directions
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-xs text-center py-5 text-[#3F2A1D]/50">
+        La Enchiladita — 105 W 2nd St, Nixon, TX 78140 • (830) 582-1147<br>
+        Casual Tex-Mex made with care. Not affiliated with any other location.
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" onclick="hideLightbox()" class="hidden fixed inset-0 bg-black/90 z-[100] flex items-center justify-center p-4">
+        <div onclick="event.stopImmediatePropagation()" class="max-w-5xl max-h-[92vh] relative">
+            <button onclick="hideLightbox()" class="absolute -top-2 -right-2 bg-white text-black w-9 h-9 flex items-center justify-center rounded-full shadow-xl text-xl z-10">&times;</button>
+            <img id="lightbox-img" class="max-h-[92vh] rounded-xl shadow-2xl" alt="">
+        </div>
+    </div>
+
+    <script>
+        // Tailwind script run
+        function initTailwind() {
+            document.documentElement.style.setProperty('--accent', '#9F2D1F');
+        }
+        
+        // Simple scroll nav effect
+        function initNav() {
+            const nav = document.getElementById('nav');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 30) {
+                    nav.classList.add('nav-scrolled');
+                } else {
+                    nav.classList.remove('nav-scrolled');
+                }
+            });
+
+            // Mobile menu
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                const icon = mobileBtn.querySelector('i');
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-times');
+            });
+            
+            // Close mobile menu on link click
+            document.querySelectorAll('.mobile-nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    const icon = mobileBtn.querySelector('i');
+                    icon.classList.add('fa-bars');
+                    icon.classList.remove('fa-times');
+                });
+            });
+            
+            // Smooth scroll for nav links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        e.preventDefault();
+                        const navHeight = nav.offsetHeight;
+                        const top = target.getBoundingClientRect().top + window.scrollY - navHeight - 12;
+                        window.scrollTo({ top, behavior: 'smooth' });
+                    }
+                });
+            });
+        }
+
+        // Lightbox for gallery
+        let currentLightbox = null;
+        
+        function showLightbox(element) {
+            const img = element.querySelector('img');
+            if (!img) return;
+            
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+            currentLightbox = lightbox;
+        }
+        
+        function hideLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('flex');
+            lightbox.classList.add('hidden');
+        }
+        
+        // Keyboard escape for lightbox
+        document.addEventListener('keydown', function(e) {
+            if (e.key === "Escape") {
+                const lightbox = document.getElementById('lightbox');
+                if (!lightbox.classList.contains('hidden')) {
+                    lightbox.classList.add('hidden');
+                    lightbox.classList.remove('flex');
+                }
+            }
+        });
+
+        // Simple accessibility + init
+        function init() {
+            initTailwind();
+            initNav();
+            
+            // Easter egg: clicking logo scrolls to top
+            const logo = document.querySelector('.fa-2xl, .section-header');
+            if (logo) {
+                document.querySelector('.flex.items-center.gap-x-3').addEventListener('click', () => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+            
+            // Preload a couple images for smoothness
+            console.log('%c[La Enchiladita] Site ready. All photos sourced from the restaurant.', 'color:#9F2D1F');
+        }
+        
+        window.onload = init;
+        
+        // Bonus: show a small console note for developer
+    </script>
+</body>
+</html>
