@@ -231,7 +231,7 @@
       <p class="mt-4 text-white/60">Tap any step to see what happens behind the scenes.</p>
     </div>
 
-    <div class="mt-14 grid gap-4 md:grid-cols-5">
+    <div id="stepGrid" class="mt-14 grid gap-4 md:grid-cols-5">
       <button data-step="1" onclick="showStep(1,this)" class="step-btn reveal rounded-xl border-2 border-bullred bg-bullcard p-5 text-left transition">
         <span class="font-display text-3xl font-900 text-bullred">01</span>
         <h3 class="mt-2 font-700">Discover</h3>
@@ -254,7 +254,7 @@
       </button>
     </div>
 
-    <div id="stepDetail" class="reveal surface-card mt-6 rounded-xl border p-7 text-white/80">
+    <div id="stepDetail" class="reveal surface-card mt-3 rounded-xl border p-5 text-white/80 md:mt-6 md:p-7">
       <h4 class="font-display text-xl font-800 text-white">Discover — We learn your market cold.</h4>
       <p class="mt-2">We review your market, competitors, and current online presence, then recommend the highest-impact next steps for your website and Google Business Profile.</p>
     </div>
@@ -559,6 +559,17 @@
     4:['Convert — Turn attention into revenue.','Review engines, tracking, and conversion tweaks make sure every bit of new traffic becomes real calls, bookings, and walk-ins.'],
     5:['Scale — Compound your dominance.','We double down on what works, expand to new keywords and locations, and keep you the business locals call first — month after month.']
   };
+  // Mobile: detail sits under the tapped step. Desktop: stays under the full 5-col row.
+  function placeStepDetail(btn){
+    const detail=document.getElementById('stepDetail');
+    const grid=document.getElementById('stepGrid');
+    if(!detail||!grid) return;
+    if(window.matchMedia('(max-width: 767px)').matches && btn){
+      btn.insertAdjacentElement('afterend', detail);
+    } else {
+      grid.insertAdjacentElement('afterend', detail);
+    }
+  }
   function showStep(n, btn){
     document.querySelectorAll('.step-btn').forEach(b=>{
       b.classList.remove('border-bullred','border-2');
@@ -568,8 +579,16 @@
     btn.classList.add('border-bullred','border-2'); btn.classList.remove('border-[#3A4560]');
     btn.querySelector('span').classList.add('text-bullred'); btn.querySelector('span').classList.remove('text-white/40');
     const d=stepData[n];
-    document.getElementById('stepDetail').innerHTML=`<h4 class="font-display text-xl font-800 text-white">${d[0]}</h4><p class="mt-2">${d[1]}</p>`;
+    const detail=document.getElementById('stepDetail');
+    detail.innerHTML=`<h4 class="font-display text-xl font-800 text-white">${d[0]}</h4><p class="mt-2">${d[1]}</p>`;
+    placeStepDetail(btn);
   }
+  // Initial mobile placement under step 01; desktop keeps panel under the row
+  placeStepDetail(document.querySelector('.step-btn[data-step="1"]'));
+  window.addEventListener('resize', ()=>{
+    const active=document.querySelector('.step-btn.border-bullred')||document.querySelector('.step-btn[data-step="1"]');
+    placeStepDetail(active);
+  });
 
   // ---------- Filters ----------
   function filterCases(cat, btn){
