@@ -33,20 +33,56 @@
     <p class="text-xs font-800 uppercase tracking-[0.28em] text-bullred">Texas Bull Marketing</p>
     <h1 class="mt-3 font-display text-4xl font-900 tracking-tight sm:text-5xl">Client site demos</h1>
 
-    <div class="mt-10 grid gap-4 sm:grid-cols-3">
-      <a href="/demo/efs/" class="group rounded-xl border border-[#3A4560] bg-bullcard p-5 transition hover:border-bullred">
+    <!-- Search: empty = show all; typing filters by progressive starts-with -->
+    <div class="mt-8">
+      <label for="demo-search" class="sr-only">Search demos</label>
+      <div class="relative">
+        <svg class="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-white/35" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="11" cy="11" r="7" />
+          <path stroke-linecap="round" d="M20 20l-3.5-3.5" />
+        </svg>
+        <input
+          id="demo-search"
+          type="search"
+          autocomplete="off"
+          spellcheck="false"
+          placeholder="Search demos…"
+          class="w-full rounded-xl border border-[#3A4560] bg-bullcard py-3.5 pl-12 pr-4 text-sm text-white placeholder:text-white/35 outline-none transition focus:border-bullred focus:ring-1 focus:ring-bullred"
+        />
+      </div>
+      <p id="demo-search-hint" class="mt-2 text-xs text-white/40">Type to filter — all demos show until you search.</p>
+    </div>
+
+    <div id="demo-grid" class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- Cards sorted A–Z by data-sort on load; search uses data-search (starts-with) -->
+      <a
+        href="/demo/efs/"
+        class="demo-card group rounded-xl border border-[#3A4560] bg-bullcard p-5 transition hover:border-bullred"
+        data-sort="efs"
+        data-search="efs enterprise flooring solutions flooring"
+      >
         <p class="text-xs font-700 uppercase tracking-widest text-bullred">Flooring</p>
         <h2 class="mt-2 font-display text-xl font-800 group-hover:text-white">EFS</h2>
         <p class="mt-1 text-sm text-white/55">Enterprise Flooring Solutions</p>
         <p class="mt-4 text-sm font-700 text-bullred">Open demo →</p>
       </a>
-      <a href="/demo/ench/" class="group rounded-xl border border-[#3A4560] bg-bullcard p-5 transition hover:border-bullred">
+      <a
+        href="/demo/ench/"
+        class="demo-card group rounded-xl border border-[#3A4560] bg-bullcard p-5 transition hover:border-bullred"
+        data-sort="ench"
+        data-search="ench la enchiladita nixon tx restaurant"
+      >
         <p class="text-xs font-700 uppercase tracking-widest text-bullred">Restaurant</p>
         <h2 class="mt-2 font-display text-xl font-800">Ench</h2>
         <p class="mt-1 text-sm text-white/55">La Enchiladita · Nixon, TX</p>
         <p class="mt-4 text-sm font-700 text-bullred">Open demo →</p>
       </a>
-      <a href="/demo/wave/" class="group rounded-xl border border-[#3A4560] bg-bullcard p-5 transition hover:border-bullred">
+      <a
+        href="/demo/wave/"
+        class="demo-card group rounded-xl border border-[#3A4560] bg-bullcard p-5 transition hover:border-bullred"
+        data-sort="wave"
+        data-search="wave wave finders electronics"
+      >
         <p class="text-xs font-700 uppercase tracking-widest text-bullred">Electronics</p>
         <h2 class="mt-2 font-display text-xl font-800">Wave</h2>
         <p class="mt-1 text-sm text-white/55">Wave Finders Electronics</p>
@@ -54,9 +90,58 @@
       </a>
     </div>
 
+    <p id="demo-empty" class="mt-8 hidden text-center text-sm text-white/50">No demos match that search.</p>
+
     <p class="mt-10 text-sm text-white/40">
       <a href="/" class="text-white/70 underline-offset-2 hover:text-white hover:underline">← Back to Texas Bull Marketing</a>
     </p>
   </div>
+
+  <script>
+    (function () {
+      const grid = document.getElementById('demo-grid')
+      const input = document.getElementById('demo-search')
+      const empty = document.getElementById('demo-empty')
+      if (!grid || !input) return
+
+      // Alphabetize by data-sort (A–Z)
+      function sortCards() {
+        const cards = Array.from(grid.querySelectorAll('.demo-card'))
+        cards.sort((a, b) => {
+          const sa = (a.getAttribute('data-sort') || '').toLowerCase()
+          const sb = (b.getAttribute('data-sort') || '').toLowerCase()
+          return sa.localeCompare(sb, undefined, { sensitivity: 'base' })
+        })
+        cards.forEach((card) => grid.appendChild(card))
+      }
+
+      // Empty query → show all. Non-empty → progressive starts-with on name tokens.
+      // "t" matches any word starting with t; "ti" matches words starting with ti.
+      function matches(card, query) {
+        if (!query) return true
+        const hay = (card.getAttribute('data-search') || '').toLowerCase()
+        const tokens = hay.split(/\s+/).filter(Boolean)
+        // Whole string starts with query, or any word starts with query
+        if (hay.startsWith(query)) return true
+        return tokens.some((t) => t.startsWith(query))
+      }
+
+      function filterCards() {
+        const q = input.value.trim().toLowerCase()
+        const cards = Array.from(grid.querySelectorAll('.demo-card'))
+        let visible = 0
+        cards.forEach((card) => {
+          const show = matches(card, q)
+          card.classList.toggle('hidden', !show)
+          if (show) visible++
+        })
+        if (empty) empty.classList.toggle('hidden', visible > 0 || !q)
+      }
+
+      sortCards()
+      input.addEventListener('input', filterCards)
+      input.addEventListener('search', filterCards) // clear (x) on some browsers
+    })()
+  </script>
 </body>
 </html>
