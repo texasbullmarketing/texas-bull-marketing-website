@@ -3,9 +3,9 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.app',
+  title: 'Texas Bull Marketing | Websites, SEO & Google Business Profiles',
+  description:
+    'Texas Bull Marketing builds optimized websites and provides Google Business Profile setup, optimization, and management for local businesses across Texas and beyond.',
   icons: {
     icon: [
       {
@@ -28,8 +28,8 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   colorScheme: 'light dark',
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: 'white' },
-    { media: '(prefers-color-scheme: dark)', color: 'black' },
+    { media: '(prefers-color-scheme: light)', color: '#161C2A' },
+    { media: '(prefers-color-scheme: dark)', color: '#161C2A' },
   ],
 }
 
