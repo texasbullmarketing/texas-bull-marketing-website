@@ -1,0 +1,15 @@
+# Texas Bull Marketing
+User-agent: *
+Allow: /
+
+# Client demos — never index hub or any demo under /demo/
+Disallow: /demo/
+Disallow: /demo
+
+User-agent: Googlebot
+Disallow: /demo/
+Disallow: /demo
+
+User-agent: Googlebot-Image
+Disallow: /demo/
+Disallow: /demo

@@ -55,3 +55,8 @@ Then open locally: `http://localhost:3000/demo/my-new-demo/`
 - Demos are static HTML inside `public/` (not React pages)
 - Wave uses HTMX partials under `partials/` — keep that folder with the demo
 - Trailing slash matters for relative assets; redirects handle bare `/demo/slug`
+- **Not indexed by Google:** everything under `/demo/` is blocked automatically via
+  `public/robots.txt` + `X-Robots-Tag: noindex, nofollow` headers on `/demo/*`.
+  New demos you drop in `public/demo/` inherit this — no extra step per demo.
+  Optional: add `<meta name="robots" content="noindex, nofollow" />` in the HTML head
+  as a backup (already on efs/ench/wave/hub).
