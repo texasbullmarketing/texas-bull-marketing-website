@@ -8,6 +8,8 @@
   <meta name="theme-color" content="#1a1410">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/htmx.org@2.0.4"></script>
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
@@ -123,6 +125,7 @@
           <button id="btn-en" class="lang-btn active px-3 py-1.5 rounded-full text-sand-100/70 transition-all" hx-on:click="setLang('en')">EN</button>
           <button id="btn-es" class="lang-btn px-3 py-1.5 rounded-full text-sand-100/70 transition-all" hx-on:click="setLang('es')">ES</button>
         </div>
+        <button type="button" onclick="openCalendly()" class="hidden sm:inline-flex px-4 py-2 rounded-full bg-copper hover:bg-copper-light text-white text-sm font-bold transition-colors shadow-glow t-nav-cta">Schedule Estimate</button>
         <button id="menu-btn" class="lg:hidden p-2 text-sand-100" aria-label="Menu">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
         </button>
@@ -133,6 +136,7 @@
       <a href="#about" class="block t-nav-about">About</a>
       <a href="#gallery" class="block t-nav-gallery">Gallery</a>
       <a href="#areas" class="block t-nav-areas">Service Area</a>
+      <button type="button" onclick="openCalendly(); document.getElementById('mobile-menu').classList.add('hidden')" class="block w-full text-left text-copper-light t-nav-cta">Schedule Estimate</button>
     </div>
   </header>
 
@@ -151,7 +155,8 @@
           <h1 class="text-4xl sm:text-5xl lg:text-[3.4rem] font-extrabold leading-[1.1] tracking-tight text-sand-50 t-hero-title">Beautiful Floors, Installed with Precision</h1>
           <p class="text-lg text-sand-100/75 leading-relaxed max-w-lg t-hero-sub">Enterprise Flooring Solutions delivers premium tile, stone, and renovation work throughout San Antonio, the surrounding metro, and South Texas communities — from Alamo Heights and Helotes to New Braunfels, Boerne, and beyond.</p>
           <div class="flex flex-wrap gap-4 pt-2">
-            <a href="#gallery" class="inline-flex px-7 py-3.5 rounded-full bg-copper hover:bg-copper-light text-white font-bold transition-all shadow-glow t-hero-cta2">See Our Projects</a>
+            <button type="button" onclick="openCalendly()" class="inline-flex px-7 py-3.5 rounded-full bg-copper hover:bg-copper-light text-white font-bold transition-all shadow-glow t-hero-cta1">Schedule Free Estimate</button>
+            <a href="#gallery" class="inline-flex px-7 py-3.5 rounded-full border-2 border-copper/40 hover:border-copper-light text-sand-50 font-bold transition-colors t-hero-cta2">See Our Projects</a>
           </div>
         </div>
         <div class="hidden lg:block">
@@ -332,6 +337,15 @@
   </main>
 
   <script>
+    const CALENDLY_URL = 'https://calendly.com/texasbullmarketing/call';
+    function openCalendly() {
+      if (window.Calendly && typeof Calendly.initPopupWidget === 'function') {
+        Calendly.initPopupWidget({ url: CALENDLY_URL });
+      } else {
+        window.open(CALENDLY_URL, '_blank', 'noopener');
+      }
+    }
+
     const langKeys = [
       ['nav-services','t-nav-services'],['nav-about','t-nav-about'],['nav-gallery','t-nav-gallery'],
       ['nav-areas','t-nav-areas'],['nav-contact','t-nav-contact'],['nav-cta','t-nav-cta'],
