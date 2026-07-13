@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Iron Roots Services — Expert home & property services in Texas. Concrete, fencing, remodeling, landscaping & more. Free estimates. Call 830-251-8489." />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Iron Roots Services | Expert Home & Property Services in Texas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="images/logo.png" />
+</head>
+<body>
+  <!-- Demo banner -->
+  <div class="demo-banner" role="status">
+    <span>DEMO VERSION</span> — Sample site for preview. Not a live booking system.
+  </div>
+
+  <!-- Navigation -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="#top" class="logo-link" aria-label="Iron Roots Services home">
+        <img src="images/logo.png" alt="Iron Roots Services" class="logo-img" width="64" height="64" />
+        <span class="logo-text">
+          <strong>IRON ROOTS</strong>
+          <span>SERVICES</span>
+        </span>
+      </a>
+      <nav class="nav-desktop" aria-label="Main">
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#testimonials">Reviews</a>
+        <a href="#contact">Contact</a>
+        <a href="#business-card">Flyer &amp; Card</a>
+      </nav>
+      <div class="header-ctas">
+        <a href="tel:8302518489" class="btn btn-outline btn-sm">Call Now</a>
+        <a href="https://calendly.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Book Appointment</a>
+      </div>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav id="mobile-nav" class="nav-mobile" aria-label="Mobile" hidden>
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#testimonials">Reviews</a>
+      <a href="#contact">Contact</a>
+      <a href="#business-card">Flyer &amp; Card</a>
+      <a href="tel:8302518489" class="btn btn-outline">Call 830-251-8489</a>
+      <a href="https://calendly.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Book Appointment</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-bg" role="img" aria-label="Completed concrete patio and Texas property work by Iron Roots Services"></div>
+      <div class="hero-overlay"></div>
+      <div class="texas-stripe" aria-hidden="true"></div>
+      <div class="container hero-content">
+        <div class="hero-badge">
+          <span class="tx-flag" aria-hidden="true"></span>
+          Serving Stockdale &amp; South Texas
+        </div>
+        <p class="hero-eyebrow">Free Estimates · Locally Owned</p>
+        <h1 id="hero-title">Iron Roots Services</h1>
+        <p class="hero-sub">Expert Home &amp; Property Services in Texas</p>
+        <p class="hero-lead">
+          Concrete, fencing, remodeling, land clearing, landscaping, and more —
+          built tough for Texas properties. Billy Rivas Jr. &amp; crew deliver quality you can stand on.
+        </p>
+        <div class="hero-actions">
+          <a href="tel:8302518489" class="btn btn-primary btn-lg">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79a15.15 15.15 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.25 1.02l-2.2 2.19z"/></svg>
+            Call Now — 830-251-8489
+          </a>
+          <a href="https://calendly.com/" target="_blank" rel="noopener noreferrer" class="btn btn-white btn-lg">
+            Book Appointment
+          </a>
+        </div>
+        <ul class="hero-trust">
+          <li>Free Estimates</li>
+          <li>Residential &amp; Property Work</li>
+          <li>Texas-Based Crew</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Trust strip -->
+    <section class="trust-strip" aria-label="Highlights">
+      <div class="container trust-grid">
+        <div class="trust-item">
+          <span class="trust-num">11+</span>
+          <span class="trust-label">Services Offered</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-num">35-mi</span>
+          <span class="trust-label">Service Radius from Stockdale</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-num">Free</span>
+          <span class="trust-label">On-Site Estimates</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-num">830</span>
+          <span class="trust-label">Local Phone Service</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section services" id="services">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag">What We Do</span>
+          <h2>Full-Service Home &amp; Property Solutions</h2>
+          <p>From hardscape to outdoor living, Iron Roots Services handles the jobs that strengthen your property — roots deep, iron strong.</p>
+        </div>
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="28" width="36" height="10" rx="1" fill="currentColor" opacity=".9"/><rect x="10" y="18" width="8" height="10" fill="currentColor" opacity=".6"/><rect x="20" y="14" width="8" height="14" fill="currentColor" opacity=".7"/><rect x="30" y="20" width="8" height="8" fill="currentColor" opacity=".6"/></svg>
+            </div>
+            <h3>Concrete</h3>
+            <p>Driveways, patios, slabs, and stamped finishes — smooth, durable pours built for Texas weather.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none"><path d="M8 38V12h4v26H8zm8 0V18h4v20h-4zm8 0V10h4v28h-4zm8 0V16h4v22h-4zm8 0V20h4v18h-4z" fill="currentColor"/></svg>
+            </div>
+            <h3>Privacy Fence</h3>
+            <p>Quality wood privacy fencing that looks sharp and keeps your yard secure and private.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none"><path d="M8 40V20l16-12 16 12v20H28V28h-8v12H8z" fill="currentColor"/></svg>
+            </div>
+            <h3>Remodeling</h3>
+            <p>Interior and exterior upgrades that modernize your home without cutting corners.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none"><path d="M10 34c4-8 8-14 14-18 6 4 10 10 14 18H10z" fill="currentColor" opacity=".85"/><path d="M14 36h20v4H14z" fill="currentColor"/></svg>
+            </div>
+            <h3>Land Clearing</h3>
+            <p>Clear brush, prep lots, and open space for builds, fencing, or landscaping projects.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none"><path d="M12 14h24v6H12v-6zm0 10h18v6H12v-6zm0 10h14v6H12v-6z" fill="currentColor"/><path d="M34 30l6 6-3 3-6-6 3-3z" fill="currentColor" opacity=".7"/></svg>
+            </div>
+            <h3>Junk Removal</h3>
+            <p>Haul-away service for debris, old materials, and property cleanouts — done right.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="18" r="8" fill="currentColor" opacity=".7"/><path d="M10 40c2-10 8-16 14-16s12 6 14 16H10z" fill="currentColor"/></svg>
+            </div>
+            <h3>Landscaping</h3>
+            <p>Clean lawns, defined beds, and outdoor spaces that boost curb appeal year-round.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none"><path d="M24 6c0 10-6 16-6 24a6 6 0 0012 0c0-8-6-14-6-24z" fill="currentColor"/><path d="M18 36h12v4H18z" fill="currentColor" opacity=".7"/></svg>
+            </div>
+            <h3>Tree Removal</h3>
+            <p>Safe removal of problem trees and limbs that threaten structures or open space.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none"><path d="M8 14h32v4H8v-4zm0 8h32v4H8v-4zm0 8h32v4H8v-4zm0 8h32v4H8v-4z" fill="currentColor"/></svg>
+            </div>
+            <h3>Laminate Flooring</h3>
+            <p>Clean installs and updates that refresh living spaces with durable, stylish floors.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none"><path d="M8 36V20l16-10 16 10v16H8z" stroke="currentColor" stroke-width="3" fill="none"/><path d="M16 36V24h16v12" stroke="currentColor" stroke-width="3" fill="none"/></svg>
+            </div>
+            <h3>Steel Pavilions</h3>
+            <p>Strong steel shade structures for patios, gatherings, and Texas sun protection.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none"><path d="M6 34l18-16 18 16H6z" fill="currentColor" opacity=".85"/><rect x="12" y="34" width="24" height="6" fill="currentColor"/></svg>
+            </div>
+            <h3>Decks and Patios</h3>
+            <p>Outdoor living spaces ready for family, grills, and weekend Texas evenings.</p>
+          </article>
+          <article class="service-card service-card-wide">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none"><ellipse cx="16" cy="30" rx="8" ry="5" fill="currentColor"/><ellipse cx="28" cy="26" rx="6" ry="4" fill="currentColor" opacity=".8"/><ellipse cx="34" cy="32" rx="7" ry="4" fill="currentColor" opacity=".7"/><circle cx="18" cy="18" r="3" fill="#c8102e"/><circle cx="30" cy="16" r="2.5" fill="#c8102e" opacity=".9"/></svg>
+            </div>
+            <h3>Rock and Flower Beds</h3>
+            <p>Rock borders, flower beds, and landscape accents that finish the look of your property.</p>
+          </article>
+        </div>
+        <div class="services-cta">
+          <a href="tel:8302518489" class="btn btn-primary">Get Your Free Estimate</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery / Before After -->
+    <section class="section gallery" id="gallery">
+      <div class="container">
+        <div class="section-head light">
+          <span class="section-tag">Our Work</span>
+          <h2>Before &amp; After Gallery</h2>
+          <p>Real Texas projects — concrete, fencing, and outdoor improvements you can see and feel.</p>
+        </div>
+
+        <div class="ba-grid">
+          <figure class="ba-card">
+            <div class="ba-labels"><span class="ba-before">Project</span><span class="ba-after">Concrete Patio</span></div>
+            <img src="images/concrete-patio.jpg" alt="Freshly finished concrete patio slab next to a Texas home" loading="lazy" />
+            <figcaption>Smooth patio pour with clean edges and proper drainage prep.</figcaption>
+          </figure>
+          <figure class="ba-card">
+            <div class="ba-labels"><span class="ba-before">Project</span><span class="ba-after">Stamped Edge</span></div>
+            <img src="images/stamped-concrete.jpg" alt="Decorative stamped-edge concrete patio being finished" loading="lazy" />
+            <figcaption>Decorative border detail on a large backyard concrete patio.</figcaption>
+          </figure>
+          <figure class="ba-card">
+            <div class="ba-labels"><span class="ba-before">Project</span><span class="ba-after">Privacy Fence</span></div>
+            <img src="images/privacy-fence.jpg" alt="New wooden privacy fence along a residential property line" loading="lazy" />
+            <figcaption>Full privacy fence install framing a manicured backyard.</figcaption>
+          </figure>
+          <figure class="ba-card">
+            <div class="ba-labels"><span class="ba-before">Project</span><span class="ba-after">Concrete Pour</span></div>
+            <img src="images/concrete-pour.jpg" alt="Crew finishing a fresh concrete patio pour" loading="lazy" />
+            <figcaption>On-site finishing — level, dense, and ready for Texas heat.</figcaption>
+          </figure>
+        </div>
+
+        <!-- Simple before/after slider demo -->
+        <div class="ba-slider-wrap">
+          <h3 class="ba-slider-title">Slide to compare finish quality</h3>
+          <div class="ba-slider" id="ba-slider" data-pos="50">
+            <div class="ba-slider-after">
+              <img src="images/stamped-concrete.jpg" alt="Finished stamped concrete patio" />
+              <span class="ba-tag after-tag">Finished</span>
+            </div>
+            <div class="ba-slider-before" id="ba-before-panel">
+              <img src="images/concrete-pour.jpg" alt="Concrete being poured and finished" />
+              <span class="ba-tag before-tag">In Progress</span>
+            </div>
+            <input type="range" min="0" max="100" value="50" class="ba-range" id="ba-range" aria-label="Compare before and after" />
+            <div class="ba-handle" id="ba-handle" aria-hidden="true">
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section testimonials" id="testimonials">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag">Testimonials</span>
+          <h2>What Texas Homeowners Say</h2>
+          <p>Real reviews from customers who hired Iron Roots Services.</p>
+        </div>
+        <div class="carousel" id="testimonial-carousel" aria-roledescription="carousel" aria-label="Customer testimonials">
+          <div class="carousel-track" id="carousel-track">
+            <article class="testimonial-card is-active" data-index="0">
+              <div class="stars" aria-label="5 stars">★★★★★</div>
+              <blockquote>
+                “Thank you soo much for such a amazing job. Great Pricing punctuality and telling me step by step the procedures. I highly recommend their company! I would definitely use them again. They are definitely a person who keeps their word.”
+              </blockquote>
+              <footer>
+                <strong>Miriam Leyva</strong>
+                <span>August 24, 2025</span>
+              </footer>
+            </article>
+            <article class="testimonial-card" data-index="1">
+              <div class="stars" aria-label="5 stars">★★★★★</div>
+              <blockquote>
+                “Billy was by far the most professional and knowledgeable individual when it came to concrete. He came out to provide us with a quote and made suggestions based on what we needed done. Actually helped us throughout the design/idea process. Was able to get us exactly what we pictured/wanted and was very efficient. His work is high quality and definitely the most affordable. Highly recommend him for your concrete needs.”
+              </blockquote>
+              <footer>
+                <strong>Barbara Davila</strong>
+                <span>May 31, 2025</span>
+              </footer>
+            </article>
+            <article class="testimonial-card" data-index="2">
+              <div class="stars" aria-label="5 stars">★★★★★</div>
+              <blockquote>
+                “Came out on a Thursday on super short notice to give an estimate. Actually helped me throughout the design/idea process. Was able to get me the most efficient, high quality and common sense design for what I wanted. Very knowledgeable, professional and definitely the most affordable. Highly recommend for your needs. Will hire again in the future.”
+              </blockquote>
+              <footer>
+                <strong>Ernie Salazar Garcia</strong>
+                <span>April 13, 2025</span>
+              </footer>
+            </article>
+          </div>
+          <div class="carousel-controls">
+            <button type="button" class="carousel-btn" id="carousel-prev" aria-label="Previous testimonial">‹</button>
+            <div class="carousel-dots" id="carousel-dots" role="tablist" aria-label="Select testimonial"></div>
+            <button type="button" class="carousel-btn" id="carousel-next" aria-label="Next testimonial">›</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA band -->
+    <section class="cta-band" aria-labelledby="cta-title">
+      <div class="container cta-inner">
+        <div>
+          <h2 id="cta-title">Ready to strengthen your property?</h2>
+          <p>Free estimates. Call Billy Rivas Jr. or book a time that works for you.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="tel:8302518489" class="btn btn-white btn-lg">830-251-8489</a>
+          <a href="https://calendly.com/" target="_blank" rel="noopener noreferrer" class="btn btn-dark btn-lg">Book on Calendly</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact + Service Area Map -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag">Contact</span>
+          <h2>Get Your Free Estimate</h2>
+          <p>Call or book a time - we&rsquo;ll go over your project and quote it free.</p>
+        </div>
+
+        <div class="contact-cta-grid">
+          <a href="tel:8302518489" class="contact-action-card call-card">
+            <span class="contact-action-icon" aria-hidden="true">📞</span>
+            <span class="contact-action-label">Call Now</span>
+            <span class="contact-action-value">830-251-8489</span>
+            <span class="contact-action-hint">Fastest way to get a free estimate</span>
+          </a>
+          <a href="https://calendly.com/" target="_blank" rel="noopener noreferrer" class="contact-action-card book-card">
+            <span class="contact-action-icon" aria-hidden="true">📅</span>
+            <span class="contact-action-label">Book Online</span>
+            <span class="contact-action-value">Schedule Appointment</span>
+            <span class="contact-action-hint">Pick a time that works for you</span>
+          </a>
+        </div>
+
+        <div class="service-area">
+          <div class="service-area-head">
+            <h3>Service Area</h3>
+            <p>Based in <strong>Stockdale, TX</strong> — we serve homes and properties within about a <strong>35-mile radius</strong> (including nearby towns across Wilson County and South Texas).</p>
+          </div>
+          <div class="map-wrap" id="service-map" role="img" aria-label="Map showing approximately 35-mile service radius around Stockdale, Texas"></div>
+          <p class="map-legend">
+            <span class="map-legend-swatch" aria-hidden="true"></span>
+            Red circle = approx. 35-mile service radius from Stockdale
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Flyer + Business Card -->
+    <section class="section business-card-section" id="business-card" aria-labelledby="biz-card-title">
+      <div class="container">
+        <div class="section-head light">
+          <span class="section-tag">Print Ready Look</span>
+          <h2 id="biz-card-title">Flyer &amp; Business Card</h2>
+          <p>Service flyer and a standard business card mockup — side by side for print or share.</p>
+        </div>
+
+        <div class="print-pair">
+          <!-- Flyer (original dark layout) -->
+          <div class="print-col">
+            <p class="print-label">Service Flyer</p>
+            <article class="biz-card" aria-label="Iron Roots Services flyer">
+              <div class="biz-card-stripe" aria-hidden="true"></div>
+              <div class="biz-card-inner">
+                <div class="biz-card-left">
+                  <img src="images/logo.png" alt="Iron Roots Services logo" class="biz-card-logo" width="140" height="140" />
+                  <p class="biz-card-tagline">Expert Home &amp; Property Services</p>
+                </div>
+                <div class="biz-card-right">
+                  <p class="biz-card-company">Iron Roots Services</p>
+                  <p class="biz-card-name">Billy Rivas Jr.</p>
+                  <p class="biz-card-title-line">Owner / Operator</p>
+                  <ul class="biz-card-details">
+                    <li>
+                      <span class="biz-label">Phone</span>
+                      <a href="tel:8302518489">830-251-8489</a>
+                    </li>
+                    <li>
+                      <span class="biz-label">Service Area</span>
+                      <span>Stockdale, TX · ~35-mile radius — Floresville, Seguin, La Vernia, Pleasanton &amp; nearby</span>
+                    </li>
+                    <li>
+                      <span class="biz-label">Estimates</span>
+                      <span>Free</span>
+                    </li>
+                  </ul>
+                  <div class="biz-card-services" aria-label="Services offered">
+                    <span>Concrete</span>
+                    <span>Privacy Fence</span>
+                    <span>Remodeling</span>
+                    <span>Land Clearing</span>
+                    <span>Junk Removal</span>
+                    <span>Landscaping</span>
+                    <span>Tree Removal</span>
+                    <span>Laminate Flooring</span>
+                    <span>Steel Pavilions</span>
+                    <span>Decks &amp; Patios</span>
+                    <span>Rock &amp; Flower Beds</span>
+                  </div>
+                </div>
+              </div>
+              <div class="biz-card-footer-bar" aria-hidden="true"></div>
+            </article>
+          </div>
+
+          <!-- Business card mock -->
+          <div class="print-col">
+            <p class="print-label">Business Card · 3.5&Prime; × 2&Prime;</p>
+            <div class="bc-stage" aria-label="Business card mockup">
+              <article class="bc-card" aria-label="Iron Roots Services business card">
+                <div class="bc-accent" aria-hidden="true"></div>
+                <div class="bc-content">
+                  <div class="bc-top">
+                    <img src="images/logo.png" alt="" class="bc-logo" width="56" height="56" />
+                    <div class="bc-top-text">
+                      <p class="bc-company">Iron Roots Services</p>
+                      <p class="bc-tag">Home &amp; Property Services</p>
+                    </div>
+                  </div>
+                  <div class="bc-divider" aria-hidden="true"></div>
+                  <p class="bc-name">Billy Rivas Jr.</p>
+                  <p class="bc-role">Owner / Operator</p>
+                  <ul class="bc-meta">
+                    <li class="bc-phone">830-251-8489</li>
+                    <li>Stockdale, TX · 35-mi. area</li>
+                    <li>Free Estimates</li>
+                  </ul>
+                </div>
+                <div class="bc-flag-bar" aria-hidden="true"></div>
+              </article>
+              <p class="bc-caption">Standard card layout for print (name, title, phone, service area, free estimates)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-stripe" aria-hidden="true"></div>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="Iron Roots Services" width="72" height="72" />
+        <div>
+          <strong>Iron Roots Services</strong>
+          <p>Expert home &amp; property services rooted in Texas pride and iron-strong workmanship.</p>
+        </div>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Concrete &amp; Patios</a></li>
+          <li><a href="#services">Privacy Fencing</a></li>
+          <li><a href="#services">Landscaping</a></li>
+          <li><a href="#services">All Services</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:8302518489">830-251-8489</a></li>
+          <li>Billy Rivas Jr.</li>
+          <li>Stockdale, TX area</li>
+          <li><a href="https://calendly.com/" target="_blank" rel="noopener noreferrer">Book Appointment</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#contact">Call for Estimate</a></li>
+          <li><a href="#business-card">Flyer &amp; Card</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span id="year"></span> Iron Roots Services. All rights reserved.</p>
+      <p class="demo-note">Demo website for preview purposes only.</p>
+    </div>
+  </footer>
+
+  <a href="tel:8302518489" class="mobile-call-bar" aria-label="Call Iron Roots Services">
+    📞 Call Now — 830-251-8489
+  </a>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="script.js"></script>
+</body>
+</html>

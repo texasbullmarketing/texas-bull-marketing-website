@@ -8,6 +8,7 @@ Live demo sites for leads. Served as static folders under `public/demo/`.
 |------|-----|--------|
 | efs | `/demo/efs/` | `public/demo/efs/` |
 | ench | `/demo/ench/` | `public/demo/ench/` |
+| irs | `/demo/irs/` | `public/demo/irs/` |
 | wave | `/demo/wave/` | `public/demo/wave/` |
 
 Hub page: `/demo/` → `public/demo/index.html`
@@ -16,6 +17,7 @@ After the domain is live:
 
 - https://texasbullmarketing.com/demo/efs/
 - https://texasbullmarketing.com/demo/ench/
+- https://texasbullmarketing.com/demo/irs/
 - https://texasbullmarketing.com/demo/wave/
 - https://texasbullmarketing.com/demo/
 
