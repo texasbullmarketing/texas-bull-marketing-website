@@ -9,6 +9,7 @@ Live demo sites for leads. Served as static folders under `public/demo/`.
 | Enterprise Flooring Solutions | `/demo/EnterpriseFlooringSolutions/` | `public/demo/EnterpriseFlooringSolutions/` |
 | Iron Roots Services | `/demo/IronRootsServices/` | `public/demo/IronRootsServices/` |
 | La Enchiladita | `/demo/LaEnchiladita/` | `public/demo/LaEnchiladita/` |
+| Michoacana Premium | `/demo/MichoacanaPremium/` | `public/demo/MichoacanaPremium/` |
 | Wave Finders Electronics | `/demo/WaveFindersElectronics/` | `public/demo/WaveFindersElectronics/` |
 
 Hub page: `/demo/` → `public/demo/index.html`
@@ -18,6 +19,7 @@ Live:
 - https://texasbullmarketing.com/demo/EnterpriseFlooringSolutions/
 - https://texasbullmarketing.com/demo/IronRootsServices/
 - https://texasbullmarketing.com/demo/LaEnchiladita/
+- https://texasbullmarketing.com/demo/MichoacanaPremium/
 - https://texasbullmarketing.com/demo/WaveFindersElectronics/
 - https://texasbullmarketing.com/demo/
 
