@@ -936,6 +936,27 @@ a {
   font-style: italic;
 }
 
+.phone-line {
+  margin: 0.85rem 0 1rem !important;
+  font-size: 1.25rem !important;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.phone-line a {
+  color: var(--white);
+  text-decoration: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.45);
+}
+
+.phone-line a:hover {
+  border-bottom-color: var(--white);
+}
+
+.visit-card .btn-block {
+  margin-top: 0.65rem;
+}
+
 .hours {
   list-style: none;
   margin-top: 0.5rem;
@@ -945,10 +966,10 @@ a {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  padding: 0.35rem 0;
+  padding: 0.3rem 0;
   border-bottom: 1px dashed #f0c4dc;
   font-weight: 700;
-  font-size: 0.92rem;
+  font-size: 0.88rem;
   color: var(--purple);
 }
 
@@ -988,6 +1009,29 @@ a {
 
 .footer-brand span {
   font-size: 0.85rem;
+  opacity: 0.85;
+}
+
+.footer-contact {
+  margin: 0.75rem 0 1rem;
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.footer-contact a {
+  color: rgba(255, 255, 255, 0.95);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 159, 208, 0.45);
+}
+
+.footer-contact a:hover {
+  color: #ff9fd0;
+  border-bottom-color: #ff9fd0;
+}
+
+.footer-hours {
+  margin-top: 0.35rem;
+  font-size: 0.88rem;
   opacity: 0.85;
 }
 
