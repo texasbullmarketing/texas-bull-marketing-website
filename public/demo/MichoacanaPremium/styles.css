@@ -1047,6 +1047,93 @@ a {
   opacity: 0.7;
 }
 
+/* ----- Uber Eats floating order button (fixed; no layout shift) ----- */
+.ue-order-btn {
+  position: fixed;
+  right: 1.15rem;
+  bottom: 1.15rem;
+  z-index: 90;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.7rem 1.05rem 0.7rem 0.75rem;
+  border-radius: 999px;
+  background: #06c167;
+  color: #fff;
+  text-decoration: none;
+  font-family: var(--font-body);
+  box-shadow:
+    0 4px 6px rgba(6, 193, 103, 0.25),
+    0 12px 28px rgba(0, 0, 0, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+
+.ue-order-btn:hover {
+  background: #05a857;
+  transform: translateY(-2px);
+  box-shadow:
+    0 6px 10px rgba(6, 193, 103, 0.3),
+    0 16px 36px rgba(0, 0, 0, 0.22);
+  color: #fff;
+}
+
+.ue-order-btn:focus-visible {
+  outline: 3px solid #06c167;
+  outline-offset: 3px;
+}
+
+.ue-order-btn__icon {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #000;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.ue-order-btn__logo {
+  display: block;
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.ue-order-btn__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.15;
+  padding-right: 0.25rem;
+}
+
+.ue-order-btn__brand {
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+}
+
+@media (max-width: 480px) {
+  .ue-order-btn {
+    right: 0.85rem;
+    bottom: 0.85rem;
+    padding: 0.6rem 0.9rem 0.6rem 0.65rem;
+  }
+
+  .ue-order-btn__icon,
+  .ue-order-btn__logo {
+    width: 36px;
+    height: 36px;
+  }
+
+  .ue-order-btn__brand {
+    font-size: 0.92rem;
+  }
+}
+
 /* ----- Responsive ----- */
 @media (max-width: 900px) {
   .hero-grid,
