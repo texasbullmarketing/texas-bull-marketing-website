@@ -1,4 +1,4 @@
-/* The 1908 — redesigned demo (real photos only) */
+/* The 1908 - redesigned demo (real photos only) */
 :root {
   --bg: #0b0a09;
   --bg-2: #13110f;
@@ -575,7 +575,7 @@ em { font-style: italic; color: var(--gold-2); }
   flex-direction: column;
   gap: 0.2rem;
 }
-/* absolute caption needs a positioned parent — sticky counts */
+/* absolute caption needs a positioned parent - sticky counts */
 .menu__feature-cap span {
   font-size: 0.65rem;
   letter-spacing: 0.18em;

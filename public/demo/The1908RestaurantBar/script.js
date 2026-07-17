@@ -1,4 +1,4 @@
-/* The 1908 demo — interactions */
+/* The 1908 demo - interactions */
 (function () {
   "use strict";
 
