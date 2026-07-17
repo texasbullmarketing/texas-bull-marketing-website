@@ -1,0 +1,547 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>The 1908 Restaurant + Bar | Downtown Seguin, TX</title>
+  <meta name="description" content="Historic casual upstairs. Speakeasy lounge below. Real photos from The 1908 in Downtown Seguin â€” smash burgers, craft cocktails, live music, and dual vibes." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#top" class="nav__brand">
+        <span class="nav__mark">The 1908</span>
+        <span class="nav__sub">Restaurant + Bar</span>
+      </a>
+      <nav class="nav__links" id="navLinks">
+        <a href="#spaces">Spaces</a>
+        <a href="#menu">Menu</a>
+        <a href="#story">Story</a>
+        <a href="#nights">Nights</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#visit">Visit</a>
+      </nav>
+      <a href="tel:+18308326726" class="btn btn--gold btn--sm nav__cta">Call (830) 832-6726</a>
+      <button class="nav__burger" id="navToggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__stage">
+        <div class="hero__frame is-active" data-vibe="main" id="heroMain">
+          <img src="assets/images/window-seat.jpg" alt="The 1908 main floor window seating â€” real venue photo" class="hero__img" />
+        </div>
+        <div class="hero__frame" data-vibe="lounge" id="heroLounge">
+          <img src="assets/images/lounge-wide.jpg" alt="The 1908 basement speakeasy lounge â€” real venue photo" class="hero__img" />
+        </div>
+        <div class="hero__scrim"></div>
+        <div class="hero__edge"></div>
+      </div>
+
+      <div class="hero__content">
+        <p class="kicker">
+          <span class="kicker__dot"></span>
+          100 E Court St Â· Downtown Seguin, Texas
+        </p>
+        <h1 class="hero__title">
+          Two floors.<br />
+          <em>One secret.</em>
+        </h1>
+        <p class="hero__lead">
+          Historic casual on the main floor. Underground speakeasy below.
+          Real nights, real pours, real Seguin energy.
+        </p>
+        <div class="hero__actions">
+          <a href="#spaces" class="btn btn--gold">Explore the dual vibe</a>
+          <a href="#menu" class="btn btn--ghost">View the card</a>
+        </div>
+
+        <div class="hero__switch" role="group" aria-label="Hero space">
+          <button type="button" class="hero__switch-btn is-active" data-hero="main">
+            <span class="hero__switch-label">Main Floor</span>
+            <span class="hero__switch-hint">Bar Â· Patio Â· Social</span>
+          </button>
+          <button type="button" class="hero__switch-btn" data-hero="lounge">
+            <span class="hero__switch-label">Basement Lounge</span>
+            <span class="hero__switch-hint">Speakeasy Â· Intimate</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="hero__stats">
+        <div><strong>3</strong><span>Levels of vibe</span></div>
+        <div><strong>3â€“6</strong><span>Happy Hour Mâ€“F</span></div>
+        <div><strong>$5</strong><span>Martinis Â· Wed</span></div>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Smash Burgers</span><span>Â·</span>
+        <span>Craft Cocktails</span><span>Â·</span>
+        <span>Speakeasy Lounge</span><span>Â·</span>
+        <span>Live Music</span><span>Â·</span>
+        <span>Patio Nights</span><span>Â·</span>
+        <span>Downtown Seguin</span><span>Â·</span>
+        <span>Smash Burgers</span><span>Â·</span>
+        <span>Craft Cocktails</span><span>Â·</span>
+        <span>Speakeasy Lounge</span><span>Â·</span>
+        <span>Live Music</span><span>Â·</span>
+        <span>Patio Nights</span><span>Â·</span>
+        <span>Downtown Seguin</span><span>Â·</span>
+      </div>
+    </div>
+
+    <!-- DUAL SPACES -->
+    <section class="spaces" id="spaces">
+      <div class="container">
+        <header class="sec-head">
+          <p class="kicker"><span class="kicker__line"></span> The dual vibe</p>
+          <h2>Pick your depth.</h2>
+          <p class="sec-lead">Same address. Completely different nights. Toggle between the social main floor and the intimate basement lounge â€” both shot on location at The 1908.</p>
+        </header>
+
+        <div class="spaces__toggle" role="tablist">
+          <button class="spaces__tab is-active" role="tab" aria-selected="true" data-space="main" id="tabMain">â†‘ Main Floor & Patio</button>
+          <button class="spaces__tab" role="tab" aria-selected="false" data-space="lounge" id="tabLounge">â†“ Basement Lounge</button>
+          <span class="spaces__pill" id="spacePill"></span>
+        </div>
+
+        <div class="spaces__panels">
+          <article class="space-panel is-active" id="spaceMain" role="tabpanel" aria-labelledby="tabMain">
+            <div class="space-panel__mosaic">
+              <figure class="space-panel__hero">
+                <img src="assets/images/window-seat.jpg" alt="Window seating and patio light at The 1908" />
+                <figcaption>Window & patio energy</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/images/drinks-bar.jpg" alt="Drafts and cocktails on the bar at The 1908" />
+                <figcaption>Cold pours</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/images/social.jpg" alt="Guests toasting at The 1908" />
+                <figcaption>Nights out</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/images/cocktail-logo.jpg" alt="Cocktail at The 1908 with venue logo" />
+                <figcaption>Under the sign</figcaption>
+              </figure>
+            </div>
+            <div class="space-panel__copy">
+              <h3>Lively. Social. Wide open.</h3>
+              <p>Main floor is where the night starts â€” bar stools under warm light, sports on the screens, patio spillover, smash burgers hitting the tray, and bartenders who remember your order.</p>
+              <ul class="chips">
+                <li>Full bar</li>
+                <li>Patio</li>
+                <li>Live music weekends</li>
+                <li>Elevated bites</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="space-panel" id="spaceLounge" role="tabpanel" aria-labelledby="tabLounge" hidden>
+            <div class="space-panel__mosaic space-panel__mosaic--lounge">
+              <figure class="space-panel__hero">
+                <img src="assets/images/lounge-wide.jpg" alt="Basement lounge seating with green chairs and longhorn art" />
+                <figcaption>The lounge</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/images/lounge-fireplace.jpg" alt="Fireplace seating corner in The 1908 basement" />
+                <figcaption>Fireplace nook</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/images/lounge-sofa.jpg" alt="Leather sofa and bookshelves in the speakeasy lounge" />
+                <figcaption>Low light, high intrigue</figcaption>
+              </figure>
+            </div>
+            <div class="space-panel__copy">
+              <h3>Intimate. Mysterious. Candlelit.</h3>
+              <p>Descend for the speakeasy soul â€” eclectic antiques, green leather, fireplace glow, bookshelves, and a cocktail card built for lingering. Take your drink downstairs and stay awhile.</p>
+              <ul class="chips">
+                <li>Speakeasy mood</li>
+                <li>Martini nights</li>
+                <li>Antique furniture</li>
+                <li>Late-night glow</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENU -->
+    <section class="menu" id="menu">
+      <div class="container">
+        <header class="sec-head sec-head--center">
+          <p class="kicker"><span class="kicker__line"></span> The card</p>
+          <h2>Elevated comfort.<br /><em>Curated pours.</em></h2>
+          <p class="sec-lead">Current kitchen card from The 1908 â€” plus cocktail &amp; martini favorites. Availability can change; ask the bar.</p>
+        </header>
+
+        <div class="menu__tabs" role="tablist">
+          <button class="menu__tab is-active" data-menu="kitchen">Kitchen</button>
+          <button class="menu__tab" data-menu="cocktails">Cocktails</button>
+          <button class="menu__tab" data-menu="martinis">Martini Card</button>
+        </div>
+
+        <div class="menu__panel is-active" data-menu-panel="kitchen">
+          <div class="menu__feature">
+            <img src="assets/images/burger.jpg" alt="Smash burger and fries at The 1908" />
+            <div class="menu__feature-cap">
+              <span>Half-pound wagyu</span>
+              <strong>Smash Burgers Â· $17</strong>
+            </div>
+          </div>
+          <div class="menu__list">
+            <p class="menu__cat">Appetizers</p>
+            <article class="menu-item">
+              <div class="menu-item__top"><h4>Ceviche with Chips</h4><span>$14</span></div>
+              <p>Fresh red fish.</p>
+            </article>
+            <article class="menu-item">
+              <div class="menu-item__top"><h4>White Queso w/ Chips</h4><span>$8</span></div>
+            </article>
+            <article class="menu-item">
+              <div class="menu-item__top"><h4>Potstickers</h4><span>$10</span></div>
+              <p>Served with ponzu and sriracha mayo.</p>
+            </article>
+            <article class="menu-item">
+              <div class="menu-item__top"><h4>Salsa w/ Chips</h4><span>$7</span></div>
+            </article>
+            <article class="menu-item">
+              <div class="menu-item__top"><h4>Guacamole w/ Chips</h4><span>$9</span></div>
+            </article>
+            <article class="menu-item">
+              <div class="menu-item__top"><h4>Fries</h4><span>$6</span></div>
+            </article>
+            <article class="menu-item">
+              <div class="menu-item__top"><h4>Loaded Fries</h4><span>$10</span></div>
+              <p>Bacon, cheese, avocado, crema, pickled jalapeÃ±os, green onions.</p>
+            </article>
+            <article class="menu-item">
+              <div class="menu-item__top"><h4>Nachos</h4><span>$12</span></div>
+              <p>Chicken, cheese, pico de gallo, guacamole, sour cream, pickled jalapeÃ±os.</p>
+            </article>
+
+            <p class="menu__cat">Salads</p>
+            <article class="menu-item">
+              <div class="menu-item__top"><h4>Classic Caesar</h4><span>$11</span></div>
+              <p>Romaine, parmesan, croutons, cracked pepper.</p>
+            </article>
+            <article class="menu-item">
+              <div class="menu-item__top"><h4>House Salad</h4><span>$10</span></div>
+              <p>Spring mix, tomatoes, cucumbers, red onions, parsley.</p>
+            </article>
+            <article class="menu-item">
+              <div class="menu-item__top"><h4>Seasonal Fruit Salad</h4><span>$12</span></div>
+              <p>Spring mix, strawberries, blueberries, dried cranberries, candied walnuts, feta cheese, mint.</p>
+            </article>
+            <article class="menu-item">
+              <div class="menu-item__top"><h4>Wedge Salad</h4><span>$9</span></div>
+              <p>Tomatoes, red onion, bacon, balsamic, blue cheese crumbles.</p>
+            </article>
+            <article class="menu-item">
+              <div class="menu-item__top"><h4>Add Chicken</h4><span>$4</span></div>
+            </article>
+
+            <p class="menu__cat">Burgers &amp; Sandwiches</p>
+            <article class="menu-item">
+              <div class="menu-item__top"><h4>Smash Burger</h4><span>$17</span></div>
+              <p>Half-pound wagyu double patty served with fries on brioche bun.</p>
+            </article>
+            <article class="menu-item">
+              <div class="menu-item__top"><h4>BBQ Smash Burger</h4><span>$17</span></div>
+              <p>Half-pound wagyu double patty served with fries on brioche bun.</p>
+            </article>
+            <article class="menu-item">
+              <div class="menu-item__top"><h4>JalapeÃ±o Smash Burger</h4><span>$17</span></div>
+              <p>Half-pound wagyu double patty served with fries on brioche bun.</p>
+            </article>
+            <article class="menu-item">
+              <div class="menu-item__top"><h4>The Philly Cheesesteak</h4><span>$14</span></div>
+              <p>Thinly diced beefsteak, bell peppers, onions, on a hoagie roll with fries.</p>
+            </article>
+            <article class="menu-item">
+              <div class="menu-item__top"><h4>Chicken Sandwich</h4><span>$16</span></div>
+              <p>Chicken thigh, hot honey buffalo sauce, dill cream sauce, dill pickles, brioche bun.</p>
+            </article>
+
+            <p class="menu__cat">Wings</p>
+            <article class="menu-item">
+              <div class="menu-item__top"><h4>Wings</h4><span>5 Â· $9 Â· 10 Â· $16 Â· 20 Â· $26</span></div>
+              <p>Buffalo, hot honey, BBQ, lemon pepper, Louisiana. Bone-in, served with celery and carrots. Ranch or blue cheese.</p>
+            </article>
+
+            <p class="menu__cat">Desserts</p>
+            <article class="menu-item">
+              <div class="menu-item__top"><h4>CrÃ¨me BrÃ»lÃ©e Cheesecake</h4><span>$9</span></div>
+            </article>
+
+            <p class="menu__cat">Kids</p>
+            <article class="menu-item">
+              <div class="menu-item__top"><h4>Chicken Strip</h4><span>$6</span></div>
+            </article>
+            <article class="menu-item">
+              <div class="menu-item__top"><h4>Corn Dog</h4><span>$6</span></div>
+            </article>
+
+            <div class="menu__food-strip">
+              <img src="assets/images/burger.jpg" alt="Smash burger at The 1908" />
+              <img src="assets/images/oysters.jpg" alt="Oysters at The 1908" />
+              <img src="assets/images/shrimp.jpg" alt="Shrimp at The 1908" />
+            </div>
+            <p class="menu__note">From the current kitchen menu Â· Prices subject to change</p>
+          </div>
+        </div>
+
+        <div class="menu__panel" data-menu-panel="cocktails" hidden>
+          <div class="menu__feature">
+            <img src="assets/images/cocktail-logo.jpg" alt="Cocktail at The 1908 bar with venue logo" />
+            <div class="menu__feature-cap">
+              <span>Behind the bar</span>
+              <strong>Crafted under the 1908 sign</strong>
+            </div>
+          </div>
+          <div class="menu__list">
+            <article class="menu-item">
+              <div class="menu-item__top"><h4>Court Street Old Fashioned</h4><span>Signature</span></div>
+              <p>Bourbon, demerara, bitters, orange oil â€” the classic, done right.</p>
+            </article>
+            <article class="menu-item">
+              <div class="menu-item__top"><h4>Lavender Margarita</h4><span>Guest pick</span></div>
+              <p>A patio favorite â€” bright, floral, dangerously easy.</p>
+            </article>
+            <article class="menu-item">
+              <div class="menu-item__top"><h4>Watermelon Smash</h4><span>Seasonal</span></div>
+              <p>Fresh, cold, and made for Texas evenings.</p>
+            </article>
+            <article class="menu-item">
+              <div class="menu-item__top"><h4>Lemon Drop Martini</h4><span>Bright</span></div>
+              <p>Crisp citrus, clean finish â€” a regular request at the rail.</p>
+            </article>
+            <article class="menu-item">
+              <div class="menu-item__top"><h4>Ice-Cold Drafts</h4><span>Rotating</span></div>
+              <p>Local and classic pours â€” from IPAs to cold domestics.</p>
+            </article>
+            <article class="menu-item">
+              <div class="menu-item__top"><h4>Happy Hour</h4><span>Monâ€“Fri 3â€“6</span></div>
+              <p>Handcrafted cocktails, ice-cold beer, elevated bites at weekday prices.</p>
+            </article>
+            <p class="menu__note">Cocktail names may rotate Â· Ask your bartender</p>
+          </div>
+        </div>
+
+        <div class="menu__panel" data-menu-panel="martinis" hidden>
+          <div class="menu__feature">
+            <img src="assets/images/drinks-bar.jpg" alt="Drinks lined up on The 1908 bar" />
+            <div class="menu__feature-cap">
+              <span>Wednesday</span>
+              <strong>$5 Martinis Â· All Day</strong>
+            </div>
+          </div>
+          <div class="menu__list">
+            <article class="menu-item">
+              <div class="menu-item__top"><h4>The Classic 1908</h4><span>Wed $5</span></div>
+              <p>Gin or vodka, dry vermouth, twist or olive. Stirred cold.</p>
+            </article>
+            <article class="menu-item">
+              <div class="menu-item__top"><h4>Dirty Downtown</h4><span>Wed $5</span></div>
+              <p>Vodka, olive brine, dry vermouth â€” unapologetically savory.</p>
+            </article>
+            <article class="menu-item">
+              <div class="menu-item__top"><h4>Espresso After Dark</h4><span>Ask bar</span></div>
+              <p>Vodka, coffee liqueur, fresh espresso â€” late-night energy.</p>
+            </article>
+            <article class="menu-item">
+              <div class="menu-item__top"><h4>French 1908</h4><span>Ask bar</span></div>
+              <p>Gin, elderflower, lemon, prosecco float.</p>
+            </article>
+            <article class="menu-item">
+              <div class="menu-item__top"><h4>Spicy Cucumber</h4><span>Ask bar</span></div>
+              <p>Vodka, cucumber, jalapeÃ±o, lime â€” clean heat.</p>
+            </article>
+            <article class="menu-item">
+              <div class="menu-item__top"><h4>Thursday Margaritas</h4><span>$4 all day</span></div>
+              <p>When martini night ends, margarita night begins.</p>
+            </article>
+            <p class="menu__note">Specials subject to change</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STORY -->
+    <section class="story" id="story">
+      <div class="container story__grid">
+        <div class="story__visual">
+          <img src="assets/images/history.jpg" alt="Historic Downtown Seguin â€” First National Bank 1908 era" class="story__photo" />
+          <div class="story__badge">
+            <span>Spirit of</span>
+            <strong>1908</strong>
+          </div>
+          <img src="assets/images/lounge-sofa.jpg" alt="Modern lounge at The 1908" class="story__inset" />
+        </div>
+        <div class="story__copy">
+          <p class="kicker"><span class="kicker__line"></span> Roots & gathering</p>
+          <h2>Nostalgia with a dash of <em>mystery & magic.</em></h2>
+          <p>Seguin has always known how to gather â€” saloons, corner bars, downtown nights that turn strangers into regulars. The 1908 picks up that thread in a historic Court Street building with a modern dual-vibe twist.</p>
+          <p>Upstairs energy. Downstairs intrigue. Eclectic antiques, Texas art, and a room that still feels like a local secret â€” even when itâ€™s full.</p>
+          <blockquote>
+            â€œThe 1908 isnâ€™t just another bar; itâ€™s a nod to the townâ€™s rich history of saloons and gathering spots with a modern twist.â€
+            <cite>â€” Seguin Gazette</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- NIGHTS / EVENTS -->
+    <section class="nights" id="nights">
+      <div class="container">
+        <header class="sec-head">
+          <p class="kicker"><span class="kicker__line"></span> Community & nights</p>
+          <h2>Happy hour.<br /><em>Live music. Special pours.</em></h2>
+        </header>
+        <div class="nights__grid">
+          <article class="night-card night-card--feature">
+            <p class="night-card__label">Weekday ritual</p>
+            <h3>Happy Hour</h3>
+            <p class="night-card__time">Monday â€“ Friday Â· 3 PM â€“ 6 PM</p>
+            <ul>
+              <li>Handcrafted cocktail specials</li>
+              <li>Ice-cold beer deals</li>
+              <li>Elevated bites while they last</li>
+            </ul>
+          </article>
+          <article class="night-card">
+            <p class="night-card__label">Weekly specials</p>
+            <h3>Deal of the day</h3>
+            <div class="night-card__rows">
+              <div><strong>Wednesday</strong><span>$5 martinis all day</span></div>
+              <div><strong>Thursday</strong><span>$4 margaritas all day</span></div>
+              <div><strong>Weekends</strong><span>Live music & late energy</span></div>
+            </div>
+          </article>
+          <article class="night-card">
+            <p class="night-card__label">Soundtrack</p>
+            <h3>Live music</h3>
+            <p>Rotating local talent â€” patio-ready upstairs, intimate energy when the lounge calls. Follow @_the1908 for the lineup.</p>
+          </article>
+          <article class="night-card">
+            <p class="night-card__label">On the calendar</p>
+            <h3>Takeovers & nights</h3>
+            <p>Guest kitchen collabs, steakhouse nights, karaoke, and seasonal pop-ups. Reservations recommended for special evenings.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="reviews" id="reviews">
+      <div class="container">
+        <header class="sec-head sec-head--center">
+          <p class="kicker"><span class="kicker__line"></span> From the room</p>
+          <h2>What locals are saying.</h2>
+          <p class="sec-lead">Real guest impressions of the food, pours, and dual-vibe rooms.</p>
+        </header>
+        <div class="reviews__grid">
+          <article class="review-card">
+            <div class="review-card__stars" aria-label="5 stars">â˜…â˜…â˜…â˜…â˜…</div>
+            <p>â€œIf youâ€™re looking for a laid back, relaxing and sleek place to have a date night, then this is the place. Try the wings â€” they are the best, then itâ€™s the burgers and fries.â€</p>
+            <footer>Google review Â· Smash burger night</footer>
+          </article>
+          <article class="review-card">
+            <div class="review-card__stars" aria-label="5 stars">â˜…â˜…â˜…â˜…â˜…</div>
+            <p>â€œReally loved this place not only for the food but the atmosphereâ€¦ most definitely will be back especially for the lavender margarita and lemon drop martini.â€</p>
+            <footer>Google review Â· Patio bar</footer>
+          </article>
+          <article class="review-card">
+            <div class="review-card__stars" aria-label="5 stars">â˜…â˜…â˜…â˜…â˜…</div>
+            <p>â€œYou can take your drink to the cozy lounge speakeasy basement. Eclectic antique furniture, artwork on the walls, and some of the exposed original brick.â€</p>
+            <footer>Guest write-up Â· Basement lounge</footer>
+          </article>
+          <article class="review-card review-card--photo">
+            <img src="assets/images/cocktail-logo.jpg" alt="Cocktail at The 1908" />
+            <div>
+              <div class="review-card__stars">â˜…â˜…â˜…â˜…â˜…</div>
+              <p>â€œExcellent detail to service â€” and they make excellent watermelon smash drinks.â€</p>
+              <footer>Google review</footer>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- VISIT -->
+    <section class="visit" id="visit">
+      <div class="container visit__grid">
+        <div class="visit__copy">
+          <p class="kicker"><span class="kicker__line"></span> Find us</p>
+          <h2>Come find<br /><em>your floor.</em></h2>
+          <p class="visit__lead">Historic Downtown Seguin. One address. Two vibes. Whether youâ€™re patio-bound or lounge-curious â€” the doorâ€™s open.</p>
+
+          <div class="visit__cards">
+            <div>
+              <h4>Address</h4>
+              <p>100 E Court St<br />Seguin, TX 78155</p>
+              <a class="text-link" href="https://www.google.com/maps/place/The+1908+Restaurant+%2B+Bar/@29.5690657,-97.9644687,17z" target="_blank" rel="noopener">Open in Google Maps â†’</a>
+            </div>
+            <div>
+              <h4>Hours</h4>
+              <ul class="hours">
+                <li><span>Mon â€“ Wed</span><span>3 PM â€“ 12 AM</span></li>
+                <li><span>Thu â€“ Sun</span><span>12 PM â€“ 12 AM</span></li>
+              </ul>
+              <p class="hours-note">Happy Hour Monâ€“Fri 3â€“6 PM</p>
+            </div>
+            <div>
+              <h4>Contact</h4>
+              <p><a href="tel:+18308326726">(830) 832-6726</a><br />
+              Instagram <a href="https://www.instagram.com/_the1908/" target="_blank" rel="noopener">@_the1908</a></p>
+            </div>
+          </div>
+
+          <div class="visit__actions">
+            <a href="tel:+18308326726" class="btn btn--gold">Call to reserve</a>
+            <a href="https://www.google.com/maps/place/The+1908+Restaurant+%2B+Bar/@29.5690657,-97.9644687,17z" class="btn btn--ghost" target="_blank" rel="noopener">Directions</a>
+          </div>
+        </div>
+
+        <div class="visit__visual">
+          <img src="assets/images/lounge-fireplace.jpg" alt="Basement lounge at The 1908" />
+          <div class="visit__visual-cap">
+            <span>Tonight</span>
+            <strong>Street buzz or basement mystery.</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="nav__mark">The 1908</span>
+        <span>Restaurant + Bar Â· Downtown Seguin</span>
+      </div>
+      <p class="footer__note">Demo concept site Â· Real venue photography (enhanced for clarity only) Â· Not the official website Â· Menu/pricing subject to change</p>
+      <p class="footer__copy">Â© <span id="year"></span> The 1908 Â· 100 E Court St, Seguin, TX</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

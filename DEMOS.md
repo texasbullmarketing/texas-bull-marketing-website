@@ -10,6 +10,8 @@ Live demo sites for leads. Served as static folders under `public/demo/`.
 | Iron Roots Services | `/demo/IronRootsServices/` | `public/demo/IronRootsServices/` |
 | La Enchiladita | `/demo/LaEnchiladita/` | `public/demo/LaEnchiladita/` |
 | Michoacana Premium | `/demo/MichoacanaPremium/` | `public/demo/MichoacanaPremium/` |
+| The 1908 Restaurant + Bar | `/demo/The1908RestaurantBar/` | `public/demo/The1908RestaurantBar/` |
+| The Blackdoor Steakhouse | `/demo/TheBlackdoorSteakhouse/` | `public/demo/TheBlackdoorSteakhouse/` |
 | Wave Finders Electronics | `/demo/WaveFindersElectronics/` | `public/demo/WaveFindersElectronics/` |
 
 Hub page: `/demo/` → `public/demo/index.html`
@@ -20,6 +22,8 @@ Live:
 - https://texasbullmarketing.com/demo/IronRootsServices/
 - https://texasbullmarketing.com/demo/LaEnchiladita/
 - https://texasbullmarketing.com/demo/MichoacanaPremium/
+- https://texasbullmarketing.com/demo/The1908RestaurantBar/
+- https://texasbullmarketing.com/demo/TheBlackdoorSteakhouse/
 - https://texasbullmarketing.com/demo/WaveFindersElectronics/
 - https://texasbullmarketing.com/demo/
 
