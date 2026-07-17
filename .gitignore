@@ -7,7 +7,11 @@ __v0_jsx-dev-runtime.ts
 .vercel/
 
 # Environment variables
+.env
 .env*.local
+
+# Local payment log (webhook writes here; use a real DB in production)
+/data/
 
 # Common ignores
 node_modules

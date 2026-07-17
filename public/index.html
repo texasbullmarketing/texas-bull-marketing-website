@@ -361,7 +361,11 @@
     <div class="reveal surface-panel mx-auto mt-12 max-w-3xl rounded-xl border p-8 text-center">
       <h3 class="font-display text-xl font-800">Need both? That’s our sweet spot.</h3>
       <p class="mt-2 text-sm leading-relaxed text-white/60">Most clients pair an optimized website with professional Google Business management. We’ll recommend the right starting point for your market — transparent pricing, no lock-in games.</p>
-      <button onclick="openModal('lead')" class="mt-6 rounded-full bg-bullred px-8 py-3 font-800 transition hover:bg-red-600">Talk With Our Team</button>
+      <div class="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
+        <button type="button" id="checkoutBtn" onclick="startCheckout()" class="rounded-full bg-bullred px-8 py-3 font-800 transition hover:bg-red-600 disabled:cursor-wait disabled:opacity-70">Pay securely</button>
+        <button onclick="openModal('lead')" class="rounded-full border border-[#3A4560] px-8 py-3 font-800 transition hover:border-bullred hover:bg-bullbg">Talk With Our Team</button>
+      </div>
+      <p id="checkoutError" class="mt-3 hidden text-sm text-red-300" role="alert"></p>
     </div>
 
     <!-- ROI Calculator -->
@@ -486,6 +490,30 @@
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
+
+  // ---------- Stripe hosted Checkout (one-time payment) ----------
+  async function startCheckout(){
+    const btn = document.getElementById('checkoutBtn');
+    const errEl = document.getElementById('checkoutError');
+    if (errEl) { errEl.classList.add('hidden'); errEl.textContent = ''; }
+    if (btn) { btn.disabled = true; btn.textContent = 'Redirecting to Stripe…'; }
+    try {
+      const res = await fetch('/api/create-checkout-session', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ quantity: 1 }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok || !data.url) {
+        throw new Error(data.error || 'Could not start checkout.');
+      }
+      window.location.href = data.url;
+    } catch (err) {
+      const message = err && err.message ? err.message : 'Checkout failed.';
+      if (errEl) { errEl.textContent = message; errEl.classList.remove('hidden'); }
+      if (btn) { btn.disabled = false; btn.textContent = 'Pay securely'; }
+    }
+  }
 
   // ---------- Calendly booking ----------
   const CALENDLY_URL = 'https://calendly.com/texasbullmarketing/call';

@@ -76,6 +76,14 @@ const nextConfig = {
           destination: '/index.html',
         },
         {
+          source: '/billing',
+          destination: '/billing.html',
+        },
+        {
+          source: '/billing/',
+          destination: '/billing.html',
+        },
+        {
           source: '/demo/',
           destination: '/demo/index.html',
         },
