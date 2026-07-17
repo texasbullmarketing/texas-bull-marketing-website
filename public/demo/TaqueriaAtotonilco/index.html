@@ -21,7 +21,7 @@
       <nav class="nav__links" id="navLinks">
         <a href="#about">About</a>
         <a href="#plates">Plates</a>
-        <a href="#menu">Favorites</a>
+        <button type="button" class="nav__menu-btn" data-open-menu>Menu</button>
         <a href="#visit">Visit</a>
       </nav>
       <a class="btn btn--primary btn--sm nav__cta" href="https://www.doordash.com/store/taqueria-atotonilco-744-w-kingsbury-st-seguin-33638881/" target="_blank" rel="noopener">Order on DoorDash</a>
@@ -44,7 +44,7 @@
         </p>
         <div class="hero__actions">
           <a class="btn btn--primary" href="https://www.doordash.com/store/taqueria-atotonilco-744-w-kingsbury-st-seguin-33638881/" target="_blank" rel="noopener">Order on DoorDash</a>
-          <a class="btn btn--ghost" href="#visit">Hours and location</a>
+          <button type="button" class="btn btn--ghost" data-open-menu>View menu</button>
         </div>
       </div>
       <div class="hero__meta">
@@ -101,53 +101,133 @@
       </div>
     </section>
 
-    <section class="menu" id="menu">
-      <div class="container">
-        <header class="sec sec--center">
-          <p class="eyebrow">What people order</p>
-          <h2>Favorites from<br /><em>regulars.</em></h2>
-          <p class="sec__lead">Highlights mentioned by guests and local listings. Ask in house for the full current menu and daily specials.</p>
-        </header>
-        <div class="menu__grid">
-          <article class="card">
-            <h3>Breakfast</h3>
-            <ul>
-              <li>Breakfast tacos</li>
-              <li>Weekend breakfast favorites</li>
-              <li>Eggs and Mexican classics</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3>Tacos and more</h3>
-            <ul>
-              <li>Street-style and dinner tacos</li>
-              <li>Al pastor and carne asada</li>
-              <li>Taquitos and flautas</li>
-              <li>Homemade tortillas</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3>Plates</h3>
-            <ul>
-              <li>Enchiladas</li>
-              <li>Carne guisada</li>
-              <li>Carne asada plate</li>
-              <li>Texas plate and specials</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3>Soups and extras</h3>
-            <ul>
-              <li>Menudo</li>
-              <li>Beef caldo</li>
-              <li>Chicken soup and tortilla soup</li>
-              <li>Chips, salsa, horchata</li>
-            </ul>
-          </article>
+    <section class="menu-teaser" id="menu">
+      <div class="container menu-teaser__box">
+        <div>
+          <p class="eyebrow">Full menu</p>
+          <h2>Combos, plates,<br /><em>tacos and more.</em></h2>
+          <p class="sec__lead">Open the menu overlay for prices and full descriptions - it only shows when you want it.</p>
+          <div class="menu-teaser__chips">
+            <span>Combos from $4.49</span>
+            <span>Breakfast plates</span>
+            <span>Enchilada plates</span>
+            <span>Lunch tacos</span>
+            <span>Menudo</span>
+          </div>
+          <div class="visit__actions">
+            <button type="button" class="btn btn--primary" data-open-menu>Open full menu</button>
+            <a class="btn btn--ghost" href="https://www.doordash.com/store/taqueria-atotonilco-744-w-kingsbury-st-seguin-33638881/" target="_blank" rel="noopener">Order on DoorDash</a>
+          </div>
         </div>
-        <p class="menu__note">Menu items and specials change - confirm prices and availability when you visit.</p>
       </div>
     </section>
+
+    <!-- MENU OVERLAY -->
+    <div class="menu-modal" id="menuModal" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="menuModalTitle">
+      <div class="menu-modal__backdrop" data-close-menu></div>
+      <div class="menu-modal__panel" role="document">
+        <header class="menu-modal__head">
+          <div>
+            <p class="eyebrow">Taqueria Atotonilco</p>
+            <h2 id="menuModalTitle">Menu</h2>
+            <p class="menu-modal__blurb">Practical prices - tap a section. Subject to change.</p>
+          </div>
+          <button type="button" class="menu-modal__close" data-close-menu aria-label="Close menu"><span></span><span></span></button>
+        </header>
+
+        <div class="menu-modal__tabs" role="tablist" aria-label="Menu sections">
+          <button type="button" class="menu-modal__tab is-active" data-menu="combos" role="tab" aria-selected="true">Combos</button>
+          <button type="button" class="menu-modal__tab" data-menu="breakfast" role="tab" aria-selected="false">Breakfast</button>
+          <button type="button" class="menu-modal__tab" data-menu="plates" role="tab" aria-selected="false">Plates</button>
+          <button type="button" class="menu-modal__tab" data-menu="tacos" role="tab" aria-selected="false">Tacos</button>
+          <button type="button" class="menu-modal__tab" data-menu="more" role="tab" aria-selected="false">More</button>
+        </div>
+
+        <div class="menu-modal__body">
+          <!-- COMBOS -->
+          <div class="menu-panel is-active" data-menu-panel="combos" role="tabpanel">
+            <h3 class="menu-cat">Combo Meals</h3>
+            <article class="mi"><div class="mi__row"><h4>Combo Enchilada</h4><span>$9.99</span></div><p>Two enchiladas with rice, beans and a drink.</p></article>
+            <article class="mi"><div class="mi__row"><h4>Combo Quesadilla</h4><span>$9.99</span></div><p>One asada quesadilla with rice, beans, salad and a drink.</p></article>
+            <article class="mi"><div class="mi__row"><h4>Combo Breakfast Taco</h4><span>$4.49</span></div><p>One taco on a flour tortilla with a drink.</p></article>
+          </div>
+
+          <!-- BREAKFAST -->
+          <div class="menu-panel" data-menu-panel="breakfast" role="tabpanel" hidden>
+            <h3 class="menu-cat">Breakfast Tacos</h3>
+            <article class="mi"><div class="mi__row"><h4>Bacon &amp; Egg</h4><span>$2.99</span></div><p>Bacon pieces mixed with egg.</p></article>
+
+            <h3 class="menu-cat">Breakfast Plates</h3>
+            <article class="mi"><div class="mi__row"><h4>Huevos Rancheros</h4><span>$7.99</span></div><p>2 eggs, beans, potatoes and ranchero sauce.</p></article>
+            <article class="mi"><div class="mi__row"><h4>Migas Plate</h4><span>$8.25</span></div><p>Onion, tomatoes, serrano pepper, diced corn tortilla chips and egg, with beans and potatoes.</p></article>
+            <article class="mi"><div class="mi__row"><h4>Pork Chop &amp; Eggs</h4><span>$10.25</span></div><p>2 eggs, beans, potatoes and ranchero sauce.</p></article>
+            <article class="mi"><div class="mi__row"><h4>Breakfast Bowl</h4><span>$9.10</span></div><p>Potatoes, bell peppers, onions, tomatoes cooked with bacon and sausage, topped with 2 eggs and cheese.</p></article>
+          </div>
+
+          <!-- PLATES -->
+          <div class="menu-panel" data-menu-panel="plates" role="tabpanel" hidden>
+            <h3 class="menu-cat">Enchilada Plates</h3>
+            <article class="mi"><div class="mi__row"><h4>#4 Mexican Plate</h4><span>$11.57</span></div><p>2 cheese enchiladas, 1 beef fajita taco on corn tortilla, rice and beans.</p></article>
+            <article class="mi"><div class="mi__row"><h4>#10 Enchilada Plate</h4><span>$10.80</span></div><p>3 cheese enchiladas, rice and beans.</p></article>
+            <article class="mi"><div class="mi__row"><h4>#11 Texas Plate</h4><span>$11.99</span></div><p>2 cheese enchiladas, carne guisada, guacamole, rice and beans.</p></article>
+
+            <h3 class="menu-cat">Lunch Plates</h3>
+            <article class="mi"><div class="mi__row"><h4>#2 Pork in Sauce</h4><span>$10.99</span></div><p>Pork with spicy red sauce, rice and beans.</p></article>
+            <article class="mi"><div class="mi__row"><h4>#9 Pastor Plate</h4><span>$10.99</span></div><p>With pico de gallo, guacamole, charro beans and tortillas.</p></article>
+            <article class="mi"><div class="mi__row"><h4>#18 Quesadilla Plate</h4><span>$11.99</span></div><p>2 beef fajita quesadillas on flour tortillas, rice, beans and salad.</p></article>
+            <article class="mi"><div class="mi__row"><h4>#45 Mini Tacos</h4><span>$11.59</span></div><p>5 mini tacos (beef fajita, pastor or barbacoa) on corn tortilla with grilled onion, cilantro and charro beans.</p></article>
+          </div>
+
+          <!-- TACOS -->
+          <div class="menu-panel" data-menu-panel="tacos" role="tabpanel" hidden>
+            <h3 class="menu-cat">Lunch Tacos</h3>
+            <article class="mi"><div class="mi__row"><h4>Carne Asada / Beef Fajitas</h4><span>$4.99</span></div><p>With lettuce and tomatoes.</p></article>
+            <article class="mi"><div class="mi__row"><h4>Barbacoa / Beef Cheek</h4><span>$4.45</span></div><p>With onion and cilantro.</p></article>
+            <article class="mi"><div class="mi__row"><h4>Pastor / Marinated Pork</h4><span>$4.45</span></div><p>Marinated pork cooked with onions.</p></article>
+            <article class="mi"><div class="mi__row"><h4>Pork in Hot Sauce</h4><span>$4.45</span></div><p>Pork in hot sauce (spicy).</p></article>
+            <article class="mi"><div class="mi__row"><h4>Chicken Fajita</h4><span>$4.45</span></div><p>Cooked with bell pepper and onions.</p></article>
+            <article class="mi"><div class="mi__row"><h4>Picadillo / Ground Beef</h4><span>$4.35</span></div><p>With cheese, lettuce and tomato.</p></article>
+            <article class="mi"><div class="mi__row"><h4>Quesadilla</h4><span>$4.15</span></div><p>Flour tortilla with beef fajita or chicken fajita.</p></article>
+
+            <h3 class="menu-cat">Crispy Tacos</h3>
+            <article class="mi"><div class="mi__row"><h4>Order of Crispy Tacos (3)</h4><span>$7.99</span></div><p>Ground beef, lettuce, tomatoes and cheese.</p></article>
+          </div>
+
+          <!-- MORE -->
+          <div class="menu-panel" data-menu-panel="more" role="tabpanel" hidden>
+            <h3 class="menu-cat">Appetizers</h3>
+            <article class="mi"><div class="mi__row"><h4>Chile con Queso and Chips</h4><span>$6.60</span></div><p>Cheese dip and corn tortilla chips.</p></article>
+            <article class="mi"><div class="mi__row"><h4>Super Nachos</h4><span>$14.99</span></div><p>Asada, chicken or ground beef with lettuce, tomato, guacamole, sour cream and pickled jalapenos.</p></article>
+            <article class="mi"><div class="mi__row"><h4>Chips and Salsa</h4><span>$2.75</span></div><p>Salsa and corn tortilla chips.</p></article>
+
+            <h3 class="menu-cat">Sides</h3>
+            <article class="mi"><div class="mi__row"><h4>Flour Tortillas (2)</h4><span>$0.80</span></div><p>Homemade.</p></article>
+            <article class="mi"><div class="mi__row"><h4>Corn Tortillas (2)</h4><span>$0.80</span></div><p>Homemade.</p></article>
+            <article class="mi"><div class="mi__row"><h4>Refried Beans (8 oz)</h4><span>$2.55</span></div></article>
+            <article class="mi"><div class="mi__row"><h4>Charro Beans (8 oz)</h4><span>$2.55</span></div><p>Homemade, spicy.</p></article>
+            <article class="mi"><div class="mi__row"><h4>Mexican Rice (8 oz)</h4><span>$2.55</span></div></article>
+            <article class="mi"><div class="mi__row"><h4>Salsa Roja (8 oz)</h4><span>$2.75</span></div><p>Homemade, spicy.</p></article>
+            <article class="mi"><div class="mi__row"><h4>Salsa Verde (8 oz)</h4><span>$2.75</span></div><p>Homemade, spicy.</p></article>
+
+            <h3 class="menu-cat">Burgers</h3>
+            <article class="mi"><div class="mi__row"><h4>Hamburger</h4><span>$8.15</span></div><p>Lettuce, tomato, pickles and french fries.</p></article>
+            <article class="mi"><div class="mi__row"><h4>Mexican Burger</h4><span>$11.45</span></div><p>Bacon, ham, avocado, french fries, lettuce, tomatoes and pickles.</p></article>
+
+            <h3 class="menu-cat">Soups</h3>
+            <article class="mi"><div class="mi__row"><h4>Menudo (16 oz)</h4><span>$9.99</span></div><p>Family recipe. Served with onion, cilantro, lime and handmade tortillas.</p></article>
+
+            <h3 class="menu-cat">Drinks</h3>
+            <article class="mi"><div class="mi__row"><h4>Mexican Soda</h4><span>$3.25</span></div><p>Glass bottle Coca-Cola.</p></article>
+            <article class="mi"><div class="mi__row"><h4>Aguas Frescas</h4><span>$3.78</span></div><p>Fresh homemade.</p></article>
+          </div>
+        </div>
+
+        <footer class="menu-modal__foot">
+          <p>Prices subject to change. Order delivery or pickup on DoorDash.</p>
+          <a class="btn btn--primary btn--sm" href="https://www.doordash.com/store/taqueria-atotonilco-744-w-kingsbury-st-seguin-33638881/" target="_blank" rel="noopener">Order on DoorDash</a>
+        </footer>
+      </div>
+    </div>
 
     <section class="reviews" id="reviews">
       <div class="container">
