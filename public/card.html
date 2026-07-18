@@ -22,23 +22,21 @@
       font-family: "Space Grotesk", system-ui, sans-serif;
     }
 
-    /* V2 · Neon Charge — single card, #1a2233 field */
+    /* V2 · Neon Charge (approved) — TEXAS BULL on top, MARKETING under */
     .card {
-      width: min(100%, 36rem);
+      width: min(100%, 38rem);
       aspect-ratio: 3.5 / 2;
-      max-height: min(90vh, 22rem);
       display: grid;
       grid-template-columns: 40% 60%;
       grid-template-rows: 1fr auto;
       background:
         radial-gradient(circle at 86% 16%, rgba(200, 16, 46, 0.36), transparent 42%),
-        radial-gradient(circle at 10% 90%, rgba(30, 58, 122, 0.45), transparent 48%),
+        radial-gradient(circle at 10% 90%, rgba(30, 58, 122, 0.48), transparent 48%),
         #1a2233;
-      color: #fff;
-      border-radius: 0.55rem;
+      border-radius: 0.6rem;
       box-shadow:
         0 0 0 1px rgba(255, 255, 255, 0.06),
-        0 24px 60px rgba(0, 0, 0, 0.45);
+        0 24px 60px rgba(0, 0, 0, 0.5);
       overflow: hidden;
     }
 
@@ -48,12 +46,12 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 8% 4% 6% 8%;
+      padding: 9% 3% 6% 8%;
       min-height: 0;
     }
     .logo-panel img {
-      width: 78%;
-      max-width: 11rem;
+      width: 82%;
+      max-width: 12rem;
       height: auto;
       max-height: 100%;
       object-fit: contain;
@@ -67,27 +65,32 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 8% 9% 4% 4%;
+      padding: 8% 8% 3% 3%;
       min-height: 0;
     }
 
-    .name-box { margin: 0 0 0.85rem; line-height: 1.02; }
+    /* TEXAS BULL (top) · MARKETING (under) */
+    .name-box {
+      margin: 0 0 1.1rem;
+      line-height: 1.05;
+    }
     .line1 {
       font-family: Syne, system-ui, sans-serif;
       font-weight: 800;
-      font-size: clamp(1.35rem, 5.2vw, 2.05rem);
+      font-size: clamp(1.55rem, 5.8vw, 2.35rem);
       letter-spacing: -0.03em;
+      color: #fff;
     }
     .line1 .bull {
       color: #ff2d4a;
-      text-shadow: 0 0 1.1rem rgba(200, 16, 46, 0.55);
+      text-shadow: 0 0 1.25rem rgba(200, 16, 46, 0.55);
     }
     .line2 {
       display: block;
-      margin-top: 0.35rem;
+      margin-top: 0.4rem;
       font-family: Syne, system-ui, sans-serif;
       font-weight: 700;
-      font-size: clamp(0.55rem, 1.9vw, 0.78rem);
+      font-size: clamp(0.62rem, 2.1vw, 0.88rem);
       letter-spacing: 0.34em;
       text-transform: uppercase;
       color: rgba(255, 255, 255, 0.5);
@@ -97,24 +100,24 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 0.55rem;
+      gap: 0.65rem;
       width: 100%;
     }
     .field {
       font-weight: 600;
-      font-size: clamp(0.65rem, 2.2vw, 0.92rem);
+      font-size: clamp(0.72rem, 2.35vw, 1rem);
       line-height: 1.25;
       color: rgba(255, 255, 255, 0.92);
       width: 100%;
     }
     .field span {
       display: block;
-      font-size: clamp(0.45rem, 1.4vw, 0.58rem);
+      font-size: clamp(0.48rem, 1.45vw, 0.62rem);
       font-weight: 700;
       letter-spacing: 0.16em;
       text-transform: uppercase;
       color: #ff6b82;
-      margin-bottom: 0.12rem;
+      margin-bottom: 0.15rem;
     }
 
     .memo {
@@ -123,21 +126,21 @@
       text-align: center;
       font-style: italic;
       font-weight: 500;
-      font-size: clamp(0.55rem, 1.85vw, 0.78rem);
+      font-size: clamp(0.58rem, 1.9vw, 0.82rem);
       color: rgba(255, 255, 255, 0.7);
-      padding: 0 1rem 0.85rem;
+      padding: 0.15rem 1rem 0.95rem;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
     }
 
     @media (max-width: 420px) {
-      .memo { white-space: normal; }
+      .memo { white-space: normal; line-height: 1.3; }
     }
   </style>
 </head>
 <body>
-  <article class="card" aria-label="Texas Bull Marketing business card">
+  <article class="card" aria-label="Texas Bull Marketing business card — V2 Neon Charge">
     <div class="logo-panel">
       <img
         src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-1-9pRF4CyBiygUYC6Rty3wOLirZ8AxIw.png"
@@ -148,6 +151,7 @@
     </div>
     <div class="info-panel">
       <div class="name-box">
+        <!-- V2 Neon: brand on top, Marketing under -->
         <div class="line1">TEXAS <span class="bull">BULL</span></div>
         <span class="line2">Marketing</span>
       </div>
