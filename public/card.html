@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Business Card — Texas Bull Marketing</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="googlebot" content="noindex, nofollow" />
+  <link rel="canonical" href="https://texasbullmarketing.com/card" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 1.5rem;
+      background: #0f131c;
+      color: #fff;
+      font-family: "Space Grotesk", system-ui, sans-serif;
+    }
+
+    /* V2 · Neon Charge — single card, #1a2233 field */
+    .card {
+      width: min(100%, 36rem);
+      aspect-ratio: 3.5 / 2;
+      max-height: min(90vh, 22rem);
+      display: grid;
+      grid-template-columns: 40% 60%;
+      grid-template-rows: 1fr auto;
+      background:
+        radial-gradient(circle at 86% 16%, rgba(200, 16, 46, 0.36), transparent 42%),
+        radial-gradient(circle at 10% 90%, rgba(30, 58, 122, 0.45), transparent 48%),
+        #1a2233;
+      color: #fff;
+      border-radius: 0.55rem;
+      box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.06),
+        0 24px 60px rgba(0, 0, 0, 0.45);
+      overflow: hidden;
+    }
+
+    .logo-panel {
+      grid-column: 1;
+      grid-row: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8% 4% 6% 8%;
+      min-height: 0;
+    }
+    .logo-panel img {
+      width: 78%;
+      max-width: 11rem;
+      height: auto;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
+    .info-panel {
+      grid-column: 2;
+      grid-row: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 8% 9% 4% 4%;
+      min-height: 0;
+    }
+
+    .name-box { margin: 0 0 0.85rem; line-height: 1.02; }
+    .line1 {
+      font-family: Syne, system-ui, sans-serif;
+      font-weight: 800;
+      font-size: clamp(1.35rem, 5.2vw, 2.05rem);
+      letter-spacing: -0.03em;
+    }
+    .line1 .bull {
+      color: #ff2d4a;
+      text-shadow: 0 0 1.1rem rgba(200, 16, 46, 0.55);
+    }
+    .line2 {
+      display: block;
+      margin-top: 0.35rem;
+      font-family: Syne, system-ui, sans-serif;
+      font-weight: 700;
+      font-size: clamp(0.55rem, 1.9vw, 0.78rem);
+      letter-spacing: 0.34em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .fields {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.55rem;
+      width: 100%;
+    }
+    .field {
+      font-weight: 600;
+      font-size: clamp(0.65rem, 2.2vw, 0.92rem);
+      line-height: 1.25;
+      color: rgba(255, 255, 255, 0.92);
+      width: 100%;
+    }
+    .field span {
+      display: block;
+      font-size: clamp(0.45rem, 1.4vw, 0.58rem);
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #ff6b82;
+      margin-bottom: 0.12rem;
+    }
+
+    .memo {
+      grid-column: 1 / -1;
+      grid-row: 2;
+      text-align: center;
+      font-style: italic;
+      font-weight: 500;
+      font-size: clamp(0.55rem, 1.85vw, 0.78rem);
+      color: rgba(255, 255, 255, 0.7);
+      padding: 0 1rem 0.85rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    @media (max-width: 420px) {
+      .memo { white-space: normal; }
+    }
+  </style>
+</head>
+<body>
+  <article class="card" aria-label="Texas Bull Marketing business card">
+    <div class="logo-panel">
+      <img
+        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-1-9pRF4CyBiygUYC6Rty3wOLirZ8AxIw.png"
+        alt="Texas Bull Marketing logo"
+        width="320"
+        height="320"
+      />
+    </div>
+    <div class="info-panel">
+      <div class="name-box">
+        <div class="line1">TEXAS <span class="bull">BULL</span></div>
+        <span class="line2">Marketing</span>
+      </div>
+      <div class="fields">
+        <div class="field"><span>Website</span>TexasBullMarketing.com</div>
+        <div class="field"><span>Email</span>TexasBullMarketing@gmail.com</div>
+        <div class="field"><span>Telephone</span>512-300-0000</div>
+      </div>
+    </div>
+    <p class="memo">Honest websites. Optimized Google Profiles. No fluff.</p>
+  </article>
+</body>
+</html>

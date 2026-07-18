@@ -21,6 +21,18 @@ const nextConfig = {
         source: '/demo/:path*',
         headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }],
       },
+      {
+        source: '/card',
+        headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }],
+      },
+      {
+        source: '/card/',
+        headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }],
+      },
+      {
+        source: '/card.html',
+        headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }],
+      },
     ]
   },
   // Old short slugs → full company-name URLs (shared links still work).
@@ -82,6 +94,14 @@ const nextConfig = {
         {
           source: '/billing/',
           destination: '/billing.html',
+        },
+        {
+          source: '/card',
+          destination: '/card.html',
+        },
+        {
+          source: '/card/',
+          destination: '/card.html',
         },
         {
           source: '/demo/',
