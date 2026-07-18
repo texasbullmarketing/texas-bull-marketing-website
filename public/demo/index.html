@@ -49,15 +49,46 @@
           type="search"
           autocomplete="off"
           spellcheck="false"
-          placeholder="Search demos…"
+          placeholder="Search demosâ€¦"
           class="w-full rounded-xl border border-[#3A4560] bg-bullcard py-3.5 pl-12 pr-4 text-sm text-white placeholder:text-white/35 outline-none transition focus:border-bullred focus:ring-1 focus:ring-bullred"
         />
       </div>
-      <p id="demo-search-hint" class="mt-2 text-xs text-white/40">Type to filter — all demos show until you search.</p>
+      <p id="demo-search-hint" class="mt-2 text-xs text-white/40">Type to filter â€” all demos show until you search.</p>
     </div>
 
     <div id="demo-grid" class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-      <!-- Cards sorted A–Z by data-sort on load; search uses data-search (starts-with) -->
+      <a
+        href="/demo/HVACProsHeatingAC/"
+        class="demo-card group rounded-xl border border-[#3A4560] bg-bullcard p-5 transition hover:border-bullred"
+        data-sort="hvac pros heating ac"
+        data-search="hvac pros heating ac air conditioning seguin juan"
+      >
+        <p class="text-xs font-700 uppercase tracking-widest text-bullred">HVAC</p>
+        <h2 class="mt-2 font-display text-xl font-800">HVAC Pros Heating &amp; A/C</h2>
+        <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
+      </a>
+      <a
+        href="/demo/PapeHVAC/"
+        class="demo-card group rounded-xl border border-[#3A4560] bg-bullcard p-5 transition hover:border-bullred"
+        data-sort="pape hvac"
+        data-search="pape hvac donald new braunfels heating air"
+      >
+        <p class="text-xs font-700 uppercase tracking-widest text-bullred">HVAC</p>
+        <h2 class="mt-2 font-display text-xl font-800">Pape HVAC</h2>
+        <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
+      </a>
+      <a
+        href="/demo/TwoRiversHeatingAC/"
+        class="demo-card group rounded-xl border border-[#3A4560] bg-bullcard p-5 transition hover:border-bullred"
+        data-sort="2 rivers heating air conditioning"
+        data-search="2 rivers heating air conditioning two rivers hvac new braunfels eddie sales service installation"
+      >
+        <p class="text-xs font-700 uppercase tracking-widest text-bullred">HVAC</p>
+        <h2 class="mt-2 font-display text-xl font-800">2 Rivers Heating &amp; Air Conditioning</h2>
+        <p class="mt-4 text-sm font-700 text-bullred">Open demo →</p>
+      </a>
+
+      <!-- Cards sorted Aâ€“Z by data-sort on load; search uses data-search (starts-with) -->
       <a
         href="/demo/EnterpriseFlooringSolutions/"
         class="demo-card group rounded-xl border border-[#3A4560] bg-bullcard p-5 transition hover:border-bullred"
@@ -66,7 +97,7 @@
       >
         <p class="text-xs font-700 uppercase tracking-widest text-bullred">Flooring</p>
         <h2 class="mt-2 font-display text-xl font-800 group-hover:text-white">Enterprise Flooring Solutions</h2>
-        <p class="mt-4 text-sm font-700 text-bullred">Open demo →</p>
+        <p class="mt-4 text-sm font-700 text-bullred">Open demo â†’</p>
       </a>
       <a
         href="/demo/IronRootsServices/"
@@ -76,7 +107,7 @@
       >
         <p class="text-xs font-700 uppercase tracking-widest text-bullred">Home services</p>
         <h2 class="mt-2 font-display text-xl font-800">Iron Roots Services</h2>
-        <p class="mt-4 text-sm font-700 text-bullred">Open demo →</p>
+        <p class="mt-4 text-sm font-700 text-bullred">Open demo â†’</p>
       </a>
       <a
         href="/demo/LaEnchiladita/"
@@ -86,7 +117,7 @@
       >
         <p class="text-xs font-700 uppercase tracking-widest text-bullred">Restaurant</p>
         <h2 class="mt-2 font-display text-xl font-800">La Enchiladita</h2>
-        <p class="mt-4 text-sm font-700 text-bullred">Open demo →</p>
+        <p class="mt-4 text-sm font-700 text-bullred">Open demo â†’</p>
       </a>
       <a
         href="/demo/MichoacanaPremium/"
@@ -96,7 +127,7 @@
       >
         <p class="text-xs font-700 uppercase tracking-widest text-bullred">Ice cream</p>
         <h2 class="mt-2 font-display text-xl font-800">Michoacana Premium</h2>
-        <p class="mt-4 text-sm font-700 text-bullred">Open demo →</p>
+        <p class="mt-4 text-sm font-700 text-bullred">Open demo â†’</p>
       </a>
       <a
         href="/demo/TaqueriaAtotonilco/"
@@ -106,7 +137,7 @@
       >
         <p class="text-xs font-700 uppercase tracking-widest text-bullred">Mexican</p>
         <h2 class="mt-2 font-display text-xl font-800">Taqueria Atotonilco</h2>
-        <p class="mt-4 text-sm font-700 text-bullred">Open demo →</p>
+        <p class="mt-4 text-sm font-700 text-bullred">Open demo â†’</p>
       </a>
       <a
         href="/demo/The1908RestaurantBar/"
@@ -116,7 +147,7 @@
       >
         <p class="text-xs font-700 uppercase tracking-widest text-bullred">Restaurant + Bar</p>
         <h2 class="mt-2 font-display text-xl font-800">The 1908 Restaurant + Bar</h2>
-        <p class="mt-4 text-sm font-700 text-bullred">Open demo →</p>
+        <p class="mt-4 text-sm font-700 text-bullred">Open demo â†’</p>
       </a>
       <a
         href="/demo/TheBlackdoorSteakhouse/"
@@ -126,7 +157,7 @@
       >
         <p class="text-xs font-700 uppercase tracking-widest text-bullred">Steakhouse</p>
         <h2 class="mt-2 font-display text-xl font-800">The Blackdoor Steakhouse</h2>
-        <p class="mt-4 text-sm font-700 text-bullred">Open demo →</p>
+        <p class="mt-4 text-sm font-700 text-bullred">Open demo â†’</p>
       </a>
       <a
         href="/demo/WaveFindersElectronics/"
@@ -136,14 +167,14 @@
       >
         <p class="text-xs font-700 uppercase tracking-widest text-bullred">Electronics</p>
         <h2 class="mt-2 font-display text-xl font-800">Wave Finders Electronics</h2>
-        <p class="mt-4 text-sm font-700 text-bullred">Open demo →</p>
+        <p class="mt-4 text-sm font-700 text-bullred">Open demo â†’</p>
       </a>
     </div>
 
     <p id="demo-empty" class="mt-8 hidden text-center text-sm text-white/50">No demos match that search.</p>
 
     <p class="mt-10 text-sm text-white/40">
-      <a href="/" class="text-white/70 underline-offset-2 hover:text-white hover:underline">← Back to Texas Bull Marketing</a>
+      <a href="/" class="text-white/70 underline-offset-2 hover:text-white hover:underline">â† Back to Texas Bull Marketing</a>
     </p>
   </div>
 
@@ -154,7 +185,7 @@
       const empty = document.getElementById('demo-empty')
       if (!grid || !input) return
 
-      // Alphabetize by data-sort (A–Z)
+      // Alphabetize by data-sort (Aâ€“Z)
       function sortCards() {
         const cards = Array.from(grid.querySelectorAll('.demo-card'))
         cards.sort((a, b) => {
@@ -165,7 +196,7 @@
         cards.forEach((card) => grid.appendChild(card))
       }
 
-      // Empty query → show all. Non-empty → progressive starts-with on name tokens.
+      // Empty query â†’ show all. Non-empty â†’ progressive starts-with on name tokens.
       // "t" matches any word starting with t; "ti" matches words starting with ti.
       function matches(card, query) {
         if (!query) return true
