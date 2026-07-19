@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Texas Bull Marketing V2 (Demo) | Custom Optimized Websites</title>
+  <meta name="description" content="Demo V2 landing page for Texas Bull Marketing. Sandbox only - main site unchanged." />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#161C2A" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/icon-light-32x32.png" />
+  <link rel="apple-touch-icon" href="/apple-icon.png" />
+
+  <!-- Calendly (same as live TBM) -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bullred: '#C8102E',
+            bullnavy: '#1E3A7A',
+            bullink: '#151C2C',
+            bullbg: '#161C2A',
+            bullsurface: '#1F2738',
+            bullcard: '#242D40',
+          },
+          fontFamily: {
+            display: ['Archivo', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    html, body { background:#161C2A; }
+    ::selection { background:#C8102E; color:#fff; }
+    .reveal { opacity:0; transform:translateY(16px); transition:opacity .4s ease, transform .4s ease; }
+    .reveal.in { opacity:1; transform:none; }
+    .text-stroke { -webkit-text-stroke:1px rgba(255,255,255,.12); }
+    #bullCanvas { position:fixed; inset:0; z-index:0; pointer-events:none; }
+    .nav-link.active { color:#fff; }
+    .nav-link.active::after { width:100%; }
+    .nav-link::after { content:''; display:block; height:2px; width:0; background:#C8102E; transition:width .2s ease; }
+    .htmx-request .btn-label { opacity:0; }
+    .htmx-request .btn-spinner { display:inline-block; }
+    .btn-spinner { display:none; }
+    /* Crisp solid surfaces - no frosted/glass haze */
+    .surface-card { background:#242D40; border-color:#3A4560; }
+    .surface-panel { background:#1F2738; border-color:#3A4560; }
+    .surface-input { background:#161C2A; border-color:#3A4560; color:#fff; }
+    .surface-input:focus { border-color:#C8102E; outline:none; }
+    @media (prefers-reduced-motion: reduce){ .reveal{opacity:1;transform:none;} #bullCanvas{display:none;} html{scroll-behavior:auto;} }
+  </style>
+</head>
+<body class="font-sans bg-bullbg text-white antialiased selection:bg-bullred">
+
+<canvas id="bullCanvas" aria-hidden="true"></canvas>
+
+<!-- ============ NAV (exact live TBM header / border) ============ -->
+<header class="fixed top-0 inset-x-0 z-50 border-b border-[#3A4560] bg-bullbg">
+  <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6" aria-label="Primary">
+    <a href="#home" class="flex items-center gap-3 group">
+      <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-1-9pRF4CyBiygUYC6Rty3wOLirZ8AxIw.png" alt="Texas Bull Marketing logo" width="48" height="48" class="h-11 w-11 object-contain transition-transform group-hover:scale-105" />
+      <span class="font-display text-lg font-900 leading-none tracking-tight">
+        TEXAS <span class="text-bullred">BULL</span><br class="hidden sm:block" />
+        <span class="text-xs font-700 tracking-[0.28em] text-white/60">MARKETING</span>
+      </span>
+    </a>
+
+    <div class="hidden items-center gap-7 lg:flex">
+      <a href="#process" class="nav-link text-sm font-600 text-white/70 transition hover:text-white" data-nav>Process</a>
+      <a href="#pricing" class="nav-link text-sm font-600 text-white/70 transition hover:text-white" data-nav>Services &amp; Pricing</a>
+      <a href="#roi" class="nav-link text-sm font-600 text-white/70 transition hover:text-white" data-nav>ROI</a>
+    </div>
+
+    <div class="flex items-center gap-3">
+      <button type="button" onclick="bookCall()" class="hidden rounded-full bg-bullred px-5 py-2.5 text-sm font-700 transition hover:bg-red-600 sm:block">
+        Claim Free Demo
+      </button>
+      <button type="button" onclick="toggleMobile()" aria-label="Open menu" class="rounded-lg border border-[#3A4560] p-2 lg:hidden">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile slide menu -->
+  <div id="mobileMenu" class="fixed inset-x-0 top-[64px] z-40 origin-top -translate-y-4 scale-y-0 border-b border-[#3A4560] bg-bullbg px-6 py-6 opacity-0 transition-all duration-200 lg:hidden">
+    <div class="flex flex-col gap-4 text-lg font-700">
+      <a href="#process" onclick="toggleMobile()" class="text-white/80 hover:text-bullred">Process</a>
+      <a href="#pricing" onclick="toggleMobile()" class="text-white/80 hover:text-bullred">Services &amp; Pricing</a>
+      <a href="#roi" onclick="toggleMobile()" class="text-white/80 hover:text-bullred">ROI</a>
+      <button type="button" onclick="toggleMobile();bookCall()" class="mt-2 rounded-full bg-bullred px-5 py-3 font-700">Claim Free Demo</button>
+    </div>
+  </div>
+</header>
+
+<main id="home" class="relative z-10">
+
+<!-- ============ HERO (exact live top page + big bull) ============ -->
+<section class="relative overflow-hidden px-4 pb-20 pt-24 sm:px-6 sm:pt-16">
+  <div class="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-2">
+    <div class="reveal">
+      <span class="inline-flex items-center gap-2 rounded-full border border-bullred/40 bg-bullred/10 px-4 py-1.5 text-xs font-700 uppercase tracking-widest text-red-300">
+        <span class="h-2 w-2 animate-pulse rounded-full bg-bullred"></span> Texas-Built &bull; Serving Local Owners Everywhere
+      </span>
+      <h1 class="mt-6 font-display text-4xl font-900 leading-[1.02] tracking-tight sm:text-6xl lg:text-7xl text-balance">
+        Make Your Business <span class="text-bullred">The One Locals Call.</span>
+      </h1>
+      <p class="mt-6 max-w-xl text-lg leading-relaxed text-white/70">
+        We build <span class="font-700 text-white">optimized websites</span> and handle <span class="font-700 text-white">Google Business Profile setup, optimization, and ongoing management</span> - so local customers find you first and choose you with confidence.
+      </p>
+      <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+        <button type="button" onclick="bookCall()" class="group rounded-full bg-bullred px-8 py-4 text-base font-800 transition hover:bg-red-600">
+          Get Started
+          <span class="ml-1 inline-block transition group-hover:translate-x-1">-&gt;</span>
+        </button>
+        <a href="#pricing" class="rounded-full border border-[#3A4560] px-8 py-4 text-center text-base font-700 text-white transition hover:border-bullred hover:bg-bullcard">
+          Explore Our Services
+        </a>
+      </div>
+      <div class="mt-8 flex items-center gap-4 text-sm text-white/50">
+        <div class="flex -space-x-2">
+          <span class="h-8 w-8 rounded-full border-2 border-black bg-bullred"></span>
+          <span class="h-8 w-8 rounded-full border-2 border-black bg-bullnavy"></span>
+          <span class="h-8 w-8 rounded-full border-2 border-black bg-white"></span>
+        </div>
+        <p><span class="font-700 text-white">137+ owners</span> already dominating their local market.</p>
+      </div>
+    </div>
+
+    <div class="reveal flex justify-center lg:justify-end">
+      <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-1-9pRF4CyBiygUYC6Rty3wOLirZ8AxIw.png" alt="Texas Bull Marketing red and blue bull mascot" width="520" height="640" class="w-[300px] sm:w-[420px] lg:w-[480px]" />
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS - 5 STEPS (exact live format) ============ -->
+<section id="process" class="scroll-mt-24 px-4 py-24 sm:px-6">
+  <div class="mx-auto max-w-6xl">
+    <div class="reveal mx-auto max-w-2xl text-center">
+      <p class="text-sm font-800 uppercase tracking-[0.28em] text-bullred">The Playbook</p>
+      <h2 class="mt-3 font-display text-4xl font-900 tracking-tight sm:text-5xl text-balance">Our 5-Step Growth System</h2>
+      <p class="mt-4 text-white/60">Tap any step to see what happens behind the scenes.</p>
+    </div>
+
+    <div id="stepGrid" class="mt-14 grid gap-4 md:grid-cols-5">
+      <button type="button" data-step="1" onclick="showStep(1,this)" class="step-btn reveal rounded-xl border-2 border-bullred bg-bullcard p-5 text-left transition">
+        <span class="font-display text-3xl font-900 text-bullred">01</span>
+        <h3 class="mt-2 font-700">Discover</h3>
+      </button>
+      <button type="button" data-step="2" onclick="showStep(2,this)" class="step-btn reveal rounded-xl border border-[#3A4560] bg-bullcard p-5 text-left transition hover:border-bullred">
+        <span class="font-display text-3xl font-900 text-white/40">02</span>
+        <h3 class="mt-2 font-700">Build</h3>
+      </button>
+      <button type="button" data-step="3" onclick="showStep(3,this)" class="step-btn reveal rounded-xl border border-[#3A4560] bg-bullcard p-5 text-left transition hover:border-bullred">
+        <span class="font-display text-3xl font-900 text-white/40">03</span>
+        <h3 class="mt-2 font-700">Rank</h3>
+      </button>
+      <button type="button" data-step="4" onclick="showStep(4,this)" class="step-btn reveal rounded-xl border border-[#3A4560] bg-bullcard p-5 text-left transition hover:border-bullred">
+        <span class="font-display text-3xl font-900 text-white/40">04</span>
+        <h3 class="mt-2 font-700">Convert</h3>
+      </button>
+      <button type="button" data-step="5" onclick="showStep(5,this)" class="step-btn reveal rounded-xl border border-[#3A4560] bg-bullcard p-5 text-left transition hover:border-bullred">
+        <span class="font-display text-3xl font-900 text-white/40">05</span>
+        <h3 class="mt-2 font-700">Scale</h3>
+      </button>
+    </div>
+
+    <div id="stepDetail" class="reveal surface-card mt-3 rounded-xl border p-5 text-white/80 md:mt-6 md:p-7">
+      <h4 class="font-display text-xl font-800 text-white">Discover - We learn your market cold.</h4>
+      <p class="mt-2">We review your market, competitors, and current online presence, then recommend the highest-impact next steps for your website and Google Business Profile.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES & PRICING (original checklist + V2 prices) ============ -->
+<section id="pricing" class="scroll-mt-24 bg-bullsurface px-4 py-24 sm:px-6">
+  <div class="mx-auto max-w-6xl">
+    <div class="reveal mx-auto max-w-2xl text-center">
+      <p class="text-sm font-800 uppercase tracking-[0.28em] text-bullred">What We Offer</p>
+      <h2 class="mt-3 font-display text-4xl font-900 tracking-tight sm:text-5xl text-balance">Professional Digital Presence - Built &amp; Managed</h2>
+      <p class="mt-4 text-white/60">Two focused services for local businesses: a custom optimized website, and Google Business Profile work that keeps you visible. Clear starting prices.</p>
+    </div>
+
+    <div class="mt-14 grid items-stretch gap-6 lg:grid-cols-2">
+      <!-- Custom Optimized Websites -->
+      <div class="reveal surface-card flex flex-col rounded-xl border p-8">
+        <h3 class="font-display text-2xl font-800">Custom Optimized Websites</h3>
+        <p class="mt-3 font-display text-4xl font-900 text-white">$700 <span class="text-base font-700 text-white/50">starting at</span></p>
+        <p class="mt-3 text-sm leading-relaxed text-white/60">A polished, high-performance website that represents your brand and converts browsers into customers.</p>
+        <ul class="mt-6 flex-1 space-y-3 text-sm text-white/70">
+          <li>✓ Custom Website</li>
+          <li>✓ Speed and conversion optimization</li>
+          <li>✓ Essential pages structured for local search</li>
+          <li>✓ Custom domain and integration included</li>
+          <li>✓ 1 full year of premium high-speed hosting included</li>
+          <li>✓ Ongoing refinements as your business grows</li>
+        </ul>
+        <button type="button" onclick="bookCall()" class="mt-6 w-full rounded-full border border-[#3A4560] py-3 font-700 transition hover:border-bullred hover:bg-bullbg">Request Website Details</button>
+      </div>
+
+      <!-- Google Business / Growth -->
+      <div class="reveal relative flex flex-col rounded-xl border-2 border-bullred bg-bullcard p-8">
+        <span class="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-bullred px-4 py-1 text-xs font-800 uppercase tracking-widest">Core Focus</span>
+        <h3 class="font-display text-2xl font-800">Google Business Profile</h3>
+        <p class="mt-3 font-display text-4xl font-900 text-white">$100 <span class="text-base font-700 text-white/50">/ month starting at</span></p>
+        <p class="mt-3 text-sm leading-relaxed text-white/70">Setup, optimization, and ongoing management so your business is accurate, visible, and competitive on Google Search and Maps - plus light website maintenance.</p>
+        <ul class="mt-6 flex-1 space-y-3 text-sm text-white/80">
+          <li>✓ Profile setup or reclaim &amp; verification support</li>
+          <li>✓ Full optimization (categories, services, attributes, photos)</li>
+          <li>✓ Ongoing management: posts, updates, Q&amp;A</li>
+          <li>✓ Review strategy and reputation guidance</li>
+          <li>✓ Performance reporting you can actually use</li>
+          <li>✓ Secure hosting maintenance</li>
+          <li>✓ Unlimited light website updates (price shifts, seasonal promos)</li>
+        </ul>
+        <p class="mt-5 rounded-lg border border-bullred/25 bg-bullred/10 px-4 py-3 text-xs leading-relaxed text-white/80">
+          <strong class="font-800 text-white">Scope:</strong> focuses strictly on profile maximization and light site updates. No blogs. No useless backlinks.
+        </p>
+        <button type="button" onclick="bookCall()" class="mt-6 w-full rounded-full bg-bullred py-3 font-800 transition hover:bg-red-600">Request Google Business Details</button>
+      </div>
+    </div>
+
+    <div class="reveal surface-panel mx-auto mt-12 max-w-3xl rounded-xl border p-8 text-center">
+      <h3 class="font-display text-xl font-800">Need both? That is our sweet spot.</h3>
+      <p class="mt-2 text-sm leading-relaxed text-white/60">Most clients pair a custom optimized website with professional Google Business management. We will recommend the right starting point for your market - transparent pricing, no lock-in games.</p>
+      <div class="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
+        <button type="button" onclick="bookCall()" class="rounded-full bg-bullred px-8 py-3 font-800 transition hover:bg-red-600">Book a 15-min Call</button>
+        <button type="button" onclick="bookCall()" class="rounded-full border border-[#3A4560] px-8 py-3 font-800 transition hover:border-bullred hover:bg-bullbg">Claim Free Demo</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ROI (exact original format) ============ -->
+<section id="roi" class="scroll-mt-24 px-4 py-24 sm:px-6">
+  <div class="mx-auto max-w-6xl">
+    <div class="reveal surface-panel mx-auto max-w-2xl rounded-xl border border-bullred p-8">
+      <h3 class="text-center font-display text-2xl font-800">Quick ROI Calculator</h3>
+      <p class="mt-1 text-center text-sm text-white/65">See what a 250% lead lift could mean for you.</p>
+      <div class="mt-6 grid gap-4 sm:grid-cols-2 sm:items-end">
+        <div>
+          <label for="curLeads" class="mb-1 block text-sm font-600 text-white/70">Current leads / month</label>
+          <input id="curLeads" type="number" min="0" value="16" oninput="calcROI()" class="surface-input w-full rounded-lg border px-4 py-3 outline-none focus:border-bullred" />
+        </div>
+        <div>
+          <label for="avgValue" class="mb-1 block text-sm font-600 text-white/70">Avg. customer value ($)</label>
+          <input id="avgValue" type="number" min="0" value="350" oninput="calcROI()" class="surface-input w-full rounded-lg border px-4 py-3 outline-none focus:border-bullred" />
+        </div>
+      </div>
+      <div id="roiOut" class="mt-6 rounded-xl bg-bullred/10 p-5 text-center">
+        <p class="text-sm text-white/60">Projected new revenue / month</p>
+        <p class="mt-1 font-display text-4xl font-900 text-bullred">$5,600</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA (same pattern as live) ============ -->
+<section class="relative overflow-hidden border-t border-[#3A4560] bg-bullcard px-4 py-24 text-center sm:px-6">
+  <div class="reveal relative mx-auto max-w-3xl">
+    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-1-9pRF4CyBiygUYC6Rty3wOLirZ8AxIw.png" alt="Texas Bull Marketing logo" width="90" height="90" class="mx-auto h-20 w-20 object-contain" />
+    <h2 class="mt-6 font-display text-4xl font-900 tracking-tight sm:text-6xl text-balance">Stop Losing Customers To The Competition.</h2>
+    <p class="mt-4 text-lg text-white/70">Let's talk about an optimized website and Google Business Profile that help make your business the one locals call first.</p>
+    <div class="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+      <button type="button" onclick="bookCall()" class="rounded-full bg-bullred px-8 py-4 text-lg font-800 transition hover:bg-red-600">Get Started</button>
+      <button type="button" onclick="bookCall()" class="rounded-full border border-[#3A4560] px-8 py-4 text-lg font-700 transition hover:border-bullred hover:bg-bullbg">Book a 15-min Call</button>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER (exact live TBM) ============ -->
+<footer class="border-t border-[#3A4560] bg-bullbg px-4 py-12 sm:px-6">
+  <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 text-center sm:flex-row sm:text-left">
+    <div class="flex items-center gap-3">
+      <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-1-9pRF4CyBiygUYC6Rty3wOLirZ8AxIw.png" alt="Texas Bull Marketing logo" width="40" height="40" class="h-10 w-10 object-contain" />
+      <div>
+        <p class="font-display font-900">TEXAS <span class="text-bullred">BULL</span> MARKETING</p>
+        <p class="text-xs text-white/40">More calls. More customers. Less hassle.</p>
+      </div>
+    </div>
+    <p class="text-sm text-white/40">© <span id="year"></span> Texas Bull Marketing. Built in Texas. Serving ambitious local owners everywhere.</p>
+  </div>
+</footer>
+
+<!-- ============ STICKY CTA (exact live) ============ -->
+<button type="button" onclick="bookCall()" class="fixed bottom-5 right-5 z-40 flex items-center gap-2 rounded-full bg-bullred px-5 py-3 font-800 transition hover:bg-red-600">
+  <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h2.6a1 1 0 01.95.68l1 3a1 1 0 01-.27 1L8 9.5a12 12 0 006.5 6.5l1.8-1.3a1 1 0 011-.27l3 1a1 1 0 01.7.95V19a2 2 0 01-2 2A16 16 0 013 5z"/></svg>
+  Book 15-min Call
+</button>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // ---------- Calendly booking (identical to live) ----------
+  const CALENDLY_URL = 'https://calendly.com/texasbullmarketing/call';
+  function bookCall(){
+    if (window.Calendly && typeof Calendly.initPopupWidget === 'function') {
+      Calendly.initPopupWidget({ url: CALENDLY_URL });
+      return false;
+    }
+    window.open(CALENDLY_URL, '_blank', 'noopener,noreferrer');
+    return false;
+  }
+
+  // ---------- Mobile menu ----------
+  function toggleMobile(){
+    const m = document.getElementById('mobileMenu');
+    const open = m.classList.contains('scale-y-100');
+    m.classList.toggle('scale-y-100', !open);
+    m.classList.toggle('scale-y-0', open);
+    m.classList.toggle('opacity-100', !open);
+    m.classList.toggle('opacity-0', open);
+    m.classList.toggle('translate-y-0', !open);
+  }
+
+  // ---------- Steps (exact live logic) ----------
+  const stepData = {
+    1: ['Discover - We learn your market cold.', 'We review your competitors, map the searches your customers use, and identify the highest-impact opportunities for your website and Google Business Profile.'],
+    2: ['Build - A site engineered to convert.', 'We craft a fast, mobile-first website with click-to-call, booking, and ordering baked in - designed to turn visitors into paying customers.'],
+    3: ['Rank - Climb the local map & search.', 'Aggressive local SEO and Google Business Profile optimization push you into the map pack and onto page one for money keywords.'],
+    4: ['Convert - Turn attention into revenue.', 'Review engines, tracking, and conversion tweaks make sure every bit of new traffic becomes real calls, bookings, and walk-ins.'],
+    5: ['Scale - Compound your dominance.', 'We double down on what works, expand to new keywords and locations, and keep you the business locals call - month after month.']
+  };
+  function placeStepDetail(btn){
+    const detail = document.getElementById('stepDetail');
+    const grid = document.getElementById('stepGrid');
+    if (!detail || !grid) return;
+    if (window.matchMedia('(max-width: 767px)').matches && btn) {
+      btn.insertAdjacentElement('afterend', detail);
+    } else {
+      grid.insertAdjacentElement('afterend', detail);
+    }
+  }
+  function showStep(n, btn){
+    document.querySelectorAll('.step-btn').forEach(function(b){
+      b.classList.remove('border-bullred', 'border-2');
+      b.classList.add('border', 'border-[#3A4560]');
+      b.querySelector('span').classList.remove('text-bullred');
+      b.querySelector('span').classList.add('text-white/40');
+    });
+    btn.classList.add('border-bullred', 'border-2');
+    btn.classList.remove('border-[#3A4560]');
+    btn.querySelector('span').classList.add('text-bullred');
+    btn.querySelector('span').classList.remove('text-white/40');
+    const d = stepData[n];
+    const detail = document.getElementById('stepDetail');
+    detail.innerHTML = '<h4 class="font-display text-xl font-800 text-white">' + d[0] + '</h4><p class="mt-2">' + d[1] + '</p>';
+    placeStepDetail(btn);
+  }
+  placeStepDetail(document.querySelector('.step-btn[data-step="1"]'));
+  window.addEventListener('resize', function(){
+    const active = document.querySelector('.step-btn.border-bullred') || document.querySelector('.step-btn[data-step="1"]');
+    placeStepDetail(active);
+  });
+
+  // ---------- ROI (exact live logic + format) ----------
+  function calcROI(){
+    const leads = +document.getElementById('curLeads').value || 0;
+    const val = +document.getElementById('avgValue').value || 0;
+    const newLeads = Math.round(leads * 2.5);
+    const newCustomers = Math.round(newLeads * 0.4);
+    const rev = newCustomers * val;
+    document.getElementById('roiOut').innerHTML =
+      '<p class="text-sm text-white/60">Projected new revenue / month</p>' +
+      '<p class="mt-1 font-display text-4xl font-900 text-bullred">$' + rev.toLocaleString() + '</p>';
+  }
+  calcROI();
+
+  // ---------- Reveal on scroll ----------
+  const io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+
+  // ---------- Active nav ----------
+  const sections = [...document.querySelectorAll('main section[id]')];
+  const navLinks = [...document.querySelectorAll('[data-nav]')];
+  const navIO = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting) {
+        navLinks.forEach(function(l){
+          l.classList.toggle('active', l.getAttribute('href') === '#' + e.target.id);
+        });
+      }
+    });
+  }, { rootMargin: '-45% 0px -50% 0px' });
+  sections.forEach(function(s){ navIO.observe(s); });
+
+  // ---------- Floating accent dots (exact live system) ----------
+  (function(){
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const c = document.getElementById('bullCanvas');
+    if (!c) return;
+    const ctx = c.getContext('2d');
+    let w, h, parts;
+    const palettes = [
+      { core:'rgba(255,70,90,0.95)',  mid:'rgba(200,16,46,0.35)',  glow:'rgba(200,16,46,0.12)' },
+      { core:'rgba(200,16,46,0.9)',   mid:'rgba(200,16,46,0.28)',  glow:'rgba(200,16,46,0.1)' },
+      { core:'rgba(130,165,230,0.9)', mid:'rgba(90,120,175,0.3)',  glow:'rgba(90,120,175,0.12)' },
+      { core:'rgba(100,145,220,0.85)',mid:'rgba(70,110,200,0.28)', glow:'rgba(70,110,200,0.1)' },
+      { core:'rgba(255,255,255,0.75)',mid:'rgba(180,200,240,0.2)', glow:'rgba(200,16,46,0.06)' },
+    ];
+    function resize(){ w = c.width = innerWidth; h = c.height = innerHeight; }
+    function init(){
+      parts = Array.from({ length: Math.min(55, Math.floor(w / 26)) }, function(){
+        return {
+          x: Math.random() * w,
+          y: Math.random() * h,
+          r: Math.random() * 2.2 + 0.8,
+          vx: (Math.random() - 0.5) * 0.3,
+          vy: (Math.random() - 0.5) * 0.3,
+          pal: palettes[Math.floor(Math.random() * palettes.length)],
+          pulse: Math.random() * Math.PI * 2,
+          pulseSpeed: 0.008 + Math.random() * 0.012
+        };
+      });
+    }
+    function draw(){
+      ctx.clearRect(0, 0, w, h);
+      parts.forEach(function(p){
+        p.x += p.vx; p.y += p.vy;
+        p.pulse += p.pulseSpeed;
+        if (p.x < 0 || p.x > w) p.vx *= -1;
+        if (p.y < 0 || p.y > h) p.vy *= -1;
+        const breath = 1 + Math.sin(p.pulse) * 0.15;
+        const coreR = p.r * breath;
+        const midR = coreR * 4.5;
+        const glowR = coreR * 10;
+        const gOuter = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, glowR);
+        gOuter.addColorStop(0, p.pal.glow);
+        gOuter.addColorStop(1, 'rgba(0,0,0,0)');
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, glowR, 0, Math.PI * 2);
+        ctx.fillStyle = gOuter;
+        ctx.fill();
+        const gMid = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, midR);
+        gMid.addColorStop(0, p.pal.mid);
+        gMid.addColorStop(1, 'rgba(0,0,0,0)');
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, midR, 0, Math.PI * 2);
+        ctx.fillStyle = gMid;
+        ctx.fill();
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, coreR, 0, Math.PI * 2);
+        ctx.fillStyle = p.pal.core;
+        ctx.fill();
+      });
+      requestAnimationFrame(draw);
+    }
+    resize(); init(); draw();
+    addEventListener('resize', function(){ resize(); init(); });
+  })();
+</script>
+</body>
+</html>

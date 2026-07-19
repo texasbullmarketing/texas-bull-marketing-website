@@ -17,6 +17,7 @@ Live demo sites for leads. Served as static folders under `public/demo/`.
 | The 1908 Restaurant + Bar | `/demo/The1908RestaurantBar/` | `public/demo/The1908RestaurantBar/` |
 | The Blackdoor Steakhouse | `/demo/TheBlackdoorSteakhouse/` | `public/demo/TheBlackdoorSteakhouse/` |
 | Wave Finders Electronics | `/demo/WaveFindersElectronics/` | `public/demo/WaveFindersElectronics/` |
+| V2TBM (TBM redesign sandbox) | `/demo/v2tbm/` | `public/demo/v2tbm/` |
 
 Hub page: `/demo/` → `public/demo/index.html`
 
