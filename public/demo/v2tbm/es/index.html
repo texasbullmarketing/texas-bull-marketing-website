@@ -1,17 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="es" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Texas Bull Marketing V2 (Demo) | Custom Optimized Websites</title>
-  <meta name="description" content="Demo V2 landing page for Texas Bull Marketing. Sandbox only - main site unchanged." />
+  <title>Texas Bull Marketing V2 (Demo) | Sitios web optimizados</title>
+  <meta name="description" content="Demo V2 de Texas Bull Marketing. Solo sandbox - el sitio principal no cambia." />
   <meta name="robots" content="noindex, nofollow" />
   <meta name="theme-color" content="#161C2A" />
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="32x32" href="/icon-light-32x32.png" />
   <link rel="apple-touch-icon" href="/apple-icon.png" />
 
-  <!-- Calendly (same as live TBM) -->
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
   <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 
@@ -54,12 +53,10 @@
     .htmx-request .btn-label { opacity:0; }
     .htmx-request .btn-spinner { display:inline-block; }
     .btn-spinner { display:none; }
-    /* Crisp solid surfaces - no frosted/glass haze */
     .surface-card { background:#242D40; border-color:#3A4560; }
     .surface-panel { background:#1F2738; border-color:#3A4560; }
     .surface-input { background:#161C2A; border-color:#3A4560; color:#fff; }
     .surface-input:focus { border-color:#C8102E; outline:none; }
-    /* Style 1 — Segmented EN | ES (from templets/lang-toggle-buttons) */
     .lang-seg {
       display: inline-flex;
       background: #0b0f14;
@@ -95,11 +92,10 @@
 
 <canvas id="bullCanvas" aria-hidden="true"></canvas>
 
-<!-- ============ NAV (exact live TBM header / border) ============ -->
 <header class="fixed top-0 inset-x-0 z-50 border-b border-[#3A4560] bg-bullbg">
-  <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6" aria-label="Primary">
+  <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6" aria-label="Principal">
     <a href="#home" class="flex items-center gap-3 group">
-      <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-1-9pRF4CyBiygUYC6Rty3wOLirZ8AxIw.png" alt="Texas Bull Marketing logo" width="48" height="48" class="h-11 w-11 object-contain transition-transform group-hover:scale-105" />
+      <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-1-9pRF4CyBiygUYC6Rty3wOLirZ8AxIw.png" alt="Logo de Texas Bull Marketing" width="48" height="48" class="h-11 w-11 object-contain transition-transform group-hover:scale-105" />
       <span class="font-display text-lg font-900 leading-none tracking-tight">
         TEXAS <span class="text-bullred">BULL</span><br class="hidden sm:block" />
         <span class="text-xs font-700 tracking-[0.28em] text-white/60">MARKETING</span>
@@ -107,68 +103,66 @@
     </a>
 
     <div class="hidden items-center gap-7 lg:flex">
-      <a href="#process" class="nav-link text-sm font-600 text-white/70 transition hover:text-white" data-nav>Process</a>
-      <a href="#pricing" class="nav-link text-sm font-600 text-white/70 transition hover:text-white" data-nav>Services &amp; Pricing</a>
+      <a href="#process" class="nav-link text-sm font-600 text-white/70 transition hover:text-white" data-nav>Proceso</a>
+      <a href="#pricing" class="nav-link text-sm font-600 text-white/70 transition hover:text-white" data-nav>Servicios y precios</a>
       <a href="#roi" class="nav-link text-sm font-600 text-white/70 transition hover:text-white" data-nav>ROI</a>
     </div>
 
     <div class="flex items-center gap-3">
-      <div class="lang-seg" role="group" aria-label="Language">
-        <a href="./" hreflang="en" lang="en" aria-current="page">EN</a>
-        <a href="es/" hreflang="es" lang="es">ES</a>
+      <div class="lang-seg" role="group" aria-label="Idioma">
+        <a href="../" hreflang="en" lang="en">EN</a>
+        <a href="./" hreflang="es" lang="es" aria-current="page">ES</a>
       </div>
       <button type="button" onclick="bookCall()" class="hidden rounded-full bg-bullred px-5 py-2.5 text-sm font-700 transition hover:bg-red-600 sm:block">
-        Claim Free Demo
+        Solicitar demo gratis
       </button>
-      <button type="button" onclick="toggleMobile()" aria-label="Open menu" class="rounded-lg border border-[#3A4560] p-2 lg:hidden">
+      <button type="button" onclick="toggleMobile()" aria-label="Abrir menú" class="rounded-lg border border-[#3A4560] p-2 lg:hidden">
         <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
       </button>
     </div>
   </nav>
 
-  <!-- Mobile slide menu -->
   <div id="mobileMenu" class="fixed inset-x-0 top-[64px] z-40 origin-top -translate-y-4 scale-y-0 border-b border-[#3A4560] bg-bullbg px-6 py-6 opacity-0 transition-all duration-200 lg:hidden">
     <div class="flex flex-col gap-4 text-lg font-700">
-      <div class="lang-seg mb-1" role="group" aria-label="Language">
-        <a href="./" hreflang="en" lang="en" aria-current="page">EN</a>
-        <a href="es/" hreflang="es" lang="es">ES</a>
+      <div class="lang-seg mb-1" role="group" aria-label="Idioma">
+        <a href="../" hreflang="en" lang="en">EN</a>
+        <a href="./" hreflang="es" lang="es" aria-current="page">ES</a>
       </div>
-      <a href="#process" onclick="toggleMobile()" class="text-white/80 hover:text-bullred">Process</a>
-      <a href="#pricing" onclick="toggleMobile()" class="text-white/80 hover:text-bullred">Services &amp; Pricing</a>
+      <a href="#process" onclick="toggleMobile()" class="text-white/80 hover:text-bullred">Proceso</a>
+      <a href="#pricing" onclick="toggleMobile()" class="text-white/80 hover:text-bullred">Servicios y precios</a>
       <a href="#roi" onclick="toggleMobile()" class="text-white/80 hover:text-bullred">ROI</a>
-      <button type="button" onclick="toggleMobile();bookCall()" class="mt-2 rounded-full bg-bullred px-5 py-3 font-700">Claim Free Demo</button>
+      <button type="button" onclick="toggleMobile();bookCall()" class="mt-2 rounded-full bg-bullred px-5 py-3 font-700">Solicitar demo gratis</button>
     </div>
   </div>
 </header>
 
 <main id="home" class="relative z-10">
 
-<!-- ============ HERO (exact live top page + big bull) ============ -->
 <section class="relative overflow-hidden px-4 pb-10 pt-24 sm:px-6 sm:pt-16">
   <div class="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-2">
     <div class="reveal">
       <span class="inline-flex items-center gap-2 rounded-full border border-bullred/40 bg-bullred/10 px-4 py-1.5 text-xs font-700 uppercase tracking-widest text-red-300">
-        <span class="h-2 w-2 animate-pulse rounded-full bg-bullred"></span> Texas-Built &bull; Local Businesses Nationwide
+        <span class="h-2 w-2 animate-pulse rounded-full bg-bullred"></span> Hecho en Texas &bull; Negocios locales en todo el país
       </span>
       <h1 class="mt-6 font-display text-4xl font-900 leading-[1.02] tracking-tight sm:text-6xl lg:text-7xl text-balance">
-        Make Your Business <span class="text-bullred">The One Locals Call.</span>
+        Haga que su negocio sea <span class="text-bullred">al que llaman primero.</span>
       </h1>
       <p class="mt-6 max-w-xl text-lg leading-relaxed text-white/70">
-        We build <span class="font-700 text-white">optimized websites</span> - in <span class="font-700 text-white">English</span>, or <span class="font-700 text-white">English + Spanish</span> when your market needs both - and handle <span class="font-700 text-white">Google Business Profile</span> setup and management so customers find you first and choose you with confidence.
+        Creamos <span class="font-700 text-white">sitios web optimizados</span> — en <span class="font-700 text-white">inglés</span>, o en <span class="font-700 text-white">inglés + español</span> cuando su mercado lo necesita — y nos encargamos del <span class="font-700 text-white">perfil de empresa en Google (GBP)</span>: configuración y gestión para que los clientes lo encuentren primero y confíen en usted.
       </p>
       <div class="mt-5 flex flex-wrap items-center gap-2">
         <span class="inline-flex items-center gap-1.5 rounded-full border border-[#3A4560] bg-bullcard px-3 py-1 text-xs font-800 tracking-wide text-white/90">
           <span class="text-white">EN</span><span class="text-white/30">|</span><span class="text-bullred">ES</span>
         </span>
-        <span class="text-sm text-white/50">Real bilingual sites for cities where both languages matter</span>
+        <span class="text-sm text-white/50">Sitios bilingües reales donde importan ambos idiomas</span>
       </div>
       <div class="mt-8 flex flex-col gap-3 sm:flex-row">
         <button type="button" onclick="bookCall()" class="group rounded-full bg-bullred px-8 py-4 text-base font-800 transition hover:bg-red-600">
-          Get Started
+          Empezar
           <span class="ml-1 inline-block transition group-hover:translate-x-1">-&gt;</span>
         </button>
         <a href="#pricing" class="rounded-full border border-[#3A4560] px-8 py-4 text-center text-base font-700 text-white transition hover:border-bullred hover:bg-bullcard">
-          Explore Our Services
+          Ver servicios
         </a>
       </div>
       <div class="mt-8 flex items-center gap-4 text-sm text-white/50">
@@ -177,111 +171,106 @@
           <span class="h-8 w-8 rounded-full border-2 border-black bg-bullnavy"></span>
           <span class="h-8 w-8 rounded-full border-2 border-black bg-white"></span>
         </div>
-        <p><span class="font-700 text-white">137+ owners</span> already dominating their local market.</p>
+        <p><span class="font-700 text-white">Más de 137 dueños</span> ya dominan su mercado local.</p>
       </div>
     </div>
 
     <div class="reveal flex justify-center lg:justify-end">
-      <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-1-9pRF4CyBiygUYC6Rty3wOLirZ8AxIw.png" alt="Texas Bull Marketing red and blue bull mascot" width="520" height="640" class="w-[300px] sm:w-[420px] lg:w-[480px]" />
+      <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-1-9pRF4CyBiygUYC6Rty3wOLirZ8AxIw.png" alt="Mascota toro de Texas Bull Marketing en rojo y azul" width="520" height="640" class="w-[300px] sm:w-[420px] lg:w-[480px]" />
     </div>
   </div>
 </section>
 
-<!-- ============ HOW IT WORKS - 5 STEPS (exact live format) ============ -->
 <section id="process" class="scroll-mt-24 px-4 pt-12 pb-24 sm:px-6">
   <div class="mx-auto max-w-6xl">
     <div class="reveal mx-auto max-w-2xl text-center">
-      <p class="text-sm font-800 uppercase tracking-[0.28em] text-bullred">The Playbook</p>
-      <h2 class="mt-3 font-display text-4xl font-900 tracking-tight sm:text-5xl text-balance">Our 5-Step Growth System</h2>
-      <p class="mt-4 text-white/60">Tap any step to see what happens behind the scenes.</p>
+      <p class="text-sm font-800 uppercase tracking-[0.28em] text-bullred">El plan de juego</p>
+      <h2 class="mt-3 font-display text-4xl font-900 tracking-tight sm:text-5xl text-balance">Nuestro sistema de crecimiento en 5 pasos</h2>
+      <p class="mt-4 text-white/60">Toque un paso para ver qué hacemos detrás de escena.</p>
     </div>
 
     <div id="stepGrid" class="mt-14 grid gap-4 md:grid-cols-5">
       <button type="button" data-step="1" onclick="showStep(1,this)" class="step-btn reveal rounded-xl border-2 border-bullred bg-bullcard p-5 text-left transition">
         <span class="font-display text-3xl font-900 text-bullred">01</span>
-        <h3 class="mt-2 font-700">Discover</h3>
+        <h3 class="mt-2 font-700">Descubrir</h3>
       </button>
       <button type="button" data-step="2" onclick="showStep(2,this)" class="step-btn reveal rounded-xl border border-[#3A4560] bg-bullcard p-5 text-left transition hover:border-bullred">
         <span class="font-display text-3xl font-900 text-white/40">02</span>
-        <h3 class="mt-2 font-700">Build</h3>
+        <h3 class="mt-2 font-700">Construir</h3>
       </button>
       <button type="button" data-step="3" onclick="showStep(3,this)" class="step-btn reveal rounded-xl border border-[#3A4560] bg-bullcard p-5 text-left transition hover:border-bullred">
         <span class="font-display text-3xl font-900 text-white/40">03</span>
-        <h3 class="mt-2 font-700">Rank</h3>
+        <h3 class="mt-2 font-700">Posicionar</h3>
       </button>
       <button type="button" data-step="4" onclick="showStep(4,this)" class="step-btn reveal rounded-xl border border-[#3A4560] bg-bullcard p-5 text-left transition hover:border-bullred">
         <span class="font-display text-3xl font-900 text-white/40">04</span>
-        <h3 class="mt-2 font-700">Convert</h3>
+        <h3 class="mt-2 font-700">Convertir</h3>
       </button>
       <button type="button" data-step="5" onclick="showStep(5,this)" class="step-btn reveal rounded-xl border border-[#3A4560] bg-bullcard p-5 text-left transition hover:border-bullred">
         <span class="font-display text-3xl font-900 text-white/40">05</span>
-        <h3 class="mt-2 font-700">Scale</h3>
+        <h3 class="mt-2 font-700">Escalar</h3>
       </button>
     </div>
 
     <div id="stepDetail" class="reveal surface-card mt-3 rounded-xl border p-5 text-white/80 md:mt-6 md:p-7">
-      <h4 class="font-display text-xl font-800 text-white">Discover - We learn your market cold.</h4>
-      <p class="mt-2">We review your competitors, map the searches your customers use (including English and Spanish when it matters), and identify the highest-impact opportunities for your website and Google Business Profile.</p>
+      <h4 class="font-display text-xl font-800 text-white">Descubrir — Conocemos su mercado a fondo.</h4>
+      <p class="mt-2">Revisamos a sus competidores, las búsquedas que usan sus clientes (en inglés y en español cuando importa) y las mejores oportunidades para su sitio web y su perfil de empresa en Google.</p>
     </div>
   </div>
 </section>
 
-<!-- ============ SERVICES & PRICING (original checklist + V2 prices) ============ -->
 <section id="pricing" class="scroll-mt-24 bg-bullsurface px-4 py-24 sm:px-6">
   <div class="mx-auto max-w-6xl">
     <div class="reveal mx-auto max-w-2xl text-center">
-      <p class="text-sm font-800 uppercase tracking-[0.28em] text-bullred">What We Offer</p>
-      <h2 class="mt-3 font-display text-4xl font-900 tracking-tight sm:text-5xl text-balance">Professional Digital Presence - Built &amp; Managed</h2>
-      <p class="mt-4 text-white/60">Custom websites for local owners anywhere - English or English + Spanish - plus Google Business Profile work that keeps you visible. Clear starting prices on the site; language fit is scoped to your market on the call.</p>
+      <p class="text-sm font-800 uppercase tracking-[0.28em] text-bullred">Lo que ofrecemos</p>
+      <h2 class="mt-3 font-display text-4xl font-900 tracking-tight sm:text-5xl text-balance">Presencia digital profesional — hecha y gestionada</h2>
+      <p class="mt-4 text-white/60">Sitios a la medida para dueños locales en cualquier ciudad — inglés o inglés + español — más trabajo en el perfil de Google para que se vea. Precios claros en el sitio; el idioma se define con usted en la llamada.</p>
     </div>
 
     <div class="mt-14 grid items-stretch gap-6 lg:grid-cols-2">
-      <!-- Custom Optimized Websites -->
       <div class="reveal surface-card flex flex-col rounded-xl border p-8">
         <div class="flex flex-wrap items-center gap-2">
-          <h3 class="font-display text-2xl font-800">Custom Optimized Websites</h3>
+          <h3 class="font-display text-2xl font-800">Sitios web optimizados a la medida</h3>
           <span class="inline-flex items-center gap-1 rounded-full border border-[#3A4560] px-2 py-0.5 text-[10px] font-800 tracking-wide text-white/70">
             EN <span class="text-white/30">·</span> <span class="text-bullred">EN+ES</span>
           </span>
         </div>
-        <p class="mt-3 font-display text-4xl font-900 text-white">$700 <span class="text-base font-700 text-white/50">starting at</span></p>
-        <p class="mt-3 text-sm leading-relaxed text-white/60">A polished, high-performance website that represents your brand and converts browsers into customers - English, or English + Spanish for bilingual markets.</p>
+        <p class="mt-3 font-display text-4xl font-900 text-white">$700 <span class="text-base font-700 text-white/50">desde</span></p>
+        <p class="mt-3 text-sm leading-relaxed text-white/60">Un sitio pulido y de alto rendimiento que representa su marca y convierte visitas en clientes — en inglés, o en inglés + español para mercados bilingües.</p>
         <ul class="mt-6 flex-1 space-y-3 text-sm text-white/70">
-          <li>✓ Custom website engineered to convert</li>
-          <li>✓ English or full English + Spanish options</li>
-          <li>✓ Speed and mobile click-to-call optimization</li>
-          <li>✓ Essential pages structured for local search</li>
-          <li>✓ Custom domain and integration included</li>
-          <li>✓ 1 full year of premium high-speed hosting included</li>
-          <li>✓ Ongoing refinements as your business grows</li>
+          <li>✓ Sitio a la medida pensado para convertir</li>
+          <li>✓ Opciones en inglés o inglés + español completo</li>
+          <li>✓ Velocidad y llamada con un toque en el celular</li>
+          <li>✓ Páginas esenciales estructuradas para búsqueda local</li>
+          <li>✓ Dominio e integraciones incluidas</li>
+          <li>✓ 1 año completo de hosting premium de alta velocidad</li>
+          <li>✓ Ajustes continuos a medida que crece su negocio</li>
         </ul>
-        <p class="mt-5 text-xs leading-relaxed text-white/45">Language setup is matched to your customers on the demo call - we will recommend English-only or bilingual based on your market.</p>
-        <button type="button" onclick="bookCall()" class="mt-6 w-full rounded-full border border-[#3A4560] py-3 font-700 transition hover:border-bullred hover:bg-bullbg">Request Website Details</button>
+        <p class="mt-5 text-xs leading-relaxed text-white/45">El idioma se define según sus clientes en la demo — recomendamos solo inglés o bilingüe según su mercado.</p>
+        <button type="button" onclick="bookCall()" class="mt-6 w-full rounded-full border border-[#3A4560] py-3 font-700 transition hover:border-bullred hover:bg-bullbg">Pedir detalles del sitio</button>
       </div>
 
-      <!-- Google Business / Growth -->
       <div class="reveal relative flex flex-col rounded-xl border-2 border-bullred bg-bullcard p-8">
-        <span class="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-bullred px-4 py-1 text-xs font-800 uppercase tracking-widest">Core Focus</span>
-        <h3 class="font-display text-2xl font-800">Google Business Profile</h3>
-        <p class="mt-3 font-display text-4xl font-900 text-white">$100 <span class="text-base font-700 text-white/50">/ month starting at</span></p>
-        <p class="mt-3 text-sm leading-relaxed text-white/70">Setup, optimization, and ongoing management so your business is accurate, visible, and competitive on Google Search and Maps - plus light website maintenance.</p>
+        <span class="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-bullred px-4 py-1 text-xs font-800 uppercase tracking-widest">Enfoque principal</span>
+        <h3 class="font-display text-2xl font-800">Perfil de empresa en Google (GBP)</h3>
+        <p class="mt-3 font-display text-4xl font-900 text-white">$100 <span class="text-base font-700 text-white/50">/ mes desde</span></p>
+        <p class="mt-3 text-sm leading-relaxed text-white/70">Configuración, optimización y gestión continua para que su negocio se vea bien y compita en Búsqueda y Maps — más mantenimiento ligero del sitio.</p>
         <ul class="mt-6 flex-1 space-y-3 text-sm text-white/80">
-          <li>✓ Profile setup or reclaim &amp; verification support</li>
-          <li>✓ Full optimization (categories, services, attributes, photos)</li>
-          <li>✓ Ongoing management: posts, updates, Q&amp;A</li>
-          <li>✓ Review strategy and reputation guidance</li>
-          <li>✓ Performance reporting you can actually use</li>
-          <li>✓ Secure hosting maintenance</li>
-          <li>✓ Unlimited light website updates (price shifts, seasonal promos)</li>
+          <li>✓ Alta, recuperación y apoyo para verificar el perfil</li>
+          <li>✓ Optimización completa (categorías, servicios, atributos, fotos)</li>
+          <li>✓ Gestión continua: publicaciones, actualizaciones, preguntas</li>
+          <li>✓ Estrategia de reseñas y reputación</li>
+          <li>✓ Reportes claros que sí puede usar</li>
+          <li>✓ Mantenimiento de hosting seguro</li>
+          <li>✓ Actualizaciones ligeras del sitio sin límite (precios, promociones)</li>
         </ul>
         <p class="mt-5 rounded-lg border border-bullred/25 bg-bullred/10 px-4 py-3 text-xs leading-relaxed text-white/80">
-          <strong class="font-800 text-white">Scope:</strong> focuses strictly on profile maximization and light site updates. No blogs. No useless backlinks.
+          <strong class="font-800 text-white">Alcance:</strong> se enfoca en maximizar el perfil y en actualizaciones ligeras del sitio. Sin blogs. Sin enlaces basura.
         </p>
-        <button type="button" onclick="bookCall()" class="mt-6 w-full rounded-full bg-bullred py-3 font-800 transition hover:bg-red-600">Request Google Business Details</button>
+        <button type="button" onclick="bookCall()" class="mt-6 w-full rounded-full bg-bullred py-3 font-800 transition hover:bg-red-600">Pedir detalles de Google</button>
       </div>
     </div>
 
-    <!-- Bilingual capability strip — below pricing cards, above Site + GBP -->
     <div class="reveal mx-auto mt-12 max-w-4xl rounded-xl border border-bullred/30 bg-bullcard/80 p-6 sm:p-8">
       <div class="flex flex-col items-start gap-5 sm:flex-row sm:items-center sm:justify-between">
         <div class="max-w-xl">
@@ -289,95 +278,90 @@
             <span class="inline-flex items-center gap-1 rounded-md border border-[#3A4560] bg-bullbg px-2.5 py-1 font-display text-xs font-900 tracking-wider">
               <span class="text-white">EN</span><span class="mx-0.5 text-white/30">|</span><span class="text-bullred">ES</span>
             </span>
-            <p class="text-xs font-800 uppercase tracking-[0.2em] text-bullred">Language-ready websites</p>
+            <p class="text-xs font-800 uppercase tracking-[0.2em] text-bullred">Sitios listos para dos idiomas</p>
           </div>
-          <h3 class="mt-3 font-display text-xl font-800 text-white sm:text-2xl">English. Or English + Spanish.</h3>
+          <h3 class="mt-3 font-display text-xl font-800 text-white sm:text-2xl">Inglés. O inglés + español.</h3>
           <p class="mt-2 text-sm leading-relaxed text-white/65">
-            Many large markets have huge Spanish-speaking audiences, yet most small-business sites are English-only. We build dual-language websites to help you win more of your market, featuring full Spanish pages and a clean language switch.
+            Muchos mercados grandes tienen una gran audiencia que habla español, y aun así la mayoría de sitios de pequeños negocios solo están en inglés. Creamos sitios en dos idiomas para que gane más de su mercado, con páginas completas en español y un cambio de idioma limpio.
           </p>
         </div>
         <ul class="w-full shrink-0 space-y-2 text-sm text-white/75 sm:w-56">
-          <li class="flex gap-2"><span class="text-bullred font-800">✓</span> Full Spanish pages when you need them</li>
-          <li class="flex gap-2"><span class="text-bullred font-800">✓</span> EN | ES switch for visitors</li>
-          <li class="flex gap-2"><span class="text-bullred font-800">✓</span> Built for local search in both languages</li>
+          <li class="flex gap-2"><span class="text-bullred font-800">✓</span> Páginas completas en español cuando las necesite</li>
+          <li class="flex gap-2"><span class="text-bullred font-800">✓</span> Interruptor EN | ES para sus visitantes</li>
+          <li class="flex gap-2"><span class="text-bullred font-800">✓</span> Preparado para búsqueda local en ambos idiomas</li>
         </ul>
       </div>
     </div>
 
     <div class="reveal surface-panel mx-auto mt-12 max-w-3xl rounded-xl border p-8 text-center">
-      <h3 class="font-display text-xl font-800">Site + GBP. English or bilingual. That is our sweet spot.</h3>
-      <p class="mt-2 text-sm leading-relaxed text-white/60">Most clients pair a custom optimized website with professional Google Business Profile management. If your customers search in Spanish too, we build for that from day one. Transparent starting prices, personalized demos, no lock-in games.</p>
+      <h3 class="font-display text-xl font-800">Sitio + GBP. Inglés o bilingüe. Ahí está nuestra fortaleza.</h3>
+      <p class="mt-2 text-sm leading-relaxed text-white/60">La mayoría de clientes combinan un sitio a la medida con la gestión profesional del perfil de Google. Si sus clientes también buscan en español, lo construimos así desde el primer día. Precios claros, demos personalizadas, sin trucos de contrato.</p>
       <div class="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
-        <button type="button" onclick="bookCall()" class="rounded-full bg-bullred px-8 py-3 font-800 transition hover:bg-red-600">Book a 15-min Call</button>
-        <button type="button" onclick="bookCall()" class="rounded-full border border-[#3A4560] px-8 py-3 font-800 transition hover:border-bullred hover:bg-bullbg">Claim Free Demo</button>
+        <button type="button" onclick="bookCall()" class="rounded-full bg-bullred px-8 py-3 font-800 transition hover:bg-red-600">Agendar llamada de 15 min</button>
+        <button type="button" onclick="bookCall()" class="rounded-full border border-[#3A4560] px-8 py-3 font-800 transition hover:border-bullred hover:bg-bullbg">Solicitar demo gratis</button>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ ROI (exact original format) ============ -->
 <section id="roi" class="scroll-mt-24 px-4 py-24 sm:px-6">
   <div class="mx-auto max-w-6xl">
     <div class="reveal surface-panel mx-auto max-w-2xl rounded-xl border border-bullred p-8">
-      <h3 class="text-center font-display text-2xl font-800">Quick ROI Calculator</h3>
-      <p class="mt-1 text-center text-sm text-white/65">See what a 250% lead lift could mean for you.</p>
+      <h3 class="text-center font-display text-2xl font-800">Calculadora rápida de ROI</h3>
+      <p class="mt-1 text-center text-sm text-white/65">Vea qué podría significar un aumento del 250% en prospectos.</p>
       <div class="mt-6 grid gap-4 sm:grid-cols-2 sm:items-end">
         <div>
-          <label for="curLeads" class="mb-1 block text-sm font-600 text-white/70">Current leads / month</label>
+          <label for="curLeads" class="mb-1 block text-sm font-600 text-white/70">Prospectos actuales / mes</label>
           <input id="curLeads" type="number" min="0" value="16" oninput="calcROI()" class="surface-input w-full rounded-lg border px-4 py-3 outline-none focus:border-bullred" />
         </div>
         <div>
-          <label for="avgValue" class="mb-1 block text-sm font-600 text-white/70">Avg. customer value ($)</label>
+          <label for="avgValue" class="mb-1 block text-sm font-600 text-white/70">Valor promedio por cliente ($)</label>
           <input id="avgValue" type="number" min="0" value="350" oninput="calcROI()" class="surface-input w-full rounded-lg border px-4 py-3 outline-none focus:border-bullred" />
         </div>
       </div>
       <div id="roiOut" class="mt-6 rounded-xl bg-bullred/10 p-5 text-center">
-        <p class="text-sm text-white/60">Projected new revenue / month</p>
+        <p class="text-sm text-white/60">Ingresos nuevos proyectados / mes</p>
         <p class="mt-1 font-display text-4xl font-900 text-bullred">$5,600</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ FINAL CTA (same pattern as live) ============ -->
 <section class="relative overflow-hidden border-t border-[#3A4560] bg-bullcard px-4 py-24 text-center sm:px-6">
   <div class="reveal relative mx-auto max-w-3xl">
-    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-1-9pRF4CyBiygUYC6Rty3wOLirZ8AxIw.png" alt="Texas Bull Marketing logo" width="90" height="90" class="mx-auto h-20 w-20 object-contain" />
-    <h2 class="mt-6 font-display text-4xl font-900 tracking-tight sm:text-6xl text-balance">Stop Losing Customers To The Competition.</h2>
-    <p class="mt-4 text-lg text-white/70">Let's talk about an optimized website - English or English + Spanish - and a Google Business Profile that help make your business the one locals call first.</p>
+    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-1-9pRF4CyBiygUYC6Rty3wOLirZ8AxIw.png" alt="Logo de Texas Bull Marketing" width="90" height="90" class="mx-auto h-20 w-20 object-contain" />
+    <h2 class="mt-6 font-display text-4xl font-900 tracking-tight sm:text-6xl text-balance">Deje de perder clientes a la competencia.</h2>
+    <p class="mt-4 text-lg text-white/70">Hablemos de un sitio optimizado — inglés o inglés + español — y un perfil de Google que ayuden a que su negocio sea al que llaman primero.</p>
     <div class="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
-      <button type="button" onclick="bookCall()" class="rounded-full bg-bullred px-8 py-4 text-lg font-800 transition hover:bg-red-600">Get Started</button>
-      <button type="button" onclick="bookCall()" class="rounded-full border border-[#3A4560] px-8 py-4 text-lg font-700 transition hover:border-bullred hover:bg-bullbg">Book a 15-min Call</button>
+      <button type="button" onclick="bookCall()" class="rounded-full bg-bullred px-8 py-4 text-lg font-800 transition hover:bg-red-600">Empezar</button>
+      <button type="button" onclick="bookCall()" class="rounded-full border border-[#3A4560] px-8 py-4 text-lg font-700 transition hover:border-bullred hover:bg-bullbg">Agendar llamada de 15 min</button>
     </div>
   </div>
 </section>
 
 </main>
 
-<!-- ============ FOOTER (exact live TBM) ============ -->
 <footer class="border-t border-[#3A4560] bg-bullbg px-4 py-12 sm:px-6">
   <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 text-center sm:flex-row sm:text-left">
     <div class="flex items-center gap-3">
-      <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-1-9pRF4CyBiygUYC6Rty3wOLirZ8AxIw.png" alt="Texas Bull Marketing logo" width="40" height="40" class="h-10 w-10 object-contain" />
+      <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-1-9pRF4CyBiygUYC6Rty3wOLirZ8AxIw.png" alt="Logo de Texas Bull Marketing" width="40" height="40" class="h-10 w-10 object-contain" />
       <div>
         <p class="font-display font-900">TEXAS <span class="text-bullred">BULL</span> MARKETING</p>
-        <p class="text-xs text-white/40">More calls. More customers. Less hassle.</p>
+        <p class="text-xs text-white/40">Más llamadas. Más clientes. Menos complicaciones.</p>
       </div>
     </div>
-    <p class="text-sm text-white/40">© <span id="year"></span> Texas Bull Marketing. Built in Texas. Websites for local owners nationwide - English &amp; Spanish ready.</p>
+    <p class="text-sm text-white/40">© <span id="year"></span> Texas Bull Marketing. Hecho en Texas. Sitios para dueños locales en todo el país — listos en inglés y español.</p>
   </div>
 </footer>
 
-<!-- ============ STICKY CTA (exact live) ============ -->
 <button type="button" onclick="bookCall()" class="fixed bottom-5 right-5 z-40 flex items-center gap-2 rounded-full bg-bullred px-5 py-3 font-800 transition hover:bg-red-600">
   <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h2.6a1 1 0 01.95.68l1 3a1 1 0 01-.27 1L8 9.5a12 12 0 006.5 6.5l1.8-1.3a1 1 0 011-.27l3 1a1 1 0 01.7.95V19a2 2 0 01-2 2A16 16 0 013 5z"/></svg>
-  Book 15-min Call
+  Llamada 15 min
 </button>
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  // ---------- Calendly booking (identical to live) ----------
   const CALENDLY_URL = 'https://calendly.com/texasbullmarketing/call';
   function bookCall(){
     if (window.Calendly && typeof Calendly.initPopupWidget === 'function') {
@@ -388,7 +372,6 @@
     return false;
   }
 
-  // ---------- Mobile menu ----------
   function toggleMobile(){
     const m = document.getElementById('mobileMenu');
     const open = m.classList.contains('scale-y-100');
@@ -399,13 +382,12 @@
     m.classList.toggle('translate-y-0', !open);
   }
 
-  // ---------- Steps (exact live logic) ----------
   const stepData = {
-    1: ['Discover - We learn your market cold.', 'We review your competitors, map the searches your customers use (including English and Spanish when it matters), and identify the highest-impact opportunities for your website and Google Business Profile.'],
-    2: ['Build - A site engineered to convert.', 'We craft a fast, mobile-first website with click-to-call, booking, and ordering baked in - English only, or full English + Spanish with a clean language switch - designed to turn visitors into paying customers.'],
-    3: ['Rank - Climb the local map & search.', 'Local SEO structure and Google Business Profile optimization push you into the map pack and onto page one for money keywords in the languages your market actually uses.'],
-    4: ['Convert - Turn attention into revenue.', 'Review engines, tracking, and conversion tweaks make sure every bit of new traffic becomes real calls, bookings, and walk-ins.'],
-    5: ['Scale - Compound your dominance.', 'We double down on what works, expand to new keywords and locations, and keep you the business locals call - month after month.']
+    1: ['Descubrir — Conocemos su mercado a fondo.', 'Revisamos a sus competidores, las búsquedas que usan sus clientes (en inglés y en español cuando importa) y las mejores oportunidades para su sitio web y su perfil de empresa en Google.'],
+    2: ['Construir — Un sitio hecho para convertir.', 'Creamos un sitio rápido y pensado para el celular, con llamada, reservas y pedidos cuando aplica — solo inglés, o inglés + español completo con un cambio de idioma limpio.'],
+    3: ['Posicionar — Suba en el mapa y en la búsqueda.', 'La estructura de SEO local y la optimización del perfil de Google lo empujan al paquete de mapas y a la primera página para las palabras que generan dinero en los idiomas que usa su mercado.'],
+    4: ['Convertir — De atención a ingresos.', 'Reseñas, seguimiento y ajustes de conversión para que el tráfico nuevo se vuelva llamadas, citas y visitas reales.'],
+    5: ['Escalar — Multiplique su dominio.', 'Duplicamos lo que funciona, ampliamos palabras clave y zonas, y lo mantenemos como el negocio al que llaman — mes tras mes.']
   };
   function placeStepDetail(btn){
     const detail = document.getElementById('stepDetail');
@@ -439,7 +421,6 @@
     placeStepDetail(active);
   });
 
-  // ---------- ROI (exact live logic + format) ----------
   function calcROI(){
     const leads = +document.getElementById('curLeads').value || 0;
     const val = +document.getElementById('avgValue').value || 0;
@@ -447,12 +428,11 @@
     const newCustomers = Math.round(newLeads * 0.4);
     const rev = newCustomers * val;
     document.getElementById('roiOut').innerHTML =
-      '<p class="text-sm text-white/60">Projected new revenue / month</p>' +
+      '<p class="text-sm text-white/60">Ingresos nuevos proyectados / mes</p>' +
       '<p class="mt-1 font-display text-4xl font-900 text-bullred">$' + rev.toLocaleString() + '</p>';
   }
   calcROI();
 
-  // ---------- Reveal on scroll ----------
   const io = new IntersectionObserver(function(entries){
     entries.forEach(function(e){
       if (e.isIntersecting) {
@@ -463,7 +443,6 @@
   }, { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
 
-  // ---------- Active nav ----------
   const sections = [...document.querySelectorAll('main section[id]')];
   const navLinks = [...document.querySelectorAll('[data-nav]')];
   const navIO = new IntersectionObserver(function(entries){
@@ -477,7 +456,6 @@
   }, { rootMargin: '-45% 0px -50% 0px' });
   sections.forEach(function(s){ navIO.observe(s); });
 
-  // ---------- Floating accent dots (exact live system) ----------
   (function(){
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     const c = document.getElementById('bullCanvas');
