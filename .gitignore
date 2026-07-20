@@ -10,10 +10,12 @@ __v0_jsx-dev-runtime.ts
 .env
 .env*.local
 
-# Local payment log (webhook writes here; use a real DB in production)
+# Local data dir (unused; reserved)
 /data/
 
 # Common ignores
 node_modules
 .next/
 .DS_Store
+.vercel
+.env*
