@@ -88,6 +88,9 @@
     .lang-seg a:hover:not([aria-current="page"]) {
       color: #fff;
     }
+    details.faq summary { list-style: none; cursor: pointer; }
+    details.faq summary::-webkit-details-marker { display: none; }
+    details.faq[open] summary .chev { transform: rotate(180deg); }
     @media (prefers-reduced-motion: reduce){ .reveal{opacity:1;transform:none;} #bullCanvas{display:none;} html{scroll-behavior:auto;} }
   </style>
 </head>
@@ -187,41 +190,36 @@
   </div>
 </section>
 
-<!-- ============ HOW IT WORKS - 5 STEPS (exact live format) ============ -->
+<!-- ============ HOW IT WORKS - 4 STEPS (from V3) ============ -->
 <section id="process" class="scroll-mt-24 px-4 pt-12 pb-24 sm:px-6">
   <div class="mx-auto max-w-6xl">
     <div class="reveal mx-auto max-w-2xl text-center">
-      <p class="text-sm font-800 uppercase tracking-[0.28em] text-bullred">The Playbook</p>
-      <h2 class="mt-3 font-display text-4xl font-900 tracking-tight sm:text-5xl text-balance">Our 5-Step Growth System</h2>
-      <p class="mt-4 text-white/60">Tap any step to see what happens behind the scenes.</p>
+      <p class="text-sm font-800 uppercase tracking-[0.28em] text-bullred">How it works</p>
+      <h2 class="mt-3 font-display text-4xl font-900 tracking-tight sm:text-5xl text-balance">From free demo to live — simple path</h2>
+      <p class="mt-4 text-white/60">Typical timeline: free demo → 15-min call → live site in about <span class="font-700 text-white">5 business days</span> after you approve (depends on photos and details you send).</p>
     </div>
 
-    <div id="stepGrid" class="mt-14 grid gap-4 md:grid-cols-5">
-      <button type="button" data-step="1" onclick="showStep(1,this)" class="step-btn reveal rounded-xl border-2 border-bullred bg-bullcard p-5 text-left transition">
-        <span class="font-display text-3xl font-900 text-bullred">01</span>
-        <h3 class="mt-2 font-700">Discover</h3>
-      </button>
-      <button type="button" data-step="2" onclick="showStep(2,this)" class="step-btn reveal rounded-xl border border-[#3A4560] bg-bullcard p-5 text-left transition hover:border-bullred">
-        <span class="font-display text-3xl font-900 text-white/40">02</span>
-        <h3 class="mt-2 font-700">Build</h3>
-      </button>
-      <button type="button" data-step="3" onclick="showStep(3,this)" class="step-btn reveal rounded-xl border border-[#3A4560] bg-bullcard p-5 text-left transition hover:border-bullred">
-        <span class="font-display text-3xl font-900 text-white/40">03</span>
-        <h3 class="mt-2 font-700">Rank</h3>
-      </button>
-      <button type="button" data-step="4" onclick="showStep(4,this)" class="step-btn reveal rounded-xl border border-[#3A4560] bg-bullcard p-5 text-left transition hover:border-bullred">
-        <span class="font-display text-3xl font-900 text-white/40">04</span>
-        <h3 class="mt-2 font-700">Convert</h3>
-      </button>
-      <button type="button" data-step="5" onclick="showStep(5,this)" class="step-btn reveal rounded-xl border border-[#3A4560] bg-bullcard p-5 text-left transition hover:border-bullred">
-        <span class="font-display text-3xl font-900 text-white/40">05</span>
-        <h3 class="mt-2 font-700">Scale</h3>
-      </button>
-    </div>
-
-    <div id="stepDetail" class="reveal surface-card mt-3 rounded-xl border p-5 text-white/80 md:mt-6 md:p-7">
-      <h4 class="font-display text-xl font-800 text-white">Discover - We learn your market cold.</h4>
-      <p class="mt-2">We review your competitors, map the searches your customers use (including English and Spanish when it matters), and identify the highest-impact opportunities for your website and Google Business Profile.</p>
+    <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="reveal surface-card rounded-xl border p-6">
+        <p class="font-display text-3xl font-900 text-bullred">01</p>
+        <h3 class="mt-2 font-display text-lg font-800">You get a demo of your business</h3>
+        <p class="mt-2 text-sm text-white/60">We mock up a real site for your name and market — not a stock template walkthrough.</p>
+      </div>
+      <div class="reveal surface-card rounded-xl border p-6">
+        <p class="font-display text-3xl font-900 text-bullred">02</p>
+        <h3 class="mt-2 font-display text-lg font-800">Short call — you decide what to buy</h3>
+        <p class="mt-2 text-sm text-white/60">Site only, or site + Google Business Profile. English or bilingual. Clear prices.</p>
+      </div>
+      <div class="reveal surface-card rounded-xl border p-6">
+        <p class="font-display text-3xl font-900 text-bullred">03</p>
+        <h3 class="mt-2 font-display text-lg font-800">We build and launch</h3>
+        <p class="mt-2 text-sm text-white/60">You send logo, photos, hours, and services. We handle structure, mobile, and go-live.</p>
+      </div>
+      <div class="reveal surface-card rounded-xl border p-6">
+        <p class="font-display text-3xl font-900 text-bullred">04</p>
+        <h3 class="mt-2 font-display text-lg font-800">You show up where locals look</h3>
+        <p class="mt-2 text-sm text-white/60">Site converts visitors. Optional monthly GBP keeps Maps and your profile accurate.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -324,7 +322,7 @@
       <div class="mt-6 grid gap-4 sm:grid-cols-2 sm:items-end">
         <div>
           <label for="curLeads" class="mb-1 block text-sm font-600 text-white/70">Current leads / month</label>
-          <input id="curLeads" type="number" min="0" value="16" oninput="calcROI()" class="surface-input w-full rounded-lg border px-4 py-3 outline-none focus:border-bullred" />
+          <input id="curLeads" type="number" min="0" value="8" oninput="calcROI()" class="surface-input w-full rounded-lg border px-4 py-3 outline-none focus:border-bullred" />
         </div>
         <div>
           <label for="avgValue" class="mb-1 block text-sm font-600 text-white/70">Avg. customer value ($)</label>
@@ -333,8 +331,63 @@
       </div>
       <div id="roiOut" class="mt-6 rounded-xl bg-bullred/10 p-5 text-center">
         <p class="text-sm text-white/60">Projected new revenue / month</p>
-        <p class="mt-1 font-display text-4xl font-900 text-bullred">$5,600</p>
+        <p class="mt-1 font-display text-4xl font-900 text-bullred">$2,800</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ (from V3 — edit later) ============ -->
+<section id="faq" class="scroll-mt-24 bg-bullsurface px-4 py-20 sm:px-6">
+  <div class="mx-auto max-w-3xl">
+    <div class="reveal text-center">
+      <p class="text-sm font-800 uppercase tracking-[0.28em] text-bullred">FAQ</p>
+      <h2 class="mt-3 font-display text-3xl font-900 tracking-tight">Questions that usually come up</h2>
+    </div>
+
+    <div class="reveal mt-10 space-y-3">
+      <details class="faq surface-card rounded-xl border px-5 py-4">
+        <summary class="flex items-center justify-between gap-3 font-700">
+          Is the monthly plan required?
+          <span class="chev text-white/40 transition">▾</span>
+        </summary>
+        <p class="mt-3 text-sm leading-relaxed text-white/65">No. You can buy the website setup on its own. Most owners add Google Business Profile management because Maps is where local customers look first.</p>
+      </details>
+      <details class="faq surface-card rounded-xl border px-5 py-4">
+        <summary class="flex items-center justify-between gap-3 font-700">
+          Can I cancel monthly care?
+          <span class="chev text-white/40 transition">▾</span>
+        </summary>
+        <p class="mt-3 text-sm leading-relaxed text-white/65">Yes. No long lock-in games on monthly GBP / light site care. You keep the site you paid to build; hosting after year one is discussed up front so you’re not surprised.</p>
+      </details>
+      <details class="faq surface-card rounded-xl border px-5 py-4">
+        <summary class="flex items-center justify-between gap-3 font-700">
+          What’s included in the free demo?
+          <span class="chev text-white/40 transition">▾</span>
+        </summary>
+        <p class="mt-3 text-sm leading-relaxed text-white/65">A personalized mockup for your business so you can see layout, mobile, and CTAs with your name on it — then a short call to review. No obligation to buy.</p>
+      </details>
+      <details class="faq surface-card rounded-xl border px-5 py-4">
+        <summary class="flex items-center justify-between gap-3 font-700">
+          English only or bilingual?
+          <span class="chev text-white/40 transition">▾</span>
+        </summary>
+        <p class="mt-3 text-sm leading-relaxed text-white/65">Both options exist. We recommend based on your customers and market on the demo call. Bilingual means real Spanish pages and a language switch. Spanish is an add-on to the site setup.</p>
+      </details>
+      <details class="faq surface-card rounded-xl border px-5 py-4">
+        <summary class="flex items-center justify-between gap-3 font-700">
+          How fast can we go live?
+          <span class="chev text-white/40 transition">▾</span>
+        </summary>
+        <p class="mt-3 text-sm leading-relaxed text-white/65">After you approve scope and send logo, photos, hours, and services, many straightforward sites launch in about <strong class="text-white/80">5 business days</strong>. Complex menus or missing assets take longer.</p>
+      </details>
+      <details class="faq surface-card rounded-xl border px-5 py-4">
+        <summary class="flex items-center justify-between gap-3 font-700">
+          What do I need to provide?
+          <span class="chev text-white/40 transition">▾</span>
+        </summary>
+        <p class="mt-3 text-sm leading-relaxed text-white/65">Business name, phone, address or service area, hours, services or menu, logo if you have one, and any photos. We guide you on the call.</p>
+      </details>
     </div>
   </div>
 </section>
@@ -399,46 +452,6 @@
     m.classList.toggle('translate-y-0', !open);
   }
 
-  // ---------- Steps (exact live logic) ----------
-  const stepData = {
-    1: ['Discover - We learn your market cold.', 'We review your competitors, map the searches your customers use (including English and Spanish when it matters), and identify the highest-impact opportunities for your website and Google Business Profile.'],
-    2: ['Build - A site engineered to convert.', 'We craft a fast, mobile-first website with click-to-call, booking, and ordering baked in - English only, or full English + Spanish with a clean language switch - designed to turn visitors into paying customers.'],
-    3: ['Rank - Climb the local map & search.', 'Local SEO structure and Google Business Profile optimization push you into the map pack and onto page one for money keywords in the languages your market actually uses.'],
-    4: ['Convert - Turn attention into revenue.', 'Review engines, tracking, and conversion tweaks make sure every bit of new traffic becomes real calls, bookings, and walk-ins.'],
-    5: ['Scale - Compound your dominance.', 'We double down on what works, expand to new keywords and locations, and keep you the business locals call - month after month.']
-  };
-  function placeStepDetail(btn){
-    const detail = document.getElementById('stepDetail');
-    const grid = document.getElementById('stepGrid');
-    if (!detail || !grid) return;
-    if (window.matchMedia('(max-width: 767px)').matches && btn) {
-      btn.insertAdjacentElement('afterend', detail);
-    } else {
-      grid.insertAdjacentElement('afterend', detail);
-    }
-  }
-  function showStep(n, btn){
-    document.querySelectorAll('.step-btn').forEach(function(b){
-      b.classList.remove('border-bullred', 'border-2');
-      b.classList.add('border', 'border-[#3A4560]');
-      b.querySelector('span').classList.remove('text-bullred');
-      b.querySelector('span').classList.add('text-white/40');
-    });
-    btn.classList.add('border-bullred', 'border-2');
-    btn.classList.remove('border-[#3A4560]');
-    btn.querySelector('span').classList.add('text-bullred');
-    btn.querySelector('span').classList.remove('text-white/40');
-    const d = stepData[n];
-    const detail = document.getElementById('stepDetail');
-    detail.innerHTML = '<h4 class="font-display text-xl font-800 text-white">' + d[0] + '</h4><p class="mt-2">' + d[1] + '</p>';
-    placeStepDetail(btn);
-  }
-  placeStepDetail(document.querySelector('.step-btn[data-step="1"]'));
-  window.addEventListener('resize', function(){
-    const active = document.querySelector('.step-btn.border-bullred') || document.querySelector('.step-btn[data-step="1"]');
-    placeStepDetail(active);
-  });
-
   // ---------- ROI (exact live logic + format) ----------
   function calcROI(){
     const leads = +document.getElementById('curLeads').value || 0;
@@ -479,7 +492,7 @@
   sections.forEach(function(s){ navIO.observe(s); });
 
   // ---------- Language switch keeps current section ----------
-  const SECTION_IDS = ['home', 'process', 'pricing', 'roi'];
+  const SECTION_IDS = ['home', 'process', 'pricing', 'roi', 'faq'];
   function getActiveSectionId(){
     if (location.hash) {
       const id = location.hash.slice(1);

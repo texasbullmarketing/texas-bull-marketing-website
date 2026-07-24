@@ -85,6 +85,9 @@
     .lang-seg a:hover:not([aria-current="page"]) {
       color: #fff;
     }
+    details.faq summary { list-style: none; cursor: pointer; }
+    details.faq summary::-webkit-details-marker { display: none; }
+    details.faq[open] summary .chev { transform: rotate(180deg); }
     @media (prefers-reduced-motion: reduce){ .reveal{opacity:1;transform:none;} #bullCanvas{display:none;} html{scroll-behavior:auto;} }
   </style>
 </head>
@@ -184,37 +187,32 @@
 <section id="process" class="scroll-mt-24 px-4 pt-12 pb-24 sm:px-6">
   <div class="mx-auto max-w-6xl">
     <div class="reveal mx-auto max-w-2xl text-center">
-      <p class="text-sm font-800 uppercase tracking-[0.28em] text-bullred">El plan de juego</p>
-      <h2 class="mt-3 font-display text-4xl font-900 tracking-tight sm:text-5xl text-balance">Nuestro sistema de crecimiento en 5 pasos</h2>
-      <p class="mt-4 text-white/60">Toque un paso para ver qué hacemos detrás de escena.</p>
+      <p class="text-sm font-800 uppercase tracking-[0.28em] text-bullred">Cómo funciona</p>
+      <h2 class="mt-3 font-display text-4xl font-900 tracking-tight sm:text-5xl text-balance">De la demo gratis a estar en vivo — camino simple</h2>
+      <p class="mt-4 text-white/60">Tiempo típico: demo gratis → llamada de 15 min → sitio en vivo en unos <span class="font-700 text-white">5 días hábiles</span> después de su aprobación (según fotos y datos que envíe).</p>
     </div>
 
-    <div id="stepGrid" class="mt-14 grid gap-4 md:grid-cols-5">
-      <button type="button" data-step="1" onclick="showStep(1,this)" class="step-btn reveal rounded-xl border-2 border-bullred bg-bullcard p-5 text-left transition">
-        <span class="font-display text-3xl font-900 text-bullred">01</span>
-        <h3 class="mt-2 font-700">Descubrir</h3>
-      </button>
-      <button type="button" data-step="2" onclick="showStep(2,this)" class="step-btn reveal rounded-xl border border-[#3A4560] bg-bullcard p-5 text-left transition hover:border-bullred">
-        <span class="font-display text-3xl font-900 text-white/40">02</span>
-        <h3 class="mt-2 font-700">Construir</h3>
-      </button>
-      <button type="button" data-step="3" onclick="showStep(3,this)" class="step-btn reveal rounded-xl border border-[#3A4560] bg-bullcard p-5 text-left transition hover:border-bullred">
-        <span class="font-display text-3xl font-900 text-white/40">03</span>
-        <h3 class="mt-2 font-700">Posicionar</h3>
-      </button>
-      <button type="button" data-step="4" onclick="showStep(4,this)" class="step-btn reveal rounded-xl border border-[#3A4560] bg-bullcard p-5 text-left transition hover:border-bullred">
-        <span class="font-display text-3xl font-900 text-white/40">04</span>
-        <h3 class="mt-2 font-700">Convertir</h3>
-      </button>
-      <button type="button" data-step="5" onclick="showStep(5,this)" class="step-btn reveal rounded-xl border border-[#3A4560] bg-bullcard p-5 text-left transition hover:border-bullred">
-        <span class="font-display text-3xl font-900 text-white/40">05</span>
-        <h3 class="mt-2 font-700">Escalar</h3>
-      </button>
-    </div>
-
-    <div id="stepDetail" class="reveal surface-card mt-3 rounded-xl border p-5 text-white/80 md:mt-6 md:p-7">
-      <h4 class="font-display text-xl font-800 text-white">Descubrir — Conocemos su mercado a fondo.</h4>
-      <p class="mt-2">Revisamos a sus competidores, las búsquedas que usan sus clientes (en inglés y en español cuando importa) y las mejores oportunidades para su sitio web y su perfil de empresa en Google.</p>
+    <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="reveal surface-card rounded-xl border p-6">
+        <p class="font-display text-3xl font-900 text-bullred">01</p>
+        <h3 class="mt-2 font-display text-lg font-800">Recibe una demo de su negocio</h3>
+        <p class="mt-2 text-sm text-white/60">Armamos un sitio real con su nombre y mercado — no un recorrido de plantilla genérica.</p>
+      </div>
+      <div class="reveal surface-card rounded-xl border p-6">
+        <p class="font-display text-3xl font-900 text-bullred">02</p>
+        <h3 class="mt-2 font-display text-lg font-800">Llamada corta — usted elige qué comprar</h3>
+        <p class="mt-2 text-sm text-white/60">Solo sitio, o sitio + perfil de Google. Inglés o bilingüe. Precios claros.</p>
+      </div>
+      <div class="reveal surface-card rounded-xl border p-6">
+        <p class="font-display text-3xl font-900 text-bullred">03</p>
+        <h3 class="mt-2 font-display text-lg font-800">Construimos y lanzamos</h3>
+        <p class="mt-2 text-sm text-white/60">Usted envía logo, fotos, horarios y servicios. Nosotros la estructura, el celular y el go-live.</p>
+      </div>
+      <div class="reveal surface-card rounded-xl border p-6">
+        <p class="font-display text-3xl font-900 text-bullred">04</p>
+        <h3 class="mt-2 font-display text-lg font-800">Aparece donde buscan los locales</h3>
+        <p class="mt-2 text-sm text-white/60">El sitio convierte visitas. El GBP mensual opcional mantiene Maps y su perfil al día.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -312,7 +310,7 @@
       <div class="mt-6 grid gap-4 sm:grid-cols-2 sm:items-end">
         <div>
           <label for="curLeads" class="mb-1 block text-sm font-600 text-white/70">Prospectos actuales / mes</label>
-          <input id="curLeads" type="number" min="0" value="16" oninput="calcROI()" class="surface-input w-full rounded-lg border px-4 py-3 outline-none focus:border-bullred" />
+          <input id="curLeads" type="number" min="0" value="8" oninput="calcROI()" class="surface-input w-full rounded-lg border px-4 py-3 outline-none focus:border-bullred" />
         </div>
         <div>
           <label for="avgValue" class="mb-1 block text-sm font-600 text-white/70">Valor promedio por cliente ($)</label>
@@ -321,8 +319,62 @@
       </div>
       <div id="roiOut" class="mt-6 rounded-xl bg-bullred/10 p-5 text-center">
         <p class="text-sm text-white/60">Ingresos nuevos proyectados / mes</p>
-        <p class="mt-1 font-display text-4xl font-900 text-bullred">$5,600</p>
+        <p class="mt-1 font-display text-4xl font-900 text-bullred">$2,800</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="scroll-mt-24 bg-bullsurface px-4 py-20 sm:px-6">
+  <div class="mx-auto max-w-3xl">
+    <div class="reveal text-center">
+      <p class="text-sm font-800 uppercase tracking-[0.28em] text-bullred">Preguntas</p>
+      <h2 class="mt-3 font-display text-3xl font-900 tracking-tight">Lo que casi siempre preguntan</h2>
+    </div>
+
+    <div class="reveal mt-10 space-y-3">
+      <details class="faq surface-card rounded-xl border px-5 py-4">
+        <summary class="flex items-center justify-between gap-3 font-700">
+          ¿El plan mensual es obligatorio?
+          <span class="chev text-white/40 transition">▾</span>
+        </summary>
+        <p class="mt-3 text-sm leading-relaxed text-white/65">No. Puede comprar solo el sitio. La mayoría suma la gestión del perfil de Google porque en Maps es donde buscan primero los clientes locales.</p>
+      </details>
+      <details class="faq surface-card rounded-xl border px-5 py-4">
+        <summary class="flex items-center justify-between gap-3 font-700">
+          ¿Puedo cancelar el plan mensual?
+          <span class="chev text-white/40 transition">▾</span>
+        </summary>
+        <p class="mt-3 text-sm leading-relaxed text-white/65">Sí. Sin contratos largos en el cuidado mensual de GBP / sitio ligero. Se queda con el sitio que pagó por construir; el hosting después del año uno se habla claro desde el principio.</p>
+      </details>
+      <details class="faq surface-card rounded-xl border px-5 py-4">
+        <summary class="flex items-center justify-between gap-3 font-700">
+          ¿Qué incluye la demo gratis?
+          <span class="chev text-white/40 transition">▾</span>
+        </summary>
+        <p class="mt-3 text-sm leading-relaxed text-white/65">Un mockup personalizado de su negocio para ver diseño, móvil y botones con su nombre — y una llamada corta para revisarlo. Sin obligación de comprar.</p>
+      </details>
+      <details class="faq surface-card rounded-xl border px-5 py-4">
+        <summary class="flex items-center justify-between gap-3 font-700">
+          ¿Solo inglés o bilingüe?
+          <span class="chev text-white/40 transition">▾</span>
+        </summary>
+        <p class="mt-3 text-sm leading-relaxed text-white/65">Existen las dos opciones. Recomendamos según sus clientes en la demo. Bilingüe significa páginas reales en español y un cambio de idioma. El español es un complemento al sitio.</p>
+      </details>
+      <details class="faq surface-card rounded-xl border px-5 py-4">
+        <summary class="flex items-center justify-between gap-3 font-700">
+          ¿Qué tan rápido salimos en vivo?
+          <span class="chev text-white/40 transition">▾</span>
+        </summary>
+        <p class="mt-3 text-sm leading-relaxed text-white/65">Después de aprobar el alcance y enviar logo, fotos, horarios y servicios, muchos sitios sencillos salen en unos <strong class="text-white/80">5 días hábiles</strong>. Menús complejos o faltan materiales tarda más.</p>
+      </details>
+      <details class="faq surface-card rounded-xl border px-5 py-4">
+        <summary class="flex items-center justify-between gap-3 font-700">
+          ¿Qué debo enviar yo?
+          <span class="chev text-white/40 transition">▾</span>
+        </summary>
+        <p class="mt-3 text-sm leading-relaxed text-white/65">Nombre del negocio, teléfono, dirección o zona de servicio, horarios, servicios o menú, logo si tiene, y fotos. En la llamada le guiamos.</p>
+      </details>
     </div>
   </div>
 </section>
@@ -382,45 +434,6 @@
     m.classList.toggle('translate-y-0', !open);
   }
 
-  const stepData = {
-    1: ['Descubrir — Conocemos su mercado a fondo.', 'Revisamos a sus competidores, las búsquedas que usan sus clientes (en inglés y en español cuando importa) y las mejores oportunidades para su sitio web y su perfil de empresa en Google.'],
-    2: ['Construir — Un sitio hecho para convertir.', 'Creamos un sitio rápido y pensado para el celular, con llamada, reservas y pedidos cuando aplica — solo inglés, o inglés + español completo con un cambio de idioma limpio.'],
-    3: ['Posicionar — Suba en el mapa y en la búsqueda.', 'La estructura de SEO local y la optimización del perfil de Google lo empujan al paquete de mapas y a la primera página para las palabras que generan dinero en los idiomas que usa su mercado.'],
-    4: ['Convertir — De atención a ingresos.', 'Reseñas, seguimiento y ajustes de conversión para que el tráfico nuevo se vuelva llamadas, citas y visitas reales.'],
-    5: ['Escalar — Multiplique su dominio.', 'Duplicamos lo que funciona, ampliamos palabras clave y zonas, y lo mantenemos como el negocio al que llaman — mes tras mes.']
-  };
-  function placeStepDetail(btn){
-    const detail = document.getElementById('stepDetail');
-    const grid = document.getElementById('stepGrid');
-    if (!detail || !grid) return;
-    if (window.matchMedia('(max-width: 767px)').matches && btn) {
-      btn.insertAdjacentElement('afterend', detail);
-    } else {
-      grid.insertAdjacentElement('afterend', detail);
-    }
-  }
-  function showStep(n, btn){
-    document.querySelectorAll('.step-btn').forEach(function(b){
-      b.classList.remove('border-bullred', 'border-2');
-      b.classList.add('border', 'border-[#3A4560]');
-      b.querySelector('span').classList.remove('text-bullred');
-      b.querySelector('span').classList.add('text-white/40');
-    });
-    btn.classList.add('border-bullred', 'border-2');
-    btn.classList.remove('border-[#3A4560]');
-    btn.querySelector('span').classList.add('text-bullred');
-    btn.querySelector('span').classList.remove('text-white/40');
-    const d = stepData[n];
-    const detail = document.getElementById('stepDetail');
-    detail.innerHTML = '<h4 class="font-display text-xl font-800 text-white">' + d[0] + '</h4><p class="mt-2">' + d[1] + '</p>';
-    placeStepDetail(btn);
-  }
-  placeStepDetail(document.querySelector('.step-btn[data-step="1"]'));
-  window.addEventListener('resize', function(){
-    const active = document.querySelector('.step-btn.border-bullred') || document.querySelector('.step-btn[data-step="1"]');
-    placeStepDetail(active);
-  });
-
   function calcROI(){
     const leads = +document.getElementById('curLeads').value || 0;
     const val = +document.getElementById('avgValue').value || 0;
@@ -458,7 +471,7 @@
   sections.forEach(function(s){ navIO.observe(s); });
 
   // Language switch keeps current section
-  const SECTION_IDS = ['home', 'process', 'pricing', 'roi'];
+  const SECTION_IDS = ['home', 'process', 'pricing', 'roi', 'faq'];
   function getActiveSectionId(){
     if (location.hash) {
       const id = location.hash.slice(1);
