@@ -141,6 +141,29 @@ ul { list-style: none; }
   padding: 0.35rem 0;
 }
 .nav__links a:hover { color: var(--blue2); }
+.lang-seg {
+  display: inline-flex;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  overflow: hidden;
+  flex-shrink: 0;
+  margin-right: 0.35rem;
+}
+.lang-seg a {
+  padding: 0.4rem 0.65rem;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: var(--dim);
+  background: rgba(18, 37, 60, 0.55);
+}
+.lang-seg a[aria-current="page"] {
+  background: var(--blue2);
+  color: #12324a;
+}
+.lang-seg a:hover:not([aria-current="page"]) {
+  color: var(--text);
+}
 .nav__burger {
   display: none;
   width: 2.3rem;

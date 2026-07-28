@@ -6,7 +6,7 @@ Live demo sites for leads. Served as static folders under `public/demo/`.
 
 | Company | URL | Folder |
 |---------|-----|--------|
-| 2 Rivers Heating & Air Conditioning | `/demo/TwoRiversHeatingAC/` | `public/demo/TwoRiversHeatingAC/` |
+| 2 Rivers Heating & Air Conditioning (EN+ES) | `/demo/TwoRiversHeatingAC/` · `/demo/TwoRiversHeatingAC/es/` | `public/demo/TwoRiversHeatingAC/` |
 | Enterprise Flooring Solutions | `/demo/EnterpriseFlooringSolutions/` | `public/demo/EnterpriseFlooringSolutions/` |
 | HVAC Pros Heating & A/C | `/demo/HVACProsHeatingAC/` | `public/demo/HVACProsHeatingAC/` |
 | Iron Roots Services | `/demo/IronRootsServices/` | `public/demo/IronRootsServices/` |
@@ -18,12 +18,14 @@ Live demo sites for leads. Served as static folders under `public/demo/`.
 | The Blackdoor Steakhouse | `/demo/TheBlackdoorSteakhouse/` | `public/demo/TheBlackdoorSteakhouse/` |
 | Wave Finders Electronics | `/demo/WaveFindersElectronics/` | `public/demo/WaveFindersElectronics/` |
 | V2TBM (TBM redesign sandbox) | `/demo/v2tbm/` | `public/demo/v2tbm/` |
+| V3TBM (CRO landing sandbox, EN+ES) | `/demo/v3tbm/` | `public/demo/v3tbm/` |
 
 Hub page: `/demo/` → `public/demo/index.html`
 
 Live:
 
 - https://texasbullmarketing.com/demo/TwoRiversHeatingAC/
+- https://texasbullmarketing.com/demo/TwoRiversHeatingAC/es/
 - https://texasbullmarketing.com/demo/EnterpriseFlooringSolutions/
 - https://texasbullmarketing.com/demo/HVACProsHeatingAC/
 - https://texasbullmarketing.com/demo/IronRootsServices/
