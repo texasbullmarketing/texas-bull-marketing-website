@@ -4,16 +4,25 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex, nofollow" />
+  <meta name="view-transition" content="same-origin" />
   <title>The 1908 Restaurant + Bar | Downtown Seguin, TX</title>
   <meta name="description" content="Historic casual upstairs. Speakeasy lounge below. Real photos from The 1908 in Downtown Seguin - smash burgers, craft cocktails, live music, and dual vibes." />
+  <link rel="canonical" href="https://texasbullmarketing.com/demo/The1908RestaurantBar/" />
+  <link rel="alternate" hreflang="en" href="https://texasbullmarketing.com/demo/The1908RestaurantBar/" />
+  <link rel="alternate" hreflang="es" href="https://texasbullmarketing.com/demo/The1908RestaurantBar/es/" />
+  <link rel="alternate" hreflang="x-default" href="https://texasbullmarketing.com/demo/The1908RestaurantBar/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <script src="https://unpkg.com/htmx.org@2.0.4" defer></script>
 </head>
-<body>
+<body data-lang="en">
+  <div id="page-root">
   <div class="grain" aria-hidden="true"></div>
   <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <div class="demo-banner" role="status"><span>DEMO</span> The 1908 · Texas Bull Marketing sample · Not the live site</div>
 
   <header class="nav" id="nav">
     <div class="nav__inner">
@@ -29,10 +38,19 @@
         <a href="#reviews">Reviews</a>
         <a href="#visit">Visit</a>
       </nav>
-      <a href="tel:+18308326726" class="btn btn--gold btn--sm nav__cta">Call (830) 832-6726</a>
-      <button class="nav__burger" id="navToggle" aria-label="Menu" aria-expanded="false">
-        <span></span><span></span>
-      </button>
+      <div class="nav__actions">
+        <div class="lang-switch" role="navigation" aria-label="Language">
+          <a href="index.html" class="is-active" hreflang="en" aria-current="page">EN</a>
+          <span aria-hidden="true">|</span>
+          <a href="es/" hreflang="es"
+            hx-get="es/" hx-select="#page-root" hx-target="#page-root"
+            hx-swap="outerHTML transition:true" hx-push-url="true">ES</a>
+        </div>
+        <a href="tel:+18308326726" class="btn btn--gold btn--sm nav__cta">Call (830) 832-6726</a>
+        <button class="nav__burger" id="navToggle" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -542,6 +560,7 @@
   </footer>
 
   <script src="script.js"></script>
+  </div>
 </body>
 </html>
 

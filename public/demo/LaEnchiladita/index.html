@@ -5,11 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Enchiladita • Authentic Tex-Mex • Nixon, TX</title>
     <meta name="robots" content="noindex, nofollow" />
+    <meta name="view-transition" content="same-origin" />
+    <link rel="canonical" href="https://texasbullmarketing.com/demo/LaEnchiladita/" />
+    <link rel="alternate" hreflang="en" href="https://texasbullmarketing.com/demo/LaEnchiladita/" />
+    <link rel="alternate" hreflang="es" href="https://texasbullmarketing.com/demo/LaEnchiladita/es/" />
+    <link rel="alternate" hreflang="x-default" href="https://texasbullmarketing.com/demo/LaEnchiladita/" />
     <!-- No client logo on file — default to Texas Bull Marketing favicon -->
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" type="image/png" sizes="32x32" href="/icon-light-32x32.png" />
     <link rel="apple-touch-icon" href="/apple-icon.png" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/htmx.org@2.0.4" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Inter:wght@400;500;600&amp;display=swap');
@@ -18,6 +24,39 @@
             --warm-red: #9F2D1F;
             --golden: #D97706;
         }
+
+        .demo-banner {
+            position: sticky;
+            top: 0;
+            z-index: 70;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+            height: 2rem;
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: #140404;
+            background: linear-gradient(90deg, #ff8a8a, #e10600);
+        }
+        .demo-banner span { font-weight: 900; letter-spacing: 0.08em; }
+
+        .lang-switch {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.28rem;
+            padding: 0.25rem 0.55rem;
+            border-radius: 999px;
+            border: 1px solid #F5D0A9;
+            background: #fff;
+            font-size: 0.72rem;
+            font-weight: 700;
+        }
+        .lang-switch a { color: #8a6a55; padding: 0.1rem 0.28rem; border-radius: 4px; text-decoration: none; }
+        .lang-switch a.is-active { background: #9F2D1F; color: #fff; }
+        .lang-switch a:hover { color: #9F2D1F; }
+        .lang-switch a.is-active:hover { color: #fff; }
+        .lang-switch span[aria-hidden] { color: #c4a882; }
         
         .tail-container {
             max-width: 1280px;
@@ -175,7 +214,10 @@
         }
     </style>
 </head>
-<body class="bg-[#FDF8F0] text-[#3F2A1D] font-sans antialiased">
+<body class="bg-[#FDF8F0] text-[#3F2A1D] font-sans antialiased" data-lang="en">
+  <div id="page-root">
+    <div class="demo-banner" role="status"><span>DEMO</span> La Enchiladita · Texas Bull Marketing sample · Not the live site</div>
+
     <!-- Top bar -->
     <div class="bg-[#9F2D1F] text-white text-sm py-1.5">
         <div class="tail-container px-6 flex items-center justify-between text-center sm:text-left">
@@ -195,7 +237,7 @@
     </div>
 
     <!-- Navigation -->
-    <nav id="nav" class="bg-[#FDF8F0] sticky top-0 z-50 border-b border-[#F5D0A9]">
+    <nav id="nav" class="bg-[#FDF8F0] sticky top-8 z-50 border-b border-[#F5D0A9]">
         <div class="tail-container px-6">
             <div class="flex items-center justify-between h-16">
                 <!-- Logo -->
@@ -218,6 +260,13 @@
                 </div>
 
                 <div class="flex items-center gap-x-3">
+                    <div class="lang-switch" role="navigation" aria-label="Language">
+                        <a href="index.html" class="is-active" hreflang="en" aria-current="page">EN</a>
+                        <span aria-hidden="true">|</span>
+                        <a href="es/" hreflang="es"
+                          hx-get="es/" hx-select="#page-root" hx-target="#page-root"
+                          hx-swap="outerHTML transition:true" hx-push-url="true">ES</a>
+                    </div>
                     <!-- Phone CTA -->
                     <a href="tel:8305821147" 
                        class="hidden sm:flex items-center gap-x-2 bg-white border border-[#F5D0A9] hover:bg-[#9F2D1F] hover:text-white hover:border-[#9F2D1F] transition-all px-4 py-2 rounded-full text-sm font-semibold shadow-sm">
@@ -726,7 +775,8 @@
 
     <footer class="text-xs text-center py-5 text-[#3F2A1D]/50">
         La Enchiladita — 105 W 2nd St, Nixon, TX 78140 • (830) 582-1147<br>
-        Casual Tex-Mex made with care. Not affiliated with any other location.
+        Casual Tex-Mex made with care. Not affiliated with any other location.<br>
+        <span class="text-[#3F2A1D]/40">Demo concept site · Texas Bull Marketing · Not the official website</span>
     </footer>
 
     <!-- Lightbox Modal -->
@@ -844,5 +894,6 @@
         
         // Bonus: show a small console note for developer
     </script>
+  </div>
 </body>
 </html>

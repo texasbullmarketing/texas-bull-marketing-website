@@ -4,16 +4,23 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex, nofollow" />
+  <meta name="view-transition" content="same-origin" />
   <title>J's Auto Shop | Automotive &amp; Mobile Mechanic · Boerne, TX</title>
   <meta name="description" content="J's Auto Shop — professional auto repair &amp; mobile mechanic in Boerne, TX. Engine, brakes, A/C, suspension, diagnostics. Call (210) 744-9275." />
   <meta name="theme-color" content="#0a0a0c" />
+  <link rel="canonical" href="https://texasbullmarketing.com/demo/JSAutoShop/" />
+  <link rel="alternate" hreflang="en" href="https://texasbullmarketing.com/demo/JSAutoShop/" />
+  <link rel="alternate" hreflang="es" href="https://texasbullmarketing.com/demo/JSAutoShop/es/" />
+  <link rel="alternate" hreflang="x-default" href="https://texasbullmarketing.com/demo/JSAutoShop/" />
   <link rel="icon" type="image/png" href="assets/images/logo-clean.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <script src="https://unpkg.com/htmx.org@2.0.4" defer></script>
 </head>
-<body>
+<body data-lang="en">
+  <div id="page-root">
   <div class="demo-banner" role="status">
     <span>DEMO VERSION</span> — Redesign preview for J's Auto Shop · Not the live site
   </div>
@@ -34,6 +41,13 @@
         <a href="#contact">Contact</a>
       </nav>
       <div class="nav__right">
+        <div class="lang-switch" role="navigation" aria-label="Language">
+          <a href="index.html" class="is-active" hreflang="en" aria-current="page">EN</a>
+          <span aria-hidden="true">|</span>
+          <a href="es/" hreflang="es"
+            hx-get="es/" hx-select="#page-root" hx-target="#page-root"
+            hx-swap="outerHTML transition:true" hx-push-url="true">ES</a>
+        </div>
         <a class="btn btn--ghost btn--sm nav__phone" href="tel:+12107449275">210-744-9275</a>
         <a class="btn btn--hot btn--sm nav__cta" href="tel:+12107449275">Call Now</a>
         <button class="nav__burger" id="navToggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
@@ -284,6 +298,7 @@
   <a class="fab" href="tel:+12107449275" aria-label="Call J's Auto Shop">
     <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79a15.15 15.15 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.25 1.02l-2.2 2.19z"/></svg>
   </a>
+  </div><!-- /#page-root -->
 
   <script src="script.js"></script>
 </body>

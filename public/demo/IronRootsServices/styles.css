@@ -161,6 +161,36 @@ ul {
   display: none;
   gap: 0.6rem;
   margin-left: auto;
+  align-items: center;
+}
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.28rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.06);
+}
+.lang-switch a {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.65);
+  padding: 0.12rem 0.28rem;
+  border-radius: 4px;
+  text-decoration: none;
+}
+.lang-switch a.is-active {
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
+}
+.lang-switch a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+.lang-switch--mobile {
+  margin: 0.5rem 0 0.75rem;
+  width: fit-content;
 }
 
 .nav-toggle {

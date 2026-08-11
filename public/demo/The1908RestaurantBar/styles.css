@@ -16,10 +16,50 @@
   --line: rgba(201, 162, 39, 0.18);
   --serif: "Cormorant Garamond", Georgia, serif;
   --sans: "Outfit", system-ui, sans-serif;
+  --banner-h: 2rem;
   --nav-h: 4.4rem;
   --max: 74rem;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
+
+.demo-banner {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 1100;
+  height: var(--banner-h);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #140404;
+  background: linear-gradient(90deg, #ff8a8a, #e10600);
+  font-family: var(--sans);
+}
+.demo-banner span { font-weight: 900; letter-spacing: 0.08em; }
+
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.28rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(31, 26, 23, 0.85);
+  flex-shrink: 0;
+}
+.lang-switch a {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--dim);
+  padding: 0.12rem 0.28rem;
+  border-radius: 4px;
+}
+.lang-switch a.is-active { background: rgba(201, 162, 39, 0.18); color: var(--gold-2); }
+.lang-switch a:hover { color: var(--gold-2); text-decoration: none; }
+.lang-switch span[aria-hidden] { color: var(--dim); font-size: 0.7rem; opacity: 0.6; }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
@@ -158,7 +198,9 @@ em { font-style: italic; color: var(--gold-2); }
 /* NAV */
 .nav {
   position: fixed;
-  inset: 0 0 auto;
+  top: var(--banner-h);
+  left: 0;
+  right: 0;
   z-index: 1000;
   height: var(--nav-h);
   border-bottom: 1px solid transparent;
@@ -219,6 +261,12 @@ em { font-style: italic; color: var(--gold-2); }
 }
 .nav__burger.is-open span:first-child { transform: translateY(3.75px) rotate(45deg); }
 .nav__burger.is-open span:last-child { transform: translateY(-3.75px) rotate(-45deg); }
+.nav__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-shrink: 0;
+}
 
 /* HERO */
 .hero {
@@ -227,7 +275,7 @@ em { font-style: italic; color: var(--gold-2); }
   min-height: 100dvh;
   display: grid;
   align-items: end;
-  padding: calc(var(--nav-h) + 1.5rem) 0 0;
+  padding: calc(var(--banner-h) + var(--nav-h) + 1.5rem) 0 0;
   overflow: hidden;
 }
 .hero__stage {
@@ -555,7 +603,7 @@ em { font-style: italic; color: var(--gold-2); }
 .menu__panel.is-active { display: grid; }
 .menu__feature {
   position: sticky;
-  top: calc(var(--nav-h) + 1rem);
+  top: calc(var(--banner-h) + var(--nav-h) + 1rem);
   border-radius: 2px;
   overflow: hidden;
   border: 1px solid rgba(201, 162, 39, 0.14);

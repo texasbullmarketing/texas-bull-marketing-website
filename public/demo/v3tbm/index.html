@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Texas Bull Marketing V3 (Demo) | Websites + Google for Local Businesses</title>
+  <meta name="description" content="Custom websites and Google Business Profile help for local owners. Free personalized demo of your business. English or English + Spanish." />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#161C2A" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/icon-light-32x32.png" />
+  <link rel="apple-touch-icon" href="/apple-icon.png" />
+
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bullred: '#C8102E',
+            bullnavy: '#1E3A7A',
+            bullbg: '#161C2A',
+            bullsurface: '#1F2738',
+            bullcard: '#242D40',
+          },
+          fontFamily: {
+            display: ['Archivo', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    html, body { background:#161C2A; }
+    ::selection { background:#C8102E; color:#fff; }
+    .reveal { opacity:0; transform:translateY(14px); transition:opacity .4s ease, transform .4s ease; }
+    .reveal.in { opacity:1; transform:none; }
+    #bullCanvas { position:fixed; inset:0; z-index:0; pointer-events:none; }
+    .nav-link.active { color:#fff; }
+    .nav-link.active::after { width:100%; }
+    .nav-link::after { content:''; display:block; height:2px; width:0; background:#C8102E; transition:width .2s ease; }
+    .surface-card { background:#242D40; border-color:#3A4560; }
+    .surface-panel { background:#1F2738; border-color:#3A4560; }
+    .surface-input { background:#161C2A; border-color:#3A4560; color:#fff; }
+    .surface-input:focus { border-color:#C8102E; outline:none; }
+    .lang-seg {
+      display: inline-flex;
+      background: #0b0f14;
+      border: 1px solid #3A4560;
+      border-radius: 999px;
+      padding: 3px;
+      gap: 2px;
+    }
+    .lang-seg a {
+      color: rgba(255,255,255,.55);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      padding: 8px 14px;
+      border-radius: 999px;
+      text-decoration: none;
+      line-height: 1;
+      transition: .15s ease;
+    }
+    .lang-seg a[aria-current="page"] { background: #C8102E; color: #fff; }
+    .lang-seg a:hover:not([aria-current="page"]) { color: #fff; }
+    #stickyCta {
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(12px);
+      transition: opacity .25s ease, transform .25s ease;
+    }
+    #stickyCta.is-visible {
+      opacity: 1;
+      pointer-events: auto;
+      transform: none;
+    }
+    details.faq summary { list-style: none; cursor: pointer; }
+    details.faq summary::-webkit-details-marker { display: none; }
+    details.faq[open] summary .chev { transform: rotate(180deg); }
+    @media (prefers-reduced-motion: reduce){
+      .reveal{opacity:1;transform:none;}
+      #bullCanvas{display:none;}
+      html{scroll-behavior:auto;}
+      #stickyCta{transition:none;}
+    }
+  </style>
+</head>
+<body class="font-sans bg-bullbg text-white antialiased selection:bg-bullred">
+
+<canvas id="bullCanvas" aria-hidden="true"></canvas>
+
+<!-- ========== NAV ========== -->
+<header class="fixed top-0 inset-x-0 z-50 border-b border-[#3A4560] bg-bullbg">
+  <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6" aria-label="Primary">
+    <a href="#home" class="flex items-center gap-3 group">
+      <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-1-9pRF4CyBiygUYC6Rty3wOLirZ8AxIw.png" alt="Texas Bull Marketing logo" width="48" height="48" class="h-11 w-11 object-contain transition-transform group-hover:scale-105" />
+      <span class="font-display text-lg font-900 leading-none tracking-tight">
+        TEXAS <span class="text-bullred">BULL</span><br class="hidden sm:block" />
+        <span class="text-xs font-700 tracking-[0.28em] text-white/60">MARKETING</span>
+      </span>
+    </a>
+
+    <div class="hidden items-center gap-6 lg:flex">
+      <a href="#how" class="nav-link text-sm font-600 text-white/70 transition hover:text-white" data-nav>How it works</a>
+      <a href="#pricing" class="nav-link text-sm font-600 text-white/70 transition hover:text-white" data-nav>Pricing</a>
+      <a href="#proof" class="nav-link text-sm font-600 text-white/70 transition hover:text-white" data-nav>Results</a>
+      <a href="#faq" class="nav-link text-sm font-600 text-white/70 transition hover:text-white" data-nav>FAQ</a>
+    </div>
+
+    <div class="flex items-center gap-3">
+      <div class="lang-seg" role="group" aria-label="Language">
+        <a href="./" data-lang-href="./" hreflang="en" lang="en" aria-current="page">EN</a>
+        <a href="es/" data-lang-href="es/" hreflang="es" lang="es">ES</a>
+      </div>
+      <button type="button" onclick="bookCall()" class="hidden rounded-full bg-bullred px-4 py-2.5 text-sm font-700 transition hover:bg-red-600 sm:block">
+        Claim Free Demo of Your Business
+      </button>
+      <button type="button" onclick="toggleMobile()" aria-label="Open menu" class="rounded-lg border border-[#3A4560] p-2 lg:hidden">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <div id="mobileMenu" class="fixed inset-x-0 top-[64px] z-40 origin-top -translate-y-4 scale-y-0 border-b border-[#3A4560] bg-bullbg px-6 py-6 opacity-0 transition-all duration-200 lg:hidden">
+    <div class="flex flex-col gap-4 text-lg font-700">
+      <div class="lang-seg mb-1" role="group" aria-label="Language">
+        <a href="./" data-lang-href="./" hreflang="en" lang="en" aria-current="page">EN</a>
+        <a href="es/" data-lang-href="es/" hreflang="es" lang="es">ES</a>
+      </div>
+      <a href="#how" onclick="toggleMobile()" class="text-white/80 hover:text-bullred">How it works</a>
+      <a href="#pricing" onclick="toggleMobile()" class="text-white/80 hover:text-bullred">Pricing</a>
+      <a href="#proof" onclick="toggleMobile()" class="text-white/80 hover:text-bullred">Results</a>
+      <a href="#faq" onclick="toggleMobile()" class="text-white/80 hover:text-bullred">FAQ</a>
+      <button type="button" onclick="toggleMobile();bookCall()" class="mt-2 rounded-full bg-bullred px-5 py-3 font-700">Claim Free Demo of Your Business</button>
+    </div>
+  </div>
+</header>
+
+<main id="home" class="relative z-10">
+
+<!-- ========== HERO: clarity first, demo spine ========== -->
+<section class="relative overflow-hidden px-4 pb-12 pt-24 sm:px-6 sm:pb-16 sm:pt-20">
+  <div class="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-2">
+    <div class="reveal">
+      <p class="text-sm font-700 text-white/70">
+        Custom websites + Google Business Profile for local owners
+      </p>
+      <h1 class="mt-3 font-display text-4xl font-900 leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl text-balance">
+        More calls from Search and Maps — not another pretty page that sits empty.
+      </h1>
+      <p class="mt-4 max-w-xl text-lg leading-relaxed text-white/65">
+        Texas-built sites for restaurants, trades, and local service businesses nationwide.
+        English, or full English + Spanish when your customers need both.
+      </p>
+      <p class="mt-3 font-display text-xl font-800 text-white sm:text-2xl text-balance">
+        Make your business <span class="text-bullred">the one locals call.</span>
+      </p>
+
+      <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+        <button type="button" onclick="bookCall()" class="rounded-full bg-bullred px-7 py-4 text-base font-800 transition hover:bg-red-600">
+          Claim Free Demo of Your Business
+        </button>
+        <a href="#pricing" class="rounded-full border border-[#3A4560] px-7 py-4 text-center text-base font-700 text-white/90 transition hover:border-bullred">
+          See pricing
+        </a>
+      </div>
+      <p class="mt-4 max-w-lg text-sm leading-relaxed text-white/50">
+        We build a personalized demo of <span class="font-600 text-white/70">your</span> business first — then walk you through it on a short call. No generic pitch deck.
+      </p>
+    </div>
+
+    <div class="reveal flex justify-center lg:justify-end">
+      <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-1-9pRF4CyBiygUYC6Rty3wOLirZ8AxIw.png" alt="Texas Bull Marketing bull mascot" width="480" height="590" class="w-[280px] sm:w-[380px] lg:w-[440px]" />
+    </div>
+  </div>
+</section>
+
+<!-- ========== WHO FOR ========== -->
+<section class="border-y border-[#3A4560] bg-bullsurface px-4 py-12 sm:px-6">
+  <div class="reveal mx-auto max-w-4xl text-center">
+    <p class="text-xs font-800 uppercase tracking-[0.2em] text-bullred">Built for local owners</p>
+    <p class="mt-4 text-base leading-relaxed text-white/75 sm:text-lg">
+      Restaurants &amp; food · HVAC &amp; home trades · Service businesses that live on phone calls and Maps · Owners who want a real site without agency drama
+    </p>
+    <p class="mt-5 text-sm text-white/40">
+      Not a fit: enterprise rebrands, national ecommerce catalogs, or content-farm SEO packages.
+    </p>
+  </div>
+</section>
+
+<!-- ========== HOW IT WORKS (outcomes + timeline) ========== -->
+<section id="how" class="scroll-mt-24 px-4 py-20 sm:px-6">
+  <div class="mx-auto max-w-6xl">
+    <div class="reveal mx-auto max-w-2xl text-center">
+      <p class="text-sm font-800 uppercase tracking-[0.28em] text-bullred">How it works</p>
+      <h2 class="mt-3 font-display text-3xl font-900 tracking-tight sm:text-4xl">From free demo to live — simple path</h2>
+      <p class="mt-3 text-white/60">Typical timeline: free demo → 15-min call → live site in about <span class="font-700 text-white">5 business days</span> after you approve (depends on photos and details you send).</p>
+    </div>
+
+    <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="reveal surface-card rounded-xl border p-6">
+        <p class="font-display text-3xl font-900 text-bullred">01</p>
+        <h3 class="mt-2 font-display text-lg font-800">You get a demo of your business</h3>
+        <p class="mt-2 text-sm text-white/60">We mock up a real site for your name and market — not a stock template walkthrough.</p>
+      </div>
+      <div class="reveal surface-card rounded-xl border p-6">
+        <p class="font-display text-3xl font-900 text-bullred">02</p>
+        <h3 class="mt-2 font-display text-lg font-800">Short call — you decide what to buy</h3>
+        <p class="mt-2 text-sm text-white/60">Site only, or site + Google Business Profile. English or bilingual. Clear prices.</p>
+      </div>
+      <div class="reveal surface-card rounded-xl border p-6">
+        <p class="font-display text-3xl font-900 text-bullred">03</p>
+        <h3 class="mt-2 font-display text-lg font-800">We build and launch</h3>
+        <p class="mt-2 text-sm text-white/60">You send logo, photos, hours, and services. We handle structure, mobile, and go-live.</p>
+      </div>
+      <div class="reveal surface-card rounded-xl border p-6">
+        <p class="font-display text-3xl font-900 text-bullred">04</p>
+        <h3 class="mt-2 font-display text-lg font-800">You show up where locals look</h3>
+        <p class="mt-2 text-sm text-white/60">Site converts visitors. Optional monthly GBP keeps Maps and your profile accurate.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PRICING ========== -->
+<section id="pricing" class="scroll-mt-24 bg-bullsurface px-4 py-20 sm:px-6">
+  <div class="mx-auto max-w-6xl">
+    <div class="reveal mx-auto max-w-2xl text-center">
+      <p class="text-sm font-800 uppercase tracking-[0.28em] text-bullred">Pricing</p>
+      <h2 class="mt-3 font-display text-3xl font-900 tracking-tight sm:text-4xl">Clear starting prices. No mystery quotes.</h2>
+      <p class="mt-3 text-white/60">Most local owners start with <span class="font-700 text-white">Website + Google Business Profile</span>. Site-only is fine if you only need the web presence right now.</p>
+    </div>
+
+    <!-- Recommended path -->
+    <div class="reveal mx-auto mt-10 max-w-3xl rounded-xl border-2 border-bullred bg-bullcard p-5 text-center sm:p-6">
+      <p class="text-xs font-800 uppercase tracking-[0.2em] text-bullred">Recommended path</p>
+      <p class="mt-2 font-display text-xl font-800 sm:text-2xl">Website + GBP management</p>
+      <p class="mt-2 text-sm text-white/65">Setup from <span class="font-700 text-white">$700</span> for the site + <span class="font-700 text-white">$100/mo</span> starting for Google Business Profile care. Spanish language pages are an add-on — scoped on your demo call.</p>
+    </div>
+
+    <div class="mt-10 grid items-stretch gap-6 lg:grid-cols-2">
+      <!-- Site -->
+      <div class="reveal surface-card flex flex-col rounded-xl border p-7 sm:p-8">
+        <p class="text-xs font-800 uppercase tracking-widest text-white/45">One-time setup</p>
+        <h3 class="mt-2 font-display text-2xl font-800">Custom website</h3>
+        <p class="mt-1 text-sm text-white/55">Best for: converting callers and showing up professional online</p>
+        <p class="mt-4 font-display text-4xl font-900">$700 <span class="text-base font-700 text-white/50">starting at</span></p>
+        <ul class="mt-5 flex-1 space-y-2.5 text-sm text-white/75">
+          <li>✓ Custom design for your business (not a generic theme dump)</li>
+          <li>✓ Mobile-first, fast, click-to-call</li>
+          <li>✓ Domain help + <strong class="text-white">1 year</strong> premium hosting included</li>
+          <li>✓ Core pages structured for local search</li>
+        </ul>
+        <div class="mt-5 rounded-lg border border-[#3A4560] bg-bullbg/60 px-4 py-3 text-xs leading-relaxed text-white/55">
+          <strong class="text-white/80">What “starting at” means:</strong> straightforward local sites land at $700. Extra pages, heavy menus, or complex builds are quoted before we start — no surprise invoice after the demo.
+          <br /><br />
+          <strong class="text-white/80">After year 1 hosting:</strong> hosting continues on a simple monthly care plan if you stay with us (see FAQ), or you can move the site.
+        </div>
+        <button type="button" onclick="bookCall()" class="mt-6 w-full rounded-full border border-[#3A4560] py-3 font-700 transition hover:border-bullred">Claim Free Demo of Your Business</button>
+      </div>
+
+      <!-- GBP -->
+      <div class="reveal relative flex flex-col rounded-xl border-2 border-bullred bg-bullcard p-7 sm:p-8">
+        <p class="text-xs font-800 uppercase tracking-widest text-white/45">Monthly</p>
+        <h3 class="mt-2 font-display text-2xl font-800">Show up on Google Maps</h3>
+        <p class="mt-1 text-sm text-white/70">Google Business Profile setup, optimization, and ongoing management</p>
+        <p class="mt-4 font-display text-4xl font-900">$100 <span class="text-base font-700 text-white/50">/ month starting at</span></p>
+        <ul class="mt-5 flex-1 space-y-2.5 text-sm text-white/80">
+          <li>✓ Setup, reclaim, or cleanup + verification support</li>
+          <li>✓ Categories, services, photos, attributes done right</li>
+          <li>✓ Ongoing posts, updates, and Q&amp;A help</li>
+          <li>✓ Review strategy guidance</li>
+          <li>✓ Light website updates (hours, promos, small copy tweaks)</li>
+        </ul>
+        <div class="mt-5 rounded-lg border border-bullred/25 bg-bullred/10 px-4 py-3 text-xs leading-relaxed text-white/80">
+          <strong class="text-white">Scope:</strong> profile maximization + light site care. No blog factories. No junk backlinks.
+          <br /><br />
+          <strong class="text-white">Month-to-month:</strong> cancel anytime — no long lock-in. Higher-touch packages quoted if you need more.
+        </div>
+        <button type="button" onclick="bookCall()" class="mt-6 w-full rounded-full bg-bullred py-3 font-800 transition hover:bg-red-600">Claim Free Demo of Your Business</button>
+      </div>
+    </div>
+
+    <!-- ONE bilingual block only -->
+    <div class="reveal mx-auto mt-10 max-w-3xl rounded-xl border border-[#3A4560] bg-bullcard/80 p-6 sm:p-7">
+      <div class="flex flex-wrap items-center gap-2">
+        <span class="lang-seg" aria-hidden="true"><span class="px-2 py-1 text-xs font-800 text-white">EN</span><span class="rounded-full bg-bullred px-2 py-1 text-xs font-800 text-white">ES</span></span>
+        <p class="text-xs font-800 uppercase tracking-[0.18em] text-bullred">English or English + Spanish</p>
+      </div>
+      <p class="mt-3 text-sm leading-relaxed text-white/70">
+        Many markets have Spanish-speaking customers while most small-business sites stay English-only.
+        We build real dual-language pages with a clean language switch, tailored to maximize your local reach.
+        Spanish is an add-on — we’ll recommend English-only or bilingual on your demo call.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PROOF ========== -->
+<section id="proof" class="scroll-mt-24 px-4 py-20 sm:px-6">
+  <div class="mx-auto max-w-6xl">
+    <div class="reveal mx-auto max-w-2xl text-center">
+      <p class="text-sm font-800 uppercase tracking-[0.28em] text-bullred">Results style</p>
+      <h2 class="mt-3 font-display text-3xl font-900 tracking-tight sm:text-4xl">What local owners actually need</h2>
+      <p class="mt-3 text-sm text-white/55">Examples of the work we do — personalized demos and live builds for real business types (not vanity metrics).</p>
+    </div>
+
+    <div class="mt-12 grid gap-4 md:grid-cols-3">
+      <div class="reveal surface-card rounded-xl border p-6">
+        <p class="text-xs font-800 uppercase tracking-widest text-bullred">Restaurant</p>
+        <h3 class="mt-2 font-display text-lg font-800">Menu + order path that works on phones</h3>
+        <p class="mt-2 text-sm text-white/60">Food businesses get clear CTAs (call, order, directions) and photo-forward pages so browsers become tables or pickups — English or bilingual when the room needs both.</p>
+      </div>
+      <div class="reveal surface-card rounded-xl border p-6">
+        <p class="text-xs font-800 uppercase tracking-widest text-bullred">HVAC / trades</p>
+        <h3 class="mt-2 font-display text-lg font-800">Click-to-call when the AC dies</h3>
+        <p class="mt-2 text-sm text-white/60">Service businesses get fast mobile pages, service areas, and a path to the phone — plus Google Business Profile structure so Maps doesn’t show a half-empty listing.</p>
+      </div>
+      <div class="reveal surface-card rounded-xl border p-6">
+        <p class="text-xs font-800 uppercase tracking-widest text-bullred">Demo-first sales</p>
+        <h3 class="mt-2 font-display text-lg font-800">See your name on the site before you buy</h3>
+        <p class="mt-2 text-sm text-white/60">We don’t sell abstract “packages.” You see a mockup built around your business, then choose site, GBP, and language with eyes open.</p>
+      </div>
+    </div>
+
+    <!-- Soft value math — not fake 250% guarantee -->
+    <div class="reveal surface-panel mx-auto mt-12 max-w-2xl rounded-xl border border-[#3A4560] p-7 sm:p-8">
+      <h3 class="text-center font-display text-xl font-800">Simple value check</h3>
+      <p class="mt-1 text-center text-sm text-white/55">Illustrative only — not a performance guarantee. Use your real numbers.</p>
+      <div class="mt-6 grid gap-4 sm:grid-cols-2 sm:items-end">
+        <div>
+          <label for="avgJob" class="mb-1 block text-sm font-600 text-white/70">Avg. job / ticket value ($)</label>
+          <input id="avgJob" type="number" min="0" value="350" oninput="calcValue()" class="surface-input w-full rounded-lg border px-4 py-3 outline-none focus:border-bullred" />
+        </div>
+        <div>
+          <label for="extraJobs" class="mb-1 block text-sm font-600 text-white/70">Extra jobs per month if online works better</label>
+          <input id="extraJobs" type="number" min="0" value="2" oninput="calcValue()" class="surface-input w-full rounded-lg border px-4 py-3 outline-none focus:border-bullred" />
+        </div>
+      </div>
+      <div id="valueOut" class="mt-6 rounded-xl bg-bullred/10 p-5 text-center">
+        <p class="text-sm text-white/60">That’s about this much extra revenue / month</p>
+        <p class="mt-1 font-display text-4xl font-900 text-bullred">$700</p>
+        <p class="mt-2 text-xs text-white/45">If two average jobs pay for a $700 site in one month, the math is easy — results still depend on your market and follow-through.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FAQ ========== -->
+<section id="faq" class="scroll-mt-24 bg-bullsurface px-4 py-20 sm:px-6">
+  <div class="mx-auto max-w-3xl">
+    <div class="reveal text-center">
+      <p class="text-sm font-800 uppercase tracking-[0.28em] text-bullred">FAQ</p>
+      <h2 class="mt-3 font-display text-3xl font-900 tracking-tight">Questions that usually come up</h2>
+    </div>
+
+    <div class="reveal mt-10 space-y-3">
+      <details class="faq surface-card rounded-xl border px-5 py-4">
+        <summary class="flex items-center justify-between gap-3 font-700">
+          Is the monthly plan required?
+          <span class="chev text-white/40 transition">▾</span>
+        </summary>
+        <p class="mt-3 text-sm leading-relaxed text-white/65">No. You can buy the website setup on its own. Most owners add Google Business Profile management because Maps is where local customers look first.</p>
+      </details>
+      <details class="faq surface-card rounded-xl border px-5 py-4">
+        <summary class="flex items-center justify-between gap-3 font-700">
+          Can I cancel monthly care?
+          <span class="chev text-white/40 transition">▾</span>
+        </summary>
+        <p class="mt-3 text-sm leading-relaxed text-white/65">Yes. No long lock-in games on monthly GBP / light site care. You keep the site you paid to build; hosting after year one is discussed up front so you’re not surprised.</p>
+      </details>
+      <details class="faq surface-card rounded-xl border px-5 py-4">
+        <summary class="flex items-center justify-between gap-3 font-700">
+          What’s included in the free demo?
+          <span class="chev text-white/40 transition">▾</span>
+        </summary>
+        <p class="mt-3 text-sm leading-relaxed text-white/65">A personalized mockup for your business so you can see layout, mobile, and CTAs with your name on it — then a short call to review. No obligation to buy.</p>
+      </details>
+      <details class="faq surface-card rounded-xl border px-5 py-4">
+        <summary class="flex items-center justify-between gap-3 font-700">
+          English only or bilingual?
+          <span class="chev text-white/40 transition">▾</span>
+        </summary>
+        <p class="mt-3 text-sm leading-relaxed text-white/65">Both options exist. We recommend based on your customers and market on the demo call. Bilingual means real Spanish pages and a language switch. Spanish is an add-on to the site setup.</p>
+      </details>
+      <details class="faq surface-card rounded-xl border px-5 py-4">
+        <summary class="flex items-center justify-between gap-3 font-700">
+          How fast can we go live?
+          <span class="chev text-white/40 transition">▾</span>
+        </summary>
+        <p class="mt-3 text-sm leading-relaxed text-white/65">After you approve scope and send logo, photos, hours, and services, many straightforward sites launch in about <strong class="text-white/80">5 business days</strong>. Complex menus or missing assets take longer.</p>
+      </details>
+      <details class="faq surface-card rounded-xl border px-5 py-4">
+        <summary class="flex items-center justify-between gap-3 font-700">
+          What do I need to provide?
+          <span class="chev text-white/40 transition">▾</span>
+        </summary>
+        <p class="mt-3 text-sm leading-relaxed text-white/65">Business name, phone, address or service area, hours, services or menu, logo if you have one, and any photos. We guide you on the call.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FINAL CTA ========== -->
+<section class="relative overflow-hidden border-t border-[#3A4560] bg-bullcard px-4 py-20 text-center sm:px-6">
+  <div class="reveal relative mx-auto max-w-2xl">
+    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-1-9pRF4CyBiygUYC6Rty3wOLirZ8AxIw.png" alt="" width="72" height="72" class="mx-auto h-16 w-16 object-contain" />
+    <h2 class="mt-5 font-display text-3xl font-900 tracking-tight sm:text-5xl text-balance">See your business on a real demo before you spend a dollar on the build.</h2>
+    <p class="mt-4 text-white/65">Texas-built. Local owners nationwide. English or English + Spanish. Clear starting prices.</p>
+    <button type="button" onclick="bookCall()" class="mt-8 rounded-full bg-bullred px-8 py-4 text-lg font-800 transition hover:bg-red-600">
+      Claim Free Demo of Your Business
+    </button>
+    <p class="mt-4 text-sm text-white/45">15-minute call after you claim — we walk through your mockup together.</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="border-t border-[#3A4560] bg-bullbg px-4 py-10 sm:px-6">
+  <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 text-center sm:flex-row sm:text-left">
+    <div class="flex items-center gap-3">
+      <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-1-9pRF4CyBiygUYC6Rty3wOLirZ8AxIw.png" alt="Texas Bull Marketing" width="40" height="40" class="h-10 w-10 object-contain" />
+      <div>
+        <p class="font-display font-900">TEXAS <span class="text-bullred">BULL</span> MARKETING</p>
+        <p class="text-xs text-white/40">More calls. More customers. Less hassle.</p>
+      </div>
+    </div>
+    <p class="text-sm text-white/40">© <span id="year"></span> Texas Bull Marketing. Demo V3 sandbox — main site unchanged.</p>
+  </div>
+</footer>
+
+<!-- Sticky CTA: only after pricing (less hunt-on-first-paint) -->
+<button type="button" id="stickyCta" onclick="bookCall()" class="fixed bottom-5 right-5 z-40 flex items-center gap-2 rounded-full bg-bullred px-5 py-3 text-sm font-800 shadow-lg transition hover:bg-red-600 sm:text-base">
+  Claim Free Demo
+</button>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const CALENDLY_URL = 'https://calendly.com/texasbullmarketing/call';
+  function bookCall(){
+    if (window.Calendly && typeof Calendly.initPopupWidget === 'function') {
+      Calendly.initPopupWidget({ url: CALENDLY_URL });
+      return false;
+    }
+    window.open(CALENDLY_URL, '_blank', 'noopener,noreferrer');
+    return false;
+  }
+
+  function toggleMobile(){
+    const m = document.getElementById('mobileMenu');
+    const open = m.classList.contains('scale-y-100');
+    m.classList.toggle('scale-y-100', !open);
+    m.classList.toggle('scale-y-0', open);
+    m.classList.toggle('opacity-100', !open);
+    m.classList.toggle('opacity-0', open);
+    m.classList.toggle('translate-y-0', !open);
+  }
+
+  function calcValue(){
+    const job = +document.getElementById('avgJob').value || 0;
+    const extra = +document.getElementById('extraJobs').value || 0;
+    const rev = job * extra;
+    document.getElementById('valueOut').innerHTML =
+      '<p class="text-sm text-white/60">That’s about this much extra revenue / month</p>' +
+      '<p class="mt-1 font-display text-4xl font-900 text-bullred">$' + rev.toLocaleString() + '</p>' +
+      '<p class="mt-2 text-xs text-white/45">If two average jobs pay for a $700 site in one month, the math is easy — results still depend on your market and follow-through.</p>';
+  }
+  calcValue();
+
+  const io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+
+  const sections = [...document.querySelectorAll('main section[id]')];
+  const navLinks = [...document.querySelectorAll('[data-nav]')];
+  const navIO = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting) {
+        navLinks.forEach(function(l){
+          l.classList.toggle('active', l.getAttribute('href') === '#' + e.target.id);
+        });
+        updateLangLinks();
+      }
+    });
+  }, { rootMargin: '-45% 0px -50% 0px' });
+  sections.forEach(function(s){ navIO.observe(s); });
+
+  // Sticky CTA after pricing
+  const sticky = document.getElementById('stickyCta');
+  const pricingEl = document.getElementById('pricing');
+  if (sticky && pricingEl) {
+    const stickyIO = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) sticky.classList.add('is-visible');
+      });
+    }, { threshold: 0.05 });
+    stickyIO.observe(pricingEl);
+    window.addEventListener('scroll', function(){
+      const rect = pricingEl.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.85) sticky.classList.add('is-visible');
+    }, { passive: true });
+  }
+
+  const SECTION_IDS = ['home', 'how', 'pricing', 'proof', 'faq'];
+  function getActiveSectionId(){
+    if (location.hash) {
+      const id = location.hash.slice(1);
+      if (SECTION_IDS.indexOf(id) !== -1 && document.getElementById(id)) return id;
+    }
+    const active = document.querySelector('[data-nav].active');
+    if (active) {
+      const id = (active.getAttribute('href') || '').replace('#', '');
+      if (SECTION_IDS.indexOf(id) !== -1) return id;
+    }
+    var current = 'home';
+    var mid = window.innerHeight * 0.35;
+    SECTION_IDS.forEach(function(id){
+      var el = document.getElementById(id);
+      if (!el) return;
+      if (el.getBoundingClientRect().top <= mid) current = id;
+    });
+    return current;
+  }
+  function updateLangLinks(){
+    var id = getActiveSectionId();
+    var hash = id ? '#' + id : '';
+    document.querySelectorAll('.lang-seg a[data-lang-href]').forEach(function(a){
+      a.setAttribute('href', a.getAttribute('data-lang-href') + hash);
+    });
+  }
+  window.addEventListener('scroll', updateLangLinks, { passive: true });
+  window.addEventListener('hashchange', updateLangLinks);
+  updateLangLinks();
+
+  (function(){
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const c = document.getElementById('bullCanvas');
+    if (!c) return;
+    const ctx = c.getContext('2d');
+    let w, h, parts;
+    const palettes = [
+      { core:'rgba(255,70,90,0.95)', mid:'rgba(200,16,46,0.35)', glow:'rgba(200,16,46,0.12)' },
+      { core:'rgba(200,16,46,0.9)', mid:'rgba(200,16,46,0.28)', glow:'rgba(200,16,46,0.1)' },
+      { core:'rgba(130,165,230,0.9)', mid:'rgba(90,120,175,0.3)', glow:'rgba(90,120,175,0.12)' },
+      { core:'rgba(255,255,255,0.75)', mid:'rgba(180,200,240,0.2)', glow:'rgba(200,16,46,0.06)' },
+    ];
+    function resize(){ w = c.width = innerWidth; h = c.height = innerHeight; }
+    function init(){
+      parts = Array.from({ length: Math.min(40, Math.floor(w / 32)) }, function(){
+        return {
+          x: Math.random() * w, y: Math.random() * h,
+          r: Math.random() * 2 + 0.6,
+          vx: (Math.random() - 0.5) * 0.25, vy: (Math.random() - 0.5) * 0.25,
+          pal: palettes[Math.floor(Math.random() * palettes.length)],
+          pulse: Math.random() * Math.PI * 2,
+          pulseSpeed: 0.008 + Math.random() * 0.01
+        };
+      });
+    }
+    function draw(){
+      ctx.clearRect(0, 0, w, h);
+      parts.forEach(function(p){
+        p.x += p.vx; p.y += p.vy; p.pulse += p.pulseSpeed;
+        if (p.x < 0 || p.x > w) p.vx *= -1;
+        if (p.y < 0 || p.y > h) p.vy *= -1;
+        const coreR = p.r * (1 + Math.sin(p.pulse) * 0.12);
+        const g = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, coreR * 8);
+        g.addColorStop(0, p.pal.glow); g.addColorStop(1, 'rgba(0,0,0,0)');
+        ctx.beginPath(); ctx.arc(p.x, p.y, coreR * 8, 0, Math.PI * 2); ctx.fillStyle = g; ctx.fill();
+        ctx.beginPath(); ctx.arc(p.x, p.y, coreR, 0, Math.PI * 2); ctx.fillStyle = p.pal.core; ctx.fill();
+      });
+      requestAnimationFrame(draw);
+    }
+    resize(); init(); draw();
+    addEventListener('resize', function(){ resize(); init(); });
+  })();
+</script>
+</body>
+</html>

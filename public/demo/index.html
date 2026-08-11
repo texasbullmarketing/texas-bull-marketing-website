@@ -36,7 +36,7 @@
     <p class="text-xs font-800 uppercase tracking-[0.28em] text-bullred">Texas Bull Marketing</p>
     <h1 class="mt-3 font-display text-4xl font-900 tracking-tight sm:text-5xl">Client site demos</h1>
 
-    <!-- Search: empty = show all; typing filters by progressive starts-with -->
+    <!-- Search: empty = paginated newest-first; typing shows all matches -->
     <div class="mt-8">
       <label for="demo-search" class="sr-only">Search demos</label>
       <div class="relative">
@@ -53,45 +53,59 @@
           class="w-full rounded-xl border border-[#3A4560] bg-bullcard py-3.5 pl-12 pr-4 text-sm text-white placeholder:text-white/35 outline-none transition focus:border-bullred focus:ring-1 focus:ring-bullred"
         />
       </div>
-      <p id="demo-search-hint" class="mt-2 text-xs text-white/40">Type to filter - all demos show until you search.</p>
+      <p id="demo-search-hint" class="mt-2 text-xs text-white/40">Type to filter all demos. Empty search shows the latest 18 (3×6), older on later pages.</p>
     </div>
 
+    <!-- data-order: higher = newer (page 1 = latest 18 when not searching) -->
     <div id="demo-grid" class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
       <a
-        href="/demo/HVACProsHeatingAC/"
+        href="/demo/AutoWorx/"
         class="demo-card group rounded-xl border border-[#3A4560] bg-bullcard p-5 transition hover:border-bullred"
-        data-sort="hvac pros heating ac"
-        data-search="hvac pros heating ac air conditioning seguin juan"
+        data-order="220"
+        data-sort="auto worx"
+        data-search="auto worx autoworx auto repair service mechanic 830 bilingual spanish espanol"
       >
-        <p class="text-xs font-700 uppercase tracking-widest text-bullred">HVAC</p>
-        <h2 class="mt-2 font-display text-xl font-800">HVAC Pros Heating &amp; A/C</h2>
+        <p class="text-xs font-700 uppercase tracking-widest text-bullred">Auto · EN + ES</p>
+        <h2 class="mt-2 font-display text-xl font-800">Auto Worx</h2>
         <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
       </a>
       <a
-        href="/demo/PapeHVAC/"
+        href="/demo/TexasBistro/"
         class="demo-card group rounded-xl border border-[#3A4560] bg-bullcard p-5 transition hover:border-bullred"
-        data-sort="pape hvac"
-        data-search="pape hvac donald new braunfels heating air"
+        data-order="210"
+        data-sort="texas bistro"
+        data-search="texas bistro new braunfels new american restaurant brunch happy hour bilingual spanish espanol"
       >
-        <p class="text-xs font-700 uppercase tracking-widest text-bullred">HVAC</p>
-        <h2 class="mt-2 font-display text-xl font-800">Pape HVAC</h2>
+        <p class="text-xs font-700 uppercase tracking-widest text-bullred">Restaurant · EN + ES</p>
+        <h2 class="mt-2 font-display text-xl font-800">Texas Bistro</h2>
         <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
       </a>
       <a
-        href="/demo/TwoRiversHeatingAC/"
+        href="/demo/PlumbBoyPlumbing/"
         class="demo-card group rounded-xl border border-[#3A4560] bg-bullcard p-5 transition hover:border-bullred"
-        data-sort="2 rivers heating air conditioning"
-        data-search="2 rivers heating air conditioning two rivers hvac new braunfels eddie sales service installation spanish espanol bilingual"
+        data-order="200"
+        data-sort="plumb boy plumbing"
+        data-search="plumb boy plumbing plumber drain water heater toilet sewer 210 bilingual spanish espanol"
       >
-        <p class="text-xs font-700 uppercase tracking-widest text-bullred">HVAC · EN + ES</p>
-        <h2 class="mt-2 font-display text-xl font-800">2 Rivers Heating &amp; Air Conditioning</h2>
+        <p class="text-xs font-700 uppercase tracking-widest text-bullred">Plumbing · EN + ES</p>
+        <h2 class="mt-2 font-display text-xl font-800">Plumb Boy Plumbing</h2>
         <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
       </a>
-
-      <!-- Cards sorted A-Z by data-sort on load; search uses data-search (starts-with) -->
+      <a
+        href="/demo/DedicatedPlumbingServices/"
+        class="demo-card group rounded-xl border border-[#3A4560] bg-bullcard p-5 transition hover:border-bullred"
+        data-order="190"
+        data-sort="dedicated plumbing services"
+        data-search="dedicated plumbing services san antonio saint hedwig plumber water heater drain bilingual spanish espanol"
+      >
+        <p class="text-xs font-700 uppercase tracking-widest text-bullred">Plumbing · EN + ES</p>
+        <h2 class="mt-2 font-display text-xl font-800">Dedicated Plumbing Services</h2>
+        <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
+      </a>
       <a
         href="/demo/DoubleMCleaning/"
         class="demo-card group rounded-xl border border-[#3A4560] bg-bullcard p-5 transition hover:border-bullred"
+        data-order="180"
         data-sort="double m cleaning"
         data-search="double m cleaning mm seguin residential office move-in move-out house clean standard deep bilingual spanish espanol"
       >
@@ -100,58 +114,9 @@
         <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
       </a>
       <a
-        href="/demo/EnterpriseFlooringSolutions/"
-        class="demo-card group rounded-xl border border-[#3A4560] bg-bullcard p-5 transition hover:border-bullred"
-        data-sort="enterprise flooring solutions"
-        data-search="enterprise flooring solutions efs tile renovation"
-      >
-        <p class="text-xs font-700 uppercase tracking-widest text-bullred">Flooring</p>
-        <h2 class="mt-2 font-display text-xl font-800 group-hover:text-white">Enterprise Flooring Solutions</h2>
-        <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
-      </a>
-      <a
-        href="/demo/IronRootsServices/"
-        class="demo-card group rounded-xl border border-[#3A4560] bg-bullcard p-5 transition hover:border-bullred"
-        data-sort="iron roots services"
-        data-search="iron roots services irs concrete fencing remodeling"
-      >
-        <p class="text-xs font-700 uppercase tracking-widest text-bullred">Home services</p>
-        <h2 class="mt-2 font-display text-xl font-800">Iron Roots Services</h2>
-        <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
-      </a>
-      <a
-        href="/demo/JackedJunkBros/"
-        class="demo-card group rounded-xl border border-[#3A4560] bg-bullcard p-5 transition hover:border-bullred"
-        data-sort="jacked junk bros"
-        data-search="jacked junk bros junk removal demolition san antonio schertz new braunfels seguin stone oak bilingual spanish espanol"
-      >
-        <p class="text-xs font-700 uppercase tracking-widest text-bullred">Junk removal · EN + ES</p>
-        <h2 class="mt-2 font-display text-xl font-800">Jacked Junk Bros</h2>
-        <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
-      </a>
-      <a
-        href="/demo/JSAutoShop/"
-        class="demo-card group rounded-xl border border-[#3A4560] bg-bullcard p-5 transition hover:border-bullred"
-        data-sort="js auto shop"
-        data-search="js auto shop j's automotive mobile mechanic boerne joe repair"
-      >
-        <p class="text-xs font-700 uppercase tracking-widest text-bullred">Auto repair</p>
-        <h2 class="mt-2 font-display text-xl font-800">J's Auto Shop</h2>
-        <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
-      </a>
-      <a
-        href="/demo/LaEnchiladita/"
-        class="demo-card group rounded-xl border border-[#3A4560] bg-bullcard p-5 transition hover:border-bullred"
-        data-sort="la enchiladita"
-        data-search="la enchiladita ench restaurant tex mex"
-      >
-        <p class="text-xs font-700 uppercase tracking-widest text-bullred">Restaurant</p>
-        <h2 class="mt-2 font-display text-xl font-800">La Enchiladita</h2>
-        <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
-      </a>
-      <a
         href="/demo/MendozasAutoRepair/"
         class="demo-card group rounded-xl border border-[#3A4560] bg-bullcard p-5 transition hover:border-bullred"
+        data-order="170"
         data-sort="mendozas auto repair"
         data-search="mendoza mendozas auto repair paint body seguin mechanical collision bilingual spanish espanol"
       >
@@ -160,58 +125,20 @@
         <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
       </a>
       <a
-        href="/demo/MichoacanaPremium/"
+        href="/demo/JSAutoShop/"
         class="demo-card group rounded-xl border border-[#3A4560] bg-bullcard p-5 transition hover:border-bullred"
-        data-sort="michoacana premium"
-        data-search="michoacana premium ice cream paleteria paletas helados mangonadas mich"
+        data-order="160"
+        data-sort="js auto shop"
+        data-search="js auto shop j's automotive mobile mechanic boerne joe repair bilingual spanish espanol"
       >
-        <p class="text-xs font-700 uppercase tracking-widest text-bullred">Ice cream</p>
-        <h2 class="mt-2 font-display text-xl font-800">Michoacana Premium</h2>
-        <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
-      </a>
-      <a
-        href="/demo/TaqueriaAtotonilco/"
-        class="demo-card group rounded-xl border border-[#3A4560] bg-bullcard p-5 transition hover:border-bullred"
-        data-sort="taqueria atotonilco"
-        data-search="taqueria atotonilco mexican tacos enchiladas breakfast lunch seguin"
-      >
-        <p class="text-xs font-700 uppercase tracking-widest text-bullred">Mexican</p>
-        <h2 class="mt-2 font-display text-xl font-800">Taqueria Atotonilco</h2>
-        <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
-      </a>
-      <a
-        href="/demo/The1908RestaurantBar/"
-        class="demo-card group rounded-xl border border-[#3A4560] bg-bullcard p-5 transition hover:border-bullred"
-        data-sort="the 1908 restaurant bar"
-        data-search="the 1908 restaurant bar seguin speakeasy cocktail bar patio"
-      >
-        <p class="text-xs font-700 uppercase tracking-widest text-bullred">Restaurant + Bar</p>
-        <h2 class="mt-2 font-display text-xl font-800">The 1908 Restaurant + Bar</h2>
-        <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
-      </a>
-      <a
-        href="/demo/TheBlackdoorSteakhouse/"
-        class="demo-card group rounded-xl border border-[#3A4560] bg-bullcard p-5 transition hover:border-bullred"
-        data-sort="the blackdoor steakhouse"
-        data-search="the blackdoor steakhouse black door seguin steak wagyu prime"
-      >
-        <p class="text-xs font-700 uppercase tracking-widest text-bullred">Steakhouse</p>
-        <h2 class="mt-2 font-display text-xl font-800">The Blackdoor Steakhouse</h2>
-        <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
-      </a>
-      <a
-        href="/demo/WaveFindersElectronics/"
-        class="demo-card group rounded-xl border border-[#3A4560] bg-bullcard p-5 transition hover:border-bullred"
-        data-sort="wave finders electronics"
-        data-search="wave finders electronics"
-      >
-        <p class="text-xs font-700 uppercase tracking-widest text-bullred">Electronics</p>
-        <h2 class="mt-2 font-display text-xl font-800">Wave Finders Electronics</h2>
+        <p class="text-xs font-700 uppercase tracking-widest text-bullred">Auto repair · EN + ES</p>
+        <h2 class="mt-2 font-display text-xl font-800">J's Auto Shop</h2>
         <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
       </a>
       <a
         href="/demo/WegenersWellService/"
         class="demo-card group rounded-xl border border-[#3A4560] bg-bullcard p-5 transition hover:border-bullred"
+        data-order="150"
         data-sort="wageners well service"
         data-search="wageners wegener well service water pump drilling emergency spanish espanol bilingual"
       >
@@ -220,8 +147,31 @@
         <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
       </a>
       <a
+        href="/demo/JackedJunkBros/"
+        class="demo-card group rounded-xl border border-[#3A4560] bg-bullcard p-5 transition hover:border-bullred"
+        data-order="140"
+        data-sort="jacked junk bros"
+        data-search="jacked junk bros junk removal demolition san antonio schertz new braunfels seguin stone oak bilingual spanish espanol"
+      >
+        <p class="text-xs font-700 uppercase tracking-widest text-bullred">Junk removal · EN + ES</p>
+        <h2 class="mt-2 font-display text-xl font-800">Jacked Junk Bros</h2>
+        <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
+      </a>
+      <a
+        href="/demo/TwoRiversHeatingAC/"
+        class="demo-card group rounded-xl border border-[#3A4560] bg-bullcard p-5 transition hover:border-bullred"
+        data-order="130"
+        data-sort="2 rivers heating air conditioning"
+        data-search="2 rivers heating air conditioning two rivers hvac new braunfels eddie sales service installation spanish espanol bilingual"
+      >
+        <p class="text-xs font-700 uppercase tracking-widest text-bullred">HVAC · EN + ES</p>
+        <h2 class="mt-2 font-display text-xl font-800">2 Rivers Heating &amp; Air Conditioning</h2>
+        <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
+      </a>
+      <a
         href="/demo/v2tbm/"
         class="demo-card group rounded-xl border border-bullred/50 bg-bullcard p-5 transition hover:border-bullred"
+        data-order="120"
         data-sort="v2tbm texas bull marketing version 2 sandbox"
         data-search="v2tbm texas bull marketing tbm version 2 sandbox demo landing"
       >
@@ -232,6 +182,7 @@
       <a
         href="/demo/v3tbm/"
         class="demo-card group rounded-xl border border-bullred/50 bg-bullcard p-5 transition hover:border-bullred"
+        data-order="110"
         data-sort="v3tbm texas bull marketing version 3 cro sandbox"
         data-search="v3tbm texas bull marketing tbm version 3 cro conversion bilingual demo landing"
       >
@@ -239,9 +190,126 @@
         <h2 class="mt-2 font-display text-xl font-800">V3TBM (CRO landing demo)</h2>
         <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
       </a>
+      <a
+        href="/demo/PapeHVAC/"
+        class="demo-card group rounded-xl border border-[#3A4560] bg-bullcard p-5 transition hover:border-bullred"
+        data-order="100"
+        data-sort="pape hvac"
+        data-search="pape hvac donald new braunfels heating air bilingual spanish espanol"
+      >
+        <p class="text-xs font-700 uppercase tracking-widest text-bullred">HVAC · EN + ES</p>
+        <h2 class="mt-2 font-display text-xl font-800">Pape HVAC</h2>
+        <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
+      </a>
+      <a
+        href="/demo/HVACProsHeatingAC/"
+        class="demo-card group rounded-xl border border-[#3A4560] bg-bullcard p-5 transition hover:border-bullred"
+        data-order="90"
+        data-sort="hvac pros heating ac"
+        data-search="hvac pros heating ac air conditioning seguin juan bilingual spanish espanol"
+      >
+        <p class="text-xs font-700 uppercase tracking-widest text-bullred">HVAC · EN + ES</p>
+        <h2 class="mt-2 font-display text-xl font-800">HVAC Pros Heating &amp; A/C</h2>
+        <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
+      </a>
+      <a
+        href="/demo/TaqueriaAtotonilco/"
+        class="demo-card group rounded-xl border border-[#3A4560] bg-bullcard p-5 transition hover:border-bullred"
+        data-order="80"
+        data-sort="taqueria atotonilco"
+        data-search="taqueria atotonilco mexican tacos enchiladas breakfast lunch seguin bilingual spanish espanol"
+      >
+        <p class="text-xs font-700 uppercase tracking-widest text-bullred">Mexican · EN + ES</p>
+        <h2 class="mt-2 font-display text-xl font-800">Taqueria Atotonilco</h2>
+        <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
+      </a>
+      <a
+        href="/demo/The1908RestaurantBar/"
+        class="demo-card group rounded-xl border border-[#3A4560] bg-bullcard p-5 transition hover:border-bullred"
+        data-order="70"
+        data-sort="the 1908 restaurant bar"
+        data-search="the 1908 restaurant bar seguin speakeasy cocktail bar patio bilingual spanish espanol"
+      >
+        <p class="text-xs font-700 uppercase tracking-widest text-bullred">Restaurant + Bar · EN + ES</p>
+        <h2 class="mt-2 font-display text-xl font-800">The 1908 Restaurant + Bar</h2>
+        <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
+      </a>
+      <a
+        href="/demo/TheBlackdoorSteakhouse/"
+        class="demo-card group rounded-xl border border-[#3A4560] bg-bullcard p-5 transition hover:border-bullred"
+        data-order="60"
+        data-sort="the blackdoor steakhouse"
+        data-search="the blackdoor steakhouse black door seguin steak wagyu prime bilingual spanish espanol"
+      >
+        <p class="text-xs font-700 uppercase tracking-widest text-bullred">Steakhouse · EN + ES</p>
+        <h2 class="mt-2 font-display text-xl font-800">The Blackdoor Steakhouse</h2>
+        <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
+      </a>
+      <a
+        href="/demo/MichoacanaPremium/"
+        class="demo-card group rounded-xl border border-[#3A4560] bg-bullcard p-5 transition hover:border-bullred"
+        data-order="50"
+        data-sort="michoacana premium"
+        data-search="michoacana premium ice cream paleteria paletas helados mangonadas mich"
+      >
+        <p class="text-xs font-700 uppercase tracking-widest text-bullred">Ice cream</p>
+        <h2 class="mt-2 font-display text-xl font-800">Michoacana Premium</h2>
+        <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
+      </a>
+      <a
+        href="/demo/IronRootsServices/"
+        class="demo-card group rounded-xl border border-[#3A4560] bg-bullcard p-5 transition hover:border-bullred"
+        data-order="40"
+        data-sort="iron roots services"
+        data-search="iron roots services irs concrete fencing remodeling bilingual spanish espanol"
+      >
+        <p class="text-xs font-700 uppercase tracking-widest text-bullred">Home services · EN + ES</p>
+        <h2 class="mt-2 font-display text-xl font-800">Iron Roots Services</h2>
+        <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
+      </a>
+      <a
+        href="/demo/LaEnchiladita/"
+        class="demo-card group rounded-xl border border-[#3A4560] bg-bullcard p-5 transition hover:border-bullred"
+        data-order="30"
+        data-sort="la enchiladita"
+        data-search="la enchiladita ench restaurant tex mex bilingual spanish espanol"
+      >
+        <p class="text-xs font-700 uppercase tracking-widest text-bullred">Restaurant · EN + ES</p>
+        <h2 class="mt-2 font-display text-xl font-800">La Enchiladita</h2>
+        <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
+      </a>
+      <a
+        href="/demo/WaveFindersElectronics/"
+        class="demo-card group rounded-xl border border-[#3A4560] bg-bullcard p-5 transition hover:border-bullred"
+        data-order="20"
+        data-sort="wave finders electronics"
+        data-search="wave finders electronics bilingual spanish espanol"
+      >
+        <p class="text-xs font-700 uppercase tracking-widest text-bullred">Electronics · EN + ES</p>
+        <h2 class="mt-2 font-display text-xl font-800">Wave Finders Electronics</h2>
+        <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
+      </a>
+      <a
+        href="/demo/EnterpriseFlooringSolutions/"
+        class="demo-card group rounded-xl border border-[#3A4560] bg-bullcard p-5 transition hover:border-bullred"
+        data-order="10"
+        data-sort="enterprise flooring solutions"
+        data-search="enterprise flooring solutions efs tile renovation bilingual spanish espanol"
+      >
+        <p class="text-xs font-700 uppercase tracking-widest text-bullred">Flooring · EN + ES</p>
+        <h2 class="mt-2 font-display text-xl font-800 group-hover:text-white">Enterprise Flooring Solutions</h2>
+        <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
+      </a>
     </div>
 
     <p id="demo-empty" class="mt-8 hidden text-center text-sm text-white/50">No demos match that search.</p>
+
+    <nav id="demo-pagination" class="mt-10 flex flex-wrap items-center justify-center gap-2" aria-label="Demo pages" hidden>
+      <button type="button" id="demo-page-prev" class="rounded-lg border border-[#3A4560] bg-bullcard px-3 py-2 text-sm font-600 text-white/80 transition hover:border-bullred hover:text-white disabled:cursor-not-allowed disabled:opacity-35">Prev</button>
+      <div id="demo-page-nums" class="flex flex-wrap items-center justify-center gap-1"></div>
+      <button type="button" id="demo-page-next" class="rounded-lg border border-[#3A4560] bg-bullcard px-3 py-2 text-sm font-600 text-white/80 transition hover:border-bullred hover:text-white disabled:cursor-not-allowed disabled:opacity-35">Next</button>
+    </nav>
+    <p id="demo-page-meta" class="mt-3 text-center text-xs text-white/40"></p>
 
     <p class="mt-10 text-sm text-white/40">
       <a href="/" class="text-white/70 underline-offset-2 hover:text-white hover:underline">&lt;- Back to Texas Bull Marketing</a>
@@ -250,15 +318,26 @@
 
   <script>
     (function () {
+      const PAGE_SIZE = 18 // 3 cols × 6 rows
       const grid = document.getElementById('demo-grid')
       const input = document.getElementById('demo-search')
       const empty = document.getElementById('demo-empty')
+      const pagNav = document.getElementById('demo-pagination')
+      const pageNums = document.getElementById('demo-page-nums')
+      const pageMeta = document.getElementById('demo-page-meta')
+      const btnPrev = document.getElementById('demo-page-prev')
+      const btnNext = document.getElementById('demo-page-next')
       if (!grid || !input) return
 
-      // Alphabetize by data-sort (A-Z)
+      let currentPage = 1
+
+      // Newest first via data-order (higher = newer)
       function sortCards() {
         const cards = Array.from(grid.querySelectorAll('.demo-card'))
         cards.sort((a, b) => {
+          const oa = parseInt(a.getAttribute('data-order') || '0', 10)
+          const ob = parseInt(b.getAttribute('data-order') || '0', 10)
+          if (ob !== oa) return ob - oa
           const sa = (a.getAttribute('data-sort') || '').toLowerCase()
           const sb = (b.getAttribute('data-sort') || '').toLowerCase()
           return sa.localeCompare(sb, undefined, { sensitivity: 'base' })
@@ -267,31 +346,115 @@
       }
 
       // Empty query -> show all. Non-empty -> progressive starts-with on name tokens.
-      // "t" matches any word starting with t; "ti" matches words starting with ti.
       function matches(card, query) {
         if (!query) return true
         const hay = (card.getAttribute('data-search') || '').toLowerCase()
         const tokens = hay.split(/\s+/).filter(Boolean)
-        // Whole string starts with query, or any word starts with query
         if (hay.startsWith(query)) return true
         return tokens.some((t) => t.startsWith(query))
       }
 
-      function filterCards() {
+      function render() {
         const q = input.value.trim().toLowerCase()
         const cards = Array.from(grid.querySelectorAll('.demo-card'))
-        let visible = 0
+        const matched = cards.filter((c) => matches(c, q))
+        const searching = q.length > 0
+
+        // While searching: show every match (no pagination). Idle: page of 18 newest-first.
+        let pageCount = 1
+        let start = 0
+        let end = matched.length
+
+        if (!searching) {
+          pageCount = Math.max(1, Math.ceil(matched.length / PAGE_SIZE))
+          if (currentPage > pageCount) currentPage = pageCount
+          if (currentPage < 1) currentPage = 1
+          start = (currentPage - 1) * PAGE_SIZE
+          end = start + PAGE_SIZE
+        } else {
+          currentPage = 1
+        }
+
+        const pageSet = new Set(matched.slice(start, end))
         cards.forEach((card) => {
-          const show = matches(card, q)
-          card.classList.toggle('hidden', !show)
-          if (show) visible++
+          card.classList.toggle('hidden', !pageSet.has(card))
         })
-        if (empty) empty.classList.toggle('hidden', visible > 0 || !q)
+
+        if (empty) empty.classList.toggle('hidden', matched.length > 0 || !searching)
+
+        // Pagination UI only when not searching and more than one page
+        const showPag = !searching && pageCount > 1
+        if (pagNav) pagNav.hidden = !showPag
+        if (pageMeta) {
+          if (searching) {
+            pageMeta.textContent = matched.length
+              ? matched.length + ' match' + (matched.length === 1 ? '' : 'es')
+              : ''
+          } else if (matched.length) {
+            const from = start + 1
+            const to = Math.min(end, matched.length)
+            pageMeta.textContent = 'Showing ' + from + '–' + to + ' of ' + matched.length + ' · Page ' + currentPage + ' of ' + pageCount
+          } else {
+            pageMeta.textContent = ''
+          }
+        }
+
+        if (pageNums) {
+          pageNums.innerHTML = ''
+          if (showPag) {
+            for (let p = 1; p <= pageCount; p++) {
+              const btn = document.createElement('button')
+              btn.type = 'button'
+              btn.textContent = String(p)
+              btn.setAttribute('aria-label', 'Page ' + p)
+              if (p === currentPage) btn.setAttribute('aria-current', 'page')
+              btn.className =
+                'min-w-[2.25rem] rounded-lg border px-3 py-2 text-sm font-600 transition ' +
+                (p === currentPage
+                  ? 'border-bullred bg-bullred text-white'
+                  : 'border-[#3A4560] bg-bullcard text-white/80 hover:border-bullred hover:text-white')
+              btn.addEventListener('click', () => {
+                currentPage = p
+                render()
+                grid.scrollIntoView({ behavior: 'smooth', block: 'start' })
+              })
+              pageNums.appendChild(btn)
+            }
+          }
+        }
+
+        if (btnPrev) {
+          btnPrev.disabled = !showPag || currentPage <= 1
+          btnPrev.onclick = () => {
+            if (currentPage > 1) {
+              currentPage--
+              render()
+              grid.scrollIntoView({ behavior: 'smooth', block: 'start' })
+            }
+          }
+        }
+        if (btnNext) {
+          btnNext.disabled = !showPag || currentPage >= pageCount
+          btnNext.onclick = () => {
+            if (currentPage < pageCount) {
+              currentPage++
+              render()
+              grid.scrollIntoView({ behavior: 'smooth', block: 'start' })
+            }
+          }
+        }
       }
 
       sortCards()
-      input.addEventListener('input', filterCards)
-      input.addEventListener('search', filterCards) // clear (x) on some browsers
+      render()
+      input.addEventListener('input', () => {
+        currentPage = 1
+        render()
+      })
+      input.addEventListener('search', () => {
+        currentPage = 1
+        render()
+      })
     })()
   </script>
 </body>

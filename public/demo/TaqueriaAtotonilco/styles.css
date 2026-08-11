@@ -13,6 +13,7 @@
   --serif: "Fraunces", Georgia, serif;
   --sans: "DM Sans", system-ui, sans-serif;
   --nav-h: 4.4rem;
+  --banner-h: 2rem;
   --max: 70rem;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -77,10 +78,53 @@ em { font-style: italic; color: var(--gold); }
 }
 .text-link:hover { text-decoration: underline; }
 
+/* Demo banner */
+.demo-banner {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 1100;
+  height: var(--banner-h);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #1a1008;
+  background: linear-gradient(90deg, #f0c070, #d4a24c);
+  padding: 0 0.75rem;
+  text-align: center;
+}
+.demo-banner span { font-weight: 900; letter-spacing: 0.08em; }
+
+/* Language switch */
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.28rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 999px;
+  border: 1px solid rgba(212, 162, 76, 0.35);
+  background: rgba(0, 0, 0, 0.25);
+  flex-shrink: 0;
+}
+.lang-switch a {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--muted);
+  padding: 0.12rem 0.28rem;
+  border-radius: 4px;
+  text-decoration: none;
+}
+.lang-switch a.is-active { background: rgba(212, 162, 76, 0.2); color: var(--cream); }
+.lang-switch a:hover { color: var(--cream); text-decoration: none; }
+
 /* NAV */
 .nav {
   position: fixed;
-  inset: 0 0 auto;
+  top: var(--banner-h);
+  left: 0;
+  right: 0;
   z-index: 1000;
   height: var(--nav-h);
   transition: 0.35s var(--ease);
@@ -153,7 +197,7 @@ em { font-style: italic; color: var(--gold); }
   min-height: 100dvh;
   display: grid;
   align-content: end;
-  padding: calc(var(--nav-h) + 1.5rem) 0 0;
+  padding: calc(var(--banner-h) + var(--nav-h) + 1.5rem) 0 0;
   overflow: hidden;
 }
 .hero__media { position: absolute; inset: 0; }
@@ -677,7 +721,7 @@ body.menu-open { overflow: hidden; }
 @media (max-width: 720px) {
   .nav__links {
     position: fixed;
-    inset: 0;
+    inset: calc(var(--banner-h) + var(--nav-h)) 0 0 0;
     background: rgba(26,18,14,0.97);
     flex-direction: column;
     justify-content: center;

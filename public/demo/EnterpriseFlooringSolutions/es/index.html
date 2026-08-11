@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es-MX" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enterprise Flooring Solutions | Azulejo y pisos premium — Sur de Texas</title>
+  <meta name="description" content="Enterprise Flooring Solutions — azulejo, piedra y renovaciones premium en el área metropolitana de San Antonio y comunidades del sur de Texas. Servicio bilingüe. Presupuestos gratis.">
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="view-transition" content="same-origin" />
+  <meta name="theme-color" content="#1a1410">
+  <link rel="canonical" href="https://texasbullmarketing.com/demo/EnterpriseFlooringSolutions/es/" />
+  <link rel="alternate" hreflang="en" href="https://texasbullmarketing.com/demo/EnterpriseFlooringSolutions/" />
+  <link rel="alternate" hreflang="es" href="https://texasbullmarketing.com/demo/EnterpriseFlooringSolutions/es/" />
+  <link rel="alternate" hreflang="x-default" href="https://texasbullmarketing.com/demo/EnterpriseFlooringSolutions/" />
+  <link rel="icon" href="../logo.jpg" type="image/jpeg" />
+  <link rel="apple-touch-icon" href="../logo.jpg" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/htmx.org@2.0.4"></script>
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'] },
+          colors: {
+            ink: { DEFAULT: '#1a1410', muted: '#5c4f44', light: '#8a7b6e' },
+            copper: { DEFAULT: '#b87333', light: '#d4a574', dark: '#8f5a28', pale: '#f3e4d4' },
+            sand: { DEFAULT: '#f0e8dc', 50: '#faf6f0', 100: '#ede5d8', 200: '#e2d6c6' },
+            surface: { DEFAULT: '#ffffff', soft: '#f7f2eb', warm: '#faf6f0' },
+          },
+          boxShadow: {
+            soft: '0 4px 24px -4px rgba(26,20,16,0.1)',
+            glow: '0 8px 32px -8px rgba(184,115,51,0.3)',
+            card: '0 2px 16px -2px rgba(184,115,51,0.12)',
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    ::selection { background: #b87333; color: #fff; }
+    html { scroll-padding-top: 5rem; }
+    .glass { background: rgba(26,20,16,0.9); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
+    .lang-btn.active { background: #b87333; color: #fff; }
+    #i18n-root.lang-fade { opacity: 0; transition: opacity 0.22s ease; }
+    #i18n-root { transition: opacity 0.32s ease; }
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .gallery-card img { transition: transform 0.5s cubic-bezier(0.22,1,0.36,1); }
+    .gallery-card:hover img { transform: scale(1.04); }
+    .city-pill { transition: all 0.2s ease; }
+    .city-pill:hover { background: #f3e4d4; border-color: #d4a574; color: #8f5a28; }
+    .city-pill-featured { background: linear-gradient(135deg, #b87333, #d4a574); color: #fff; border-color: #b87333; }
+    .tile-bg {
+      background-image:
+        linear-gradient(30deg, rgba(184,115,51,0.04) 12%, transparent 12.5%, transparent 87%, rgba(184,115,51,0.04) 87.5%),
+        linear-gradient(150deg, rgba(184,115,51,0.04) 12%, transparent 12.5%, transparent 87%, rgba(184,115,51,0.04) 87.5%);
+      background-size: 36px 62px;
+    }
+    .copper-bar { background: linear-gradient(90deg, #b87333, #d4a574, #b87333); height: 3px; }
+    .demo-banner {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 60;
+      display: flex; align-items: center; justify-content: center; gap: 0.4rem;
+      height: 2rem; font-size: 0.72rem; font-weight: 700; color: #140404;
+      background: linear-gradient(90deg, #ff8a8a, #e10600);
+    }
+    .demo-banner span { font-weight: 900; letter-spacing: 0.08em; }
+    body { padding-top: 2rem; }
+    .lang-switch {
+      display: inline-flex; align-items: center; gap: 0.15rem;
+      padding: 0.2rem; border-radius: 999px; border: 1px solid rgba(184,115,51,0.35);
+      background: rgba(26,20,16,0.6); font-size: 0.72rem; font-weight: 800;
+    }
+    .lang-switch a {
+      color: rgba(240,232,220,0.7); padding: 0.35rem 0.65rem; border-radius: 999px; text-decoration: none;
+    }
+    .lang-switch a.is-active { background: #b87333; color: #fff; }
+    .lang-switch a:hover { color: #fff; }
+  </style>
+</head>
+<body class="font-sans text-ink bg-sand-50 antialiased" data-lang="es">
+  <div id="page-root">
+    <div class="demo-banner" role="status"><span>DEMO</span> Enterprise Flooring Solutions · Demo de Texas Bull Marketing · No es el sitio oficial</div>
+
+  <!-- Nav -->
+  <header class="fixed top-8 inset-x-0 z-50 glass border-b border-copper/20 shadow-soft">
+    <nav class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
+      <a href="#hero" class="shrink-0"><img src="../logo.jpg" alt="Enterprise Flooring Solutions" class="h-10 w-auto"></a>
+      <div class="hidden lg:flex items-center gap-7 text-sm font-semibold text-sand-100/80">
+        <a href="#services" class="t-nav-services hover:text-copper-light transition-colors">Servicios</a>
+        <a href="#about" class="t-nav-about hover:text-copper-light transition-colors">Nosotros</a>
+        <a href="#gallery" class="t-nav-gallery hover:text-copper-light transition-colors">Galería</a>
+        <a href="#areas" class="t-nav-areas hover:text-copper-light transition-colors">Área de servicio</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <div class="lang-switch" role="navigation" aria-label="Idioma">
+          <a href="../" hreflang="en"
+            hx-get="../" hx-select="#page-root" hx-target="#page-root"
+            hx-swap="outerHTML transition:true" hx-push-url="true">EN</a>
+          <a href="./" class="is-active" hreflang="es" aria-current="page">ES</a>
+        </div>
+        <button type="button" onclick="openCalendly()" class="hidden sm:inline-flex px-4 py-2 rounded-full bg-copper hover:bg-copper-light text-white text-sm font-bold transition-colors shadow-glow t-nav-cta">Agendar presupuesto</button>
+        <button id="menu-btn" class="lg:hidden p-2 text-sand-100" aria-label="Menú">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </nav>
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-copper/20 px-5 py-4 space-y-3 bg-ink text-sm font-semibold text-sand-100/80">
+      <a href="#services" class="block t-nav-services">Servicios</a>
+      <a href="#about" class="block t-nav-about">Nosotros</a>
+      <a href="#gallery" class="block t-nav-gallery">Galería</a>
+      <a href="#areas" class="block t-nav-areas">Área de servicio</a>
+      <button type="button" onclick="openCalendly(); document.getElementById('mobile-menu').classList.add('hidden')" class="block w-full text-left text-copper-light t-nav-cta">Agendar presupuesto</button>
+    </div>
+  </header>
+
+  <main id="i18n-root">
+
+    <!-- Hero -->
+    <section id="hero" class="relative pt-16 min-h-[92vh] flex items-center overflow-hidden bg-ink tile-bg">
+      <div class="absolute inset-0">
+        <img src="../gallery-marble-floor.jpg" alt="" class="w-full h-full object-cover opacity-40">
+        <div class="absolute inset-0 bg-gradient-to-r from-ink via-ink/92 to-ink/55"></div>
+      </div>
+      <div class="absolute top-0 left-0 right-0 copper-bar"></div>
+      <div class="relative max-w-6xl mx-auto px-5 py-20 grid lg:grid-cols-2 gap-12 items-center">
+        <div class="space-y-6">
+          <span class="inline-block px-4 py-1.5 rounded-full bg-copper/20 border border-copper/40 text-copper-light text-sm font-bold tracking-wide t-hero-eyebrow">Pisos y azulejo en el sur de Texas</span>
+          <h1 class="text-4xl sm:text-5xl lg:text-[3.4rem] font-extrabold leading-[1.1] tracking-tight text-sand-50 t-hero-title">Pisos hermosos, instalados con precisión</h1>
+          <p class="text-lg text-sand-100/75 leading-relaxed max-w-lg t-hero-sub">Enterprise Flooring Solutions ofrece azulejo, piedra y renovaciones premium en San Antonio, el área metropolitana y comunidades del sur de Texas — desde Alamo Heights y Helotes hasta New Braunfels, Boerne y más allá.</p>
+          <div class="flex flex-wrap gap-4 pt-2">
+            <button type="button" onclick="openCalendly()" class="inline-flex px-7 py-3.5 rounded-full bg-copper hover:bg-copper-light text-white font-bold transition-all shadow-glow t-hero-cta1">Agendar presupuesto gratis</button>
+            <a href="#gallery" class="inline-flex px-7 py-3.5 rounded-full border-2 border-copper/40 hover:border-copper-light text-sand-50 font-bold transition-colors t-hero-cta2">Ver proyectos</a>
+          </div>
+        </div>
+        <div class="hidden lg:block">
+          <div class="relative ml-auto max-w-sm">
+            <div class="absolute -inset-3 bg-copper/25 rounded-3xl blur-2xl"></div>
+            <img src="../logo.jpg" alt="Enterprise Flooring Solutions" class="relative rounded-2xl shadow-glow w-full ring-1 ring-copper/30">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-24 bg-sand-50 tile-bg">
+      <div class="max-w-6xl mx-auto px-5">
+        <div class="text-center max-w-2xl mx-auto mb-14 reveal">
+          <p class="text-copper font-bold text-sm uppercase tracking-widest mb-2 t-svc-eyebrow">Nuestros servicios</p>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-ink t-svc-title">Todo lo que sus pisos merecen</h2>
+          <div class="copper-bar w-16 mx-auto my-4 rounded-full"></div>
+          <p class="mt-2 text-ink-muted t-svc-sub">Instalaciones residenciales y comerciales para hogares de Texas — diseños precisos, acabados limpios y materiales duraderos.</p>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <article class="reveal p-7 rounded-2xl border border-copper/15 bg-white hover:border-copper/40 hover:shadow-card transition-all group">
+            <div class="w-11 h-11 rounded-xl bg-copper/10 text-copper flex items-center justify-center mb-4 group-hover:bg-copper group-hover:text-white transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+            </div>
+            <h3 class="font-bold text-lg mb-2 t-s1t">Instalación de azulejo</h3>
+            <p class="text-sm text-ink-muted leading-relaxed t-s1d">Porcelana, cerámica y piedra natural con líneas perfectas y lechada impecable.</p>
+          </article>
+          <article class="reveal p-7 rounded-2xl border border-copper/15 bg-white hover:border-copper/40 hover:shadow-card transition-all group">
+            <div class="w-11 h-11 rounded-xl bg-copper/10 text-copper flex items-center justify-center mb-4 group-hover:bg-copper group-hover:text-white transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0h1"/></svg>
+            </div>
+            <h3 class="font-bold text-lg mb-2 t-s2t">Baños y cocinas</h3>
+            <p class="text-sm text-ink-muted leading-relaxed t-s2d">Remodelaciones de zonas húmedas, salpicaderos, regaderas e impermeabilización.</p>
+          </article>
+          <article class="reveal p-7 rounded-2xl border border-copper/15 bg-white hover:border-copper/40 hover:shadow-card transition-all group">
+            <div class="w-11 h-11 rounded-xl bg-copper/10 text-copper flex items-center justify-center mb-4 group-hover:bg-copper group-hover:text-white transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16"/></svg>
+            </div>
+            <h3 class="font-bold text-lg mb-2 t-s3t">Renovación de pisos</h3>
+            <p class="text-sm text-ink-muted leading-relaxed t-s3d">Demolición completa, preparación del subpiso y superficies nuevas.</p>
+          </article>
+          <article class="reveal p-7 rounded-2xl border border-copper/15 bg-white hover:border-copper/40 hover:shadow-card transition-all group">
+            <div class="w-11 h-11 rounded-xl bg-copper/10 text-copper flex items-center justify-center mb-4 group-hover:bg-copper group-hover:text-white transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 21l3-3m-3 3l-3-3m3 3V8m10 5l-3 3m3-3l3 3m-3-3v8"/></svg>
+            </div>
+            <h3 class="font-bold text-lg mb-2 t-s4t">Diseños personalizados</h3>
+            <p class="text-sm text-ink-muted leading-relaxed t-s4d">Espiga, patrones y bordes decorativos que elevan cualquier espacio.</p>
+          </article>
+          <article class="reveal p-7 rounded-2xl border border-copper/15 bg-white hover:border-copper/40 hover:shadow-card transition-all group">
+            <div class="w-11 h-11 rounded-xl bg-copper/10 text-copper flex items-center justify-center mb-4 group-hover:bg-copper group-hover:text-white transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5"/></svg>
+            </div>
+            <h3 class="font-bold text-lg mb-2 t-s5t">Pisos comerciales</h3>
+            <p class="text-sm text-ink-muted leading-relaxed t-s5d">Instalaciones duraderas para oficinas y comercios de alto tráfico.</p>
+          </article>
+          <article class="reveal p-7 rounded-2xl border border-copper/15 bg-white hover:border-copper/40 hover:shadow-card transition-all group">
+            <div class="w-11 h-11 rounded-xl bg-copper/10 text-copper flex items-center justify-center mb-4 group-hover:bg-copper group-hover:text-white transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><circle cx="15" cy="12" r="3"/></svg>
+            </div>
+            <h3 class="font-bold text-lg mb-2 t-s6t">Reparación y restauración</h3>
+            <p class="text-sm text-ink-muted leading-relaxed t-s6d">Reemplazo de azulejos, relechado y renovación de pisos.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-24 bg-sand-100">
+      <div class="max-w-6xl mx-auto px-5 grid lg:grid-cols-2 gap-14 items-center">
+        <div class="reveal space-y-5">
+          <p class="text-copper font-bold text-sm uppercase tracking-widest t-ab-eyebrow">Nosotros</p>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-ink t-ab-title">Expertos locales, alcance metropolitano</h2>
+          <p class="text-ink-muted leading-relaxed t-ab-p1">Enterprise Flooring Solutions es una empresa de renovación que sirve a propietarios y negocios en el sur de Texas — incluyendo San Antonio y comunidades de toda el área metropolitana. Aportamos precisión, transparencia y acabados premium a cada proyecto — ya sea un baño principal en Alamo Heights o un reemplazo completo de piso en Cibolo.</p>
+          <p class="text-ink-muted leading-relaxed t-ab-p2">Desde la primera consulta hasta la entrega final, recibe comunicación directa, un sitio de trabajo limpio y resultados visibles en cada detalle.</p>
+          <div class="grid grid-cols-3 gap-4 pt-4">
+            <div class="text-center p-4 rounded-xl bg-white border border-copper/15 shadow-card">
+              <div class="text-2xl font-extrabold text-copper">15+</div>
+              <div class="text-xs text-ink-muted mt-1 t-ab-s1">Años de experiencia</div>
+            </div>
+            <div class="text-center p-4 rounded-xl bg-white border border-copper/15 shadow-card">
+              <div class="text-2xl font-extrabold text-copper">500+</div>
+              <div class="text-xs text-ink-muted mt-1 t-ab-s2">Proyectos realizados</div>
+            </div>
+            <div class="text-center p-4 rounded-xl bg-white border border-copper/15 shadow-card">
+              <div class="text-2xl font-extrabold text-copper">100%</div>
+              <div class="text-xs text-ink-muted mt-1 t-ab-s3">Satisfacción</div>
+            </div>
+          </div>
+        </div>
+        <div class="reveal relative">
+          <img src="../gallery-bathroom-luxury.jpg" alt="Instalación de azulejo en baño de lujo" class="rounded-2xl shadow-soft w-full object-cover aspect-[4/5]" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="py-24 bg-ink text-sand-50">
+      <div class="max-w-6xl mx-auto px-5">
+        <div class="text-center max-w-2xl mx-auto mb-12 reveal">
+          <p class="text-copper font-bold text-sm uppercase tracking-widest mb-2 t-gal-eyebrow">Nuestro trabajo</p>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-sand-50 t-gal-title">Instalaciones recientes</h2>
+          <p class="mt-4 text-sand-100/70 t-gal-sub">Proyectos reales de hogares en nuestra área de servicio — azulejo, piedra y pisos bien hechos.</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 reveal">
+          <div class="gallery-card sm:col-span-2 lg:col-span-2 rounded-2xl overflow-hidden shadow-soft ring-1 ring-copper/20">
+            <img src="../gallery-marble-floor.jpg" alt="Piso de azulejo tipo mármol de gran formato y muro de acento" class="w-full h-72 sm:h-96 object-cover" loading="lazy">
+          </div>
+          <div class="gallery-card rounded-2xl overflow-hidden shadow-soft ring-1 ring-copper/20">
+            <img src="../gallery-shower-marble.jpg" alt="Regadera walk-in con azulejo tipo mármol" class="w-full h-72 object-cover" loading="lazy">
+          </div>
+          <div class="gallery-card rounded-2xl overflow-hidden shadow-soft ring-1 ring-copper/20">
+            <img src="../gallery-bathroom-luxury.jpg" alt="Baño de lujo con azulejo hexagonal en la regadera" class="w-full h-72 object-cover" loading="lazy">
+          </div>
+          <div class="gallery-card rounded-2xl overflow-hidden shadow-soft ring-1 ring-copper/20">
+            <img src="../gallery-living-room.jpg" alt="Piso tipo madera con muro de acento moderno" class="w-full h-72 object-cover" loading="lazy">
+          </div>
+          <div class="gallery-card rounded-2xl overflow-hidden shadow-soft ring-1 ring-copper/20">
+            <img src="../gallery-staircase.jpg" alt="Escalera moderna con muro de acento geométrico" class="w-full h-72 object-cover" loading="lazy">
+          </div>
+          <div class="gallery-card rounded-2xl overflow-hidden shadow-soft ring-1 ring-copper/20">
+            <img src="../gallery-deck-tile.jpg" alt="Terraza cubierta con piso de azulejo tipo madera" class="w-full h-72 object-cover" loading="lazy">
+          </div>
+          <div class="gallery-card sm:col-span-2 rounded-2xl overflow-hidden shadow-soft ring-1 ring-copper/20">
+            <img src="../gallery-porch-tile.jpg" alt="Instalación de azulejo con veta de madera en el porche" class="w-full h-64 object-cover" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Area -->
+    <section id="areas" class="py-24 bg-sand-50 tile-bg">
+      <div class="max-w-6xl mx-auto px-5">
+        <div class="text-center max-w-2xl mx-auto mb-10 reveal">
+          <p class="text-copper font-bold text-sm uppercase tracking-widest mb-2 t-ar-eyebrow">Dónde trabajamos</p>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-ink t-ar-title">San Antonio y el área metropolitana</h2>
+          <div class="copper-bar w-16 mx-auto my-4 rounded-full"></div>
+          <p class="mt-2 text-ink-muted t-ar-sub">Con base en el área de San Antonio, servimos con orgullo a comunidades en los condados de Bexar, Comal, Guadalupe y zonas cercanas — desde el centro de la ciudad hasta los suburbios del Hill Country.</p>
+        </div>
+
+        <div class="reveal rounded-2xl overflow-hidden shadow-soft border border-copper/20 mb-8 ring-1 ring-copper/10">
+          <iframe
+            title="Enterprise Flooring Solutions service area map"
+            src="https://www.google.com/maps/embed?origin=mfe&amp;pb=!1m3!2m1!1s29.52,-98.45!6i9!3m1!1sen!5m1!1sen"
+            width="100%" height="420" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            class="w-full"></iframe>
+        </div>
+
+        <div class="reveal flex flex-wrap justify-center gap-2.5">
+          <span class="city-pill city-pill-featured px-4 py-2 rounded-full border text-sm font-bold shadow-glow">San Antonio, TX</span>
+          <span class="city-pill px-4 py-2 rounded-full bg-white border border-copper/20 text-sm font-semibold text-ink-muted">Live Oak, TX</span>
+          <span class="city-pill px-4 py-2 rounded-full bg-white border border-copper/20 text-sm font-semibold text-ink-muted">La Vernia, TX</span>
+          <span class="city-pill px-4 py-2 rounded-full bg-white border border-copper/20 text-sm font-semibold text-ink-muted">New Braunfels, TX</span>
+          <span class="city-pill px-4 py-2 rounded-full bg-white border border-copper/20 text-sm font-semibold text-ink-muted">Converse, TX</span>
+          <span class="city-pill px-4 py-2 rounded-full bg-white border border-copper/20 text-sm font-semibold text-ink-muted">Seguin, TX</span>
+          <span class="city-pill px-4 py-2 rounded-full bg-white border border-copper/20 text-sm font-semibold text-ink-muted">Hollywood Park, TX</span>
+          <span class="city-pill px-4 py-2 rounded-full bg-white border border-copper/20 text-sm font-semibold text-ink-muted">Kirby, TX</span>
+          <span class="city-pill px-4 py-2 rounded-full bg-white border border-copper/20 text-sm font-semibold text-ink-muted">Shavano Park, TX</span>
+          <span class="city-pill px-4 py-2 rounded-full bg-white border border-copper/20 text-sm font-semibold text-ink-muted">Helotes, TX</span>
+          <span class="city-pill px-4 py-2 rounded-full bg-white border border-copper/20 text-sm font-semibold text-ink-muted">Schertz, TX</span>
+          <span class="city-pill px-4 py-2 rounded-full bg-white border border-copper/20 text-sm font-semibold text-ink-muted">Alamo Heights, TX</span>
+          <span class="city-pill px-4 py-2 rounded-full bg-white border border-copper/20 text-sm font-semibold text-ink-muted">Boerne, TX</span>
+          <span class="city-pill px-4 py-2 rounded-full bg-white border border-copper/20 text-sm font-semibold text-ink-muted">Bulverde, TX</span>
+          <span class="city-pill px-4 py-2 rounded-full bg-white border border-copper/20 text-sm font-semibold text-ink-muted">Cibolo, TX</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 bg-ink text-sand-50 text-center border-t-4 border-copper">
+      <img src="../logo.jpg" alt="EFS" class="h-9 mx-auto mb-3 opacity-90">
+      <p class="text-copper-light text-sm italic mb-2 t-ft-tag">Servicios de renovación</p>
+      <p class="text-slate-400 text-xs t-ft-copy">© 2026 Enterprise Flooring Solutions. Todos los derechos reservados.</p>
+      <p class="text-slate-500 text-xs mt-1 t-ft-loc">Sirviendo a San Antonio y comunidades del sur de Texas con orgullo</p>
+      <p class="text-slate-600 text-[11px] mt-3">Sitio demo de concepto · Texas Bull Marketing · No es el sitio oficial</p>
+    </footer>
+
+  </main>
+
+  <script>
+    const CALENDLY_URL = 'https://calendly.com/texasbullmarketing/call';
+    function openCalendly() {
+      if (window.Calendly && typeof Calendly.initPopupWidget === 'function') {
+        Calendly.initPopupWidget({ url: CALENDLY_URL });
+      } else {
+        window.open(CALENDLY_URL, '_blank', 'noopener');
+      }
+    }
+
+    document.getElementById('menu-btn').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+
+    const obs = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }), { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  </script>
+  </div>
+</body>
+</html>

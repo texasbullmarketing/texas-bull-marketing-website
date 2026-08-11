@@ -16,6 +16,7 @@
   --serif: "Cormorant Garamond", Georgia, serif;
   --sans: "Manrope", system-ui, sans-serif;
   --nav-h: 4.5rem;
+  --banner-h: 2rem;
   --max: 72rem;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -100,10 +101,53 @@ em { font-style: italic; color: var(--brass-2); }
 }
 .text-link:hover { border-color: var(--brass); color: var(--brass-2); }
 
+/* Demo banner */
+.demo-banner {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 1100;
+  height: var(--banner-h);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #100c07;
+  background: linear-gradient(90deg, #d4b06a, #b8954a);
+  padding: 0 0.75rem;
+  text-align: center;
+}
+.demo-banner span { font-weight: 900; letter-spacing: 0.08em; }
+
+/* Language switch */
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.28rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 1px;
+  border: 1px solid rgba(184, 149, 74, 0.35);
+  background: rgba(0, 0, 0, 0.35);
+  flex-shrink: 0;
+}
+.lang-switch a {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  padding: 0.12rem 0.28rem;
+  text-decoration: none;
+}
+.lang-switch a.is-active { background: rgba(184, 149, 74, 0.2); color: var(--cream); }
+.lang-switch a:hover { color: var(--cream); text-decoration: none; }
+
 /* NAV */
 .nav {
   position: fixed;
-  inset: 0 0 auto;
+  top: var(--banner-h);
+  left: 0;
+  right: 0;
   z-index: 1000;
   height: var(--nav-h);
   border-bottom: 1px solid transparent;
@@ -182,7 +226,7 @@ em { font-style: italic; color: var(--brass-2); }
   min-height: 100dvh;
   display: grid;
   align-content: end;
-  padding: calc(var(--nav-h) + 2rem) 0 0;
+  padding: calc(var(--banner-h) + var(--nav-h) + 2rem) 0 0;
   overflow: hidden;
 }
 .hero__media {
@@ -970,7 +1014,7 @@ body.menu-open { overflow: hidden; }
 @media (max-width: 768px) {
   .nav__links {
     position: fixed;
-    inset: 0;
+    inset: calc(var(--banner-h) + var(--nav-h)) 0 0 0;
     background: rgba(7,7,7,0.97);
     flex-direction: column;
     justify-content: center;

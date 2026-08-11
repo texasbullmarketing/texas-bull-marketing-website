@@ -6,7 +6,12 @@
   <title>Enterprise Flooring Solutions | Premium Tile &amp; Flooring — South Texas</title>
   <meta name="description" content="Enterprise Flooring Solutions — premium tile, stone, and renovation services across the Greater San Antonio metro and surrounding South Texas communities. Bilingual service. Free estimates.">
   <meta name="robots" content="noindex, nofollow" />
+  <meta name="view-transition" content="same-origin" />
   <meta name="theme-color" content="#1a1410">
+  <link rel="canonical" href="https://texasbullmarketing.com/demo/EnterpriseFlooringSolutions/" />
+  <link rel="alternate" hreflang="en" href="https://texasbullmarketing.com/demo/EnterpriseFlooringSolutions/" />
+  <link rel="alternate" hreflang="es" href="https://texasbullmarketing.com/demo/EnterpriseFlooringSolutions/es/" />
+  <link rel="alternate" hreflang="x-default" href="https://texasbullmarketing.com/demo/EnterpriseFlooringSolutions/" />
   <link rel="icon" href="logo.jpg" type="image/jpeg" />
   <link rel="apple-touch-icon" href="logo.jpg" />
   <script src="https://cdn.tailwindcss.com"></script>
@@ -57,64 +62,32 @@
       background-size: 36px 62px;
     }
     .copper-bar { background: linear-gradient(90deg, #b87333, #d4a574, #b87333); height: 3px; }
+    .demo-banner {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 60;
+      display: flex; align-items: center; justify-content: center; gap: 0.4rem;
+      height: 2rem; font-size: 0.72rem; font-weight: 700; color: #140404;
+      background: linear-gradient(90deg, #ff8a8a, #e10600);
+    }
+    .demo-banner span { font-weight: 900; letter-spacing: 0.08em; }
+    body { padding-top: 2rem; }
+    .lang-switch {
+      display: inline-flex; align-items: center; gap: 0.15rem;
+      padding: 0.2rem; border-radius: 999px; border: 1px solid rgba(184,115,51,0.35);
+      background: rgba(26,20,16,0.6); font-size: 0.72rem; font-weight: 800;
+    }
+    .lang-switch a {
+      color: rgba(240,232,220,0.7); padding: 0.35rem 0.65rem; border-radius: 999px; text-decoration: none;
+    }
+    .lang-switch a.is-active { background: #b87333; color: #fff; }
+    .lang-switch a:hover { color: #fff; }
   </style>
 </head>
-<body class="font-sans text-ink bg-sand-50 antialiased">
-
-  <!-- i18n source templates -->
-  <template id="tpl-en">
-    <data nav-services="Services" nav-about="About" nav-gallery="Gallery" nav-areas="Service Area" nav-contact="Contact" nav-cta="Free Estimate"
-      hero-eyebrow="South Texas Flooring &amp; Tile"
-      hero-title="Beautiful Floors, Installed with Precision"
-      hero-sub="Enterprise Flooring Solutions delivers premium tile, stone, and renovation work throughout San Antonio, the surrounding metro, and South Texas communities — from Alamo Heights and Helotes to New Braunfels, Boerne, and beyond."
-      hero-cta1="Request a Free Estimate" hero-cta2="See Our Projects"
-      svc-eyebrow="Our Services" svc-title="Everything Your Floors Deserve" svc-sub="Residential and commercial installations built for Texas homes — precise layouts, clean finishes, and materials that hold up to real life."
-      s1t="Tile Installation" s1d="Porcelain, ceramic, and natural stone with crisp lines and flawless grout."
-      s2t="Bathrooms &amp; Kitchens" s2d="Wet-area remodels, backsplashes, shower surrounds, and waterproofing."
-      s3t="Floor Renovation" s3d="Full tear-out, subfloor prep, and stunning new surfaces."
-      s4t="Custom Layouts" s4d="Herringbone, patterns, and decorative borders that elevate any room."
-      s5t="Commercial Flooring" s5d="Durable, high-traffic installations for offices and retail."
-      s6t="Repair &amp; Restoration" s6d="Tile replacement, re-grouting, and floor refresh projects."
-      ab-eyebrow="About Us" ab-title="Local Experts, Metro-Wide Reach"
-      ab-p1="Enterprise Flooring Solutions is a renovation company serving homeowners and businesses across South Texas — including San Antonio and communities throughout the metro. We bring precision, transparency, and premium finishes to every project — whether it's a master bath in Alamo Heights or a full floor replacement in Cibolo."
-      ab-p2="From first consultation to final walkthrough, you get direct communication, a clean job site, and results you can see in every detail."
-      ab-s1="Years Experience" ab-s2="Projects Done" ab-s3="Satisfaction"
-      gal-eyebrow="Our Work" gal-title="Recent Installations" gal-sub="Real projects from homes across our service area — tile, stone, and flooring done right."
-      ar-eyebrow="Where We Work" ar-title="San Antonio &amp; the Greater Metro" ar-sub="Headquartered in the San Antonio area, we proudly serve homeowners across Bexar, Comal, Guadalupe, and surrounding counties — from the city core to the Hill Country suburbs."
-      ct-eyebrow="Contact" ct-title="Let's Talk About Your Project" ct-sub="Tell us what you have in mind and we'll schedule a free on-site estimate at your convenience."
-      fm-name="Full Name" fm-phone="Phone" fm-email="Email" fm-msg="Project details" fm-btn="Send Request"
-      ct-hours="Hours" ct-hours-v="Mon – Fri: 7am – 6pm · Sat: 8am – 2pm"
-      ft-tag="Renovation services" ft-copy="© 2026 Enterprise Flooring Solutions. All rights reserved."
-      ft-loc="Serving San Antonio and South Texas communities with pride"></data>
-  </template>
-  <template id="tpl-es">
-    <data nav-services="Servicios" nav-about="Nosotros" nav-gallery="Galería" nav-areas="Área de Servicio" nav-contact="Contacto" nav-cta="Presupuesto Gratis"
-      hero-eyebrow="Pisos y Azulejo en el Sur de Texas"
-      hero-title="Pisos Hermosos, Instalados con Precisión"
-      hero-sub="Enterprise Flooring Solutions ofrece azulejo, piedra y renovaciones premium en San Antonio, el área metropolitana y comunidades del sur de Texas — desde Alamo Heights y Helotes hasta New Braunfels, Boerne y más allá."
-      hero-cta1="Solicitar Presupuesto Gratis" hero-cta2="Ver Proyectos"
-      svc-eyebrow="Nuestros Servicios" svc-title="Todo lo que Sus Pisos Merecen" svc-sub="Instalaciones residenciales y comerciales para hogares de Texas — diseños precisos, acabados limpios y materiales duraderos."
-      s1t="Instalación de Azulejo" s1d="Porcelana, cerámica y piedra natural con líneas perfectas y lechada impecable."
-      s2t="Baños y Cocinas" s2d="Remodelaciones, salpicaderos, regaderas e impermeabilización."
-      s3t="Renovación de Pisos" s3d="Demolición completa, preparación del subpiso y superficies nuevas."
-      s4t="Diseños Personalizados" s4d="Espiga, patrones y bordes decorativos que elevan cualquier espacio."
-      s5t="Pisos Comerciales" s5d="Instalaciones duraderas para oficinas y comercios de alto tráfico."
-      s6t="Reparación y Restauración" s6d="Reemplazo de azulejos, relechado y renovación de pisos."
-      ab-eyebrow="Nosotros" ab-title="Expertos Locales, Alcance Metropolitano"
-      ab-p1="Enterprise Flooring Solutions es una empresa de renovación que sirve a propietarios y negocios en el sur de Texas — incluyendo San Antonio y comunidades de toda el área metropolitana. Aportamos precisión, transparencia y acabados premium a cada proyecto."
-      ab-p2="Desde la primera consulta hasta la entrega final, recibe comunicación directa, un sitio de trabajo limpio y resultados visibles en cada detalle."
-      ab-s1="Años de Experiencia" ab-s2="Proyectos Realizados" ab-s3="Satisfacción"
-      gal-eyebrow="Nuestro Trabajo" gal-title="Instalaciones Recientes" gal-sub="Proyectos reales de hogares en nuestra área de servicio — azulejo, piedra y pisos bien hechos."
-      ar-eyebrow="Dónde Trabajamos" ar-title="San Antonio y el Área Metropolitana" ar-sub="Con base en el área de San Antonio, servimos con orgullo a comunidades en los condados de Bexar, Comal, Guadalupe y zonas cercanas — desde el centro de la ciudad hasta los suburbios del Hill Country."
-      ct-eyebrow="Contacto" ct-title="Hablemos de Su Proyecto" ct-sub="Cuéntenos su idea y programaremos un presupuesto gratuito en su domicilio."
-      fm-name="Nombre Completo" fm-phone="Teléfono" fm-email="Correo" fm-msg="Detalles del proyecto" fm-btn="Enviar Solicitud"
-      ct-hours="Horario" ct-hours-v="Lun – Vie: 7am – 6pm · Sáb: 8am – 2pm"
-      ft-tag="Servicios de renovación" ft-copy="© 2026 Enterprise Flooring Solutions. Todos los derechos reservados."
-      ft-loc="Sirviendo a San Antonio y comunidades del sur de Texas con orgullo"></data>
-  </template>
+<body class="font-sans text-ink bg-sand-50 antialiased" data-lang="en">
+  <div id="page-root">
+    <div class="demo-banner" role="status"><span>DEMO</span> Enterprise Flooring Solutions · Texas Bull Marketing sample · Not the live site</div>
 
   <!-- Nav -->
-  <header class="fixed top-0 inset-x-0 z-50 glass border-b border-copper/20 shadow-soft">
+  <header class="fixed top-8 inset-x-0 z-50 glass border-b border-copper/20 shadow-soft">
     <nav class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
       <a href="#hero" class="shrink-0"><img src="logo.jpg" alt="Enterprise Flooring Solutions" class="h-10 w-auto"></a>
       <div class="hidden lg:flex items-center gap-7 text-sm font-semibold text-sand-100/80">
@@ -124,9 +97,11 @@
         <a href="#areas" class="t-nav-areas hover:text-copper-light transition-colors">Service Area</a>
       </div>
       <div class="flex items-center gap-3">
-        <div class="flex rounded-full bg-ink/60 border border-copper/20 p-0.5 text-xs font-bold">
-          <button id="btn-en" class="lang-btn active px-3 py-1.5 rounded-full text-sand-100/70 transition-all" hx-on:click="setLang('en')">EN</button>
-          <button id="btn-es" class="lang-btn px-3 py-1.5 rounded-full text-sand-100/70 transition-all" hx-on:click="setLang('es')">ES</button>
+        <div class="lang-switch" role="navigation" aria-label="Language">
+          <a href="index.html" class="is-active" hreflang="en" aria-current="page">EN</a>
+          <a href="es/" hreflang="es"
+            hx-get="es/" hx-select="#page-root" hx-target="#page-root"
+            hx-swap="outerHTML transition:true" hx-push-url="true">ES</a>
         </div>
         <button type="button" onclick="openCalendly()" class="hidden sm:inline-flex px-4 py-2 rounded-full bg-copper hover:bg-copper-light text-white text-sm font-bold transition-colors shadow-glow t-nav-cta">Schedule Estimate</button>
         <button id="menu-btn" class="lg:hidden p-2 text-sand-100" aria-label="Menu">
@@ -335,6 +310,7 @@
       <p class="text-copper-light text-sm italic mb-2 t-ft-tag">Renovation services</p>
       <p class="text-slate-400 text-xs t-ft-copy">© 2026 Enterprise Flooring Solutions. All rights reserved.</p>
       <p class="text-slate-500 text-xs mt-1 t-ft-loc">Serving San Antonio and South Texas communities with pride</p>
+      <p class="text-slate-600 text-[11px] mt-3">Demo concept site · Texas Bull Marketing · Not the official website</p>
     </footer>
 
   </main>
@@ -349,45 +325,6 @@
       }
     }
 
-    const langKeys = [
-      ['nav-services','t-nav-services'],['nav-about','t-nav-about'],['nav-gallery','t-nav-gallery'],
-      ['nav-areas','t-nav-areas'],['nav-contact','t-nav-contact'],['nav-cta','t-nav-cta'],
-      ['hero-eyebrow','t-hero-eyebrow'],['hero-title','t-hero-title'],['hero-sub','t-hero-sub'],
-      ['hero-cta1','t-hero-cta1'],['hero-cta2','t-hero-cta2'],
-      ['svc-eyebrow','t-svc-eyebrow'],['svc-title','t-svc-title'],['svc-sub','t-svc-sub'],
-      ['s1t','t-s1t'],['s1d','t-s1d'],['s2t','t-s2t'],['s2d','t-s2d'],
-      ['s3t','t-s3t'],['s3d','t-s3d'],['s4t','t-s4t'],['s4d','t-s4d'],
-      ['s5t','t-s5t'],['s5d','t-s5d'],['s6t','t-s6t'],['s6d','t-s6d'],
-      ['ab-eyebrow','t-ab-eyebrow'],['ab-title','t-ab-title'],['ab-p1','t-ab-p1'],['ab-p2','t-ab-p2'],
-      ['ab-s1','t-ab-s1'],['ab-s2','t-ab-s2'],['ab-s3','t-ab-s3'],
-      ['gal-eyebrow','t-gal-eyebrow'],['gal-title','t-gal-title'],['gal-sub','t-gal-sub'],
-      ['ar-eyebrow','t-ar-eyebrow'],['ar-title','t-ar-title'],['ar-sub','t-ar-sub'],
-      ['ct-eyebrow','t-ct-eyebrow'],['ct-title','t-ct-title'],['ct-sub','t-ct-sub'],
-      ['fm-name','t-fm-name'],['fm-phone','t-fm-phone'],['fm-email','t-fm-email'],
-      ['fm-msg','t-fm-msg'],['fm-btn','t-fm-btn'],
-      ['ct-hours','t-ct-hours'],['ct-hours-v','t-ct-hours-v'],
-      ['ft-tag','t-ft-tag'],['ft-copy','t-ft-copy'],['ft-loc','t-ft-loc'],
-    ];
-
-    function setLang(lang) {
-      const root = document.getElementById('i18n-root');
-      const tpl = document.getElementById('tpl-' + lang).content.querySelector('data');
-      root.classList.add('lang-fade');
-      setTimeout(() => {
-        langKeys.forEach(([attr, cls]) => {
-          const val = tpl.getAttribute(attr);
-          if (val) document.querySelectorAll('.' + cls).forEach(el => el.innerHTML = val);
-        });
-        document.documentElement.lang = lang;
-        document.getElementById('btn-en').classList.toggle('active', lang === 'en');
-        document.getElementById('btn-es').classList.toggle('active', lang === 'es');
-        localStorage.setItem('efs-lang', lang);
-        root.classList.remove('lang-fade');
-      }, 180);
-    }
-
-    if (localStorage.getItem('efs-lang') === 'es') setLang('es');
-
     document.getElementById('menu-btn').addEventListener('click', () => {
       document.getElementById('mobile-menu').classList.toggle('hidden');
     });
@@ -395,5 +332,6 @@
     const obs = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }), { threshold: 0.1 });
     document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
   </script>
+  </div>
 </body>
 </html>

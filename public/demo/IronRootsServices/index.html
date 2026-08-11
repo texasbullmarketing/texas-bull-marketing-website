@@ -5,7 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Iron Roots Services — Expert home & property services in Texas. Concrete, fencing, remodeling, landscaping & more. Free estimates. Call 830-251-8489." />
   <meta name="robots" content="noindex, nofollow" />
+  <meta name="view-transition" content="same-origin" />
   <title>Iron Roots Services | Expert Home & Property Services in Texas</title>
+  <link rel="canonical" href="https://texasbullmarketing.com/demo/IronRootsServices/" />
+  <link rel="alternate" hreflang="en" href="https://texasbullmarketing.com/demo/IronRootsServices/" />
+  <link rel="alternate" hreflang="es" href="https://texasbullmarketing.com/demo/IronRootsServices/es/" />
+  <link rel="alternate" hreflang="x-default" href="https://texasbullmarketing.com/demo/IronRootsServices/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
@@ -13,8 +18,10 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" type="image/png" href="images/logo.png" />
   <link rel="apple-touch-icon" href="images/logo.png" />
+  <script src="https://unpkg.com/htmx.org@2.0.4" defer></script>
 </head>
-<body>
+<body data-lang="en">
+  <div id="page-root">
   <!-- Demo banner -->
   <div class="demo-banner" role="status">
     <span>DEMO VERSION</span> — Sample site for preview. Not a live booking system.
@@ -38,6 +45,13 @@
         <a href="#business-card">Flyer &amp; Card</a>
       </nav>
       <div class="header-ctas">
+        <div class="lang-switch" role="navigation" aria-label="Language">
+          <a href="index.html" class="is-active" hreflang="en" aria-current="page">EN</a>
+          <span aria-hidden="true">|</span>
+          <a href="es/" hreflang="es"
+            hx-get="es/" hx-select="#page-root" hx-target="#page-root"
+            hx-swap="outerHTML transition:true" hx-push-url="true">ES</a>
+        </div>
         <a href="tel:8302518489" class="btn btn-outline btn-sm">Call Now</a>
         <a href="https://calendly.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Book Appointment</a>
       </div>
@@ -51,6 +65,13 @@
       <a href="#testimonials">Reviews</a>
       <a href="#contact">Contact</a>
       <a href="#business-card">Flyer &amp; Card</a>
+      <div class="lang-switch lang-switch--mobile" role="navigation" aria-label="Language">
+        <a href="index.html" class="is-active" hreflang="en" aria-current="page">EN</a>
+        <span aria-hidden="true">|</span>
+        <a href="es/" hreflang="es"
+          hx-get="es/" hx-select="#page-root" hx-target="#page-root"
+          hx-swap="outerHTML transition:true" hx-push-url="true">ES</a>
+      </div>
       <a href="tel:8302518489" class="btn btn-outline">Call 830-251-8489</a>
       <a href="https://calendly.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Book Appointment</a>
     </nav>
@@ -499,6 +520,7 @@
   <a href="tel:8302518489" class="mobile-call-bar" aria-label="Call Iron Roots Services">
     📞 Call Now — 830-251-8489
   </a>
+  </div><!-- /#page-root -->
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script src="script.js"></script>

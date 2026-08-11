@@ -326,3 +326,31 @@ em { font-style: italic; color: var(--ice); }
   .nav__cta { display: none; }
   .cards { grid-template-columns: 1fr; }
 }
+
+/* Demo banner + language switch */
+.demo-banner {
+  position: relative;
+  z-index: 120;
+  background: #0a1018;
+  border-bottom: 1px solid rgba(76, 201, 240, 0.2);
+  color: #94a3b8;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-align: center;
+  padding: 0.45rem 1rem;
+}
+.demo-banner span { color: #f48c06; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; }
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--dim);
+  flex-shrink: 0;
+}
+.lang-switch a { color: var(--muted); padding: 0.2rem 0.15rem; }
+.lang-switch a:hover { color: var(--text); }
+.lang-switch a.is-active { color: var(--hot2); }
