@@ -4,17 +4,16 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="noindex, nofollow" />
-  <title>Taco Vallarta | Hwy 87 · La Vernia, TX</title>
-  <meta name="description" content="Taco Vallarta on U.S. Hwy 87 in La Vernia. Quesabirrias, tacos, breakfast, and plates. Call (830) 581-7013. Open early." />
+  <title>Taco Vallarta | Quesabirria &amp; plates · La Vernia</title>
+  <meta name="description" content="Taco Vallarta on U.S. Hwy 87 in La Vernia. Quesabirrias, tacos, breakfast, parrilladas. Open at 6. Call (830) 581-7013." />
   <meta name="theme-color" content="#c8102e" />
   <link rel="canonical" href="https://texasbullmarketing.com/demo/TacoVallarta/" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Taco Vallarta | La Vernia" />
-  <meta property="og:description" content="Quesabirrias and plates on Hwy 87. Call (830) 581-7013." />
+  <meta property="og:description" content="Quesabirrias and plates on Hwy 87. Open at 6. Call (830) 581-7013." />
   <meta property="og:url" content="https://texasbullmarketing.com/demo/TacoVallarta/" />
-  <meta property="og:image" content="images/hero-birria.jpg" />
+  <meta property="og:image" content="https://texasbullmarketing.com/demo/TacoVallarta/images/hero-birria.jpg" />
   <link rel="icon" type="image/png" href="favicon.png" />
-  <link rel="apple-touch-icon" href="favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet" />
@@ -37,6 +36,7 @@
       "addressCountry": "US"
     },
     "geo": { "@type": "GeoCoordinates", "latitude": 29.3568676, "longitude": -98.1293289 },
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "3.9", "reviewCount": "123" },
     "openingHoursSpecification": [
       { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "06:00", "closes": "21:30" },
       { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday","Saturday"], "opens": "06:00", "closes": "22:00" },
@@ -46,92 +46,200 @@
   </script>
 </head>
 <body>
-  <a class="skip" href="#eat">Skip to food</a>
-  <header class="bar">
-    <a class="mark" href="#top">TACO VALLARTA</a>
-    <nav>
-      <a href="#eat">Food</a>
-      <a href="#menu">Board</a>
-      <a href="#go">Hours</a>
-    </nav>
-    <a class="call" href="tel:+18305817013">(830) 581-7013</a>
+  <a class="skip" href="#menu">Skip to menu</a>
+  <header class="nav">
+    <div class="wrap nav__in">
+      <a class="brand" href="#top">TACO VALLARTA</a>
+      <nav class="nav__links" id="navLinks">
+        <a href="#eat">Food</a>
+        <a href="#menu">Board</a>
+        <a href="#visit">Hours</a>
+      </nav>
+      <div class="nav__right">
+        <a class="btn btn--red btn--sm" href="tel:+18305817013">(830) 581-7013</a>
+        <button class="burger" id="navToggle" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
   </header>
 
-  <section class="splash" id="top">
+  <section class="hero" id="top">
     <img src="images/hero-birria.jpg" alt="Quesabirrias with consomé, chips, and salsas at Taco Vallarta" />
-    <div class="splash__copy">
-      <p>LA VERNIA · HWY 87</p>
+    <div class="hero__in wrap">
+      <p class="kicker">La Vernia · Hwy 87</p>
       <h1>Crispy birria.<br>Open at 6.</h1>
-      <a href="tel:+18305817013">Call the window</a>
-    </div>
-  </section>
-
-  <section class="eat" id="eat">
-    <div class="eat__head">
-      <h2>What’s on the tray</h2>
-      <p>Real plates from this kitchen. No empty dining room.</p>
-    </div>
-    <div class="mosaic">
-      <figure><img src="images/tacos-street.jpg" alt="Three grilled tacos with beans and a pickle" /><figcaption>Tacos</figcaption></figure>
-      <figure><img src="images/breakfast.jpg" alt="Huevos rancheros with shredded meat, potatoes, bacon, and beans" /><figcaption>Breakfast plate</figcaption></figure>
-      <figure><img src="images/torta.jpg" alt="Steak torta with fries" /><figcaption>Torta</figcaption></figure>
-      <figure><img src="images/enchiladas.jpg" alt="Beef enchiladas with rice and beans" /><figcaption>Enchiladas</figcaption></figure>
-      <figure><img src="images/stew.jpg" alt="Red stew with onion, cilantro, and lime" /><figcaption>Bowl</figcaption></figure>
-      <figure><img src="images/fajitas.jpg" alt="Fajita plate with rice, beans, guacamole, and tortillas" /><figcaption>Fajitas</figcaption></figure>
-    </div>
-  </section>
-
-  <section class="board" id="menu">
-    <h2>From the standing board</h2>
-    <div class="cols">
-      <div>
-        <h3>Always on</h3>
-        <ul>
-          <li>Quesabirrias</li>
-          <li>3 taco combo</li>
-          <li>Fish or shrimp tacos</li>
-          <li>Regular enchilada plate</li>
-          <li>Enchilada with fajitas</li>
-        </ul>
-      </div>
-      <div>
-        <h3>Breakfast</h3>
-        <ul>
-          <li>Breakfast plate</li>
-          <li>Breakfast tacos</li>
-          <li>Breakfast burritos</li>
-          <li>Build-your-own omelette</li>
-        </ul>
-      </div>
-      <div>
-        <h3>Also</h3>
-        <ul>
-          <li>Tortas</li>
-          <li>Quesadillas</li>
-          <li>Parrilladas</li>
-          <li>Horchata · Jamaica</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="go" id="go">
-    <div>
-      <p class="kicker">14021 U.S. Hwy 87 W · La Vernia, TX 78121</p>
-      <h2>Come hungry.<br>Leave with a tray.</h2>
-      <ul class="hrs">
-        <li><b>Mon–Thu</b> 6:00 AM – 9:30 PM</li>
-        <li><b>Fri–Sat</b> 6:00 AM – 10:00 PM</li>
-        <li><b>Sunday</b> 7:00 AM – 9:00 PM</li>
-      </ul>
-      <p class="note">Hours from Google. Delivery is listed on their profile.</p>
-      <p>
-        <a class="call" href="tel:+18305817013">(830) 581-7013</a>
-        <a class="dir" href="https://maps.google.com/?q=14021+U.S.+Hwy+87+W,+La+Vernia,+TX+78121" target="_blank" rel="noopener">Open in Maps</a>
+      <p class="lead">Quesabirrias, street tacos, breakfast plates, parrilladas. Dine-in or the drive-through. Orders to go: (830) 581-7013.</p>
+      <p class="hero__btns">
+        <a class="btn btn--red" href="tel:+18305817013">Call the window</a>
+        <a class="btn btn--ghost" href="#menu">See the board</a>
       </p>
     </div>
   </section>
+
+  <section class="strip">
+    <p><strong>Open at 6</strong> Sunday at 7</p>
+    <p><strong>Dine-in</strong> Drive-through</p>
+    <p><strong>Quesabirrias</strong> On the specialty board</p>
+    <p><strong>14021 Hwy 87 W</strong> La Vernia</p>
+  </section>
+
+  <section class="section" id="eat">
+    <div class="wrap">
+      <p class="kicker">On the tray</p>
+      <h2>What’s coming out of the window.</h2>
+      <p class="intro">Kitchen photos from this shop — not an empty dining room.</p>
+      <div class="grid">
+        <figure>
+          <img src="images/hero-birria.jpg" alt="Quesabirrias with consomé" />
+          <figcaption>Quesabirrias</figcaption>
+        </figure>
+        <figure>
+          <img src="images/tacos-corn.jpg" alt="Corn tortillas with chopped steak, onion, and cilantro" />
+          <figcaption>Street tacos</figcaption>
+        </figure>
+        <figure>
+          <img src="images/asada-fries.jpg" alt="Fries with steak and cheese sauce" />
+          <figcaption>Asada fries</figcaption>
+        </figure>
+        <figure>
+          <img src="images/breakfast.jpg" alt="Breakfast plate with eggs, meat, potatoes, and beans" />
+          <figcaption>Breakfast plate</figcaption>
+        </figure>
+        <figure>
+          <img src="images/torta.jpg" alt="Steak torta with fries" />
+          <figcaption>Torta</figcaption>
+        </figure>
+        <figure>
+          <img src="images/enchiladas.jpg" alt="Beef enchiladas with rice and beans" />
+          <figcaption>Enchiladas</figcaption>
+        </figure>
+        <figure>
+          <img src="images/fajitas.jpg" alt="Fajita plate with rice, beans, guacamole, and tortillas" />
+          <figcaption>Fajitas</figcaption>
+        </figure>
+        <figure>
+          <img src="images/tacos-street.jpg" alt="Three grilled tacos with beans" />
+          <figcaption>Taco combo</figcaption>
+        </figure>
+        <figure>
+          <img src="images/quesadilla.jpg" alt="Quesadilla" />
+          <figcaption>Quesadilla</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section menu" id="menu">
+    <div class="wrap">
+      <p class="kicker">Drive-up board</p>
+      <h2>What’s on the standing board.</h2>
+      <p class="intro">Copied from the outdoor menu at 14021 Hwy 87. Prices change — the board is out front.</p>
+      <div class="menu-tabs" role="tablist">
+        <button type="button" class="menu-tab is-active" data-panel="special" aria-selected="true">Specialty</button>
+        <button type="button" class="menu-tab" data-panel="breakfast" aria-selected="false">Breakfast</button>
+        <button type="button" class="menu-tab" data-panel="entree" aria-selected="false">Entrée</button>
+        <button type="button" class="menu-tab" data-panel="grill" aria-selected="false">Parrilladas</button>
+        <button type="button" class="menu-tab" data-panel="sides" aria-selected="false">Kids · sides · drinks</button>
+      </div>
+      <div class="menu-panel is-open" id="panel-special">
+        <p class="menu-head">Vallarta specialty</p>
+        <div class="menu-grid">
+          <article class="mi"><h4>Quesabirrias</h4></article>
+          <article class="mi"><h4>Regular enchilada plate</h4></article>
+          <article class="mi"><h4>Fish or shrimp tacos (3)</h4><p>Grilled or fried</p></article>
+          <article class="mi"><h4>Enchilada w/ fajitas</h4></article>
+          <article class="mi"><h4>3 taco combo</h4></article>
+        </div>
+      </div>
+      <div class="menu-panel" id="panel-breakfast">
+        <p class="menu-head">Breakfast</p>
+        <div class="menu-grid">
+          <article class="mi"><h4>Breakfast plate</h4></article>
+          <article class="mi"><h4>Breakfast tacos</h4></article>
+          <article class="mi"><h4>Breakfast burritos</h4></article>
+          <article class="mi"><h4>Omelette — create your own</h4><p>Veggies: onion, tomato, bell pepper, jalapeño, spinach, mushroom, potato. Protein: ham, bacon, sausage, chorizo.</p></article>
+          <article class="mi"><h4>Sides</h4><p>Potatoes · bacon · sausage · pancake order (2)</p></article>
+        </div>
+      </div>
+      <div class="menu-panel" id="panel-entree">
+        <p class="menu-head">Entrée</p>
+        <p class="fine">Proteins on the board: beef fajitas, al pastor, chicken fajitas, sirloin, guisada, carnitas, barbacoa, brisket, picadillo.</p>
+        <div class="menu-grid">
+          <article class="mi"><h4>Burrito</h4></article>
+          <article class="mi"><h4>Tortas</h4></article>
+          <article class="mi"><h4>Torta w/ French fries</h4></article>
+          <article class="mi"><h4>Plates</h4></article>
+          <article class="mi"><h4>Nachos</h4></article>
+          <article class="mi"><h4>Taco bowl</h4></article>
+          <article class="mi"><h4>Quesadilla taco</h4></article>
+          <article class="mi"><h4>Jumbo quesadilla</h4><p>Cheese, or beef or chicken</p></article>
+          <article class="mi"><h4>Tacos / mini tacos</h4></article>
+          <article class="mi"><h4>Asada fries</h4></article>
+        </div>
+      </div>
+      <div class="menu-panel" id="panel-grill">
+        <p class="menu-head">Parrilladas</p>
+        <div class="menu-grid">
+          <article class="mi"><h4>Fajita parrillada</h4></article>
+          <article class="mi"><h4>Chicken and beef parrillada</h4></article>
+          <article class="mi"><h4>Chicken, beef, and shrimp parrillada</h4></article>
+          <article class="mi"><h4>Parrillada shrimp w/ fajitas</h4></article>
+        </div>
+      </div>
+      <div class="menu-panel" id="panel-sides">
+        <p class="menu-head">Kids plates</p>
+        <p class="fine">Board lists kids plates with a drink included.</p>
+        <div class="menu-grid">
+          <article class="mi"><h4>Kids enchilada plate</h4></article>
+          <article class="mi"><h4>Kids cheese quesadilla plate</h4></article>
+        </div>
+        <p class="menu-head" style="margin-top:1.2rem">Soups &amp; sides</p>
+        <div class="menu-grid">
+          <article class="mi"><h4>Menudo</h4></article>
+          <article class="mi"><h4>Fideo loco</h4></article>
+          <article class="mi"><h4>Guacamole · sour cream</h4></article>
+          <article class="mi"><h4>Charro beans · refried beans</h4></article>
+          <article class="mi"><h4>Cheese dip · fries · rice</h4></article>
+        </div>
+        <p class="menu-head" style="margin-top:1.2rem">Drinks</p>
+        <div class="menu-grid">
+          <article class="mi"><h4>Mex Coke · Jarritos · fountain</h4></article>
+          <article class="mi"><h4>Aguas frescas</h4></article>
+          <article class="mi"><h4>Corona · Modelo · Bud Light · Dos XX · Ultra Lite</h4></article>
+          <article class="mi"><h4>House margarita · michelada · mangonadarita</h4></article>
+        </div>
+      </div>
+      <img class="board-shot" src="images/menu-board.jpg" alt="Taco Vallarta outdoor menu board, orders to go (830) 581-7013" />
+      <p class="fine">The standing board is in the parking lot. Call (830) 581-7013 for to-go.</p>
+    </div>
+  </section>
+
+  <section class="visit" id="visit">
+    <div class="wrap visit__grid">
+      <div>
+        <p class="kicker">14021 U.S. Hwy 87 W</p>
+        <h2>Come hungry.<br>Leave with a tray.</h2>
+        <ul class="hours">
+          <li><span>Mon–Thu</span><strong>6:00 AM – 9:30 PM</strong></li>
+          <li><span>Fri–Sat</span><strong>6:00 AM – 10:00 PM</strong></li>
+          <li><span>Sunday</span><strong>7:00 AM – 9:00 PM</strong></li>
+        </ul>
+        <p>Dine-in · drive-through</p>
+        <p style="margin-top:1rem">
+          <a class="btn btn--red" href="tel:+18305817013">Call (830) 581-7013</a>
+          <a class="btn btn--ghost-ink" href="https://maps.google.com/?q=14021+U.S.+Hwy+87+W,+La+Vernia,+TX+78121" target="_blank" rel="noopener">Open in Maps</a>
+        </p>
+      </div>
+      <div class="visit__shots">
+        <img src="images/storefront-lot.jpg" alt="Taco Vallarta building and parking lot on Hwy 87" />
+        <img src="images/dining-new.jpg" alt="Dining room with brick wall and high-top table" />
+        <img src="images/table-card.jpg" alt="Taco Vallarta table card with phone (830) 581-7013" />
+      </div>
+    </div>
+  </section>
   <iframe class="map" title="Map of Taco Vallarta" src="https://maps.google.com/maps?q=14021%20U.S.%20Hwy%2087%20W%2C%20La%20Vernia%2C%20TX%2078121&amp;z=16&amp;output=embed" loading="lazy"></iframe>
-  <footer>Taco Vallarta · La Vernia · <a href="tel:+18305817013">(830) 581-7013</a></footer>
+  <footer>
+    <div class="wrap">Taco Vallarta · La Vernia · <a href="tel:+18305817013">(830) 581-7013</a></div>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>

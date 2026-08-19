@@ -4,15 +4,19 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="noindex, nofollow" />
-  <title>La Vernia Chinese Cuisine | Hwy 87</title>
-  <meta name="description" content="La Vernia Chinese Cuisine. Dine-in and to-go on U.S. Hwy 87. Closed Monday. Call (830) 779-4800." />
-  <meta name="theme-color" content="#c8102e" />
+  <title>La Vernia Chinese Cuisine | Dine-in &amp; to go · Hwy 87</title>
+  <meta name="description" content="La Vernia Chinese Cuisine on U.S. Hwy 87. Combo plates, lo mein, sesame chicken. Dine-in and to go. Call (830) 779-4800. Monday closed." />
+  <meta name="theme-color" content="#8b1520" />
   <link rel="canonical" href="https://texasbullmarketing.com/demo/LaVerniaChinese/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="La Vernia Chinese Cuisine | Hwy 87" />
+  <meta property="og:description" content="Dine-in and to go on U.S. Hwy 87. Call (830) 779-4800." />
+  <meta property="og:url" content="https://texasbullmarketing.com/demo/LaVerniaChinese/" />
+  <meta property="og:image" content="https://texasbullmarketing.com/demo/LaVerniaChinese/images/storefront-hero.jpg" />
   <link rel="icon" type="image/png" href="favicon.png" />
-  <link rel="apple-touch-icon" href="favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700&family=Newsreader:opsz,wght@6..72,400;6..72,600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700&family=Source+Sans+3:wght@400;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <script type="application/ld+json">
   {
@@ -20,6 +24,8 @@
     "@type": "Restaurant",
     "name": "La Vernia Chinese Cuisine",
     "telephone": "+18307794800",
+    "url": "https://texasbullmarketing.com/demo/LaVerniaChinese/",
+    "image": "https://texasbullmarketing.com/demo/LaVerniaChinese/images/storefront-hero.jpg",
     "servesCuisine": "Chinese",
     "address": {
       "@type": "PostalAddress",
@@ -29,6 +35,8 @@
       "postalCode": "78121",
       "addressCountry": "US"
     },
+    "geo": { "@type": "GeoCoordinates", "latitude": 29.3387328, "longitude": -98.1020781 },
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.3", "reviewCount": "394" },
     "openingHoursSpecification": [
       { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Sunday"], "opens": "11:00", "closes": "21:00" },
       { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday","Saturday"], "opens": "11:00", "closes": "22:00" }
@@ -37,31 +45,165 @@
   </script>
 </head>
 <body>
-  <aside>
-    <p>LA VERNIA</p>
-    <h1>中国菜</h1>
-    <h2>Chinese<br>Cuisine</h2>
-    <a href="tel:+18307794800">(830) 779-4800</a>
-    <p class="aside-note">Dine-in &amp; to go · Hwy 87</p>
-  </aside>
-  <main>
-    <section class="trio">
-      <figure><img src="images/combo.jpg" alt="Combination plate" /><figcaption>Combo plate</figcaption></figure>
-      <figure><img src="images/noodles.jpg" alt="Lo mein noodles" /><figcaption>Noodles</figcaption></figure>
-      <figure><img src="images/pineapple-chicken.jpg" alt="Pineapple chicken" /><figcaption>Pineapple chicken</figcaption></figure>
-    </section>
-    <section class="hours">
-      <h3>The week</h3>
-      <ul>
-        <li><span>Monday</span> Closed</li>
-        <li><span>Tue–Thu</span> 11 AM – 9 PM</li>
-        <li><span>Friday–Saturday</span> 11 AM – 10 PM</li>
-        <li><span>Sunday</span> 11 AM – 9 PM</li>
-      </ul>
-      <p>11727 U.S. Hwy 87 W, La Vernia, TX 78121</p>
-      <p><a href="https://maps.google.com/?q=11727+U.S.+Hwy+87+W,+La+Vernia,+TX+78121" target="_blank" rel="noopener">Open in Maps</a></p>
-    </section>
-    <iframe title="Map of La Vernia Chinese Cuisine" src="https://maps.google.com/maps?q=11727%20U.S.%20Hwy%2087%20W%2C%20La%20Vernia%2C%20TX%2078121&amp;z=16&amp;output=embed" loading="lazy"></iframe>
-  </main>
+  <a class="skip" href="#plates">Skip to plates</a>
+  <header class="nav">
+    <div class="wrap nav__in">
+      <a class="brand" href="#top">
+        <strong>La Vernia Chinese Cuisine</strong>
+        <small>Hwy 87 · Dine-in &amp; to go</small>
+      </a>
+      <nav class="nav__links" id="navLinks">
+        <a href="#plates">Plates</a>
+        <a href="#menu">Kitchen</a>
+        <a href="#room">Inside</a>
+        <a href="#visit">Visit</a>
+      </nav>
+      <div class="nav__right">
+        <a class="btn btn--gold btn--sm" href="tel:+18307794800">(830) 779-4800</a>
+        <button class="burger" id="navToggle" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero" id="top">
+    <img src="images/storefront-hero.jpg" alt="La Vernia Chinese Cuisine storefront with lanterns and dine-in and to-go sign" />
+    <div class="hero__in wrap">
+      <p class="kicker">La Vernia · U.S. Hwy 87</p>
+      <h1>Lanterns out front.<br>Combo plates inside.</h1>
+      <p class="lead">Dine-in and to go. Egg roll, wonton, fried rice, and the sauce on the blue-and-white plates. Monday closed.</p>
+      <p class="hero__btns">
+        <a class="btn btn--gold" href="tel:+18307794800">Call (830) 779-4800</a>
+        <a class="btn btn--ghost" href="#plates">See the plates</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="strip">
+    <p><strong>4.3 on Google</strong> 394 reviews</p>
+    <p><strong>Tue–Thu · Sun</strong> 11 AM – 9 PM</p>
+    <p><strong>Fri–Sat</strong> 11 AM – 10 PM</p>
+    <p><strong>Monday</strong> Closed</p>
+  </section>
+
+  <section class="section" id="plates">
+    <div class="wrap">
+      <p class="kicker">From this kitchen</p>
+      <h2>Real plates from Hwy 87.</h2>
+      <p class="intro">Photos from this dining room and to-go boxes. Ask at the counter for today’s board — we don’t invent a 40-item menu we don’t have.</p>
+      <div class="grid">
+        <figure>
+          <img src="images/combo-beef.jpg" alt="Beef and broccoli combo with fried rice, egg roll, and wonton" />
+          <figcaption><strong>Beef &amp; broccoli combo</strong> Fried rice, egg roll, wonton.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/lo-mein.jpg" alt="Lo mein noodles with chicken and bean sprouts" />
+          <figcaption><strong>Lo mein</strong> Noodles, chicken, sprouts.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/sesame-togo.jpg" alt="Sesame chicken in a to-go box with broccoli" />
+          <figcaption><strong>Sesame chicken</strong> To go, broccoli on the side.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/cumin-beef.jpg" alt="Cumin-style beef with onion, peppers, and dried chile" />
+          <figcaption><strong>Cumin beef</strong> Onion, pepper, dried chile.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/combo-mushroom.jpg" alt="Beef, mushroom, and broccoli combo with fried wonton chips" />
+          <figcaption><strong>Beef &amp; mushroom</strong> Combo with fried wonton.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/sweet-sour.jpg" alt="Sweet and sour chicken with peppers and broccoli" />
+          <figcaption><strong>Sweet &amp; sour chicken</strong> Peppers, onion, broccoli.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/combo-wontons.jpg" alt="Fried wonton, egg roll, fried rice, and soup" />
+          <figcaption><strong>Combo sides</strong> Egg roll, wonton, fried rice, soup.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/fried-rice.jpg" alt="Bowl of fried rice with pea and carrot" />
+          <figcaption><strong>Fried rice</strong> On the table with tea.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/pineapple-chicken.jpg" alt="Pineapple chicken" />
+          <figcaption><strong>Pineapple chicken</strong> From this kitchen.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section menu" id="menu">
+    <div class="wrap">
+      <p class="kicker">What we can name</p>
+      <h2>From the photos — ask inside for the full board.</h2>
+      <div class="menu-tabs" role="tablist">
+        <button type="button" class="menu-tab is-active" data-panel="plates" aria-selected="true">Plates</button>
+        <button type="button" class="menu-tab" data-panel="sides" aria-selected="false">Sides &amp; soup</button>
+      </div>
+      <div class="menu-panel is-open" id="panel-plates">
+        <p class="menu-head">Plates we photographed</p>
+        <div class="menu-grid">
+          <article class="mi"><h4>Beef &amp; broccoli combo</h4><p>Fried rice, egg roll, wonton</p></article>
+          <article class="mi"><h4>Beef &amp; mushroom combo</h4><p>Broccoli, carrot, fried wonton</p></article>
+          <article class="mi"><h4>Lo mein</h4><p>Chicken, bean sprouts, onion</p></article>
+          <article class="mi"><h4>Cumin beef</h4><p>Onion, pepper, dried chile</p></article>
+          <article class="mi"><h4>Sesame chicken</h4><p>To go with broccoli</p></article>
+          <article class="mi"><h4>Sweet &amp; sour chicken</h4><p>Peppers and broccoli</p></article>
+          <article class="mi"><h4>Pineapple chicken</h4></article>
+          <article class="mi"><h4>Crispy chicken</h4></article>
+        </div>
+      </div>
+      <div class="menu-panel" id="panel-sides">
+        <p class="menu-head">Sides &amp; soup</p>
+        <div class="menu-grid">
+          <article class="mi"><h4>Fried rice</h4></article>
+          <article class="mi"><h4>Egg roll</h4></article>
+          <article class="mi"><h4>Fried wonton</h4></article>
+          <article class="mi"><h4>Hot and sour soup</h4></article>
+          <article class="mi"><h4>Egg drop soup</h4><p>On combo plates</p></article>
+        </div>
+      </div>
+      <p class="fine">No printed menu was in this photo set. Call (830) 779-4800 for today’s order. Dine-in and to go.</p>
+    </div>
+  </section>
+
+  <section class="section" id="room">
+    <div class="wrap room">
+      <img src="images/dining.jpg" alt="Red chairs and window tables inside La Vernia Chinese Cuisine" />
+      <div>
+        <p class="kicker">Inside</p>
+        <h2>Red chairs, Hwy 87 out the window.</h2>
+        <p class="intro">Door hours match Google: closed Monday. Sit down or take the same plates to go.</p>
+        <a class="btn btn--red" href="tel:+18307794800">Call (830) 779-4800</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="visit" id="visit">
+    <div class="wrap visit__grid">
+      <div>
+        <p class="kicker">Visit</p>
+        <h2>11727 U.S. Hwy 87 W</h2>
+        <p>La Vernia, TX 78121</p>
+        <ul class="hours">
+          <li><span>Monday</span><strong>Closed</strong></li>
+          <li><span>Tue–Thu · Sunday</span><strong>11 AM – 9 PM</strong></li>
+          <li><span>Friday–Saturday</span><strong>11 AM – 10 PM</strong></li>
+        </ul>
+        <p>Dine-in · takeout · delivery</p>
+        <p style="margin-top:1rem">
+          <a class="btn btn--gold" href="tel:+18307794800">Call</a>
+          <a class="btn btn--ghost-ink" href="https://maps.google.com/?q=11727+U.S.+Hwy+87+W,+La+Vernia,+TX+78121" target="_blank" rel="noopener">Open in Maps</a>
+        </p>
+      </div>
+      <div class="visit__shots">
+        <img src="images/storefront.jpg" alt="Storefront of La Vernia Chinese Cuisine" />
+      </div>
+    </div>
+  </section>
+  <iframe class="map" title="Map of La Vernia Chinese Cuisine" src="https://maps.google.com/maps?q=11727%20U.S.%20Hwy%2087%20W%2C%20La%20Vernia%2C%20TX%2078121&amp;z=16&amp;output=embed" loading="lazy"></iframe>
+  <footer>
+    <div class="wrap">La Vernia Chinese Cuisine · Hwy 87 · <a href="tel:+18307794800">(830) 779-4800</a></div>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>

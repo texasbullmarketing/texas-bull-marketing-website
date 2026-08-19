@@ -4,11 +4,16 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="noindex, nofollow" />
-  <title>The Shed | Coffee · La Vernia</title>
-  <meta name="description" content="The Shed drive-through coffee on San Antonio Rd. Signatures, smoothies, shaved ice. Call (210) 999-0160." />
+  <title>The Shed | Drive-through coffee · La Vernia</title>
+  <meta name="description" content="The Shed on San Antonio Rd in La Vernia. Hot, iced, blended signatures, protein smoothies, shaved ice. Drive-through from 5:30 AM. Call (210) 999-0160." />
+  <meta name="theme-color" content="#3dccc7" />
   <link rel="canonical" href="https://texasbullmarketing.com/demo/TheShed/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="The Shed | Coffee · La Vernia" />
+  <meta property="og:description" content="Drive-through coffee on San Antonio Rd. Call (210) 999-0160." />
+  <meta property="og:url" content="https://texasbullmarketing.com/demo/TheShed/" />
+  <meta property="og:image" content="https://texasbullmarketing.com/demo/TheShed/images/storefront-bear.jpg" />
   <link rel="icon" type="image/png" href="favicon.png" />
-  <link rel="apple-touch-icon" href="favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet" />
@@ -20,6 +25,8 @@
     "name": "The Shed",
     "telephone": "+12109990160",
     "email": "theshedcoffeeshop@gmail.com",
+    "url": "https://texasbullmarketing.com/demo/TheShed/",
+    "image": "https://texasbullmarketing.com/demo/TheShed/images/storefront-bear.jpg",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "102 San Antonio Rd",
@@ -27,36 +34,204 @@
       "addressRegion": "TX",
       "postalCode": "78121",
       "addressCountry": "US"
-    }
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": 29.3556161, "longitude": -98.1190665 },
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.7", "reviewCount": "300" },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "05:30", "closes": "19:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "06:30", "closes": "19:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "07:30", "closes": "17:00" }
+    ],
+    "sameAs": ["https://www.instagram.com/theshed.lv/"]
   }
   </script>
 </head>
 <body>
-  <nav>
-    <b>THE SHED</b>
-    <a href="tel:+12109990160">(210) 999-0160</a>
-  </nav>
-  <section class="cols">
-    <figure><img src="images/cup.jpg" alt="Iced Shed drink with teal sleeve" /><figcaption>Iced</figcaption></figure>
-    <figure><img src="images/frappe.jpg" alt="Blended drink with whipped cream" /><figcaption>Blended</figcaption></figure>
-    <figure><img src="images/muffin.jpg" alt="Cream-cheese muffin" /><figcaption>Eats</figcaption></figure>
+  <a class="skip" href="#menu">Skip to menu</a>
+  <header class="nav">
+    <div class="wrap nav__in">
+      <a class="brand" href="#top">THE SHED</a>
+      <nav class="nav__links" id="navLinks">
+        <a href="#drinks">Drinks</a>
+        <a href="#menu">Board</a>
+        <a href="#visit">Visit</a>
+      </nav>
+      <div class="nav__right">
+        <a class="btn btn--mint btn--sm" href="tel:+12109990160">(210) 999-0160</a>
+        <button class="burger" id="navToggle" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero" id="top">
+    <img src="images/storefront-bear.jpg" alt="The Shed teal building, wooden sign, and bear statue on San Antonio Road" />
+    <div class="hero__in wrap">
+      <p class="kicker">La Vernia · San Antonio Rd</p>
+      <h1>Hot. Iced.<br>Blended.</h1>
+      <p class="lead">Drive-through coffee from 5:30 AM. Irish Outlaw, Southern Belle, Caramel Coyote, shaved ice, muffins. Teal building, bear out front.</p>
+      <p class="hero__btns">
+        <a class="btn btn--mint" href="tel:+12109990160">Call (210) 999-0160</a>
+        <a class="btn btn--ghost" href="#menu">What’s on the board</a>
+      </p>
+    </div>
   </section>
-  <section class="copy">
-    <h1>Hot. Iced.<br>Blended.</h1>
-    <p>Drive-through on San Antonio Road. Signatures from the board: Irish Outlaw, Southern Belle, Caramel Coyote, Coconut Cowboy, The Lone Star, Rattler.</p>
-    <ul>
-      <li><span>Mon–Fri</span> 5:30 AM – 7 PM</li>
-      <li><span>Saturday</span> 6:30 AM – 7 PM</li>
-      <li><span>Sunday</span> 7:30 AM – 5 PM</li>
-    </ul>
-    <p>102 San Antonio Rd, La Vernia, TX 78121</p>
-    <p><a href="mailto:theshedcoffeeshop@gmail.com">theshedcoffeeshop@gmail.com</a></p>
-    <p>
-      <a href="https://www.instagram.com/theshed.lv/" target="_blank" rel="noopener">Instagram</a>
-      ·
-      <a href="https://maps.google.com/?q=102+San+Antonio+Rd,+La+Vernia,+TX+78121" target="_blank" rel="noopener">Maps</a>
-    </p>
+
+  <section class="strip">
+    <p><strong>4.7 on Google</strong> 300 reviews</p>
+    <p><strong>Mon–Fri</strong> 5:30 AM – 7 PM</p>
+    <p><strong>Saturday</strong> 6:30 AM – 7 PM</p>
+    <p><strong>Sunday</strong> 7:30 AM – 5 PM</p>
   </section>
-  <iframe title="Map of The Shed" src="https://maps.google.com/maps?q=102%20San%20Antonio%20Rd%2C%20La%20Vernia%2C%20TX%2078121&amp;z=16&amp;output=embed" loading="lazy"></iframe>
+
+  <section class="section" id="drinks">
+    <div class="wrap">
+      <p class="kicker">In the cup</p>
+      <h2>Signatures, whipped cream, teal sleeve.</h2>
+      <p class="intro">Drinks from this window — not stock coffee photos.</p>
+      <div class="grid">
+        <figure>
+          <img src="images/iced-sleeve.jpg" alt="Iced Shed drink with whipped cream and caramel in a teal sleeve" />
+          <figcaption>Iced · teal sleeve</figcaption>
+        </figure>
+        <figure>
+          <img src="images/frappe-dome.jpg" alt="Blended drink with whipped cream and caramel under a dome lid" />
+          <figcaption>Blended</figcaption>
+        </figure>
+        <figure>
+          <img src="images/cup.jpg" alt="Iced Shed drink" />
+          <figcaption>Iced</figcaption>
+        </figure>
+        <figure>
+          <img src="images/frappe.jpg" alt="Blended drink with whipped cream" />
+          <figcaption>Whipped</figcaption>
+        </figure>
+        <figure>
+          <img src="images/muffin.jpg" alt="Cream-cheese muffin" />
+          <figcaption>Eats · muffin</figcaption>
+        </figure>
+        <figure>
+          <img src="images/sign.jpg" alt="The Shed wooden sign on the teal building" />
+          <figcaption>The sign</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section menu" id="menu">
+    <div class="wrap">
+      <p class="kicker">Yard board</p>
+      <h2>Shed Signatures — hot, iced, or blended.</h2>
+      <p class="intro">From the board in the grass. Small $4.50 · Medium $5.50 · Large $6.50. Taxes included on the board.</p>
+      <div class="menu-tabs" role="tablist">
+        <button type="button" class="menu-tab is-active" data-panel="sig" aria-selected="true">Signatures</button>
+        <button type="button" class="menu-tab" data-panel="classic" aria-selected="false">Classic drinks</button>
+        <button type="button" class="menu-tab" data-panel="smooth" aria-selected="false">Smoothies &amp; ice</button>
+        <button type="button" class="menu-tab" data-panel="eats" aria-selected="false">Eats</button>
+      </div>
+      <div class="menu-panel is-open" id="panel-sig">
+        <p class="menu-head">Shed Signatures</p>
+        <div class="menu-grid">
+          <article class="mi"><h4>Irish Outlaw</h4></article>
+          <article class="mi"><h4>Southern Belle</h4></article>
+          <article class="mi"><h4>Speed Mule</h4></article>
+          <article class="mi"><h4>Dude Delight</h4></article>
+          <article class="mi"><h4>Caramel Coyote</h4></article>
+          <article class="mi"><h4>Gypsy</h4></article>
+          <article class="mi"><h4>Stallion</h4></article>
+          <article class="mi"><h4>Coconut Cowboy</h4></article>
+          <article class="mi"><h4>The Lone Star</h4></article>
+          <article class="mi"><h4>White Lightning</h4></article>
+          <article class="mi"><h4>Pistol</h4></article>
+          <article class="mi"><h4>Rattler</h4></article>
+          <article class="mi"><h4>Grizzly</h4></article>
+        </div>
+      </div>
+      <div class="menu-panel" id="panel-classic">
+        <p class="menu-head">Classic drinks</p>
+        <div class="menu-grid">
+          <article class="mi"><h4>Americano</h4></article>
+          <article class="mi"><h4>Drip coffee</h4></article>
+          <article class="mi"><h4>Cold brew</h4></article>
+          <article class="mi"><h4>Cortado</h4></article>
+          <article class="mi"><h4>Latte</h4></article>
+          <article class="mi"><h4>Cappuccino</h4></article>
+          <article class="mi"><h4>Mocha</h4></article>
+          <article class="mi"><h4>Chai / dirty chai</h4></article>
+          <article class="mi"><h4>Hot chocolate</h4></article>
+          <article class="mi"><h4>Steamers</h4></article>
+          <article class="mi"><h4>Kids steamers</h4></article>
+          <article class="mi"><h4>Energy drinks</h4><p>Medium $5 · Large $5.50 · Grizzly $7.50</p></article>
+        </div>
+      </div>
+      <div class="menu-panel" id="panel-smooth">
+        <p class="menu-head">Protein smoothies</p>
+        <p class="fine">Small $6.75 · Medium $8 · Large $10. Board lists calorie / protein facts.</p>
+        <div class="menu-grid">
+          <article class="mi"><h4>Chocolate peanut butter</h4></article>
+          <article class="mi"><h4>Peanut butter banana</h4></article>
+          <article class="mi"><h4>Strawberry cheesecake</h4></article>
+          <article class="mi"><h4>Banana cheesecake</h4></article>
+          <article class="mi"><h4>Cookies n cream</h4></article>
+          <article class="mi"><h4>Strawberry banana</h4></article>
+          <article class="mi"><h4>Mixed berries</h4></article>
+          <article class="mi"><h4>Strawberry pineapple</h4></article>
+          <article class="mi"><h4>Sugar-free vanilla</h4></article>
+          <article class="mi"><h4>Organic greens</h4></article>
+        </div>
+        <p class="menu-head" style="margin-top:1.2rem">Shaved ice</p>
+        <div class="menu-grid">
+          <article class="mi"><h4>Banana mama · blueberry · blue coconut</h4></article>
+          <article class="mi"><h4>Cotton candy · tiger’s blood · watermelon</h4></article>
+          <article class="mi"><h4>Piña colada · strawberry · lemon-lime</h4></article>
+          <article class="mi"><h4>Sugar-free options marked on the board</h4></article>
+        </div>
+      </div>
+      <div class="menu-panel" id="panel-eats">
+        <p class="menu-head">Eats &amp; extras</p>
+        <div class="menu-grid">
+          <article class="mi"><h4>Chocolate chunk cookie</h4></article>
+          <article class="mi"><h4>Jumbo muffin</h4></article>
+          <article class="mi"><h4>Donut holes</h4></article>
+          <article class="mi"><h4>Joe to go</h4></article>
+          <article class="mi"><h4>Homemade cinnamon roll</h4></article>
+          <article class="mi"><h4>Sausage kolache</h4></article>
+          <article class="mi"><h4>Bottled water</h4></article>
+        </div>
+      </div>
+      <img class="board-shot" src="images/menu-board.jpg" alt="The Shed outdoor menu board with signatures, smoothies, shaved ice, and eats" />
+      <p class="fine">Board in the yard. Prices can change. Dairy-free options noted on the sign.</p>
+    </div>
+  </section>
+
+  <section class="visit" id="visit">
+    <div class="wrap visit__grid">
+      <div>
+        <p class="kicker">Drive-through</p>
+        <h2>102 San Antonio Rd</h2>
+        <p>La Vernia, TX 78121</p>
+        <ul class="hours">
+          <li><span>Monday – Friday</span><strong>5:30 AM – 7 PM</strong></li>
+          <li><span>Saturday</span><strong>6:30 AM – 7 PM</strong></li>
+          <li><span>Sunday</span><strong>7:30 AM – 5 PM</strong></li>
+        </ul>
+        <p>Dine-in · drive-through · delivery</p>
+        <p><a href="mailto:theshedcoffeeshop@gmail.com">theshedcoffeeshop@gmail.com</a></p>
+        <p><a href="https://www.instagram.com/theshed.lv/" target="_blank" rel="noopener">Instagram @theshed.lv</a></p>
+        <p style="margin-top:1rem">
+          <a class="btn btn--mint" href="tel:+12109990160">Call (210) 999-0160</a>
+          <a class="btn btn--ghost-ink" href="https://maps.google.com/?q=102+San+Antonio+Rd,+La+Vernia,+TX+78121" target="_blank" rel="noopener">Open in Maps</a>
+        </p>
+      </div>
+      <div class="visit__shots">
+        <img src="images/storefront-dusk.jpg" alt="The Shed teal building at dusk with the yard board" />
+        <img src="images/storefront.jpg" alt="The Shed storefront" />
+      </div>
+    </div>
+  </section>
+  <iframe class="map" title="Map of The Shed" src="https://maps.google.com/maps?q=102%20San%20Antonio%20Rd%2C%20La%20Vernia%2C%20TX%2078121&amp;z=16&amp;output=embed" loading="lazy"></iframe>
+  <footer>
+    <div class="wrap">The Shed · 102 San Antonio Rd · <a href="tel:+12109990160">(210) 999-0160</a></div>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>

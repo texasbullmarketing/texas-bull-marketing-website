@@ -10,22 +10,26 @@
       setOpen(!links.classList.contains("is-open"));
     });
     links.querySelectorAll("a").forEach(function (a) {
-      a.addEventListener("click", function () {
-        setOpen(false);
-      });
+      a.addEventListener("click", function () { setOpen(false); });
     });
     document.addEventListener("keydown", function (e) {
       if (e.key === "Escape") setOpen(false);
     });
   }
 
-  document.addEventListener("click", function (e) {
-    var tab = e.target.closest(".menu-tab");
-    if (!tab) return;
-    document.querySelectorAll(".menu-tab").forEach(function (btn) {
-      var on = btn === tab;
-      btn.classList.toggle("is-active", on);
-      btn.setAttribute("aria-selected", on ? "true" : "false");
+  var tabs = document.querySelectorAll(".menu-tab");
+  var panels = document.querySelectorAll(".menu-panel");
+  tabs.forEach(function (tab) {
+    tab.addEventListener("click", function () {
+      var id = tab.getAttribute("data-panel");
+      tabs.forEach(function (t) {
+        var on = t === tab;
+        t.classList.toggle("is-active", on);
+        t.setAttribute("aria-selected", on ? "true" : "false");
+      });
+      panels.forEach(function (p) {
+        p.classList.toggle("is-open", p.id === "panel-" + id);
+      });
     });
   });
 })();
