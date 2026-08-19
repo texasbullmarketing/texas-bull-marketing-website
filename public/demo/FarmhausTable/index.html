@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Farmhaus Table | Howdy from FM 3432 · Adkins, TX</title>
+  <meta name="description" content="Farmhaus Table in Adkins. Howdy. $10 Haus Lunch, The Boot’s Special, Nanny Janie’s fried chicken, haus-made gravy. Wed–Sat on FM 3432. Call (210) 775-0020." />
+  <meta name="theme-color" content="#8f1d22" />
+  <link rel="canonical" href="https://texasbullmarketing.com/demo/FarmhausTable/" />
+  <meta property="og:title" content="Farmhaus Table | Adkins" />
+  <meta property="og:description" content="Bar and grill on the red metal barn. Howdy." />
+  <meta property="og:image" content="images/storefront.jpg" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://unpkg.com/htmx.org@2.0.4" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Farmhaus Table",
+    "telephone": "+12107750020",
+    "url": "https://texasbullmarketing.com/demo/FarmhausTable/",
+    "servesCuisine": "American",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "2239 FM 3432",
+      "addressLocality": "Adkins",
+      "addressRegion": "TX",
+      "postalCode": "78101",
+      "addressCountry": "US"
+    },
+    "sameAs": ["https://www.instagram.com/farmhaustable/"]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#menu">Skip to menu</a>
+  <header class="nav">
+    <a class="brand" href="#top">Farmhaus <i>Table</i></a>
+    <nav id="navLinks">
+      <a href="#howdy">The haus</a>
+      <a href="#plates">Plates</a>
+      <a href="#menu">Menu</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <a class="call" href="tel:+12107750020">(210) 775-0020</a>
+    <button class="burger" id="navToggle" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </header>
+
+  <section class="hero" id="top">
+    <img src="images/storefront.jpg" alt="Red metal barn wall and Farmhaus Table cow-and-chicken sign" />
+    <div class="hero__card">
+      <p class="howdy-script">Howdy!</p>
+      <h1>Bar and grill on a red metal barn.</h1>
+      <p>FM 3432, Adkins. Cow, pig, and chicken on the sign. Haus-made gravy on the plate. Closed Sunday through Tuesday.</p>
+      <p class="hero__btns">
+        <a class="btn" href="tel:+12107750020">Call the haus</a>
+        <a class="btn btn--ghost" href="#menu">What’s cooking</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="howdy" id="howdy">
+    <div class="wrap stories">
+      <article>
+        <p class="kicker">The Boot’s Special</p>
+        <h2>Named after PaPaw.</h2>
+        <p>A 10 oz beef cutlet, battered and fried, cream gravy. The card says it was named after a local legend, PaPaw Waltisperger. That’s the kind of plate they put in the favorites box.</p>
+      </article>
+      <article>
+        <p class="kicker">The Nanny Janie Plate</p>
+        <h2>Abuela’s fried chicken.</h2>
+        <p>A leg and a thigh. The owner’s Abuela, Juanita Sardelich, fried it. The menu says now they get to share it with y’all.</p>
+      </article>
+      <article>
+        <p class="kicker">$10 Haus Lunch</p>
+        <h2>Eleven to two.</h2>
+        <p>Wednesday through Saturday. Burger, tenders, four wings, one pulled-pork enchilada, crispy chicken salad, or a BLT. Drinks sold separately. The enchilada card says it’s bold and it’s big.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="plates" id="plates">
+    <div class="wrap">
+      <p class="kicker">On the paper plate</p>
+      <h2>Bakery bun, parmesan fries, brisket in an eggroll.</h2>
+      <div class="thumbs">
+        <img src="images/burger.jpg" alt="Cheeseburger and parmesan fries on newspaper liner" />
+        <img src="images/eggrolls.jpg" alt="Cheesy brisket eggrolls" />
+        <img src="images/mac-balls.jpg" alt="Fried bacon mac and cheese balls" />
+        <img src="images/cheeseburger.jpg" alt="Cheeseburger on a bakery bun with fries" />
+        <img src="images/french-toast.jpg" alt="French toast with sausage and maple" />
+        <img src="images/burger-close.jpg" alt="Close burger with fries" />
+      </div>
+    </div>
+  </section>
+
+  <section class="menu" id="menu">
+    <div class="wrap">
+      <p class="kicker">From their printed cards</p>
+      <h2>The board</h2>
+      <div class="menu-tabs" role="tablist" aria-label="Menu sections">
+        <button type="button" class="menu-tab is-active" aria-selected="true" hx-get="partials/lunch.html" hx-target="#menu-panel" hx-swap="innerHTML">Haus Lunch</button>
+        <button type="button" class="menu-tab" aria-selected="false" hx-get="partials/starters.html" hx-target="#menu-panel" hx-swap="innerHTML">Starters</button>
+        <button type="button" class="menu-tab" aria-selected="false" hx-get="partials/favorites.html" hx-target="#menu-panel" hx-swap="innerHTML">Favorites</button>
+        <button type="button" class="menu-tab" aria-selected="false" hx-get="partials/entrees.html" hx-target="#menu-panel" hx-swap="innerHTML">Entrees</button>
+        <button type="button" class="menu-tab" aria-selected="false" hx-get="partials/extras.html" hx-target="#menu-panel" hx-swap="innerHTML">Sides &amp; more</button>
+        <button type="button" class="menu-tab" aria-selected="false" hx-get="partials/bar.html" hx-target="#menu-panel" hx-swap="innerHTML">Bar</button>
+      </div>
+      <div id="menu-panel" hx-get="partials/lunch.html" hx-trigger="load" hx-swap="innerHTML"></div>
+    </div>
+  </section>
+
+  <section class="visit" id="visit">
+    <div class="wrap visit__grid">
+      <div>
+        <p class="kicker">Find the red wall</p>
+        <h2>2239 FM 3432</h2>
+        <p>Adkins, TX 78101</p>
+        <ul>
+          <li><span>Sun–Tue</span> Closed</li>
+          <li><span>Wednesday</span> 11–2 · 5–9</li>
+          <li><span>Thu–Sat</span> 11–2 · 5–11</li>
+        </ul>
+        <p>Thursday is all-day happy hour.</p>
+        <p><a href="tel:+12107750020">(210) 775-0020</a></p>
+        <p><a href="https://www.instagram.com/farmhaustable/" target="_blank" rel="noopener">@farmhaustable</a></p>
+        <p class="note">Hours from their printed drink menu. Dine-in, takeout, and delivery are listed on Google.</p>
+        <a class="btn" href="https://maps.google.com/?q=2239+FM+3432,+Adkins,+TX+78101" target="_blank" rel="noopener">Open in Maps</a>
+      </div>
+      <div class="visit__shots">
+        <img src="images/storefront.jpg" alt="Farmhaus Table sign on the red barn" />
+        <img src="images/salad-bar.jpg" alt="Salad bar in the rustic wood island" />
+      </div>
+    </div>
+  </section>
+  <iframe class="map" title="Map of Farmhaus Table" src="https://maps.google.com/maps?q=2239%20FM%203432%2C%20Adkins%2C%20TX%2078101&amp;z=16&amp;output=embed" loading="lazy"></iframe>
+  <footer>Farmhaus Table · Adkins · Howdy from the farm road</footer>
+  <script src="script.js"></script>
+</body>
+</html>

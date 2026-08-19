@@ -1,0 +1,24 @@
+:root { --sun: #ffb703; --chile: #d00000; --black: #111; --white: #fff; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--white); color: var(--black); font-family: "IBM Plex Sans", system-ui, sans-serif; }
+img { width: 100%; height: 100%; object-fit: cover; display: block; }
+a { color: var(--chile); }
+header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 0.9rem 4vw; background: var(--sun); font-weight: 800; letter-spacing: 0.06em;
+}
+header a { color: var(--black); text-decoration: none; }
+.dawn { padding: 8vh 4vw 5vh; }
+.dawn h1 { font-family: "Anton", sans-serif; font-size: clamp(2.8rem, 9vw, 6rem); line-height: 0.92; text-transform: uppercase; }
+.dawn p { margin-top: 0.8rem; font-size: 1.15rem; }
+.row { display: grid; grid-template-columns: repeat(3, 1fr); }
+.row figure { position: relative; aspect-ratio: 1; }
+.row figcaption {
+  position: absolute; left: 0; bottom: 0; right: 0;
+  padding: 0.55rem 0.7rem; background: var(--chile); color: #fff; font-weight: 800;
+}
+.facts { padding: 3rem 4vw; }
+.facts li { list-style: none; padding: 0.4rem 0; border-bottom: 1px solid #eee; max-width: 24rem; }
+.facts p { margin-top: 0.8rem; }
+iframe { width: 100%; height: 260px; border: 0; display: block; }
+@media (max-width: 800px) { .row { grid-template-columns: 1fr; } }

@@ -6,6 +6,19 @@ Live demo sites for leads. Served as static folders under `public/demo/`.
 
 | Company | URL | Folder |
 |---------|-----|--------|
+| ArMando’s Pizzeria (EN) | `/demo/ArMandosPizzeria/` | `public/demo/ArMandosPizzeria/` |
+| Baldy’s American Diner (EN) | `/demo/BaldysAmericanDiner/` | `public/demo/BaldysAmericanDiner/` |
+| Casas Custom Metal Buildings (EN+ES) | `/demo/CasasMetal/` · `/demo/CasasMetal/es/` | `public/demo/CasasMetal/` |
+| El Rodeo Mexican Restaurant (EN) | `/demo/ElRodeo/` | `public/demo/ElRodeo/` |
+| El Valle De Mexico (EN) | `/demo/ElValleDeMexico/` | `public/demo/ElValleDeMexico/` |
+| Farmhaus Table (EN) | `/demo/FarmhausTable/` | `public/demo/FarmhausTable/` |
+| GM Nails and Spa (EN) | `/demo/GMNails/` | `public/demo/GMNails/` |
+| La Vernia Chinese Cuisine (EN) | `/demo/LaVerniaChinese/` | `public/demo/LaVerniaChinese/` |
+| Rice 2 Go (EN) | `/demo/Rice2Go/` | `public/demo/Rice2Go/` |
+| Sammy’s Paws and Spas (EN) | `/demo/SammysPawsAndSpas/` | `public/demo/SammysPawsAndSpas/` |
+| Taco Vallarta (EN) | `/demo/TacoVallarta/` | `public/demo/TacoVallarta/` |
+| The Shed (EN) | `/demo/TheShed/` | `public/demo/TheShed/` |
+| Auto Worx V2 (EN+ES · $5k-tier) | `/demo/AutoWorxV2/` · `/demo/AutoWorxV2/es/` | `public/demo/AutoWorxV2/` |
 | 2 Rivers Heating & Air Conditioning (EN+ES) | `/demo/TwoRiversHeatingAC/` · `/demo/TwoRiversHeatingAC/es/` | `public/demo/TwoRiversHeatingAC/` |
 | Auto Worx (EN+ES) | `/demo/AutoWorx/` · `/demo/AutoWorx/es/` | `public/demo/AutoWorx/` |
 | Dedicated Plumbing Services (EN+ES) | `/demo/DedicatedPlumbingServices/` · `/demo/DedicatedPlumbingServices/es/` | `public/demo/DedicatedPlumbingServices/` |
@@ -36,6 +49,21 @@ Hub page: `/demo/` → `public/demo/index.html`
 Live:
 
 - https://texasbullmarketing.com/demo/
+- https://texasbullmarketing.com/demo/ArMandosPizzeria/
+- https://texasbullmarketing.com/demo/BaldysAmericanDiner/
+- https://texasbullmarketing.com/demo/CasasMetal/
+- https://texasbullmarketing.com/demo/CasasMetal/es/
+- https://texasbullmarketing.com/demo/ElRodeo/
+- https://texasbullmarketing.com/demo/ElValleDeMexico/
+- https://texasbullmarketing.com/demo/FarmhausTable/
+- https://texasbullmarketing.com/demo/GMNails/
+- https://texasbullmarketing.com/demo/LaVerniaChinese/
+- https://texasbullmarketing.com/demo/Rice2Go/
+- https://texasbullmarketing.com/demo/SammysPawsAndSpas/
+- https://texasbullmarketing.com/demo/TacoVallarta/
+- https://texasbullmarketing.com/demo/TheShed/
+- https://texasbullmarketing.com/demo/AutoWorxV2/
+- https://texasbullmarketing.com/demo/AutoWorxV2/es/
 - https://texasbullmarketing.com/demo/AutoWorx/
 - https://texasbullmarketing.com/demo/AutoWorx/es/
 - https://texasbullmarketing.com/demo/TexasBistro/

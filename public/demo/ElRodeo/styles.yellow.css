@@ -1,0 +1,64 @@
+:root {
+  --red: #b42318;
+  --red-hot: #d32f2f;
+  --gold: #f0c14b;
+  --ink: #1a120c;
+  --paper: #f7f1e6;
+  --mute: #5c5348;
+  --line: rgba(180, 35, 24, 0.16);
+  --max: 1080px;
+  --nav: 4.3rem;
+  --display: "Alfa Slab One", Impact, sans-serif;
+  --sans: "Source Sans 3", system-ui, sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; overflow-x: clip; scroll-padding-top: 5rem; }
+body { font-family: var(--sans); color: var(--ink); background: var(--paper); line-height: 1.5; }
+img { max-width: 100%; display: block; }
+a { color: var(--red); }
+button { font: inherit; background: none; border: 0; cursor: pointer; }
+.skip { position: absolute; left: 12px; top: -48px; background: var(--red); color: #fff; padding: 8px 12px; }
+.skip:focus { top: 8px; }
+.wrap { width: min(var(--max), calc(100vw - 2rem)); margin-inline: auto; }
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 1.1rem; border-radius: 6px; font-weight: 700; }
+.btn--red { background: var(--red); color: #fff; }
+.btn--red:hover { background: var(--red-hot); color: #fff; text-decoration: none; }
+.btn--gold { background: var(--gold); color: var(--ink); }
+.btn--gold:hover { text-decoration: none; }
+.btn--sm { min-height: 40px; padding: 0 0.85rem; font-size: 0.85rem; }
+.nav { position: sticky; top: 0; z-index: 20; height: var(--nav); background: rgba(247, 241, 230, 0.95); border-bottom: 1px solid var(--line); }
+.nav__in { height: 100%; display: flex; align-items: center; gap: 1rem; }
+.brand { display: flex; align-items: center; gap: 0.6rem; color: inherit; }
+.brand:hover { text-decoration: none; }
+.brand img { width: 40px; height: 40px; object-fit: cover; border-radius: 4px; }
+.brand strong { display: block; font-family: var(--display); letter-spacing: 0.02em; }
+.brand small { display: block; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--mute); }
+.nav__links { display: flex; gap: 1.1rem; margin-left: auto; }
+.nav__links a { color: var(--ink); font-weight: 700; }
+.nav__right { display: flex; align-items: center; gap: 0.5rem; }
+.burger { display: none; width: 2.3rem; height: 2.3rem; flex-direction: column; justify-content: center; gap: 5px; }
+.burger span { width: 1.1rem; height: 2px; background: var(--ink); display: block; }
+.eyebrow { font-size: 0.72rem; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; color: var(--red); margin-bottom: 0.5rem; }
+.hero { background: #8e1c14; color: #fff; padding: 2.2rem 0; }
+.hero .eyebrow { color: var(--gold); }
+.hero__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.6rem; align-items: center; }
+.hero h1 { font-family: var(--display); font-size: clamp(1.8rem, 5vw, 3rem); line-height: 1.05; margin-bottom: 0.7rem; }
+.lead { color: rgba(255,255,255,0.86); margin-bottom: 1.1rem; }
+.hero img { width: 100%; border-radius: 10px; object-fit: cover; aspect-ratio: 3/4; }
+.plates { padding: 2.8rem 0; }
+.plates h2 { font-family: var(--display); font-size: 1.8rem; margin-bottom: 1rem; }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.9rem; }
+.grid article { background: #fff; border-radius: 10px; overflow: hidden; border: 1px solid var(--line); }
+.grid img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+.grid h3 { padding: 0.7rem 0.85rem 0.9rem; font-family: var(--display); font-size: 1.1rem; }
+.visit { padding: 2rem 0 0; }
+.visit h2 { font-family: var(--display); font-size: 1.8rem; margin-bottom: 0.6rem; }
+.visit p { color: var(--mute); max-width: 34rem; margin-bottom: 1rem; }
+.map { width: 100%; height: 280px; border: 0; margin-top: 1.4rem; display: block; }
+.foot { background: #3a120e; color: #f7f1e6; padding: 1.1rem 0; }
+@media (max-width: 800px) {
+  .hero__grid, .grid { grid-template-columns: 1fr; }
+  .nav__links { display: none; position: absolute; left: 0; right: 0; top: var(--nav); background: var(--paper); padding: 0.8rem 1rem; flex-direction: column; }
+  .nav__links.is-open { display: flex; }
+  .burger { display: flex; }
+}

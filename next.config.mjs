@@ -111,6 +111,10 @@ const nextConfig = {
           source: '/demo/:slug/',
           destination: '/demo/:slug/index.html',
         },
+        {
+          source: '/demo/:slug/es/',
+          destination: '/demo/:slug/es/index.html',
+        },
       ],
     }
   },

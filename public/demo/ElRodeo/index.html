@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>El Rodeo Mexican Restaurant | Nixon, TX</title>
+  <meta name="description" content="El Rodeo at 109 E Central Ave, Nixon, TX. Fajitas, tacos by the pound, menudo, micheladas. Call (830) 582-2150." />
+  <meta name="theme-color" content="#b4332a" />
+  <link rel="canonical" href="https://texasbullmarketing.com/demo/ElRodeo/" />
+  <meta property="og:title" content="El Rodeo | Nixon, TX" />
+  <meta property="og:image" content="images/michelada.jpg" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Teko:wght@500;600;700&family=Work+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://unpkg.com/htmx.org@2.0.4" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "El Rodeo Mexican Restaurant",
+    "telephone": "+18305822150",
+    "servesCuisine": "Mexican",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "109 E Central Ave",
+      "addressLocality": "Nixon",
+      "addressRegion": "TX",
+      "postalCode": "78140",
+      "addressCountry": "US"
+    }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#plates">Skip to plates</a>
+  <header class="nav">
+    <a class="mark" href="#top">EL <span>RODEO</span></a>
+    <nav id="navLinks">
+      <a href="#plates">Plates</a>
+      <a href="#menu">Menu</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <a class="call" href="tel:+18305822150">(830) 582-2150</a>
+    <button class="burger" id="navToggle" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </header>
+
+  <section class="hero" id="top">
+    <img src="images/michelada.jpg" alt="Michelada with shrimp and cucumber in front of the yellow Texas El Rodeo sign" />
+    <div class="hero__copy">
+      <p>MEXICAN RESTAURANT · NIXON</p>
+      <h1>The yellow Texas on the red wall.</h1>
+      <p class="lead">109 E Central Ave. Papel picado inside, meats by the pound. The phone is painted on the building.</p>
+      <p class="hero__btns">
+        <a class="btn" href="tel:+18305822150">Call (830) 582-2150</a>
+        <a class="btn btn--ghost" href="#menu">See the menu</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="facts">
+    <p><strong>By the pound</strong> Carnitas, asada, barbacoa, pastor, chicken fajita — tortillas, cilantro, onion.</p>
+    <p><strong>Family pack</strong> Mini taco box of 20, or a quesapizza.</p>
+    <p><strong>Nixon</strong> 109 E Central Ave. Red wall, yellow Texas, OPEN neon.</p>
+  </section>
+
+  <section class="plates" id="plates">
+    <div class="wrap">
+      <p class="kicker">From the kitchen</p>
+      <h2>Skillets, boxes, and a michelada.</h2>
+      <div class="mosaic">
+        <figure><img src="images/fajitas.jpg" alt="Chicken fajitas on a skillet" /><figcaption>Fajitas</figcaption></figure>
+        <figure><img src="images/taco-box.jpg" alt="Box of street tacos" /><figcaption>Taco box</figcaption></figure>
+        <figure><img src="images/tostada.jpg" alt="Loaded tostada" /><figcaption>Tostada</figcaption></figure>
+        <figure><img src="images/tacos-beer.jpg" alt="Asada tacos and a salted beer" /><figcaption>Asada tacos</figcaption></figure>
+        <figure><img src="images/torta.jpg" alt="Barbacoa torta" /><figcaption>Torta</figcaption></figure>
+        <figure><img src="images/pork-breakfast.jpg" alt="Pork chop breakfast with eggs, potatoes, and beans" /><figcaption>Pork chop plate</figcaption></figure>
+        <figure><img src="images/fajita-plate.jpg" alt="Fajita plate with rice, beans, and tomato" /><figcaption>Fajita plate</figcaption></figure>
+        <figure><img src="images/carnitas.jpg" alt="Carnitas tacos and a bowl of beans" /><figcaption>Carnitas</figcaption></figure>
+        <figure><img src="images/avocado-salad.jpg" alt="Chicken salad with avocado and tomato" /><figcaption>Chicken salad</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="menu" id="menu">
+    <div class="wrap">
+      <p class="kicker">From their printed menu</p>
+      <h2>What’s on the spiral book</h2>
+      <p class="intro">Names from the menu on the table. Prices change — ask inside.</p>
+      <div class="menu-tabs" role="tablist">
+        <button type="button" class="menu-tab is-active" aria-selected="true" hx-get="partials/pound.html" hx-target="#menu-panel" hx-swap="innerHTML">By the pound</button>
+        <button type="button" class="menu-tab" aria-selected="false" hx-get="partials/family.html" hx-target="#menu-panel" hx-swap="innerHTML">Family pack</button>
+        <button type="button" class="menu-tab" aria-selected="false" hx-get="partials/kitchen.html" hx-target="#menu-panel" hx-swap="innerHTML">Kitchen</button>
+        <button type="button" class="menu-tab" aria-selected="false" hx-get="partials/kids.html" hx-target="#menu-panel" hx-swap="innerHTML">Kids</button>
+      </div>
+      <div id="menu-panel" hx-get="partials/pound.html" hx-trigger="load" hx-swap="innerHTML"></div>
+    </div>
+  </section>
+
+  <section class="visit" id="visit">
+    <div class="wrap visit__grid">
+      <div>
+        <p class="kicker">Find us</p>
+        <h2>109 E Central Ave</h2>
+        <p>Nixon, TX 78140</p>
+        <p class="phone"><a href="tel:+18305822150">(830) 582-2150</a></p>
+        <p>The wall also says restaurant and drive thru. Breakfast tacos are listed all day on the board inside.</p>
+        <a class="btn" href="https://maps.google.com/?q=109+E+Central+Ave,+Nixon,+TX+78140" target="_blank" rel="noopener">Open in Maps</a>
+      </div>
+      <div class="visit__shots">
+        <img src="images/storefront.jpg" alt="El Rodeo patio and RESTAURANT letters" />
+        <img src="images/storefront-phone.jpg" alt="Red El Rodeo building with phone 830-582-2150" />
+        <img src="images/dining.jpg" alt="Dining room with papel picado and a windmill" />
+      </div>
+    </div>
+  </section>
+  <iframe class="map" title="Map of El Rodeo at 109 E Central Ave, Nixon, TX" src="https://maps.google.com/maps?q=109%20E%20Central%20Ave%2C%20Nixon%2C%20TX%2078140&amp;z=17&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <footer>El Rodeo Mexican Restaurant · Nixon, TX · <a href="tel:+18305822150">(830) 582-2150</a></footer>
+  <script src="script.js"></script>
+</body>
+</html>
