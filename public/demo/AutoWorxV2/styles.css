@@ -373,7 +373,7 @@ em { font-style: italic; }
   overflow: hidden;
   background: #000;
   user-select: none;
-  touch-action: none;
+  touch-action: pan-y;
 }
 .ba--feature {
   border-radius: 18px;
@@ -417,6 +417,7 @@ em { font-style: italic; }
   position: absolute; inset: 0;
   width: 100%; height: 100%;
   opacity: 0; cursor: ew-resize; z-index: 4; margin: 0;
+  touch-action: pan-y;
 }
 .ba__tags {
   position: absolute; inset: 0.7rem 0.75rem auto;
@@ -697,6 +698,8 @@ em { font-style: italic; }
 @media (max-width: 980px) {
   .intro-grid, .insure-grid, .contact-grid, .footer-grid,
   .ba-grid { grid-template-columns: 1fr; }
+  .ba-grid { gap: 2rem; }
+  .ba--feature { margin-bottom: 2rem; }
   .bay-grid, .steps { grid-template-columns: 1fr 1fr; }
   .stats-grid { grid-template-columns: 1fr 1fr; }
   .stats-grid div:nth-child(2) { border-right: 0; }
@@ -727,6 +730,9 @@ em { font-style: italic; }
 @media (max-width: 620px) {
   .bay-grid, .steps, .form-row { grid-template-columns: 1fr; }
   .brand small { display: none; }
+  .ba-grid { gap: 2.4rem; }
+  .ba--feature { margin-bottom: 2.4rem; }
+  .ba__cap { padding: 1.15rem 1.05rem 1.3rem; }
   .sticky-call { display: block; }
   .hero h1 { font-size: clamp(2.6rem, 14vw, 3.6rem); }
   .section { padding: 3.4rem 0; }
