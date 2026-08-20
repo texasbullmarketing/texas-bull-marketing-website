@@ -108,7 +108,7 @@ footer a { color: var(--yellow); }
     background: var(--red-deep); flex-direction: column; padding: 0.8rem var(--pad); gap: 0.55rem;
   }
   .nav nav.is-open { display: flex; }
-  .burger { display: flex; }
+  .burger { display: flex; margin-left: auto; flex-shrink: 0; }
   .nav .call { display: none; }
   .facts, .mosaic, .visit__grid { grid-template-columns: 1fr; }
   .facts p { border-right: 0; border-bottom: 1px solid rgba(0,0,0,0.08); }

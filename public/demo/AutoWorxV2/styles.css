@@ -717,7 +717,8 @@ em { font-style: italic; }
     color: #fff;
     font-size: 1.08rem;
   }
-  .nav-burger { display: flex; }
+  .header-actions { margin-left: auto; }
+  .nav-burger { display: flex; flex-shrink: 0; }
   .header-actions .btn--ghost { display: none; }
   .work-head { flex-direction: column; align-items: flex-start; }
   .hero { min-height: min(88vh, 720px); }

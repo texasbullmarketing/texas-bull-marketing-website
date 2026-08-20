@@ -308,7 +308,8 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
     gap: 0.75rem;
   }
   .nav__links.is-open { display: flex; }
-  .burger { display: flex; }
+  .nav__right { margin-left: auto; }
+  .burger { display: flex; flex-shrink: 0; }
   .hero { min-height: 32rem; }
   .hero__in { padding: 3.2rem 0 2.4rem; }
 }

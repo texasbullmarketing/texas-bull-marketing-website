@@ -109,7 +109,8 @@ footer a { color: var(--sun); }
     background: var(--sun); flex-direction: column; padding: 0.8rem 1rem 1rem; gap: 0.5rem;
   }
   .nav__links.is-open { display: flex; }
-  .burger { display: flex; }
+  .nav__right { margin-left: auto; }
+  .burger { display: flex; flex-shrink: 0; }
   .nav__right .btn { display: none; }
   .strip, .grid, .visit__grid, .menu-grid { grid-template-columns: 1fr; }
   .strip p { border-right: 0; border-bottom: 1px solid rgba(255,255,255,.18); }

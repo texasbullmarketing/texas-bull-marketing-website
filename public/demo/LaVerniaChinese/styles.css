@@ -91,7 +91,8 @@ footer a { color: var(--gold); }
 @media (max-width: 860px) {
   .nav__links { display: none; position: absolute; left: 0; right: 0; top: 100%; background: var(--red); flex-direction: column; padding: 0.8rem 1rem 1rem; gap: 0.5rem; }
   .nav__links.is-open { display: flex; }
-  .burger { display: flex; }
+  .nav__right { margin-left: auto; }
+  .burger { display: flex; flex-shrink: 0; }
   .nav__right .btn { display: none; }
   .strip, .grid, .menu-grid, .visit__grid, .room { grid-template-columns: 1fr; }
   .strip p { border-right: 0; border-bottom: 1px solid #2a2a2a; }
