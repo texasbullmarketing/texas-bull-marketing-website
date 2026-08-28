@@ -574,8 +574,17 @@ em { font-style: normal; color: var(--blue2); }
   .nav__word small { display: none; }
 }
 @media (max-width: 720px) {
+  .nav__inner {
+    justify-content: space-between;
+    gap: 0.4rem;
+  }
   .nav__word { display: none; }
   .nav__logo { height: 2.9rem; }
+  .nav__right {
+    margin-left: auto;
+    gap: 0.35rem;
+    flex-shrink: 0;
+  }
   .nav__links {
     display: none; position: fixed;
     inset: var(--nav-h) 0 0 0;
