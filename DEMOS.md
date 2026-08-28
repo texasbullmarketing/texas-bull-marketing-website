@@ -6,6 +6,7 @@ Live demo sites for leads. Served as static folders under `public/demo/`.
 
 | Company | URL | Folder |
 |---------|-----|--------|
+| CR Tire Shop (EN+ES) | `/demo/CRTireShop/` · `/demo/CRTireShop/es/` | `public/demo/CRTireShop/` |
 | ArMando’s Pizzeria (EN) | `/demo/ArMandosPizzeria/` | `public/demo/ArMandosPizzeria/` |
 | Baldy’s American Diner (EN) | `/demo/BaldysAmericanDiner/` | `public/demo/BaldysAmericanDiner/` |
 | Casas Custom Metal Buildings (EN+ES) | `/demo/CasasMetal/` · `/demo/CasasMetal/es/` | `public/demo/CasasMetal/` |
@@ -49,6 +50,8 @@ Hub page: `/demo/` → `public/demo/index.html`
 Live:
 
 - https://texasbullmarketing.com/demo/
+- https://texasbullmarketing.com/demo/CRTireShop/
+- https://texasbullmarketing.com/demo/CRTireShop/es/
 - https://texasbullmarketing.com/demo/ArMandosPizzeria/
 - https://texasbullmarketing.com/demo/BaldysAmericanDiner/
 - https://texasbullmarketing.com/demo/CasasMetal/
@@ -112,7 +115,7 @@ Full agent skill (auto-loads in Grok): **`tbm-client-demo`**
 - User: `~/.grok/skills/tbm-client-demo/SKILL.md`
 - Repo: `.grok/skills/tbm-client-demo/SKILL.md`
 
-Covers: EN + Spanish URL, HTMX language switch + smooth transition, solid header, Call/Text/Email CTAs, conversion layout by business type, SEO/schema/hreflang/OG (noindex while demo, flip-ready for live), hub card, relative paths.
+Covers: restaurants/food = EN only; every other business = EN + Spanish URL + HTMX switch; GBP phone if numbers disagree; no DEMO banner (the `/demo/` URL is enough); floating DoorDash/Uber/Toast pill only when they have a real link; conversion layout by type; SEO/schema (noindex while demo, flip-ready for live); hub card; relative paths.
 
 **Quick trigger in chat:**  
 `New demo for [Business] — [type] in [city]. Phone … Email … Follow tbm-client-demo.`
