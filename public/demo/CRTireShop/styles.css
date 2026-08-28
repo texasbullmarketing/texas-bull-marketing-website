@@ -460,7 +460,32 @@ em { font-style: normal; color: var(--blue2); }
   border-radius: 14px;
   background: var(--panel);
 }
-.veh svg { margin: 0 auto 0.55rem; color: var(--blue2); }
+.veh-icon {
+  display: block;
+  width: 100%;
+  max-width: 8.5rem;
+  height: 3.6rem;
+  margin: 0 auto 0.8rem;
+  background-color: var(--blue2);
+}
+.veh-icon--car {
+  -webkit-mask: url("assets/images/icon-car.png") center / contain no-repeat;
+  mask: url("assets/images/icon-car.png") center / contain no-repeat;
+}
+.veh-icon--truck {
+  -webkit-mask: url("assets/images/icon-truck.png") center / contain no-repeat;
+  mask: url("assets/images/icon-truck.png") center / contain no-repeat;
+}
+.veh-icon--semi {
+  -webkit-mask: url("assets/images/icon-semi.png") center / contain no-repeat;
+  mask: url("assets/images/icon-semi.png") center / contain no-repeat;
+}
+.veh-icon--tractor {
+  height: 4.35rem;
+  max-width: 6.4rem;
+  -webkit-mask: url("assets/images/icon-tractor.png") center / contain no-repeat;
+  mask: url("assets/images/icon-tractor.png") center / contain no-repeat;
+}
 .veh strong {
   display: block; font-family: var(--display);
   letter-spacing: 0.05em; text-transform: uppercase; font-size: 0.95rem;
