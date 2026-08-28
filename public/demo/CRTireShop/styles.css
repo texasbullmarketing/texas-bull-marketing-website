@@ -196,6 +196,22 @@ em { font-style: normal; color: var(--blue2); }
 .swatch--cobalt { background: #0047ab; }
 .swatch--yellow { background: #ffde00; }
 .swatch--orange { background: #ff5c00; }
+.theme-custom {
+  display: flex; align-items: center; gap: 0.65rem; width: 100%;
+  padding: 0.55rem; border-radius: 8px; margin-top: 0.2rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.86rem; font-weight: 600; color: var(--text); cursor: pointer;
+}
+.theme-custom:hover { background: rgba(255,255,255,0.06); }
+.theme-custom.is-active { background: rgba(var(--accent-rgb), 0.16); color: #fff; }
+.theme-custom input[type="color"] {
+  width: 1.7rem; height: 1.7rem; padding: 0; margin-left: auto;
+  border: 0; background: none; cursor: pointer;
+}
+.theme-custom input[type="color"]::-webkit-color-swatch-wrapper { padding: 0; }
+.theme-custom input[type="color"]::-webkit-color-swatch {
+  border: 1px solid rgba(255,255,255,0.28); border-radius: 5px;
+}
 .visually-hidden {
   position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
   overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
