@@ -21,6 +21,7 @@
   <meta property="og:url" content="https://texasbullmarketing.com/demo/AutoWorx/" />
   <meta property="og:image" content="https://texasbullmarketing.com/demo/AutoWorx/assets/images/work/shop-exterior.jpg" />
   <link rel="stylesheet" href="styles.css" />
+  <script>try{var a=localStorage.getItem("autoworx-accent");if(a)document.documentElement.setAttribute("data-accent",a);}catch(e){}</script>
   <script src="https://unpkg.com/htmx.org@2.0.4" defer></script>
   <script type="application/ld+json">
   {
@@ -31,8 +32,17 @@
     "description": "Family-owned auto body and paint shop since 2000. Collision repair, paintless dent repair, auto glass, insurance claims welcome.",
     "url": "https://texasbullmarketing.com/demo/AutoWorx/",
     "telephone": "+18303037775",
+    "email": "autoworxinfo@gmail.com",
     "image": "https://texasbullmarketing.com/demo/AutoWorx/assets/images/work/shop-exterior.jpg",
     "logo": "https://texasbullmarketing.com/demo/AutoWorx/assets/images/logo.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "960 E Court",
+      "addressLocality": "Seguin",
+      "addressRegion": "TX",
+      "postalCode": "78155",
+      "addressCountry": "US"
+    },
     "foundingDate": "2000",
     "inLanguage": "en",
     "hasOfferCatalog": {
@@ -50,17 +60,34 @@
 </head>
 <body data-lang="en">
   <div id="page-root">
-    <div class="demo-banner" role="status"><span>DEMO</span> Auto Worx · Texas Bull Marketing sample · Not the live site</div>
-
-    <header class="site-header">
+<header class="site-header">
       <div class="header-inner">
-        <a class="brand" href="index.html#top" aria-label="Auto Worx home">
-          <img src="assets/images/logo.jpg" width="140" height="100" alt="Auto Worx" />
-          <span>
-            <strong>AUTO WORX</strong>
-            <small>Body &amp; Paint · Since 2000</small>
-          </span>
-        </a>
+        <div class="brand-wrap">
+          <button type="button" class="theme-btn" id="themeToggle" aria-haspopup="true" aria-expanded="false" aria-controls="themeMenu" aria-label="Try a logo color">
+            <img src="assets/images/logo.jpg" width="140" height="100" alt="Auto Worx" />
+          </button>
+          <div class="theme-menu" id="themeMenu" hidden role="menu" aria-label="Accent color">
+            <p class="theme-menu__hint">Try a color</p>
+            <button type="button" role="menuitemradio" data-accent="original" aria-checked="true"><span class="swatch swatch--original" aria-hidden="true"></span> Original</button>
+            <button type="button" role="menuitemradio" data-accent="red" aria-checked="false"><span class="swatch swatch--red" aria-hidden="true"></span> Race car red</button>
+            <button type="button" role="menuitemradio" data-accent="green" aria-checked="false"><span class="swatch swatch--green" aria-hidden="true"></span> Flame green</button>
+            <button type="button" role="menuitemradio" data-accent="cobalt" aria-checked="false"><span class="swatch swatch--cobalt" aria-hidden="true"></span> Cobalt blue</button>
+            <button type="button" role="menuitemradio" data-accent="yellow" aria-checked="false"><span class="swatch swatch--yellow" aria-hidden="true"></span> Juicy Fruit yellow</button>
+            <button type="button" role="menuitemradio" data-accent="orange" aria-checked="false"><span class="swatch swatch--orange" aria-hidden="true"></span> Hemi orange</button>
+            <label class="theme-custom">
+              <span class="swatch" id="customSwatch" aria-hidden="true"></span>
+              Custom
+              <span class="theme-custom__code" id="customHex"></span>
+              <input type="color" id="themeColor" value="#d01010" />
+            </label>
+          </div>
+          <a class="brand" href="index.html#top" aria-label="Auto Worx home">
+            <span>
+              <strong>AUTO WORX</strong>
+              <small>Body &amp; Paint · Since 2000</small>
+            </span>
+          </a>
+        </div>
         <nav class="nav-links" id="navLinks" aria-label="Main">
           <a href="#services">Services</a>
           <a href="#results">Results</a>
@@ -287,27 +314,60 @@
           <div>
             <p class="eyebrow">Contact</p>
             <h2>Call Auto Worx.</h2>
-            <p class="lead">English or Spanish — happy to help. Call the shop to get started.</p>
+            <p class="lead">English or Spanish — happy to help. Call or email the shop to get started.</p>
             <div class="contact-actions">
               <a class="btn btn--primary btn--lg" href="tel:+18303037775">Call (830) 303-7775</a>
+              <a class="btn btn--ghost btn--lg" href="mailto:autoworxinfo@gmail.com">Email</a>
             </div>
             <ul class="contact-card">
               <li>
                 <span>Phone</span>
-                <a href="tel:+18303037775">(830) 303-7775</a>
+                <a href="tel:+18303037775">830-303-7775</a>
+              </li>
+              <li>
+                <span>Email</span>
+                <span class="contact-dual">
+                  <a href="mailto:autoworxinfo@gmail.com">autoworxinfo@gmail.com</a>
+                  <a href="mailto:agallegos.autoworx@gmail.com">agallegos.autoworx@gmail.com</a>
+                </span>
+              </li>
+              <li>
+                <span>Address</span>
+                <strong>960 E Court<br />Seguin, TX 78155</strong>
               </li>
               <li><span>Shop</span><strong>Body &amp; Paint · Since 2000</strong></li>
               <li><span>Services</span><strong>Collision · PDR · Glass · Paint</strong></li>
             </ul>
           </div>
-          <aside class="hero-card" style="margin:0">
-            <p class="eyebrow">Fastest way to reach us</p>
-            <h2>Call the shop</h2>
-            <p class="phone-xl"><a href="tel:+18303037775">830-303-7775</a></p>
-            <p>Tell us the vehicle and what happened — we’ll take it from there.</p>
-            <div class="stack">
-              <a class="btn btn--primary btn--block" href="tel:+18303037775">Call 830-303-7775</a>
+          <aside class="map-card" aria-label="Shop location">
+            <p class="eyebrow">Location</p>
+            <p class="map-card__address">
+              <span class="map-card__pin" aria-hidden="true">📍</span>
+              <a
+                href="https://www.google.com/maps/search/?api=1&amp;query=960+E+Court,+Seguin,+TX+78155"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <strong>Auto Worx</strong>
+                960 E Court<br />
+                Seguin, TX 78155
+              </a>
+            </p>
+            <div class="map-card__frame">
+              <iframe
+                title="Auto Worx on Google Maps — 960 E Court, Seguin, TX"
+                src="https://maps.google.com/maps?q=960+E+Court,+Seguin,+TX+78155&amp;z=15&amp;output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen
+              ></iframe>
             </div>
+            <a
+              class="btn btn--ghost btn--block map-card__directions"
+              href="https://www.google.com/maps/dir/?api=1&amp;destination=960+E+Court,+Seguin,+TX+78155"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Get directions</a>
           </aside>
         </div>
       </section>
@@ -317,8 +377,9 @@
       <div class="wrap">
         <strong>AUTO WORX</strong>
         <p>Body &amp; Paint · Collision · Glass · PDR · Since 2000</p>
-        <p><a href="tel:+18303037775">(830) 303-7775</a></p>
-        <p class="footer-demo">© <span id="year"></span> · Demo by Texas Bull Marketing · Not the official live website</p>
+        <p>960 E Court · Seguin, TX 78155</p>
+        <p><a href="tel:+18303037775">830-303-7775</a> · <a href="mailto:autoworxinfo@gmail.com">autoworxinfo@gmail.com</a></p>
+        <p class="footer-demo">© <span id="year"></span></p>
       </div>
     </footer>
     <div class="sticky-call"><a class="btn btn--primary" href="tel:+18303037775">📞 Call 830-303-7775</a></div>

@@ -20,7 +20,7 @@
   --sans: "Inter", system-ui, sans-serif;
   --display: "Outfit", system-ui, sans-serif;
   --nav-h: 4.75rem;
-  --banner-h: 2.1rem;
+  --banner-h: 0px;
   --max: 70rem;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
   --brand-glow: 0 0 40px rgba(30, 111, 191, 0.14);
@@ -70,7 +70,7 @@ em { font-style: italic; color: var(--primary2); }
 }
 
 /* Demo banner */
-.demo-banner {
+.demo-banner { display: none !important;
   position: fixed;
   inset: 0 0 auto;
   z-index: 200;
@@ -130,7 +130,7 @@ em { font-style: italic; color: var(--primary2); }
 /* Nav */
 .nav {
   position: fixed;
-  inset: var(--banner-h) 0 auto;
+  inset: 0 0 auto;
   z-index: 100;
   height: var(--nav-h);
   border-bottom: 1px solid transparent;
@@ -261,7 +261,7 @@ em { font-style: italic; color: var(--primary2); }
 /* Hero */
 .hero {
   position: relative;
-  padding: calc(var(--banner-h) + var(--nav-h) + 2.75rem) 0 4rem;
+  padding: calc(var(--nav-h) + 2.75rem) 0 4rem;
   overflow: hidden;
 }
 .hero__bg {
@@ -778,7 +778,7 @@ em { font-style: italic; color: var(--primary2); }
   .nav__links {
     display: none;
     position: fixed;
-    inset: calc(var(--banner-h) + var(--nav-h)) 0 0 0;
+    inset: var(--nav-h) 0 0 0;
     z-index: 99;
     background: rgba(7, 15, 20, 0.98);
     flex-direction: column;

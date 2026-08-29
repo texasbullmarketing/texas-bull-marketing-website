@@ -80,9 +80,11 @@
     var sw = document.getElementById("customSwatch");
     var inp = document.getElementById("themeColor");
     var lab = document.querySelector(".theme-custom");
+    var code = document.getElementById("customHex");
     if (sw) sw.style.background = hex || "#1a6dff";
     if (inp && hex) inp.value = hex;
     if (lab) lab.classList.toggle("is-active", !!on);
+    if (code) code.textContent = on && hex ? String(hex).toUpperCase() : "";
   }
 
   function applyCustomHex(hex) {

@@ -15,7 +15,7 @@
   --font: "Segoe UI", system-ui, -apple-system, sans-serif;
   --display: "Segoe UI", system-ui, sans-serif;
   --nav-h: 4.4rem;
-  --banner-h: 2rem;
+  --banner-h: 0px;
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
@@ -31,7 +31,7 @@ a { color: var(--blue-deep); text-decoration: none; }
 a:hover { text-decoration: underline; }
 .wrap { width: min(100% - 2rem, var(--max)); margin-inline: auto; }
 
-.demo-banner {
+.demo-banner { display: none !important;
   position: fixed; inset: 0 0 auto; z-index: 200; height: var(--banner-h);
   display: flex; align-items: center; justify-content: center; gap: .4rem;
   font-size: .72rem; font-weight: 600; color: #0b1f3a;
@@ -60,7 +60,7 @@ a:hover { text-decoration: underline; }
 
 /* Solid header from top */
 .site-header {
-  position: sticky; top: var(--banner-h); z-index: 100;
+  position: sticky; top: 0; z-index: 100;
   background: #fff; border-bottom: 1px solid var(--line);
   box-shadow: 0 6px 20px rgba(11, 31, 58, .06);
   min-height: var(--nav-h);
@@ -232,7 +232,7 @@ a:hover { text-decoration: underline; }
   .strip-grid { grid-template-columns: 1fr 1fr; }
   .nav-links { display: none; }
   .nav-links.is-open {
-    display: flex; position: fixed; inset: calc(var(--banner-h) + var(--nav-h)) 0 0 0;
+    display: flex; position: fixed; inset: var(--nav-h) 0 0 0;
     flex-direction: column; background: #fff; padding: 1.25rem 1.5rem; gap: 0; z-index: 99;
   }
   .nav-links.is-open a {

@@ -25,6 +25,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../styles.css" />
+  <script>try{var a=localStorage.getItem("autoworx-v2-accent");if(a)document.documentElement.setAttribute("data-accent",a);}catch(e){}</script>
   <script src="https://unpkg.com/htmx.org@2.0.4" defer></script>
   <script type="application/ld+json">
   {
@@ -57,17 +58,34 @@
 <body data-lang="es">
   <div class="grain" aria-hidden="true"></div>
   <div id="page-root">
-    <div class="demo-banner" role="status"><span>DEMO</span> Auto Worx V2 · Muestra nivel $5k · Texas Bull Marketing · No es el sitio oficial</div>
-
-    <header class="site-header">
+<header class="site-header">
       <div class="header-inner">
-        <a class="brand" href="./#top" aria-label="Inicio Auto Worx">
-          <img src="../assets/images/logo.jpg" width="140" height="100" alt="Auto Worx" />
-          <span>
-            <strong>AUTO WORX</strong>
-            <small>Hojalatería y pintura · Seguin</small>
-          </span>
-        </a>
+        <div class="brand-wrap">
+          <button type="button" class="theme-btn" id="themeToggle" aria-haspopup="true" aria-expanded="false" aria-controls="themeMenu" aria-label="Probar un color">
+            <img src="../assets/images/logo.jpg" width="140" height="100" alt="Auto Worx" />
+          </button>
+          <div class="theme-menu" id="themeMenu" hidden role="menu" aria-label="Color de acento">
+            <p class="theme-menu__hint">Pruebe un color</p>
+            <button type="button" role="menuitemradio" data-accent="original" aria-checked="true"><span class="swatch swatch--original" aria-hidden="true"></span> Original</button>
+            <button type="button" role="menuitemradio" data-accent="red" aria-checked="false"><span class="swatch swatch--red" aria-hidden="true"></span> Rojo carrera</button>
+            <button type="button" role="menuitemradio" data-accent="green" aria-checked="false"><span class="swatch swatch--green" aria-hidden="true"></span> Verde llama</button>
+            <button type="button" role="menuitemradio" data-accent="cobalt" aria-checked="false"><span class="swatch swatch--cobalt" aria-hidden="true"></span> Azul cobalto</button>
+            <button type="button" role="menuitemradio" data-accent="yellow" aria-checked="false"><span class="swatch swatch--yellow" aria-hidden="true"></span> Amarillo Juicy Fruit</button>
+            <button type="button" role="menuitemradio" data-accent="orange" aria-checked="false"><span class="swatch swatch--orange" aria-hidden="true"></span> Naranja Hemi</button>
+            <label class="theme-custom">
+              <span class="swatch" id="customSwatch" aria-hidden="true"></span>
+              Personalizado
+              <span class="theme-custom__code" id="customHex"></span>
+              <input type="color" id="themeColor" value="#d01018" />
+            </label>
+          </div>
+          <a class="brand" href="./#top" aria-label="Inicio Auto Worx">
+            <span>
+              <strong>AUTO WORX</strong>
+              <small>Hojalatería y pintura · Seguin</small>
+            </span>
+          </a>
+        </div>
         <nav class="nav-links" id="navLinks" aria-label="Menú principal">
           <a href="#work">Trabajos</a>
           <a href="#services">Servicios</a>
@@ -427,7 +445,7 @@
             <p><a href="tel:+18303037775">830-303-7775</a><br /><a href="mailto:autoworxinfo@gmail.com">autoworxinfo@gmail.com</a></p>
           </div>
         </div>
-        <p class="footer-demo">© <span id="year"></span> · Demo de Texas Bull Marketing · No es el sitio oficial</p>
+        <p class="footer-demo">© <span id="year"></span></p>
       </div>
     </footer>
     <div class="sticky-call"><a class="btn btn--primary" href="tel:+18303037775">Llamar 830-303-7775</a></div>

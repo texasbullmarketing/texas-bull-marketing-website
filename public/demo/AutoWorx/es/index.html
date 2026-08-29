@@ -20,6 +20,7 @@
   <meta property="og:url" content="https://texasbullmarketing.com/demo/AutoWorx/es/" />
   <meta property="og:image" content="https://texasbullmarketing.com/demo/AutoWorx/assets/images/work/shop-exterior.jpg" />
   <link rel="stylesheet" href="../styles.css" />
+  <script>try{var a=localStorage.getItem("autoworx-accent");if(a)document.documentElement.setAttribute("data-accent",a);}catch(e){}</script>
   <script src="https://unpkg.com/htmx.org@2.0.4" defer></script>
   <script type="application/ld+json">
   {
@@ -29,6 +30,15 @@
     "description": "Taller familiar de hojalatería y pintura desde el 2000. Choques, enderezado sin pintura (PDR) y cristales. Aceptamos seguros.",
     "url": "https://texasbullmarketing.com/demo/AutoWorx/es/",
     "telephone": "+18303037775",
+    "email": "autoworxinfo@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "960 E Court",
+      "addressLocality": "Seguin",
+      "addressRegion": "TX",
+      "postalCode": "78155",
+      "addressCountry": "US"
+    },
     "inLanguage": "es-MX",
     "foundingDate": "2000"
   }
@@ -36,17 +46,34 @@
 </head>
 <body data-lang="es">
   <div id="page-root">
-    <div class="demo-banner" role="status"><span>DEMO</span> Auto Worx · Demo de Texas Bull Marketing · No es el sitio oficial</div>
-
-    <header class="site-header">
+<header class="site-header">
       <div class="header-inner">
-        <a class="brand" href="./#top" aria-label="Inicio Auto Worx">
-          <img src="../assets/images/logo.jpg" width="140" height="100" alt="Auto Worx" />
-          <span>
-            <strong>AUTO WORX</strong>
-            <small>Hojalatería y pintura · Desde el 2000</small>
-          </span>
-        </a>
+        <div class="brand-wrap">
+          <button type="button" class="theme-btn" id="themeToggle" aria-haspopup="true" aria-expanded="false" aria-controls="themeMenu" aria-label="Probar un color">
+            <img src="../assets/images/logo.jpg" width="140" height="100" alt="Auto Worx" />
+          </button>
+          <div class="theme-menu" id="themeMenu" hidden role="menu" aria-label="Color de acento">
+            <p class="theme-menu__hint">Pruebe un color</p>
+            <button type="button" role="menuitemradio" data-accent="original" aria-checked="true"><span class="swatch swatch--original" aria-hidden="true"></span> Original</button>
+            <button type="button" role="menuitemradio" data-accent="red" aria-checked="false"><span class="swatch swatch--red" aria-hidden="true"></span> Rojo carrera</button>
+            <button type="button" role="menuitemradio" data-accent="green" aria-checked="false"><span class="swatch swatch--green" aria-hidden="true"></span> Verde llama</button>
+            <button type="button" role="menuitemradio" data-accent="cobalt" aria-checked="false"><span class="swatch swatch--cobalt" aria-hidden="true"></span> Azul cobalto</button>
+            <button type="button" role="menuitemradio" data-accent="yellow" aria-checked="false"><span class="swatch swatch--yellow" aria-hidden="true"></span> Amarillo Juicy Fruit</button>
+            <button type="button" role="menuitemradio" data-accent="orange" aria-checked="false"><span class="swatch swatch--orange" aria-hidden="true"></span> Naranja Hemi</button>
+            <label class="theme-custom">
+              <span class="swatch" id="customSwatch" aria-hidden="true"></span>
+              Personalizado
+              <span class="theme-custom__code" id="customHex"></span>
+              <input type="color" id="themeColor" value="#d01010" />
+            </label>
+          </div>
+          <a class="brand" href="./#top" aria-label="Inicio Auto Worx">
+            <span>
+              <strong>AUTO WORX</strong>
+              <small>Hojalatería y pintura · Desde el 2000</small>
+            </span>
+          </a>
+        </div>
         <nav class="nav-links" id="navLinks" aria-label="Menú principal">
           <a href="#services">Servicios</a>
           <a href="#results">Resultados</a>
@@ -242,27 +269,60 @@
           <div>
             <p class="eyebrow">Contacto</p>
             <h2>Llama a Auto Worx</h2>
-            <p class="lead">Te atendemos en español o en inglés — como te acomode.</p>
+            <p class="lead">Te atendemos en español o en inglés — llama o escribe al taller.</p>
             <div class="contact-actions">
               <a class="btn btn--primary btn--lg" href="tel:+18303037775">Llamar (830) 303-7775</a>
+              <a class="btn btn--ghost btn--lg" href="mailto:autoworxinfo@gmail.com">Correo</a>
             </div>
             <ul class="contact-card">
               <li>
                 <span>Teléfono</span>
-                <a href="tel:+18303037775">(830) 303-7775</a>
+                <a href="tel:+18303037775">830-303-7775</a>
+              </li>
+              <li>
+                <span>Correo</span>
+                <span class="contact-dual">
+                  <a href="mailto:autoworxinfo@gmail.com">autoworxinfo@gmail.com</a>
+                  <a href="mailto:agallegos.autoworx@gmail.com">agallegos.autoworx@gmail.com</a>
+                </span>
+              </li>
+              <li>
+                <span>Dirección</span>
+                <strong>960 E Court<br />Seguin, TX 78155</strong>
               </li>
               <li><span>Taller</span><strong>Hojalatería y pintura · Desde el 2000</strong></li>
               <li><span>Servicios</span><strong>Choques · PDR · Cristales · Pintura</strong></li>
             </ul>
           </div>
-          <aside class="hero-card" style="margin:0">
-            <p class="eyebrow">Lo más rápido</p>
-            <h2>Llama al taller</h2>
-            <p class="phone-xl"><a href="tel:+18303037775">830-303-7775</a></p>
-            <p>Dinos el carro y qué le pasó — de ahí nos encargamos nosotros.</p>
-            <div class="stack">
-              <a class="btn btn--primary btn--block" href="tel:+18303037775">Llamar 830-303-7775</a>
+          <aside class="map-card" aria-label="Ubicación del taller">
+            <p class="eyebrow">Ubicación</p>
+            <p class="map-card__address">
+              <span class="map-card__pin" aria-hidden="true">📍</span>
+              <a
+                href="https://www.google.com/maps/search/?api=1&amp;query=960+E+Court,+Seguin,+TX+78155"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <strong>Auto Worx</strong>
+                960 E Court<br />
+                Seguin, TX 78155
+              </a>
+            </p>
+            <div class="map-card__frame">
+              <iframe
+                title="Auto Worx en Google Maps — 960 E Court, Seguin, TX"
+                src="https://maps.google.com/maps?q=960+E+Court,+Seguin,+TX+78155&amp;z=15&amp;output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen
+              ></iframe>
             </div>
+            <a
+              class="btn btn--ghost btn--block map-card__directions"
+              href="https://www.google.com/maps/dir/?api=1&amp;destination=960+E+Court,+Seguin,+TX+78155"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Cómo llegar</a>
           </aside>
         </div>
       </section>
@@ -272,8 +332,9 @@
       <div class="wrap">
         <strong>AUTO WORX</strong>
         <p>Hojalatería y pintura · Choques · Cristales · PDR · Desde el 2000</p>
-        <p><a href="tel:+18303037775">(830) 303-7775</a></p>
-        <p class="footer-demo">© <span id="year"></span> · Demo de Texas Bull Marketing · No es el sitio oficial</p>
+        <p>960 E Court · Seguin, TX 78155</p>
+        <p><a href="tel:+18303037775">830-303-7775</a> · <a href="mailto:autoworxinfo@gmail.com">autoworxinfo@gmail.com</a></p>
+        <p class="footer-demo">© <span id="year"></span></p>
       </div>
     </footer>
     <div class="sticky-call"><a class="btn btn--primary" href="tel:+18303037775">📞 Llamar 830-303-7775</a></div>

@@ -25,7 +25,7 @@
             --golden: #D97706;
         }
 
-        .demo-banner {
+        .demo-banner { display: none !important;
             position: sticky;
             top: 0;
             z-index: 70;
@@ -216,9 +216,7 @@
 </head>
 <body class="bg-[#FDF8F0] text-[#3F2A1D] font-sans antialiased" data-lang="en">
   <div id="page-root">
-    <div class="demo-banner" role="status"><span>DEMO</span> La Enchiladita · Texas Bull Marketing sample · Not the live site</div>
-
-    <!-- Top bar -->
+<!-- Top bar -->
     <div class="bg-[#9F2D1F] text-white text-sm py-1.5">
         <div class="tail-container px-6 flex items-center justify-between text-center sm:text-left">
             <div class="flex items-center justify-center sm:justify-start gap-x-2 text-xs sm:text-sm">
@@ -237,7 +235,7 @@
     </div>
 
     <!-- Navigation -->
-    <nav id="nav" class="bg-[#FDF8F0] sticky top-8 z-50 border-b border-[#F5D0A9]">
+    <nav id="nav" class="bg-[#FDF8F0] sticky top-0 z-50 border-b border-[#F5D0A9]">
         <div class="tail-container px-6">
             <div class="flex items-center justify-between h-16">
                 <!-- Logo -->
@@ -776,8 +774,7 @@
     <footer class="text-xs text-center py-5 text-[#3F2A1D]/50">
         La Enchiladita — 105 W 2nd St, Nixon, TX 78140 • (830) 582-1147<br>
         Casual Tex-Mex made with care. Not affiliated with any other location.<br>
-        <span class="text-[#3F2A1D]/40">Demo concept site · Texas Bull Marketing · Not the official website</span>
-    </footer>
+</footer>
 
     <!-- Lightbox Modal -->
     <div id="lightbox" onclick="hideLightbox()" class="hidden fixed inset-0 bg-black/90 z-[100] flex items-center justify-center p-4">

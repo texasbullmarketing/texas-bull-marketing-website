@@ -17,19 +17,35 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../styles.css" />
   <script src="https://unpkg.com/htmx.org@2.0.4" defer></script>
+<script>try{var a=localStorage.getItem("atotonilco-accent");if(a)document.documentElement.setAttribute("data-accent",a);}catch(e){}</script>
 </head>
 <body data-lang="es">
   <div id="page-root">
-  <div class="demo-banner" role="status">
-    <span>DEMO</span> — Taqueria Atotonilco · Demo de Texas Bull Marketing · No es el sitio oficial
-  </div>
-
-  <header class="nav" id="nav">
+<header class="nav" id="nav">
     <div class="nav__inner">
-      <a href="#top" class="nav__brand">
-        <span class="nav__name">Taqueria Atotonilco</span>
-        <span class="nav__tag">Seguin, TX</span>
+<div class="brand-wrap">
+          <button type="button" class="theme-btn" id="themeToggle" aria-haspopup="true" aria-expanded="false" aria-controls="themeMenu" aria-label="Probar un color">
+            <span class="nav__name">Taqueria Atotonilco</span>
+          </button>
+          <div class="theme-menu" id="themeMenu" hidden role="menu" aria-label="Color de acento">
+            <p class="theme-menu__hint">Pruebe un color</p>
+            <button type="button" role="menuitemradio" data-accent="original" aria-checked="true"><span class="swatch swatch--original" aria-hidden="true"></span> Original</button>
+            <button type="button" role="menuitemradio" data-accent="red" aria-checked="false"><span class="swatch swatch--red" aria-hidden="true"></span> Rojo carrera</button>
+            <button type="button" role="menuitemradio" data-accent="green" aria-checked="false"><span class="swatch swatch--green" aria-hidden="true"></span> Verde llama</button>
+            <button type="button" role="menuitemradio" data-accent="cobalt" aria-checked="false"><span class="swatch swatch--cobalt" aria-hidden="true"></span> Azul cobalto</button>
+            <button type="button" role="menuitemradio" data-accent="yellow" aria-checked="false"><span class="swatch swatch--yellow" aria-hidden="true"></span> Amarillo Juicy Fruit</button>
+            <button type="button" role="menuitemradio" data-accent="orange" aria-checked="false"><span class="swatch swatch--orange" aria-hidden="true"></span> Naranja Hemi</button>
+            <label class="theme-custom">
+              <span class="swatch" id="customSwatch" aria-hidden="true"></span>
+              Personalizado
+              <span class="theme-custom__code" id="customHex"></span>
+              <input type="color" id="themeColor" value="#c43c2c" />
+            </label>
+          </div>
+          <a href="#top" class="nav__brand">
+            <span class="nav__tag">Seguin, TX</span>
       </a>
+        </div>
       <nav class="nav__links" id="navLinks">
         <a href="#about">Nosotros</a>
         <a href="#plates">Platos</a>

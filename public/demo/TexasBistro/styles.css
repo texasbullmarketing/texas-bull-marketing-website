@@ -11,7 +11,7 @@
   --gold: #b8956c;
   --sage: #4a5d4e;
   --max: 1040px;
-  --banner-h: 2rem;
+  --banner-h: 0px;
   --nav-h: 4.35rem;
   --font: "Segoe UI", system-ui, -apple-system, sans-serif;
   --display: Georgia, "Times New Roman", serif;
@@ -32,7 +32,7 @@ a { color: var(--wine); text-decoration: none; }
 a:hover { text-decoration: underline; }
 .wrap { width: min(100% - 2rem, var(--max)); margin-inline: auto; }
 
-.demo-banner {
+.demo-banner { display: none !important;
   position: fixed; inset: 0 0 auto; z-index: 200; height: var(--banner-h);
   display: flex; align-items: center; justify-content: center; gap: 0.4rem;
   font-size: 0.72rem; font-weight: 700; color: #2a1f14;
@@ -65,7 +65,7 @@ a:hover { text-decoration: underline; }
 
 /* Solid header */
 .site-header {
-  position: sticky; top: var(--banner-h); z-index: 100;
+  position: sticky; top: 0; z-index: 100;
   background: var(--cream); border-bottom: 1px solid var(--line);
   box-shadow: 0 6px 20px rgba(26, 23, 20, 0.05); min-height: var(--nav-h);
 }
@@ -302,7 +302,7 @@ a:hover { text-decoration: underline; }
   .nav-links { display: none; }
   .nav-links.is-open {
     display: flex; position: fixed;
-    inset: calc(var(--banner-h) + var(--nav-h)) 0 0 0;
+    inset: var(--nav-h) 0 0 0;
     flex-direction: column; background: var(--cream); padding: 1.2rem 1.5rem; z-index: 99; gap: 0;
   }
   .nav-links.is-open a {

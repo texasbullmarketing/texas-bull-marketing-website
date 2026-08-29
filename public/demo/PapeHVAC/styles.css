@@ -381,7 +381,7 @@ em { font-style: normal; color: var(--cyan); }
 }
 
 /* Demo banner + language switch */
-.demo-banner {
+.demo-banner { display: none !important;
   position: relative;
   z-index: 120;
   background: #0a1f28;
