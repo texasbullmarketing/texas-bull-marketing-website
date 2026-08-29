@@ -60,8 +60,10 @@ button { font: inherit; background: none; border: 0; cursor: pointer; color: inh
 .nav__in { height: 100%; display: flex; align-items: center; gap: 1rem; }
 .brand { color: #fff; }
 .brand:hover { text-decoration: none; }
-.brand strong { display: block; font-family: var(--display); font-size: 1.15rem; font-weight: 700; }
-.brand small { display: block; font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); }
+.brand-stack { display: flex; flex-direction: column; align-items: flex-start; line-height: 1.15; text-align: left; }
+.brand strong, .brand-stack strong { display: block; font-family: var(--display); font-size: 1.15rem; font-weight: 700; }
+.brand small, .brand-stack small { display: block; font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); }
+.theme-btn.brand { flex-direction: column; align-items: flex-start; }
 .nav__links { display: flex; gap: 1.2rem; margin-left: auto; font-weight: 700; }
 .nav__links a { color: #fff; }
 .nav__right { display: flex; align-items: center; gap: 0.5rem; }
@@ -178,7 +180,12 @@ footer a { color: var(--gold); }
   border-radius: 50%; background: #fff; flex-shrink: 0;
 }
 .order-float__icon img { width: 22px; height: 22px; object-fit: contain; }
-.order-float--dd { background: #FF3008; }
+.order-float--dd,
+html[data-accent] .order-float--dd,
+html[data-accent] .order-float.order-float--dd:hover {
+  background: #FF3008 !important;
+  color: #fff !important;
+}
 
 @media (max-width: 860px) {
   .nav__links {
