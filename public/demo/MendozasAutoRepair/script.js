@@ -136,8 +136,15 @@
     if (xhr && xhr.responseText) syncHeadFromResponse(xhr.responseText);
   });
 
-  document.addEventListener("htmx:afterSettle", function () {
+  document.addEventListener("htmx:afterSettle", function (evt) {
     init();
+    var root = document.getElementById("page-root");
+    if (root && window.htmx) window.htmx.process(root);
+    document.querySelectorAll(".reveal").forEach(function (el) {
+      if (el.getBoundingClientRect().top < window.innerHeight + 40) {
+        el.classList.add("is-in");
+      }
+    });
     if (!window.location.hash) window.scrollTo(0, 0);
   });
 })();
