@@ -38,7 +38,7 @@
 
     <!-- Search: empty = paginated newest-first; typing shows all matches -->
     <div class="mt-8">
-      <label for="demo-search" class="sr-only">Search demos</label>
+      <label for="demo-search" class="sr-only">Search demos by business or city</label>
       <div class="relative">
         <svg class="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-white/35" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
           <circle cx="11" cy="11" r="7" />
@@ -49,11 +49,11 @@
           type="search"
           autocomplete="off"
           spellcheck="false"
-          placeholder="Search demos..."
+          placeholder="Search by business or city…"
           class="w-full rounded-xl border border-[#3A4560] bg-bullcard py-3.5 pl-12 pr-4 text-sm text-white placeholder:text-white/35 outline-none transition focus:border-bullred focus:ring-1 focus:ring-bullred"
         />
       </div>
-      <p id="demo-search-hint" class="mt-2 text-xs text-white/40">Type to filter all demos. Empty search shows the latest 18 (3×6), older on later pages.</p>
+      <p id="demo-search-hint" class="mt-2 text-xs text-white/40">Search by business or the city they are in — not towns they serve. Empty search shows the latest 18 (3×6), older on later pages.</p>
     </div>
 
     <!-- data-order: higher = newer (page 1 = latest 18 when not searching) -->
@@ -64,9 +64,11 @@
         data-order="370"
         data-sort="cr tire shop"
         data-search="cr tire shop mechanic nixon hwy 87 tires 18 wheeler tractor road service spanish espanol bilingual"
+        data-city="nixon"
       >
         <p class="text-xs font-700 uppercase tracking-widest text-bullred">Tires &amp; mechanic · EN + ES</p>
         <h2 class="mt-2 font-display text-xl font-800">CR Tire Shop</h2>
+        <p class="mt-1 text-sm text-white/50">Nixon, TX</p>
         <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
       </a>
       <a
@@ -75,9 +77,11 @@
         data-order="360"
         data-sort="armandos pizzeria"
         data-search="armandos armandos pizzeria pizza la vernia toast dine in carry out delivery"
+        data-city="la vernia"
       >
         <p class="text-xs font-700 uppercase tracking-widest text-bullred">Pizza · EN</p>
         <h2 class="mt-2 font-display text-xl font-800">ArMando’s Pizzeria</h2>
+        <p class="mt-1 text-sm text-white/50">La Vernia, TX</p>
         <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
       </a>
       <a
@@ -86,9 +90,11 @@
         data-order="350"
         data-sort="baldys american diner"
         data-search="baldys diner american breakfast chicken fried steak la vernia hwy 87"
+        data-city="la vernia"
       >
         <p class="text-xs font-700 uppercase tracking-widest text-bullred">Diner · EN</p>
         <h2 class="mt-2 font-display text-xl font-800">Baldy’s American Diner</h2>
+        <p class="mt-1 text-sm text-white/50">La Vernia, TX</p>
         <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
       </a>
       <a
@@ -97,9 +103,11 @@
         data-order="340"
         data-sort="casas custom metal buildings"
         data-search="casas metal buildings barns shops carports fence la vernia bilingual spanish espanol"
+        data-city="la vernia"
       >
         <p class="text-xs font-700 uppercase tracking-widest text-bullred">Metal buildings · EN + ES</p>
         <h2 class="mt-2 font-display text-xl font-800">Casas Custom Metal Buildings</h2>
+        <p class="mt-1 text-sm text-white/50">La Vernia, TX</p>
         <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
       </a>
       <a
@@ -108,9 +116,11 @@
         data-order="330"
         data-sort="el rodeo mexican restaurant"
         data-search="el rodeo mexican restaurant nixon fajitas tacos menudo micheladas"
+        data-city="nixon"
       >
         <p class="text-xs font-700 uppercase tracking-widest text-bullred">Mexican · EN</p>
         <h2 class="mt-2 font-display text-xl font-800">El Rodeo Mexican Restaurant</h2>
+        <p class="mt-1 text-sm text-white/50">Nixon, TX</p>
         <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
       </a>
       <a
@@ -119,9 +129,11 @@
         data-order="320"
         data-sort="el valle de mexico"
         data-search="el valle de mexico breakfast tacos migas enchiladas san antonio loop 106"
+        data-city="san antonio"
       >
         <p class="text-xs font-700 uppercase tracking-widest text-bullred">Mexican breakfast · EN</p>
         <h2 class="mt-2 font-display text-xl font-800">El Valle De Mexico</h2>
+        <p class="mt-1 text-sm text-white/50">San Antonio, TX</p>
         <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
       </a>
       <a
@@ -130,9 +142,11 @@
         data-order="310"
         data-sort="farmhaus table"
         data-search="farmhaus table adkins fried chicken haus lunch bar grill"
+        data-city="adkins"
       >
         <p class="text-xs font-700 uppercase tracking-widest text-bullred">Bar &amp; grill · EN</p>
         <h2 class="mt-2 font-display text-xl font-800">Farmhaus Table</h2>
+        <p class="mt-1 text-sm text-white/50">Adkins, TX</p>
         <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
       </a>
       <a
@@ -141,9 +155,11 @@
         data-order="300"
         data-sort="gm nails and spa"
         data-search="gm nails spa manicure nail art la vernia"
+        data-city="la vernia"
       >
         <p class="text-xs font-700 uppercase tracking-widest text-bullred">Nails · EN</p>
         <h2 class="mt-2 font-display text-xl font-800">GM Nails and Spa</h2>
+        <p class="mt-1 text-sm text-white/50">La Vernia, TX</p>
         <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
       </a>
       <a
@@ -152,9 +168,11 @@
         data-order="290"
         data-sort="la vernia chinese cuisine"
         data-search="la vernia chinese cuisine hwy 87 dine in to go"
+        data-city="la vernia"
       >
         <p class="text-xs font-700 uppercase tracking-widest text-bullred">Chinese · EN</p>
         <h2 class="mt-2 font-display text-xl font-800">La Vernia Chinese Cuisine</h2>
+        <p class="mt-1 text-sm text-white/50">La Vernia, TX</p>
         <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
       </a>
       <a
@@ -163,9 +181,11 @@
         data-order="280"
         data-sort="rice 2 go"
         data-search="rice 2 go rice2go chinese la vernia chihuahua lotus"
+        data-city="la vernia"
       >
         <p class="text-xs font-700 uppercase tracking-widest text-bullred">Chinese · EN</p>
         <h2 class="mt-2 font-display text-xl font-800">Rice 2 Go</h2>
+        <p class="mt-1 text-sm text-white/50">La Vernia, TX</p>
         <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
       </a>
       <a
@@ -174,9 +194,11 @@
         data-order="270"
         data-sort="sammys paws and spas"
         data-search="sammys paws spas dog grooming la vernia wild stallion"
+        data-city="la vernia"
       >
         <p class="text-xs font-700 uppercase tracking-widest text-bullred">Pet grooming · EN</p>
         <h2 class="mt-2 font-display text-xl font-800">Sammy’s Paws and Spas</h2>
+        <p class="mt-1 text-sm text-white/50">La Vernia, TX</p>
         <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
       </a>
       <a
@@ -185,9 +207,11 @@
         data-order="260"
         data-sort="taco vallarta"
         data-search="taco vallarta quesabirria tacos la vernia hwy 87 mexican"
+        data-city="la vernia"
       >
         <p class="text-xs font-700 uppercase tracking-widest text-bullred">Mexican · EN</p>
         <h2 class="mt-2 font-display text-xl font-800">Taco Vallarta</h2>
+        <p class="mt-1 text-sm text-white/50">La Vernia, TX</p>
         <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
       </a>
       <a
@@ -196,9 +220,11 @@
         data-order="250"
         data-sort="the shed coffee"
         data-search="the shed coffee drive through la vernia smoothies shaved ice"
+        data-city="la vernia"
       >
         <p class="text-xs font-700 uppercase tracking-widest text-bullred">Coffee · EN</p>
         <h2 class="mt-2 font-display text-xl font-800">The Shed</h2>
+        <p class="mt-1 text-sm text-white/50">La Vernia, TX</p>
         <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
       </a>
       <a
@@ -207,9 +233,11 @@
         data-order="240"
         data-sort="auto worx v2 5k"
         data-search="auto worx autoworx v2 5k five thousand polished collision body paint seguin bilingual spanish espanol"
+        data-city="seguin"
       >
         <p class="text-xs font-700 uppercase tracking-widest text-bullred">Auto · EN + ES · $5k V2</p>
         <h2 class="mt-2 font-display text-xl font-800">Auto Worx V2</h2>
+        <p class="mt-1 text-sm text-white/50">Seguin, TX</p>
         <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
       </a>
       <a
@@ -217,10 +245,12 @@
         class="demo-card group rounded-xl border border-[#3A4560] bg-bullcard p-5 transition hover:border-bullred"
         data-order="220"
         data-sort="auto worx"
-        data-search="auto worx autoworx auto repair service mechanic 830 bilingual spanish espanol"
+        data-search="auto worx autoworx auto repair service mechanic 830 seguin bilingual spanish espanol"
+        data-city="seguin"
       >
         <p class="text-xs font-700 uppercase tracking-widest text-bullred">Auto · EN + ES</p>
         <h2 class="mt-2 font-display text-xl font-800">Auto Worx</h2>
+        <p class="mt-1 text-sm text-white/50">Seguin, TX</p>
         <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
       </a>
       <a
@@ -229,9 +259,11 @@
         data-order="210"
         data-sort="texas bistro"
         data-search="texas bistro new braunfels new american restaurant brunch happy hour bilingual spanish espanol"
+        data-city="new braunfels"
       >
         <p class="text-xs font-700 uppercase tracking-widest text-bullred">Restaurant · EN + ES</p>
         <h2 class="mt-2 font-display text-xl font-800">Texas Bistro</h2>
+        <p class="mt-1 text-sm text-white/50">New Braunfels, TX</p>
         <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
       </a>
       <a
@@ -239,10 +271,12 @@
         class="demo-card group rounded-xl border border-[#3A4560] bg-bullcard p-5 transition hover:border-bullred"
         data-order="200"
         data-sort="plumb boy plumbing"
-        data-search="plumb boy plumbing plumber drain water heater toilet sewer 210 bilingual spanish espanol"
+        data-search="plumb boy plumbing plumber drain water heater toilet sewer 210 san antonio bilingual spanish espanol"
+        data-city="san antonio"
       >
         <p class="text-xs font-700 uppercase tracking-widest text-bullred">Plumbing · EN + ES</p>
         <h2 class="mt-2 font-display text-xl font-800">Plumb Boy Plumbing</h2>
+        <p class="mt-1 text-sm text-white/50">San Antonio, TX</p>
         <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
       </a>
       <a
@@ -250,10 +284,12 @@
         class="demo-card group rounded-xl border border-[#3A4560] bg-bullcard p-5 transition hover:border-bullred"
         data-order="190"
         data-sort="dedicated plumbing services"
-        data-search="dedicated plumbing services san antonio saint hedwig plumber water heater drain bilingual spanish espanol"
+        data-search="dedicated plumbing services saint hedwig st hedwig plumber water heater drain bilingual spanish espanol"
+        data-city="saint hedwig st hedwig"
       >
         <p class="text-xs font-700 uppercase tracking-widest text-bullred">Plumbing · EN + ES</p>
         <h2 class="mt-2 font-display text-xl font-800">Dedicated Plumbing Services</h2>
+        <p class="mt-1 text-sm text-white/50">Saint Hedwig, TX</p>
         <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
       </a>
       <a
@@ -262,9 +298,11 @@
         data-order="180"
         data-sort="double m cleaning"
         data-search="double m cleaning mm seguin residential office move-in move-out house clean standard deep bilingual spanish espanol"
+        data-city="seguin"
       >
         <p class="text-xs font-700 uppercase tracking-widest text-bullred">Cleaning · EN + ES</p>
         <h2 class="mt-2 font-display text-xl font-800">Double M Cleaning</h2>
+        <p class="mt-1 text-sm text-white/50">Seguin, TX</p>
         <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
       </a>
       <a
@@ -273,9 +311,11 @@
         data-order="170"
         data-sort="mendozas auto repair"
         data-search="mendoza mendozas auto repair paint body seguin mechanical collision bilingual spanish espanol"
+        data-city="seguin"
       >
         <p class="text-xs font-700 uppercase tracking-widest text-bullred">Paint · Body · Mech · EN + ES</p>
         <h2 class="mt-2 font-display text-xl font-800">Mendoza's Auto Repair</h2>
+        <p class="mt-1 text-sm text-white/50">Seguin, TX</p>
         <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
       </a>
       <a
@@ -284,9 +324,11 @@
         data-order="160"
         data-sort="js auto shop"
         data-search="js auto shop j's automotive mobile mechanic boerne joe repair bilingual spanish espanol"
+        data-city="boerne"
       >
         <p class="text-xs font-700 uppercase tracking-widest text-bullred">Auto repair · EN + ES</p>
         <h2 class="mt-2 font-display text-xl font-800">J's Auto Shop</h2>
+        <p class="mt-1 text-sm text-white/50">Boerne, TX</p>
         <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
       </a>
       <a
@@ -294,10 +336,12 @@
         class="demo-card group rounded-xl border border-[#3A4560] bg-bullcard p-5 transition hover:border-bullred"
         data-order="150"
         data-sort="wageners well service"
-        data-search="wageners wegener well service water pump drilling emergency spanish espanol bilingual"
+        data-search="wageners wegener well service water pump drilling emergency nixon spanish espanol bilingual"
+        data-city="nixon"
       >
         <p class="text-xs font-700 uppercase tracking-widest text-bullred">Well service · EN + ES</p>
         <h2 class="mt-2 font-display text-xl font-800">Wageners Well Service</h2>
+        <p class="mt-1 text-sm text-white/50">Nixon, TX</p>
         <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
       </a>
       <a
@@ -305,10 +349,12 @@
         class="demo-card group rounded-xl border border-[#3A4560] bg-bullcard p-5 transition hover:border-bullred"
         data-order="140"
         data-sort="jacked junk bros"
-        data-search="jacked junk bros junk removal demolition san antonio schertz new braunfels seguin stone oak bilingual spanish espanol"
+        data-search="jacked junk bros junk removal demolition san antonio bilingual spanish espanol"
+        data-city="san antonio"
       >
         <p class="text-xs font-700 uppercase tracking-widest text-bullred">Junk removal · EN + ES</p>
         <h2 class="mt-2 font-display text-xl font-800">Jacked Junk Bros</h2>
+        <p class="mt-1 text-sm text-white/50">San Antonio, TX</p>
         <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
       </a>
       <a
@@ -317,9 +363,11 @@
         data-order="130"
         data-sort="2 rivers heating air conditioning"
         data-search="2 rivers heating air conditioning two rivers hvac new braunfels eddie sales service installation spanish espanol bilingual"
+        data-city="new braunfels"
       >
         <p class="text-xs font-700 uppercase tracking-widest text-bullred">HVAC · EN + ES</p>
         <h2 class="mt-2 font-display text-xl font-800">2 Rivers Heating &amp; Air Conditioning</h2>
+        <p class="mt-1 text-sm text-white/50">New Braunfels, TX</p>
         <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
       </a>
       <a
@@ -350,9 +398,11 @@
         data-order="100"
         data-sort="pape hvac"
         data-search="pape hvac donald new braunfels heating air bilingual spanish espanol"
+        data-city="new braunfels"
       >
         <p class="text-xs font-700 uppercase tracking-widest text-bullred">HVAC · EN + ES</p>
         <h2 class="mt-2 font-display text-xl font-800">Pape HVAC</h2>
+        <p class="mt-1 text-sm text-white/50">New Braunfels, TX</p>
         <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
       </a>
       <a
@@ -361,9 +411,11 @@
         data-order="90"
         data-sort="hvac pros heating ac"
         data-search="hvac pros heating ac air conditioning seguin juan bilingual spanish espanol"
+        data-city="seguin"
       >
         <p class="text-xs font-700 uppercase tracking-widest text-bullred">HVAC · EN + ES</p>
         <h2 class="mt-2 font-display text-xl font-800">HVAC Pros Heating &amp; A/C</h2>
+        <p class="mt-1 text-sm text-white/50">Seguin, TX</p>
         <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
       </a>
       <a
@@ -372,9 +424,11 @@
         data-order="80"
         data-sort="taqueria atotonilco"
         data-search="taqueria atotonilco mexican tacos enchiladas breakfast lunch seguin bilingual spanish espanol"
+        data-city="seguin"
       >
         <p class="text-xs font-700 uppercase tracking-widest text-bullred">Mexican · EN + ES</p>
         <h2 class="mt-2 font-display text-xl font-800">Taqueria Atotonilco</h2>
+        <p class="mt-1 text-sm text-white/50">Seguin, TX</p>
         <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
       </a>
       <a
@@ -383,9 +437,11 @@
         data-order="70"
         data-sort="the 1908 restaurant bar"
         data-search="the 1908 restaurant bar seguin speakeasy cocktail bar patio bilingual spanish espanol"
+        data-city="seguin"
       >
         <p class="text-xs font-700 uppercase tracking-widest text-bullred">Restaurant + Bar · EN + ES</p>
         <h2 class="mt-2 font-display text-xl font-800">The 1908 Restaurant + Bar</h2>
+        <p class="mt-1 text-sm text-white/50">Seguin, TX</p>
         <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
       </a>
       <a
@@ -394,9 +450,11 @@
         data-order="60"
         data-sort="the blackdoor steakhouse"
         data-search="the blackdoor steakhouse black door seguin steak wagyu prime bilingual spanish espanol"
+        data-city="seguin"
       >
         <p class="text-xs font-700 uppercase tracking-widest text-bullred">Steakhouse · EN + ES</p>
         <h2 class="mt-2 font-display text-xl font-800">The Blackdoor Steakhouse</h2>
+        <p class="mt-1 text-sm text-white/50">Seguin, TX</p>
         <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
       </a>
       <a
@@ -404,10 +462,12 @@
         class="demo-card group rounded-xl border border-[#3A4560] bg-bullcard p-5 transition hover:border-bullred"
         data-order="50"
         data-sort="michoacana premium"
-        data-search="michoacana premium ice cream paleteria paletas helados mangonadas mich"
+        data-search="michoacana premium ice cream paleteria paletas helados mangonadas mich seguin"
+        data-city="seguin"
       >
         <p class="text-xs font-700 uppercase tracking-widest text-bullred">Ice cream</p>
         <h2 class="mt-2 font-display text-xl font-800">Michoacana Premium</h2>
+        <p class="mt-1 text-sm text-white/50">Seguin, TX</p>
         <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
       </a>
       <a
@@ -415,10 +475,12 @@
         class="demo-card group rounded-xl border border-[#3A4560] bg-bullcard p-5 transition hover:border-bullred"
         data-order="40"
         data-sort="iron roots services"
-        data-search="iron roots services irs concrete fencing remodeling bilingual spanish espanol"
+        data-search="iron roots services irs concrete fencing remodeling stockdale bilingual spanish espanol"
+        data-city="stockdale"
       >
         <p class="text-xs font-700 uppercase tracking-widest text-bullred">Home services · EN + ES</p>
         <h2 class="mt-2 font-display text-xl font-800">Iron Roots Services</h2>
+        <p class="mt-1 text-sm text-white/50">Stockdale, TX</p>
         <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
       </a>
       <a
@@ -426,10 +488,12 @@
         class="demo-card group rounded-xl border border-[#3A4560] bg-bullcard p-5 transition hover:border-bullred"
         data-order="30"
         data-sort="la enchiladita"
-        data-search="la enchiladita ench restaurant tex mex bilingual spanish espanol"
+        data-search="la enchiladita ench restaurant tex mex nixon bilingual spanish espanol"
+        data-city="nixon"
       >
         <p class="text-xs font-700 uppercase tracking-widest text-bullred">Restaurant · EN + ES</p>
         <h2 class="mt-2 font-display text-xl font-800">La Enchiladita</h2>
+        <p class="mt-1 text-sm text-white/50">Nixon, TX</p>
         <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
       </a>
       <a
@@ -437,10 +501,12 @@
         class="demo-card group rounded-xl border border-[#3A4560] bg-bullcard p-5 transition hover:border-bullred"
         data-order="20"
         data-sort="wave finders electronics"
-        data-search="wave finders electronics bilingual spanish espanol"
+        data-search="wave finders electronics seguin bilingual spanish espanol"
+        data-city="seguin"
       >
         <p class="text-xs font-700 uppercase tracking-widest text-bullred">Electronics · EN + ES</p>
         <h2 class="mt-2 font-display text-xl font-800">Wave Finders Electronics</h2>
+        <p class="mt-1 text-sm text-white/50">Seguin, TX</p>
         <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
       </a>
       <a
@@ -448,10 +514,12 @@
         class="demo-card group rounded-xl border border-[#3A4560] bg-bullcard p-5 transition hover:border-bullred"
         data-order="10"
         data-sort="enterprise flooring solutions"
-        data-search="enterprise flooring solutions efs tile renovation bilingual spanish espanol"
+        data-search="enterprise flooring solutions efs tile renovation san antonio bilingual spanish espanol"
+        data-city="san antonio"
       >
         <p class="text-xs font-700 uppercase tracking-widest text-bullred">Flooring · EN + ES</p>
         <h2 class="mt-2 font-display text-xl font-800 group-hover:text-white">Enterprise Flooring Solutions</h2>
+        <p class="mt-1 text-sm text-white/50">San Antonio, TX</p>
         <p class="mt-4 text-sm font-700 text-bullred">Open demo -&gt;</p>
       </a>
     </div>
@@ -499,13 +567,26 @@
         cards.forEach((card) => grid.appendChild(card))
       }
 
-      // Empty query -> show all. Non-empty -> progressive starts-with on name tokens.
+      // Empty query -> show all. City = location only (data-city), not service area.
+      // Name/keywords live in data-search. Phrase match for la vernia / san antonio.
+      function tokenMatch(text, query) {
+        if (!text) return false
+        if (text === query) return true
+        if (text.startsWith(query + ' ')) return true
+        const tokens = text.split(/\s+/).filter(Boolean)
+        const parts = query.split(/\s+/).filter(Boolean)
+        if (parts.length > 1) {
+          if (text.includes(query)) return true
+          return parts.every((q) => tokens.some((t) => t.startsWith(q)))
+        }
+        return tokens.some((t) => t.startsWith(query))
+      }
+
       function matches(card, query) {
         if (!query) return true
+        const city = (card.getAttribute('data-city') || '').toLowerCase()
         const hay = (card.getAttribute('data-search') || '').toLowerCase()
-        const tokens = hay.split(/\s+/).filter(Boolean)
-        if (hay.startsWith(query)) return true
-        return tokens.some((t) => t.startsWith(query))
+        return tokenMatch(city, query) || tokenMatch(hay, query)
       }
 
       function render() {
