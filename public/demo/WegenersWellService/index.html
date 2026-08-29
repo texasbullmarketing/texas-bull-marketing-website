@@ -75,13 +75,32 @@
     }
   }
   </script>
+<script>try{var a=localStorage.getItem("wegeners-accent");if(a)document.documentElement.setAttribute("data-accent",a);}catch(e){}</script>
 </head>
 <body data-lang="en">
 <header class="nav" id="nav">
     <div class="nav__inner">
-      <a href="#top" class="nav__brand" aria-label="Wageners Well Service home">
-        <img class="nav__logo" src="assets/logo-nav.png?v=3" width="180" height="180" alt="Wageners Well Service" decoding="async" />
-      </a>
+<div class="brand-wrap">
+          <button type="button" class="theme-btn" id="themeToggle" aria-haspopup="true" aria-expanded="false" aria-controls="themeMenu" aria-label="Try a logo color">
+            <img class="nav__logo" src="assets/logo-nav.png?v=3" width="180" height="180" alt="Wageners Well Service" decoding="async" />
+          </button>
+          <div class="theme-menu" id="themeMenu" hidden role="menu" aria-label="Accent color">
+            <p class="theme-menu__hint">Try a color</p>
+            <button type="button" role="menuitemradio" data-accent="original" aria-checked="true"><span class="swatch swatch--original" aria-hidden="true"></span> Original</button>
+            <button type="button" role="menuitemradio" data-accent="red" aria-checked="false"><span class="swatch swatch--red" aria-hidden="true"></span> Race car red</button>
+            <button type="button" role="menuitemradio" data-accent="green" aria-checked="false"><span class="swatch swatch--green" aria-hidden="true"></span> Flame green</button>
+            <button type="button" role="menuitemradio" data-accent="cobalt" aria-checked="false"><span class="swatch swatch--cobalt" aria-hidden="true"></span> Cobalt blue</button>
+            <button type="button" role="menuitemradio" data-accent="yellow" aria-checked="false"><span class="swatch swatch--yellow" aria-hidden="true"></span> Juicy Fruit yellow</button>
+            <button type="button" role="menuitemradio" data-accent="orange" aria-checked="false"><span class="swatch swatch--orange" aria-hidden="true"></span> Hemi orange</button>
+            <label class="theme-custom">
+              <span class="swatch" id="customSwatch" aria-hidden="true"></span>
+              Custom
+              <span class="theme-custom__code" id="customHex"></span>
+              <input type="color" id="themeColor" value="#0f4c8a" />
+            </label>
+          </div>
+          
+        </div>
       <nav class="nav__links" id="navLinks" aria-label="Main">
         <a href="#services">Services</a>
         <a href="#why">Why Us</a>
