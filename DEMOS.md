@@ -6,6 +6,10 @@ Live demo sites for leads. Served as static folders under `public/demo/`.
 
 | Company | URL | Folder |
 |---------|-----|--------|
+| Small Town Jump (EN+ES) | `/demo/SmallTownJump/` · `/demo/SmallTownJump/es/` | `public/demo/SmallTownJump/` |
+| Taqueria La Guadalupana (EN) | `/demo/TaqueriaLaGuadalupana/` | `public/demo/TaqueriaLaGuadalupana/` |
+| Diamond R Coffee Co. (EN) | `/demo/DiamondRCoffeeCo/` | `public/demo/DiamondRCoffeeCo/` |
+| The Lucky Tea Cup (EN) | `/demo/TheLuckyTeaCup/` | `public/demo/TheLuckyTeaCup/` |
 | CR Tire Shop (EN+ES) | `/demo/CRTireShop/` · `/demo/CRTireShop/es/` | `public/demo/CRTireShop/` |
 | ArMando’s Pizzeria (EN) | `/demo/ArMandosPizzeria/` | `public/demo/ArMandosPizzeria/` |
 | Baldy’s American Diner (EN) | `/demo/BaldysAmericanDiner/` | `public/demo/BaldysAmericanDiner/` |
@@ -50,6 +54,11 @@ Hub page: `/demo/` → `public/demo/index.html`
 Live:
 
 - https://texasbullmarketing.com/demo/
+- https://texasbullmarketing.com/demo/SmallTownJump/
+- https://texasbullmarketing.com/demo/SmallTownJump/es/
+- https://texasbullmarketing.com/demo/TaqueriaLaGuadalupana/
+- https://texasbullmarketing.com/demo/DiamondRCoffeeCo/
+- https://texasbullmarketing.com/demo/TheLuckyTeaCup/
 - https://texasbullmarketing.com/demo/CRTireShop/
 - https://texasbullmarketing.com/demo/CRTireShop/es/
 - https://texasbullmarketing.com/demo/ArMandosPizzeria/
