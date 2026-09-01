@@ -6,7 +6,7 @@
   <meta name="robots" content="noindex, nofollow" />
   <title>El Rodeo Mexican Restaurant | Nixon, TX</title>
   <meta name="description" content="El Rodeo at 109 E Central Ave, Nixon, TX. Fajitas, tacos by the pound, menudo, micheladas. Call (830) 582-2150." />
-  <meta name="theme-color" content="#b4332a" />
+  <meta name="theme-color" content="#421d25" />
   <link rel="canonical" href="https://texasbullmarketing.com/demo/ElRodeo/" />
   <meta property="og:title" content="El Rodeo | Nixon, TX" />
   <meta property="og:image" content="images/michelada.jpg" />
@@ -23,6 +23,8 @@
     "@type": "Restaurant",
     "name": "El Rodeo Mexican Restaurant",
     "telephone": "+18305822150",
+    "logo": "https://texasbullmarketing.com/demo/ElRodeo/images/logo.png",
+    "image": "https://texasbullmarketing.com/demo/ElRodeo/images/michelada.jpg",
     "servesCuisine": "Mexican",
     "address": {
       "@type": "PostalAddress",
@@ -40,26 +42,33 @@
   <a class="skip" href="#plates">Skip to plates</a>
   <header class="nav">
 <div class="brand-wrap">
-          <button type="button" class="theme-btn mark" id="themeToggle" aria-haspopup="true" aria-expanded="false" aria-controls="themeMenu" aria-label="Try a logo color">
-            EL <span>RODEO</span>
+          <button type="button" class="theme-btn" id="themeToggle" aria-haspopup="true" aria-expanded="false" aria-controls="themeMenu" aria-label="Try a logo color">
+            <img class="nav__logo js-swap-logo" src="images/logo.png?v=3" width="887" height="1040" alt="El Rodeo Mexican Restaurant" />
           </button>
           <div class="theme-menu" id="themeMenu" hidden role="menu" aria-label="Accent color">
-            <p class="theme-menu__hint">Try a color</p>
+            <p class="theme-menu__hint">
+              <span>Try a color</span>
+              <button type="button" class="logo-ver" id="logoVerBtn" aria-pressed="false" aria-label="Switch to v2 logo">v2</button>
+            </p>
             <button type="button" role="menuitemradio" data-accent="original" aria-checked="true"><span class="swatch swatch--original" aria-hidden="true"></span> Original</button>
             <button type="button" role="menuitemradio" data-accent="red" aria-checked="false"><span class="swatch swatch--red" aria-hidden="true"></span> Race car red</button>
             <button type="button" role="menuitemradio" data-accent="green" aria-checked="false"><span class="swatch swatch--green" aria-hidden="true"></span> Flame green</button>
             <button type="button" role="menuitemradio" data-accent="cobalt" aria-checked="false"><span class="swatch swatch--cobalt" aria-hidden="true"></span> Cobalt blue</button>
-            <button type="button" role="menuitemradio" data-accent="yellow" aria-checked="false"><span class="swatch swatch--yellow" aria-hidden="true"></span> Juicy Fruit yellow</button>
+            <button type="button" role="menuitemradio" data-accent="yellow" aria-checked="false"><span class="swatch swatch--yellow" aria-hidden="true"></span> Chile red</button>
             <button type="button" role="menuitemradio" data-accent="orange" aria-checked="false"><span class="swatch swatch--orange" aria-hidden="true"></span> Hemi orange</button>
             <label class="theme-custom">
               <span class="swatch" id="customSwatch" aria-hidden="true"></span>
               Custom
               <span class="theme-custom__code" id="customHex"></span>
-              <input type="color" id="themeColor" value="#b4332a" />
+              <input type="color" id="themeColor" value="#421d25" />
             </label>
           </div>
           
         </div>
+    <div class="nav__meta">
+      <p class="nav__offer">Drive-thru · Takeout · Dine-in</p>
+      <p class="nav__city">109 E Central Ave, Nixon, TX 78140</p>
+    </div>
     <nav id="navLinks">
       <a href="#plates">Plates</a>
       <a href="#menu">Menu</a>
@@ -73,7 +82,7 @@
     <img src="images/michelada.jpg" alt="Michelada with shrimp and cucumber in front of the yellow Texas El Rodeo sign" />
     <div class="hero__copy">
       <p>MEXICAN RESTAURANT · NIXON</p>
-      <h1>The yellow Texas on the red wall.</h1>
+      <h1>Fajitas, tacos by the pound, breakfast all day.</h1>
       <p class="lead">109 E Central Ave. Papel picado inside, meats by the pound. The phone is painted on the building.</p>
       <p class="hero__btns">
         <a class="btn" href="tel:+18305822150">Call (830) 582-2150</a>
@@ -139,7 +148,10 @@
     </div>
   </section>
   <iframe class="map" title="Map of El Rodeo at 109 E Central Ave, Nixon, TX" src="https://maps.google.com/maps?q=109%20E%20Central%20Ave%2C%20Nixon%2C%20TX%2078140&amp;z=17&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  <footer>El Rodeo Mexican Restaurant · Nixon, TX · <a href="tel:+18305822150">(830) 582-2150</a></footer>
+  <footer>
+    <img class="footer__logo js-swap-logo" src="images/logo.png?v=3" width="887" height="1040" alt="El Rodeo Mexican Restaurant" />
+    <p>El Rodeo Mexican Restaurant · Nixon, TX · <a href="tel:+18305822150">(830) 582-2150</a></p>
+  </footer>
   <script src="script.js"></script>
 </body>
 </html>

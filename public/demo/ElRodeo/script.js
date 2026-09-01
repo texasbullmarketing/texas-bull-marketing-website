@@ -31,7 +31,7 @@
   var STORAGE_KEY = 'elrodeo-accent';
   var STORAGE_HEX = 'elrodeo-accent' + "-hex";
   var CUSTOM_VARS = ["--accent", "--accent-2", "--accent-3", "--accent-deep", "--accent-rgb", "--on-accent"];
-  var ACCENTS = { original: '#b4332a', red: "#e10600", green: "#12b85a", cobalt: "#0047ab", yellow: "#e6b800", orange: "#ff5c00", custom: '#b4332a' };
+  var ACCENTS = { original: '#421d25', red: "#e10600", green: "#12b85a", cobalt: "#0047ab", yellow: "#b4332a", orange: "#ff5c00", custom: '#421d25' };
   var ACCENT_KEYS = { original: 1, red: 1, green: 1, cobalt: 1, yellow: 1, orange: 1, custom: 1 };
   function currentAccent() { return document.documentElement.getAttribute("data-accent") || "original"; }
   function clearCustomVars() { CUSTOM_VARS.forEach(function (p) { document.documentElement.style.removeProperty(p); }); }
@@ -50,7 +50,7 @@
     var inp = document.getElementById("themeColor");
     var lab = document.querySelector(".theme-custom");
     var code = document.getElementById("customHex");
-    if (sw) sw.style.background = hex || '#b4332a';
+    if (sw) sw.style.background = hex || '#421d25';
     if (inp && hex) inp.value = hex;
     if (lab) lab.classList.toggle("is-active", !!on);
     if (code) code.textContent = on && hex ? String(hex).toUpperCase() : "";
@@ -91,19 +91,36 @@
       else { localStorage.setItem(STORAGE_KEY, key); localStorage.removeItem(STORAGE_HEX); }
     } catch (e) {}
     var meta = document.querySelector('meta[name="theme-color"]');
-    if (meta) meta.setAttribute("content", ACCENTS[key] || '#b4332a');
+    if (meta) meta.setAttribute("content", ACCENTS[key] || '#421d25');
     document.querySelectorAll("#themeMenu [data-accent]").forEach(function (btn) {
       var on = btn.getAttribute("data-accent") === key;
       btn.classList.toggle("is-active", on);
       btn.setAttribute("aria-checked", on ? "true" : "false");
     });
-    syncCustomUi('#b4332a', false);
+    syncCustomUi('#421d25', false);
+  }
+  var LOGO_KEY = "elrodeo-logo-ver";
+  var LOGOS = { v1: "images/logo.png?v=3", v2: "images/logo-v2.png?v=2" };
+  function currentLogo() {
+    try { return localStorage.getItem(LOGO_KEY) === "v2" ? "v2" : "v1"; } catch (e) { return "v1"; }
+  }
+  function applyLogo(ver) {
+    var key = ver === "v2" ? "v2" : "v1";
+    document.querySelectorAll(".js-swap-logo").forEach(function (img) { img.src = LOGOS[key]; });
+    var btn = document.getElementById("logoVerBtn");
+    if (btn) {
+      btn.classList.toggle("is-active", key === "v2");
+      btn.setAttribute("aria-pressed", key === "v2" ? "true" : "false");
+      btn.setAttribute("aria-label", key === "v2" ? "Switch to original logo" : "Switch to v2 logo");
+    }
+    try { localStorage.setItem(LOGO_KEY, key); } catch (e) {}
   }
   function initThemeMenu() {
     var toggle = document.getElementById("themeToggle");
     var menu = document.getElementById("themeMenu");
     if (!toggle || !menu) return;
     applyAccent(currentAccent());
+    applyLogo(currentLogo());
     toggle.onclick = function (e) {
       e.stopPropagation();
       var open = toggle.getAttribute("aria-expanded") === "true";
@@ -113,6 +130,13 @@
     menu.querySelectorAll("[data-accent]").forEach(function (btn) {
       btn.onclick = function (e) { e.stopPropagation(); applyAccent(btn.getAttribute("data-accent")); };
     });
+    var verBtn = document.getElementById("logoVerBtn");
+    if (verBtn) {
+      verBtn.onclick = function (e) {
+        e.stopPropagation();
+        applyLogo(currentLogo() === "v2" ? "v1" : "v2");
+      };
+    }
     var picker = document.getElementById("themeColor");
     if (picker) {
       picker.onclick = function (e) { e.stopPropagation(); };
