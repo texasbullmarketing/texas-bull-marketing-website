@@ -6,10 +6,18 @@ Allow: /
 Disallow: /demo/
 Disallow: /demo
 
+# TBM Drive pin list — phone app only, never search
+Disallow: /drive-sites.json
+Disallow: /drive-sites.json/
+
 User-agent: Googlebot
 Disallow: /demo/
 Disallow: /demo
+Disallow: /drive-sites.json
+Disallow: /drive-sites.json/
 
 User-agent: Googlebot-Image
 Disallow: /demo/
 Disallow: /demo
+Disallow: /drive-sites.json
+Disallow: /drive-sites.json/

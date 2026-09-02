@@ -1,0 +1,15 @@
+{
+  "id": "el-rodeo",
+  "name": "El Rodeo Mexican Restaurant",
+  "type": "restaurant",
+  "schemaType": "Restaurant",
+  "phone": "+18305822150",
+  "street": "109 E Central Ave",
+  "city": "Nixon",
+  "region": "TX",
+  "zip": "78140",
+  "lat": 29.2675,
+  "lng": -97.7639,
+  "spanish": "optional",
+  "demoUrl": "https://texasbullmarketing.com/demo/ElRodeo/"
+}

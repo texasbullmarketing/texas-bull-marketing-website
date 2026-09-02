@@ -1,0 +1,15 @@
+{
+  "id": "auto-worx",
+  "name": "Auto Worx",
+  "type": "auto-repair",
+  "schemaType": "AutoRepair",
+  "phone": "+18303037775",
+  "street": "960 E Court",
+  "city": "Seguin",
+  "region": "TX",
+  "zip": "78155",
+  "lat": 29.5691299,
+  "lng": -97.9534853,
+  "spanish": "required",
+  "demoUrl": "https://texasbullmarketing.com/demo/AutoWorxV2/"
+}

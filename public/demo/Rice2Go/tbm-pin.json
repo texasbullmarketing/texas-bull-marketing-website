@@ -1,0 +1,15 @@
+{
+  "id": "rice-2-go",
+  "name": "Rice 2 Go",
+  "type": "restaurant",
+  "schemaType": "Restaurant",
+  "phone": "+18303917423",
+  "street": "225 Chihuahua St",
+  "city": "La Vernia",
+  "region": "TX",
+  "zip": "78121",
+  "lat": 29.3533601,
+  "lng": -98.1096695,
+  "spanish": "optional",
+  "demoUrl": "https://texasbullmarketing.com/demo/Rice2Go/"
+}

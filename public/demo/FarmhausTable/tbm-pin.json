@@ -1,0 +1,15 @@
+{
+  "id": "farmhaus-table",
+  "name": "Farmhaus Table",
+  "type": "restaurant",
+  "schemaType": "Restaurant",
+  "phone": "+12107750020",
+  "street": "2239 FM 3432",
+  "city": "Adkins",
+  "region": "TX",
+  "zip": "78101",
+  "lat": 29.3105642,
+  "lng": -98.2074925,
+  "spanish": "optional",
+  "demoUrl": "https://texasbullmarketing.com/demo/FarmhausTable/"
+}

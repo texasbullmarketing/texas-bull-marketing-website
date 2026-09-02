@@ -33,6 +33,24 @@ const nextConfig = {
         source: '/card.html',
         headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }],
       },
+      {
+        source: '/drive-sites.json',
+        headers: [
+          { key: 'Access-Control-Allow-Origin', value: '*' },
+          { key: 'Cache-Control', value: 'public, max-age=0, must-revalidate' },
+          { key: 'X-Robots-Tag', value: 'noindex, nofollow, noarchive, nosnippet' },
+          { key: 'Content-Type', value: 'application/json; charset=utf-8' },
+        ],
+      },
+      {
+        source: '/drive-sites.json/',
+        headers: [
+          { key: 'Access-Control-Allow-Origin', value: '*' },
+          { key: 'Cache-Control', value: 'public, max-age=0, must-revalidate' },
+          { key: 'X-Robots-Tag', value: 'noindex, nofollow, noarchive, nosnippet' },
+          { key: 'Content-Type', value: 'application/json; charset=utf-8' },
+        ],
+      },
     ]
   },
   // Old short slugs → full company-name URLs (shared links still work).

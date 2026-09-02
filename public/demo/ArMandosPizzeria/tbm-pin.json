@@ -1,0 +1,15 @@
+{
+  "id": "armandos-pizzeria",
+  "name": "ArMando's Pizzeria",
+  "type": "restaurant",
+  "schemaType": "Restaurant",
+  "phone": "+18305817023",
+  "street": "13250 U.S. Highway 87 West, Suite A",
+  "city": "La Vernia",
+  "region": "TX",
+  "zip": "78121",
+  "lat": 29.3560654,
+  "lng": -98.1167879,
+  "spanish": "optional",
+  "demoUrl": "https://texasbullmarketing.com/demo/ArMandosPizzeria/"
+}

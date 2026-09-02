@@ -1,0 +1,15 @@
+{
+  "id": "blackdoor",
+  "name": "The Blackdoor Steakhouse",
+  "type": "restaurant-high",
+  "schemaType": "Restaurant",
+  "phone": "+18304915556",
+  "street": "104 N Austin St",
+  "city": "Seguin",
+  "region": "TX",
+  "zip": "78155",
+  "lat": 29.5690593,
+  "lng": -97.9647247,
+  "spanish": "optional",
+  "demoUrl": "https://texasbullmarketing.com/demo/TheBlackdoorSteakhouse/"
+}

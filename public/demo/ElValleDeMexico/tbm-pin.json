@@ -1,0 +1,15 @@
+{
+  "id": "el-valle",
+  "name": "El Valle De Mexico",
+  "type": "restaurant",
+  "schemaType": "Restaurant",
+  "phone": "+12107263070",
+  "street": "10081 TX-106 Loop",
+  "city": "San Antonio",
+  "region": "TX",
+  "zip": "78263",
+  "lat": 29.3743866,
+  "lng": -98.2890644,
+  "spanish": "optional",
+  "demoUrl": "https://texasbullmarketing.com/demo/ElValleDeMexico/"
+}

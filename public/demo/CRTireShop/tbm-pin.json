@@ -1,0 +1,15 @@
+{
+  "id": "cr-tire-shop",
+  "name": "CR Tire Shop",
+  "type": "auto-repair",
+  "schemaType": "AutoRepair",
+  "phone": "+18307425353",
+  "street": "211 W Central Ave",
+  "city": "Nixon",
+  "region": "TX",
+  "zip": "78140",
+  "lat": 29.2667991,
+  "lng": -97.7665535,
+  "spanish": "required",
+  "demoUrl": "https://texasbullmarketing.com/demo/CRTireShop/"
+}

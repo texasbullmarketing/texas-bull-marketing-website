@@ -1,0 +1,15 @@
+{
+  "id": "la-enchiladita",
+  "name": "La Enchiladita",
+  "type": "restaurant",
+  "schemaType": "Restaurant",
+  "phone": "+18305821147",
+  "street": "105 W 2nd St",
+  "city": "Nixon",
+  "region": "TX",
+  "zip": "78140",
+  "lat": 29.2682299,
+  "lng": -97.7650253,
+  "spanish": "optional",
+  "demoUrl": "https://texasbullmarketing.com/demo/LaEnchiladita/"
+}

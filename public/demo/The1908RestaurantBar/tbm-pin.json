@@ -1,0 +1,15 @@
+{
+  "id": "the-1908",
+  "name": "The 1908 Restaurant + Bar",
+  "type": "restaurant-high",
+  "schemaType": "Restaurant",
+  "phone": "+18308326726",
+  "street": "100 E Court St",
+  "city": "Seguin",
+  "region": "TX",
+  "zip": "78155",
+  "lat": 29.569,
+  "lng": -97.964484,
+  "spanish": "optional",
+  "demoUrl": "https://texasbullmarketing.com/demo/The1908RestaurantBar/"
+}

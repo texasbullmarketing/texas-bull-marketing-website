@@ -1,0 +1,15 @@
+{
+  "id": "diamond-r-coffee",
+  "name": "Diamond R Coffee Co.",
+  "type": "restaurant",
+  "schemaType": "CafeOrCoffeeShop",
+  "phone": "+18302030531",
+  "street": "804 Texas 80",
+  "city": "Nixon",
+  "region": "TX",
+  "zip": "78140",
+  "lat": 29.2826937,
+  "lng": -97.7652326,
+  "spanish": "optional",
+  "demoUrl": "https://texasbullmarketing.com/demo/DiamondRCoffeeCo/"
+}

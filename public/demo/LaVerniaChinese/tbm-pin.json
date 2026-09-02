@@ -1,0 +1,15 @@
+{
+  "id": "la-vernia-chinese",
+  "name": "La Vernia Chinese Cuisine",
+  "type": "restaurant",
+  "schemaType": "Restaurant",
+  "phone": "+18307794800",
+  "street": "11727 U.S. Hwy 87 W",
+  "city": "La Vernia",
+  "region": "TX",
+  "zip": "78121",
+  "lat": 29.3387328,
+  "lng": -98.1020781,
+  "spanish": "optional",
+  "demoUrl": "https://texasbullmarketing.com/demo/LaVerniaChinese/"
+}

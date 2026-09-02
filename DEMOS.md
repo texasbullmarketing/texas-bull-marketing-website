@@ -47,6 +47,16 @@ Live demo sites for leads. Served as static folders under `public/demo/`.
 | V2TBM (TBM redesign sandbox) | `/demo/v2tbm/` | `public/demo/v2tbm/` |
 | V3TBM (CRO landing sandbox, EN+ES) | `/demo/v3tbm/` | `public/demo/v3tbm/` |
 
+## TBM Drive pin list
+
+Storefront demos only (a street you can drive to and pitch in person). Service-area businesses are not pinned.
+
+- Live URL the phone app fetches: `https://texasbullmarketing.com/drive-sites.json`
+- Source: `public/demo/<Folder>/tbm-pin.json` on each storefront demo
+- Rebuild after add/delete: `python scripts/collect-drive-sites.py` → writes `public/drive-sites.json`
+- On the phone: TBM Drive → gear → **Update sites** (does not auto-sync)
+- Customer yes/no or demo pulled down: delete that `tbm-pin.json`, collect, deploy. Same URL.
+
 Hub page: `/demo/` → `public/demo/index.html`
 
 **Hub layout:** 3×6 grid (18 newest demos on page 1). Older demos move to page 2+. Search filters the full set (no page limit while typing). Sort is newest-first via `data-order`.
@@ -145,7 +155,8 @@ Covers: restaurants/food = EN only; every other business = EN + Spanish URL + HT
    - Card title = full company name (not an abbreviation)
    - No town name needed on the card; tag `EN + ES` in category when bilingual
    - Set `data-order` higher than existing cards so it lands on page 1 (newest first; page size 18)
-6. Commit and push — no Next.js code changes needed for a new folder.
+6. Storefront (street you can drive to): add `tbm-pin.json` in the demo folder, then run `python scripts/collect-drive-sites.py`. Service-area only: skip the pin.
+7. Commit and push — no Next.js code changes needed for a new folder.
    - Clean URLs already work via `next.config.mjs`:
      - `/demo/your-slug` → redirects to `/demo/your-slug/`
      - `/demo/your-slug/` → serves `index.html`

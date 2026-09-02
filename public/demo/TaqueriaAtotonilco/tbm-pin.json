@@ -1,0 +1,15 @@
+{
+  "id": "taqueria-atotonilco",
+  "name": "Taqueria Atotonilco",
+  "type": "restaurant",
+  "schemaType": "Restaurant",
+  "phone": "+18304334668",
+  "street": "744 W Kingsbury St",
+  "city": "Seguin",
+  "region": "TX",
+  "zip": "78155",
+  "lat": 29.5807372,
+  "lng": -97.9747445,
+  "spanish": "optional",
+  "demoUrl": "https://texasbullmarketing.com/demo/TaqueriaAtotonilco/"
+}

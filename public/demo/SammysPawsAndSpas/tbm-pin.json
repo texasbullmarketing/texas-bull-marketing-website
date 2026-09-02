@@ -1,0 +1,15 @@
+{
+  "id": "sammys-paws",
+  "name": "Sammy's Paws and Spas",
+  "type": "spa",
+  "schemaType": "LocalBusiness",
+  "phone": "+12108857802",
+  "street": "120 Wild Stallion Dr",
+  "city": "La Vernia",
+  "region": "TX",
+  "zip": "78121",
+  "lat": 29.2932512,
+  "lng": -98.1196304,
+  "spanish": "optional",
+  "demoUrl": "https://texasbullmarketing.com/demo/SammysPawsAndSpas/"
+}

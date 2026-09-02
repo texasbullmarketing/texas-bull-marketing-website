@@ -1,0 +1,15 @@
+{
+  "id": "casas-metal",
+  "name": "Casas Custom Metal Buildings",
+  "type": "signs-other",
+  "schemaType": "HomeAndConstructionBusiness",
+  "phone": "+12108356561",
+  "street": "260 Great Oaks Blvd",
+  "city": "La Vernia",
+  "region": "TX",
+  "zip": "78121",
+  "lat": 29.3486934,
+  "lng": -98.033859,
+  "spanish": "required",
+  "demoUrl": "https://texasbullmarketing.com/demo/CasasMetal/"
+}

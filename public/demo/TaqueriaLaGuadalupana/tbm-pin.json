@@ -1,0 +1,15 @@
+{
+  "id": "taqueria-la-guadalupana",
+  "name": "Taqueria La Guadalupana",
+  "type": "restaurant",
+  "schemaType": "Restaurant",
+  "phone": "+18305822371",
+  "street": "1000 E Central Ave",
+  "city": "Nixon",
+  "region": "TX",
+  "zip": "78140",
+  "lat": 29.2701792,
+  "lng": -97.7546537,
+  "spanish": "optional",
+  "demoUrl": "https://texasbullmarketing.com/demo/TaqueriaLaGuadalupana/"
+}

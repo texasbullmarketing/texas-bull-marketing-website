@@ -1,0 +1,15 @@
+{
+  "id": "lucky-tea-cup",
+  "name": "The Lucky Tea Cup",
+  "type": "restaurant",
+  "schemaType": "Restaurant",
+  "phone": "+17138344943",
+  "street": "219 N Nixon Ave",
+  "city": "Nixon",
+  "region": "TX",
+  "zip": "78140",
+  "lat": 29.2690502,
+  "lng": -97.7649295,
+  "spanish": "optional",
+  "demoUrl": "https://texasbullmarketing.com/demo/TheLuckyTeaCup/"
+}

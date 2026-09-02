@@ -1,0 +1,15 @@
+{
+  "id": "js-auto",
+  "name": "J's Auto Shop",
+  "type": "auto-repair",
+  "schemaType": "AutoRepair",
+  "phone": "+12107449275",
+  "street": "9154 Aqua Dr",
+  "city": "Boerne",
+  "region": "TX",
+  "zip": "78006",
+  "lat": 29.7946641,
+  "lng": -98.7319703,
+  "spanish": "required",
+  "demoUrl": "https://texasbullmarketing.com/demo/JSAutoShop/"
+}

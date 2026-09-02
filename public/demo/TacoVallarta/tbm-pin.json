@@ -1,0 +1,15 @@
+{
+  "id": "taco-vallarta",
+  "name": "Taco Vallarta",
+  "type": "restaurant",
+  "schemaType": "Restaurant",
+  "phone": "+18305817013",
+  "street": "14021 U.S. Hwy 87 W",
+  "city": "La Vernia",
+  "region": "TX",
+  "zip": "78121",
+  "lat": 29.3568676,
+  "lng": -98.1293289,
+  "spanish": "optional",
+  "demoUrl": "https://texasbullmarketing.com/demo/TacoVallarta/"
+}

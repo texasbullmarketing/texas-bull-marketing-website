@@ -1,0 +1,15 @@
+{
+  "id": "texas-bistro",
+  "name": "Texas Bistro",
+  "type": "restaurant",
+  "schemaType": "Restaurant",
+  "phone": "+18303027538",
+  "street": "1932 S Seguin Ave",
+  "city": "New Braunfels",
+  "region": "TX",
+  "zip": "78130",
+  "lat": 29.6877844,
+  "lng": -98.1083084,
+  "spanish": "optional",
+  "demoUrl": "https://texasbullmarketing.com/demo/TexasBistro/"
+}

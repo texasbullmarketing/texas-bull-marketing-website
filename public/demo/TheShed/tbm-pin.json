@@ -1,0 +1,15 @@
+{
+  "id": "the-shed",
+  "name": "The Shed",
+  "type": "restaurant",
+  "schemaType": "CafeOrCoffeeShop",
+  "phone": "+12109990160",
+  "street": "102 San Antonio Rd",
+  "city": "La Vernia",
+  "region": "TX",
+  "zip": "78121",
+  "lat": 29.3556161,
+  "lng": -98.1190665,
+  "spanish": "optional",
+  "demoUrl": "https://texasbullmarketing.com/demo/TheShed/"
+}

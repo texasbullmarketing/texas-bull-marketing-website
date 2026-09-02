@@ -1,0 +1,15 @@
+{
+  "id": "michoacana",
+  "name": "Michoacana Premium",
+  "type": "restaurant",
+  "schemaType": "IceCreamShop",
+  "phone": "+18303595555",
+  "street": "1447 E Court St",
+  "city": "Seguin",
+  "region": "TX",
+  "zip": "78155",
+  "lat": 29.569173,
+  "lng": -97.9485162,
+  "spanish": "optional",
+  "demoUrl": "https://texasbullmarketing.com/demo/MichoacanaPremium/"
+}

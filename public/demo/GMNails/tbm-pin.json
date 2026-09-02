@@ -1,0 +1,15 @@
+{
+  "id": "gm-nails",
+  "name": "GM Nails and Spa",
+  "type": "spa",
+  "schemaType": "HealthAndBeautyBusiness",
+  "phone": "+18304993394",
+  "street": "2543 FM 775",
+  "city": "La Vernia",
+  "region": "TX",
+  "zip": "78121",
+  "lat": 29.3502102,
+  "lng": -98.127536,
+  "spanish": "optional",
+  "demoUrl": "https://texasbullmarketing.com/demo/GMNails/"
+}

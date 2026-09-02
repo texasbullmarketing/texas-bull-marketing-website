@@ -1,0 +1,15 @@
+{
+  "id": "baldys-diner",
+  "name": "Baldy's American Diner",
+  "type": "restaurant",
+  "schemaType": "Restaurant",
+  "phone": "+18309473580",
+  "street": "9356 US Hwy 87 W",
+  "city": "La Vernia",
+  "region": "TX",
+  "zip": "78121",
+  "lat": 29.308346,
+  "lng": -98.08377,
+  "spanish": "optional",
+  "demoUrl": "https://texasbullmarketing.com/demo/BaldysAmericanDiner/"
+}

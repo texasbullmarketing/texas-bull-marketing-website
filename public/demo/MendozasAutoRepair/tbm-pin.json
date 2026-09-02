@@ -1,0 +1,15 @@
+{
+  "id": "mendozas-auto",
+  "name": "Mendoza's Auto Repair",
+  "type": "auto-repair",
+  "schemaType": "AutoRepair",
+  "phone": "+18305342025",
+  "street": "571 W. Kingsbury",
+  "city": "Seguin",
+  "region": "TX",
+  "zip": "78155",
+  "lat": 29.5803716,
+  "lng": -97.9722272,
+  "spanish": "required",
+  "demoUrl": "https://texasbullmarketing.com/demo/MendozasAutoRepair/"
+}
