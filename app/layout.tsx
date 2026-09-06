@@ -3,9 +3,9 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Texas Bull Marketing | Websites, SEO & Google Business Profiles',
+  title: 'Texas Bull Marketing | Custom Websites + Google for Local Businesses',
   description:
-    'Texas Bull Marketing builds optimized websites and provides Google Business Profile setup, optimization, and management for local businesses across Texas and beyond.',
+    'Standard site $700 or Premium $900. Or start monthly with the site + Google: $150 setup then $150/mo Standard or $250/mo Premium. Texas-built websites for local owners nationwide.',
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: 'any' },

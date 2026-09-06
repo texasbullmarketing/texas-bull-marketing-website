@@ -6,6 +6,7 @@ Live demo sites for leads. Served as static folders under `public/demo/`.
 
 | Company | URL | Folder |
 |---------|-----|--------|
+| V1TBM (previous live homepage) | `/demo/v1tbm/` | `public/demo/v1tbm/` |
 | Small Town Jump (EN+ES) | `/demo/SmallTownJump/` · `/demo/SmallTownJump/es/` | `public/demo/SmallTownJump/` |
 | Taqueria La Guadalupana (EN) | `/demo/TaqueriaLaGuadalupana/` | `public/demo/TaqueriaLaGuadalupana/` |
 | Diamond R Coffee Co. (EN) | `/demo/DiamondRCoffeeCo/` | `public/demo/DiamondRCoffeeCo/` |
@@ -44,7 +45,7 @@ Live demo sites for leads. Served as static folders under `public/demo/`.
 | The Blackdoor Steakhouse (EN+ES) | `/demo/TheBlackdoorSteakhouse/` · `/demo/TheBlackdoorSteakhouse/es/` | `public/demo/TheBlackdoorSteakhouse/` |
 | Wave Finders Electronics (EN+ES) | `/demo/WaveFindersElectronics/` · `/demo/WaveFindersElectronics/es/` | `public/demo/WaveFindersElectronics/` |
 | Wageners Well Service (EN+ES) | `/demo/WegenersWellService/` · `/demo/WegenersWellService/es/` | `public/demo/WegenersWellService/` |
-| V2TBM (TBM redesign sandbox) | `/demo/v2tbm/` | `public/demo/v2tbm/` |
+| V2TBM (TBM redesign sandbox; live homepage is now this design) | `/demo/v2tbm/` | `public/demo/v2tbm/` |
 | V3TBM (CRO landing sandbox, EN+ES) | `/demo/v3tbm/` | `public/demo/v3tbm/` |
 
 ## TBM Drive pin list
@@ -63,6 +64,7 @@ Hub page: `/demo/` → `public/demo/index.html`
 
 Live:
 
+- https://texasbullmarketing.com/demo/v1tbm/
 - https://texasbullmarketing.com/demo/
 - https://texasbullmarketing.com/demo/SmallTownJump/
 - https://texasbullmarketing.com/demo/SmallTownJump/es/

@@ -106,6 +106,14 @@ const nextConfig = {
           destination: '/index.html',
         },
         {
+          source: '/es',
+          destination: '/es/index.html',
+        },
+        {
+          source: '/es/',
+          destination: '/es/index.html',
+        },
+        {
           source: '/billing',
           destination: '/billing.html',
         },

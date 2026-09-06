@@ -5,12 +5,16 @@ import type { NextRequest } from 'next/server'
 // even when app/page.tsx exists. beforeFiles rewrites alone can be
 // inconsistent across Next versions; middleware makes it reliable.
 export function middleware(request: NextRequest) {
-  if (request.nextUrl.pathname === '/') {
+  const { pathname } = request.nextUrl
+  if (pathname === '/') {
     return NextResponse.rewrite(new URL('/index.html', request.url))
+  }
+  if (pathname === '/es' || pathname === '/es/') {
+    return NextResponse.rewrite(new URL('/es/index.html', request.url))
   }
   return NextResponse.next()
 }
 
 export const config = {
-  matcher: '/',
+  matcher: ['/', '/es', '/es/'],
 }

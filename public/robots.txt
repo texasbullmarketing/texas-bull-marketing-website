@@ -1,6 +1,9 @@
 # Texas Bull Marketing
+Sitemap: https://texasbullmarketing.com/sitemap.xml
+
 User-agent: *
 Allow: /
+Allow: /es/
 
 # Client demos — never index hub or any demo under /demo/
 Disallow: /demo/
