@@ -390,6 +390,21 @@
     "spanish": "optional"
   },
   {
+    "id": "victorias-ink-room",
+    "name": "Victoria\u2019s Ink Room",
+    "type": "signs-other",
+    "schemaType": "TattooParlor",
+    "phone": "+18303183153",
+    "street": "1107 N Austin St",
+    "city": "Seguin",
+    "region": "TX",
+    "zip": "78155",
+    "lat": 29.5789122,
+    "lng": -97.96456,
+    "demoUrl": "https://texasbullmarketing.com/demo/VictoriasInkRoom/",
+    "spanish": "required"
+  },
+  {
     "id": "mjl-tire-service",
     "name": "MJL Tire & Service LLC",
     "type": "auto-repair",

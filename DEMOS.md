@@ -7,6 +7,7 @@ Live demo sites for leads. Served as static folders under `public/demo/`.
 | Company | URL | Folder |
 |---------|-----|--------|
 | V1TBM (previous live homepage) | `/demo/v1tbm/` | `public/demo/v1tbm/` |
+| Victoria’s Ink Room (EN+ES) | `/demo/VictoriasInkRoom/` · `/demo/VictoriasInkRoom/es/` | `public/demo/VictoriasInkRoom/` |
 | Full Moon Tattoos (EN+ES) | `/demo/FullMoonTattoos/` · `/demo/FullMoonTattoos/es/` | `public/demo/FullMoonTattoos/` |
 | MJL Tire & Service (EN+ES) | `/demo/MJLTireService/` · `/demo/MJLTireService/es/` | `public/demo/MJLTireService/` |
 | Small Town Jump (EN+ES) | `/demo/SmallTownJump/` · `/demo/SmallTownJump/es/` | `public/demo/SmallTownJump/` |
@@ -68,6 +69,8 @@ Live:
 
 - https://texasbullmarketing.com/demo/v1tbm/
 - https://texasbullmarketing.com/demo/
+- https://texasbullmarketing.com/demo/VictoriasInkRoom/
+- https://texasbullmarketing.com/demo/VictoriasInkRoom/es/
 - https://texasbullmarketing.com/demo/FullMoonTattoos/
 - https://texasbullmarketing.com/demo/FullMoonTattoos/es/
 - https://texasbullmarketing.com/demo/MJLTireService/

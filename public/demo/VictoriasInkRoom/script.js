@@ -1,15 +1,15 @@
 (function () {
-  var KEY = "full-moon-tattoos-accent";
-  var HEX_KEY = "full-moon-tattoos-accent-hex";
+  var KEY = "victorias-ink-room-accent";
+  var HEX_KEY = "victorias-ink-room-accent-hex";
   var CUSTOM_VARS = ["--accent", "--accent-2", "--accent-3", "--accent-deep", "--accent-rgb", "--on-accent", "--gold", "--gold-hot"];
-  var ORIGINAL = "#c9b27a";
+  var ORIGINAL = "#e07a9e";
   var PRESETS = { oxblood: "#8b1e3f", violet: "#5c2e91", teal: "#1a7a72", gold: "#c9a227", olive: "#4a5d2a" };
 
   function hexToRgb(hex) {
     var h = String(hex || "").replace("#", "");
     if (h.length === 3) h = h[0] + h[0] + h[1] + h[1] + h[2] + h[2];
     var n = parseInt(h, 16);
-    if (isNaN(n)) return { r: 201, g: 178, b: 122 };
+    if (isNaN(n)) return { r: 224, g: 122, b: 158 };
     return { r: (n >> 16) & 255, g: (n >> 8) & 255, b: n & 255 };
   }
 
@@ -151,38 +151,40 @@
   }
 
   var alts = {
-    "images/artist.jpg": "Stacie Cervera, owner and artist at Full Moon Tattoos in Floresville",
-    "images/lilies.jpg": "Color realism lilies and orange flowers on an upper arm",
-    "images/elk-forest.jpg": "Black and gray elk and pine forest tattoo down a thigh",
-    "images/butterfly-back.jpg": "Black and gray butterfly and florals across a back",
-    "images/wolf-moon.jpg": "Black and gray wolf howling at a red moon on an upper arm",
-    "images/medusa.jpg": "Black and gray Medusa portrait on a thigh",
-    "images/cherubs.jpg": "Black and gray cherub portraits down an upper arm",
-    "images/hummingbirds.jpg": "Black and gray magnolias and hummingbirds across a back",
-    "images/phoenix.jpg": "Black and gray phoenix with flowers on a thigh",
-    "images/tea-butterflies.jpg": "Color watercolor tea cup and butterflies on a forearm",
-    "images/bird-blueberries.jpg": "Color bird on a blueberry branch on an arm",
-    "images/moose.jpg": "Color moose with mountains and flowers on a thigh",
-    "images/liberty-rose.jpg": "Black and gray Statue of Liberty, flame, and money rose on a forearm",
-    "images/memorial.jpg": "Fine-line memorial tattoo with a cross, dandelion, and butterflies",
-    "images/jason.jpg": "Black and gray hockey-mask horror portrait on a forearm",
-    "images/in-utero.jpg": "Color realism Nirvana In Utero tribute tattoo on a thigh",
-    "../images/artist.jpg": "Stacie Cervera, dueña y artista de Full Moon Tattoos en Floresville",
-    "../images/lilies.jpg": "Lirios y flores naranjas en realismo a color en un brazo",
-    "../images/elk-forest.jpg": "Alce y bosque de pinos en negro y gris en un muslo",
-    "../images/butterfly-back.jpg": "Mariposa y flores en negro y gris en la espalda",
-    "../images/wolf-moon.jpg": "Lobo aullando a una luna roja en negro y gris",
-    "../images/medusa.jpg": "Retrato de Medusa en negro y gris en un muslo",
-    "../images/cherubs.jpg": "Querubines en negro y gris en un brazo",
-    "../images/hummingbirds.jpg": "Magnolias y colibríes en negro y gris en la espalda",
-    "../images/phoenix.jpg": "Fénix con flores en negro y gris en un muslo",
-    "../images/tea-butterflies.jpg": "Taza de té y mariposas en acuarela a color en un antebrazo",
-    "../images/bird-blueberries.jpg": "Pájaro en una rama de arándanos a color",
-    "../images/moose.jpg": "Alce con montañas y flores a color en un muslo",
-    "../images/liberty-rose.jpg": "Estatua de la Libertad, llama y rosa de billete en negro y gris",
-    "../images/memorial.jpg": "Tatuaje memorial de línea fina con cruz, diente de león y mariposas",
-    "../images/jason.jpg": "Retrato de máscara de hockey en negro y gris en un antebrazo",
-    "../images/in-utero.jpg": "Homenaje a color de la portada In Utero de Nirvana en un muslo"
+    "images/nicki.jpg": "Nicki, artist at Victoria’s Ink Room in Seguin",
+    "images/peony.jpg": "Black and gray peony tattoo on a calf, by Nicki",
+    "images/cowboy.jpg": "Black and gray cowboy, desert, moon, and sunflower forearm tattoo by Nicki",
+    "images/mice.jpg": "Fine-line Cinderella mice tattoo on an upper arm, by Nicki",
+    "images/moon-wrist.jpg": "Ornamental crescent moon and star tattoo on a hand, by Nicki",
+    "images/godspeed.jpg": "Floral hand tattoo with Godspeed script, by Nicki",
+    "images/lilies-hip.jpg": "Fine-line lilies along a hip, by Nicki",
+    "images/jesus.jpg": "Black and gray Jesus portrait with a crown of thorns, by Nicki",
+    "images/petra.jpg": "Petra Pokes, artist at Victoria’s Ink Room in Seguin",
+    "images/petra-shoulder.jpg": "Fine-line flowers on a shoulder, by Petra",
+    "images/petra-chest.jpg": "Chrysanthemum tattoo on the chest, by Petra",
+    "images/petra-fear.jpg": "Script Never let your fear decide your fate with florals, by Petra",
+    "images/petra-butterfly.jpg": "Butterfly and flowers on a forearm, by Petra",
+    "images/petra-dates.jpg": "Script names and dates on a forearm, by Petra",
+    "images/petra-moth.jpg": "Luna moth tattoo on the chest, by Petra",
+    "images/petra-door.jpg": "Color storybook door tattoo, by Petra",
+    "images/petra-ghosts.jpg": "Polaroid ghosts and florals, by Petra",
+    "../images/nicki.jpg": "Nicki, artista de Victoria’s Ink Room en Seguin",
+    "../images/peony.jpg": "Peonía en negro y gris en una pantorrilla, de Nicki",
+    "../images/cowboy.jpg": "Vaquero, desierto, luna y girasol en negro y gris, de Nicki",
+    "../images/mice.jpg": "Ratones de Cenicienta en línea fina, de Nicki",
+    "../images/moon-wrist.jpg": "Luna creciente ornamental en una mano, de Nicki",
+    "../images/godspeed.jpg": "Flores en la mano con letra Godspeed, de Nicki",
+    "../images/lilies-hip.jpg": "Lirios en línea fina en la cadera, de Nicki",
+    "../images/jesus.jpg": "Retrato de Jesús con corona de espinas, de Nicki",
+    "../images/petra.jpg": "Petra Pokes, artista de Victoria’s Ink Room en Seguin",
+    "../images/petra-shoulder.jpg": "Flores en línea fina en un hombro, de Petra",
+    "../images/petra-chest.jpg": "Crisantemo en el pecho, de Petra",
+    "../images/petra-fear.jpg": "Letra Never let your fear decide your fate con flores, de Petra",
+    "../images/petra-butterfly.jpg": "Mariposa y flores en un antebrazo, de Petra",
+    "../images/petra-dates.jpg": "Nombres y fechas en un antebrazo, de Petra",
+    "../images/petra-moth.jpg": "Polilla luna en el pecho, de Petra",
+    "../images/petra-door.jpg": "Puerta de cuento a color, de Petra",
+    "../images/petra-ghosts.jpg": "Fantasmas en polaroid con flores, de Petra"
   };
 
   function initArtistCards() {
@@ -279,8 +281,52 @@
     });
   }
 
+  function initBeforeAfter() {
+    document.querySelectorAll("[data-ba]").forEach(function (el) {
+      var grip = el.querySelector(".ba__grip");
+      if (!grip) return;
+
+      function setPos(pct) {
+        pct = Math.max(4, Math.min(96, pct));
+        el.style.setProperty("--pos", pct + "%");
+        grip.setAttribute("aria-valuenow", String(Math.round(pct)));
+      }
+
+      function fromEvent(e) {
+        var rect = el.getBoundingClientRect();
+        var x = (e.clientX || (e.touches && e.touches[0].clientX) || 0) - rect.left;
+        setPos((x / rect.width) * 100);
+      }
+
+      var dragging = false;
+      function start(e) {
+        dragging = true;
+        el.setPointerCapture && e.pointerId != null && el.setPointerCapture(e.pointerId);
+        fromEvent(e);
+        e.preventDefault();
+      }
+      function move(e) {
+        if (!dragging) return;
+        fromEvent(e);
+      }
+      function end() { dragging = false; }
+
+      el.addEventListener("pointerdown", start);
+      window.addEventListener("pointermove", move);
+      window.addEventListener("pointerup", end);
+      window.addEventListener("pointercancel", end);
+
+      grip.addEventListener("keydown", function (e) {
+        var now = parseFloat(el.style.getPropertyValue("--pos")) || 50;
+        if (e.key === "ArrowLeft") { setPos(now - 5); e.preventDefault(); }
+        if (e.key === "ArrowRight") { setPos(now + 5); e.preventDefault(); }
+      });
+    });
+  }
+
   initNav();
   initThemeMenu();
   initArtistCards();
   initLightbox();
+  initBeforeAfter();
 })();
