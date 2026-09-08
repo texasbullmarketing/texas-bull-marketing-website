@@ -7,6 +7,7 @@ Live demo sites for leads. Served as static folders under `public/demo/`.
 | Company | URL | Folder |
 |---------|-----|--------|
 | V1TBM (previous live homepage) | `/demo/v1tbm/` | `public/demo/v1tbm/` |
+| MJL Tire & Service (EN+ES stub) | `/demo/MJLTireService/` · `/demo/MJLTireService/es/` | `public/demo/MJLTireService/` |
 | Small Town Jump (EN+ES) | `/demo/SmallTownJump/` · `/demo/SmallTownJump/es/` | `public/demo/SmallTownJump/` |
 | Taqueria La Guadalupana (EN) | `/demo/TaqueriaLaGuadalupana/` | `public/demo/TaqueriaLaGuadalupana/` |
 | Diamond R Coffee Co. (EN) | `/demo/DiamondRCoffeeCo/` | `public/demo/DiamondRCoffeeCo/` |
@@ -66,6 +67,8 @@ Live:
 
 - https://texasbullmarketing.com/demo/v1tbm/
 - https://texasbullmarketing.com/demo/
+- https://texasbullmarketing.com/demo/MJLTireService/
+- https://texasbullmarketing.com/demo/MJLTireService/es/
 - https://texasbullmarketing.com/demo/SmallTownJump/
 - https://texasbullmarketing.com/demo/SmallTownJump/es/
 - https://texasbullmarketing.com/demo/TaqueriaLaGuadalupana/

@@ -373,5 +373,20 @@
     "lng": -97.9647247,
     "demoUrl": "https://texasbullmarketing.com/demo/TheBlackdoorSteakhouse/",
     "spanish": "optional"
+  },
+  {
+    "id": "mjl-tire-service",
+    "name": "MJL Tire & Service LLC",
+    "type": "auto-repair",
+    "schemaType": "AutoRepair",
+    "phone": "+18304069325",
+    "street": "101 W Main St",
+    "city": "Stockdale",
+    "region": "TX",
+    "zip": "78160",
+    "lat": 29.236543,
+    "lng": -97.9601909,
+    "demoUrl": "https://texasbullmarketing.com/demo/MJLTireService/",
+    "spanish": "pending"
   }
 ]
