@@ -1,0 +1,15 @@
+{
+  "id": "full-moon-tattoos",
+  "name": "Full Moon Tattoos",
+  "type": "signs-other",
+  "schemaType": "TattooParlor",
+  "phone": "+17012138216",
+  "street": "1311 3rd St",
+  "city": "Floresville",
+  "region": "TX",
+  "zip": "78114",
+  "lat": 29.1341573,
+  "lng": -98.1592245,
+  "demoUrl": "https://texasbullmarketing.com/demo/FullMoonTattoos/",
+  "spanish": "required"
+}
