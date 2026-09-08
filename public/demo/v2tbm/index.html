@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Texas Bull Marketing V2 (Demo) | Custom Optimized Websites</title>
-  <meta name="description" content="Demo V2 landing page for Texas Bull Marketing. Sandbox only - main site unchanged." />
+  <title>Texas Bull Marketing V2 (Demo) | Custom Websites + Google Care</title>
+  <meta name="description" content="Standard site $700 or Premium $900. Or start monthly with the site + Google: $150 setup then $150/mo Standard or $250/mo Premium. Texas-built." />
   <meta name="robots" content="noindex, nofollow" />
   <meta name="theme-color" content="#161C2A" />
   <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -91,6 +91,13 @@
     details.faq summary { list-style: none; cursor: pointer; }
     details.faq summary::-webkit-details-marker { display: none; }
     details.faq[open] summary .chev { transform: rotate(180deg); }
+    .cmp-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .cmp-table { width: 100%; min-width: 640px; border-collapse: collapse; }
+    .cmp-table th, .cmp-table td { padding: 0.85rem 1rem; border-bottom: 1px solid #3A4560; text-align: left; vertical-align: top; }
+    .cmp-table th { font-size: 11px; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,.45); }
+    .cmp-table th.rec { color: #C8102E; }
+    .cmp-table td { font-size: 14px; color: rgba(255,255,255,.7); }
+    .cmp-table td.rec { color: rgba(255,255,255,.92); }
     @media (prefers-reduced-motion: reduce){ .reveal{opacity:1;transform:none;} #bullCanvas{display:none;} html{scroll-behavior:auto;} }
   </style>
 </head>
@@ -111,7 +118,8 @@
 
     <div class="hidden items-center gap-7 lg:flex">
       <a href="#process" class="nav-link text-sm font-600 text-white/70 transition hover:text-white" data-nav>Process</a>
-      <a href="#pricing" class="nav-link text-sm font-600 text-white/70 transition hover:text-white" data-nav>Services &amp; Pricing</a>
+      <a href="#services" class="nav-link text-sm font-600 text-white/70 transition hover:text-white" data-nav>Services</a>
+      <a href="#pricing" class="nav-link text-sm font-600 text-white/70 transition hover:text-white" data-nav>Pricing</a>
       <a href="#roi" class="nav-link text-sm font-600 text-white/70 transition hover:text-white" data-nav>ROI</a>
     </div>
 
@@ -137,7 +145,8 @@
         <a href="es/" data-lang-href="es/" hreflang="es" lang="es">ES</a>
       </div>
       <a href="#process" onclick="toggleMobile()" class="text-white/80 hover:text-bullred">Process</a>
-      <a href="#pricing" onclick="toggleMobile()" class="text-white/80 hover:text-bullred">Services &amp; Pricing</a>
+      <a href="#services" onclick="toggleMobile()" class="text-white/80 hover:text-bullred">Services</a>
+      <a href="#pricing" onclick="toggleMobile()" class="text-white/80 hover:text-bullred">Pricing</a>
       <a href="#roi" onclick="toggleMobile()" class="text-white/80 hover:text-bullred">ROI</a>
       <button type="button" onclick="toggleMobile();bookCall()" class="mt-2 rounded-full bg-bullred px-5 py-3 font-700">Claim Free Demo</button>
     </div>
@@ -157,13 +166,10 @@
         Make Your Business <span class="text-bullred">The One Locals Call.</span>
       </h1>
       <p class="mt-6 max-w-xl text-lg leading-relaxed text-white/70">
-        We build <span class="font-700 text-white">optimized websites</span> - in <span class="font-700 text-white">English</span>, or <span class="font-700 text-white">English + Spanish</span> when your market needs both - and handle <span class="font-700 text-white">Google Business Profile</span> setup and management so customers find you first and choose you with confidence.
+        We build <span class="font-700 text-white">fast, lightweight websites</span>. Buy the site for <span class="font-700 text-white">$700</span> Standard or <span class="font-700 text-white">$900</span> Premium, or start at <span class="font-700 text-white">$150</span> with the website and Google Business Profile in the monthly.
       </p>
       <div class="mt-5 flex flex-wrap items-center gap-2">
-        <span class="inline-flex items-center gap-1.5 rounded-full border border-[#3A4560] bg-bullcard px-3 py-1 text-xs font-800 tracking-wide text-white/90">
-          <span class="text-white">EN</span><span class="text-white/30">|</span><span class="text-bullred">ES</span>
-        </span>
-        <span class="text-sm text-white/50">Real bilingual sites for cities where both languages matter</span>
+        <span class="text-sm text-white/50">Real-text menus — no slow PDFs.</span>
       </div>
       <div class="mt-8 flex flex-col gap-3 sm:flex-row">
         <button type="button" onclick="bookCall()" class="group rounded-full bg-bullred px-8 py-4 text-base font-800 transition hover:bg-red-600">
@@ -171,7 +177,7 @@
           <span class="ml-1 inline-block transition group-hover:translate-x-1">-&gt;</span>
         </button>
         <a href="#pricing" class="rounded-full border border-[#3A4560] px-8 py-4 text-center text-base font-700 text-white transition hover:border-bullred hover:bg-bullcard">
-          Explore Our Services
+          See Plans
         </a>
       </div>
       <div class="mt-8 flex items-center gap-4 text-sm text-white/50">
@@ -196,7 +202,7 @@
     <div class="reveal mx-auto max-w-2xl text-center">
       <p class="text-sm font-800 uppercase tracking-[0.28em] text-bullred">How it works</p>
       <h2 class="mt-3 font-display text-4xl font-900 tracking-tight sm:text-5xl text-balance">From free demo to live — simple path</h2>
-      <p class="mt-4 text-white/60">Typical timeline: free demo → 15-min call → live site in about <span class="font-700 text-white">5 business days</span> after you approve (depends on photos and details you send).</p>
+      <p class="mt-4 text-white/60">Typical timeline: free demo → 15-min call → live site in about <span class="font-700 text-white">3 to 5 days</span> once you are happy with the site and pick a domain.</p>
     </div>
 
     <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -207,104 +213,246 @@
       </div>
       <div class="reveal surface-card rounded-xl border p-6">
         <p class="font-display text-3xl font-900 text-bullred">02</p>
-        <h3 class="mt-2 font-display text-lg font-800">Short call — you decide what to buy</h3>
-        <p class="mt-2 text-sm text-white/60">Site only, or site + Google Business Profile. English or bilingual. Clear prices.</p>
+        <h3 class="mt-2 font-display text-lg font-800">Short call — buy the site or go monthly</h3>
+        <p class="mt-2 text-sm text-white/60">Buy Standard ($700) or Premium ($900), or start at $150 setup with the site + Google. Monthly starts when you are ready to go live.</p>
       </div>
       <div class="reveal surface-card rounded-xl border p-6">
         <p class="font-display text-3xl font-900 text-bullred">03</p>
         <h3 class="mt-2 font-display text-lg font-800">We build and launch</h3>
-        <p class="mt-2 text-sm text-white/60">You send logo, photos, hours, and services. We handle structure, mobile, and go-live.</p>
+        <p class="mt-2 text-sm text-white/60">You send logo, photos, hours, and services. We go live once you are happy with the site and pick a domain.</p>
       </div>
       <div class="reveal surface-card rounded-xl border p-6">
         <p class="font-display text-3xl font-900 text-bullred">04</p>
         <h3 class="mt-2 font-display text-lg font-800">You show up where locals look</h3>
-        <p class="mt-2 text-sm text-white/60">Site converts visitors. Optional monthly GBP keeps Maps and your profile accurate.</p>
+        <p class="mt-2 text-sm text-white/60">The site converts visitors. Site + GBP monthly keeps Maps and your profile working.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ SERVICES & PRICING (original checklist + V2 prices) ============ -->
+<!-- ============ SERVICES ============ -->
+<section id="services" class="scroll-mt-24 px-4 pb-24 sm:px-6">
+  <div class="mx-auto max-w-6xl">
+    <div class="reveal mx-auto max-w-2xl text-center">
+      <p class="text-sm font-800 uppercase tracking-[0.28em] text-bullred">What we do</p>
+      <h2 class="mt-3 font-display text-4xl font-900 tracking-tight sm:text-5xl text-balance">The work that makes locals call you</h2>
+      <p class="mt-4 text-white/60">A fast custom site, a Google profile that stays accurate, and pages people can actually read on a phone. Standard, or with the Premium add-on.</p>
+    </div>
+
+    <div class="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <article class="reveal surface-card rounded-xl border p-6">
+        <div class="flex h-11 w-11 items-center justify-center rounded-lg bg-bullred">
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21s-7-4.5-7-10a7 7 0 1114 0c0 5.5-7 10-7 10z"/><circle cx="12" cy="11" r="2.5"/></svg>
+        </div>
+        <h3 class="mt-4 font-display text-xl font-800">Managed Google Business Profile</h3>
+        <p class="mt-2 text-sm leading-relaxed text-white/60">Monthly monitoring, optimization, posts, and review strategy so you show up in Maps and stay competitive. Included on Site + GBP monthly — not as an add-on if you buy the site.</p>
+      </article>
+      <article class="reveal surface-card rounded-xl border p-6">
+        <div class="flex h-11 w-11 items-center justify-center rounded-lg bg-bullred">
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17v-6h13M3 7h18M3 12h4m-4 5h4"/></svg>
+        </div>
+        <h3 class="mt-4 font-display text-xl font-800">Lightweight custom websites</h3>
+        <p class="mt-2 text-sm leading-relaxed text-white/60">Builds that stay light: mobile click-to-call, clear CTAs, and fast global edge hosting.</p>
+      </article>
+      <article class="reveal surface-card rounded-xl border p-6">
+        <div class="flex h-11 w-11 items-center justify-center rounded-lg bg-bullred">
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M10 18a8 8 0 100-16 8 8 0 000 16z"/></svg>
+        </div>
+        <h3 class="mt-4 font-display text-xl font-800">Local search visibility</h3>
+        <p class="mt-2 text-sm leading-relaxed text-white/60">Built to rank for high-intent nearby phrases. Schema, name, address, phone, and services lined up with your Google Business Profile.</p>
+      </article>
+      <article class="reveal surface-card rounded-xl border p-6">
+        <div class="flex h-11 w-11 items-center justify-center rounded-lg bg-bullred">
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h10M4 18h16"/></svg>
+        </div>
+        <h3 class="mt-4 font-display text-xl font-800">Real-text menus &amp; service grids</h3>
+        <p class="mt-2 text-sm leading-relaxed text-white/60">Readable on a phone. Prices and services as real text — not a slow PDF or a photo of a flyer nobody can pinch-zoom.</p>
+      </article>
+      <article class="reveal surface-card rounded-xl border p-6">
+        <div class="flex h-11 w-11 items-center justify-center rounded-lg bg-bullred">
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path stroke-linecap="round" d="M12 3c2.5 3.2 4 6.5 4 9s-1.5 5.8-4 9c-2.5-3.2-4-6.5-4-9s1.5-5.8 4-9z"/><path stroke-linecap="round" d="M3.5 9h17M3.5 15h17"/></svg>
+        </div>
+        <h3 class="mt-4 font-display text-xl font-800">Premium add-on</h3>
+        <p class="mt-2 text-sm leading-relaxed text-white/60">Second-language pages that mirror the main site — not a translated strip. Clean language switch for visitors.</p>
+      </article>
+      <article class="reveal surface-card rounded-xl border p-6">
+        <div class="flex h-11 w-11 items-center justify-center rounded-lg bg-bullred">
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h10M4 17h7"/></svg>
+        </div>
+        <h3 class="mt-4 font-display text-xl font-800">Lite Updates</h3>
+        <p class="mt-2 text-sm leading-relaxed text-white/60">Price changes, new photos, announcement banners. Four per year if you buy the site. One per month on Site + GBP.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRICING — SITE OR SITE + GBP ============ -->
 <section id="pricing" class="scroll-mt-24 bg-bullsurface px-4 py-24 sm:px-6">
   <div class="mx-auto max-w-6xl">
     <div class="reveal mx-auto max-w-2xl text-center">
-      <p class="text-sm font-800 uppercase tracking-[0.28em] text-bullred">What We Offer</p>
-      <h2 class="mt-3 font-display text-4xl font-900 tracking-tight sm:text-5xl text-balance">Professional Digital Presence - Built &amp; Managed</h2>
-      <p class="mt-4 text-white/60">Custom websites for local owners anywhere - English or English + Spanish - plus Google Business Profile work that keeps you visible. Clear starting prices on the site; language fit is scoped to your market on the call.</p>
+      <p class="text-sm font-800 uppercase tracking-[0.28em] text-bullred">Services &amp; Pricing</p>
+      <h2 class="mt-3 font-display text-4xl font-900 tracking-tight sm:text-5xl text-balance">Buy the site. Or start monthly with the site + Google.</h2>
+      <p class="mt-4 text-white/60">Four clear plans. Same Texas-built site. Own it for $700 or $900, or start at $150 setup with the website and Google Business Profile in the monthly.</p>
     </div>
 
-    <div class="mt-14 grid items-stretch gap-6 lg:grid-cols-2">
-      <!-- Custom Optimized Websites -->
+    <div class="mt-14 grid items-stretch gap-6 sm:grid-cols-2">
       <div class="reveal surface-card flex flex-col rounded-xl border p-8">
-        <div class="flex flex-wrap items-center gap-2">
-          <h3 class="font-display text-2xl font-800">Custom Optimized Websites</h3>
-          <span class="inline-flex items-center gap-1 rounded-full border border-[#3A4560] px-2 py-0.5 text-[10px] font-800 tracking-wide text-white/70">
-            EN <span class="text-white/30">·</span> <span class="text-bullred">EN+ES</span>
-          </span>
-        </div>
-        <p class="mt-3 font-display text-4xl font-900 text-white">$700 <span class="text-base font-700 text-white/50">starting at</span></p>
-        <p class="mt-3 text-sm leading-relaxed text-white/60">A polished, high-performance website that represents your brand and converts browsers into customers - English, or English + Spanish for bilingual markets.</p>
+        <p class="text-xs font-800 uppercase tracking-[0.2em] text-white/45">One time</p>
+        <h3 class="mt-2 font-display text-2xl font-800">Standard site</h3>
+        <p class="mt-3 font-display text-4xl font-900 text-white">$700 <span class="text-base font-700 text-white/50">one time</span></p>
+        <p class="mt-3 text-sm leading-relaxed text-white/60">Site that turns visitors into calls. Domain, 1 year hosting, 4 Lite Updates. You own it.</p>
         <ul class="mt-6 flex-1 space-y-3 text-sm text-white/70">
           <li>✓ Custom website engineered to convert</li>
-          <li>✓ English or full English + Spanish options</li>
-          <li>✓ Speed and mobile click-to-call optimization</li>
-          <li>✓ Essential pages structured for local search</li>
-          <li>✓ Custom domain and integration included</li>
-          <li>✓ 1 full year of premium high-speed hosting included</li>
-          <li>✓ Ongoing refinements as your business grows</li>
+          <li>✓ Speed and mobile click-to-call</li>
+          <li>✓ Schema + NAP matched to your Google profile</li>
+          <li>✓ Real-text menus and service grids</li>
+          <li>✓ Custom domain included</li>
+          <li>✓ 1 year hosting</li>
+          <li>✓ 4 Lite Updates this year</li>
         </ul>
-        <p class="mt-5 text-xs leading-relaxed text-white/45">Language setup is matched to your customers on the demo call - we will recommend English-only or bilingual based on your market.</p>
-        <button type="button" onclick="bookCall()" class="mt-6 w-full rounded-full border border-[#3A4560] py-3 font-700 transition hover:border-bullred hover:bg-bullbg">Request Website Details</button>
+        <button type="button" onclick="bookCall()" class="mt-6 w-full rounded-full border border-[#3A4560] py-3 font-700 transition hover:border-bullred hover:bg-bullbg">Request Standard Site</button>
       </div>
 
-      <!-- Google Business / Growth -->
+      <div class="reveal surface-card flex flex-col rounded-xl border p-8">
+        <p class="text-xs font-800 uppercase tracking-[0.2em] text-white/45">One time · Premium add-on</p>
+        <h3 class="mt-2 font-display text-2xl font-800">Premium site</h3>
+        <p class="mt-3 font-display text-4xl font-900 text-white">$900 <span class="text-base font-700 text-white/50">one time</span></p>
+        <p class="mt-3 text-sm leading-relaxed text-white/60">Standard site plus the Premium add-on. Domain, 1 year hosting, 4 Lite Updates. You own it.</p>
+        <ul class="mt-6 flex-1 space-y-3 text-sm text-white/70">
+          <li>✓ Everything in Standard site</li>
+          <li>✓ Premium add-on included</li>
+          <li>✓ Second-language pages + language switch</li>
+          <li>✓ Same phone, hours, and map on both editions</li>
+          <li>✓ Custom domain included</li>
+          <li>✓ 1 year hosting</li>
+          <li>✓ 4 Lite Updates this year</li>
+        </ul>
+        <button type="button" onclick="bookCall()" class="mt-6 w-full rounded-full border border-[#3A4560] py-3 font-700 transition hover:border-bullred hover:bg-bullbg">Request Premium Site</button>
+      </div>
+
       <div class="reveal relative flex flex-col rounded-xl border-2 border-bullred bg-bullcard p-8">
-        <span class="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-bullred px-4 py-1 text-xs font-800 uppercase tracking-widest">Core Focus</span>
-        <h3 class="font-display text-2xl font-800">Google Business Profile</h3>
-        <p class="mt-3 font-display text-4xl font-900 text-white">$100 <span class="text-base font-700 text-white/50">/ month starting at</span></p>
-        <p class="mt-3 text-sm leading-relaxed text-white/70">Setup, optimization, and ongoing management so your business is accurate, visible, and competitive on Google Search and Maps - plus light website maintenance.</p>
+        <span class="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-bullred px-4 py-1 text-xs font-800 uppercase tracking-widest">Site + Google</span>
+        <h3 class="mt-2 font-display text-2xl font-800">Standard site + GBP</h3>
+        <p class="mt-3 font-display text-4xl font-900 text-white">$150 <span class="text-base font-700 text-white/50">setup</span></p>
+        <p class="mt-1 text-sm text-white/70">Then <span class="font-800 text-white">$150/mo</span> when you are happy with the site and ready to go live.</p>
+        <p class="mt-4 text-sm leading-relaxed text-white/70">The website and Google Business Profile are in the monthly. Lease with an option to buy.</p>
         <ul class="mt-6 flex-1 space-y-3 text-sm text-white/80">
-          <li>✓ Profile setup or reclaim &amp; verification support</li>
-          <li>✓ Full optimization (categories, services, attributes, photos)</li>
-          <li>✓ Ongoing management: posts, updates, Q&amp;A</li>
-          <li>✓ Review strategy and reputation guidance</li>
-          <li>✓ Performance reporting you can actually use</li>
-          <li>✓ Secure hosting maintenance</li>
-          <li>✓ Unlimited light website updates (price shifts, seasonal promos)</li>
+          <li>✓ Standard website included</li>
+          <li>✓ Domain + hosting in the monthly</li>
+          <li>✓ Google listing setup / reclaim</li>
+          <li>✓ Hours, photos, posts, Q&amp;A</li>
+          <li>✓ Review asks — never fake reviews</li>
+          <li>✓ Site stays in sync with Google</li>
+          <li>✓ 1 Lite Update every month</li>
+          <li>✓ No blogs. No backlinks.</li>
         </ul>
         <p class="mt-5 rounded-lg border border-bullred/25 bg-bullred/10 px-4 py-3 text-xs leading-relaxed text-white/80">
-          <strong class="font-800 text-white">Scope:</strong> focuses strictly on profile maximization and light site updates. No blogs. No useless backlinks.
+          <strong class="font-800 text-white">$150 to start,</strong> then $150/mo for the live site and monthly Google care. Option to buy after 6 months at 50% off.
         </p>
-        <button type="button" onclick="bookCall()" class="mt-6 w-full rounded-full bg-bullred py-3 font-800 transition hover:bg-red-600">Request Google Business Details</button>
+        <button type="button" onclick="bookCall()" class="mt-6 w-full rounded-full bg-bullred py-3 font-800 transition hover:bg-red-600">Start Standard + GBP</button>
+      </div>
+
+      <div class="reveal relative flex flex-col rounded-xl border-2 border-bullred bg-bullcard p-8">
+        <span class="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-bullred px-4 py-1 text-xs font-800 uppercase tracking-widest">Premium</span>
+        <h3 class="mt-2 font-display text-2xl font-800">Premium site + GBP</h3>
+        <p class="mt-3 font-display text-4xl font-900 text-white">$150 <span class="text-base font-700 text-white/50">setup</span></p>
+        <p class="mt-1 text-sm text-white/70">Then <span class="font-800 text-white">$250/mo</span> when you are happy with the site and ready to go live.</p>
+        <p class="mt-4 text-sm leading-relaxed text-white/70">Premium add-on website included, plus Google and Apple Business Connect. Lease with an option to buy.</p>
+        <ul class="mt-6 flex-1 space-y-3 text-sm text-white/80">
+          <li>✓ Everything in Standard site + GBP</li>
+          <li>✓ Premium add-on website + language switch</li>
+          <li>✓ Apple Business Connect (Apple Maps / Siri)</li>
+          <li>✓ Listings match the Premium website</li>
+          <li>✓ 1 Lite Update every month</li>
+          <li>✓ No blogs. No backlinks.</li>
+        </ul>
+        <p class="mt-5 rounded-lg border border-bullred/25 bg-bullred/10 px-4 py-3 text-xs leading-relaxed text-white/80">
+          <strong class="font-800 text-white">Premium monthly</strong> includes the Premium add-on, Google, and Apple Maps. Option to buy after 6 months at 50% off.
+        </p>
+        <button type="button" onclick="bookCall()" class="mt-6 w-full rounded-full bg-bullred py-3 font-800 transition hover:bg-red-600">Start Premium + GBP</button>
       </div>
     </div>
 
-    <!-- Bilingual capability strip — below pricing cards, above Site + GBP -->
     <div class="reveal mx-auto mt-12 max-w-4xl rounded-xl border border-bullred/30 bg-bullcard/80 p-6 sm:p-8">
       <div class="flex flex-col items-start gap-5 sm:flex-row sm:items-center sm:justify-between">
         <div class="max-w-xl">
           <div class="flex items-center gap-2">
-            <span class="inline-flex items-center gap-1 rounded-md border border-[#3A4560] bg-bullbg px-2.5 py-1 font-display text-xs font-900 tracking-wider">
-              <span class="text-white">EN</span><span class="mx-0.5 text-white/30">|</span><span class="text-bullred">ES</span>
-            </span>
-            <p class="text-xs font-800 uppercase tracking-[0.2em] text-bullred">Language-ready websites</p>
+            <p class="text-xs font-800 uppercase tracking-[0.2em] text-bullred">Premium add-on</p>
           </div>
-          <h3 class="mt-3 font-display text-xl font-800 text-white sm:text-2xl">English. Or English + Spanish.</h3>
+          <h3 class="mt-3 font-display text-xl font-800 text-white sm:text-2xl">Standard. Or add Premium.</h3>
           <p class="mt-2 text-sm leading-relaxed text-white/65">
-            Many large markets have huge Spanish-speaking audiences, yet most small-business sites are English-only. We build dual-language websites to help you win more of your market, featuring full Spanish pages and a clean language switch.
+            Premium is the add-on: a second-language edition of the same site and a clean language switch, so you can cover more of your market without a second build.
           </p>
         </div>
         <ul class="w-full shrink-0 space-y-2 text-sm text-white/75 sm:w-56">
-          <li class="flex gap-2"><span class="text-bullred font-800">✓</span> Full Spanish pages when you need them</li>
-          <li class="flex gap-2"><span class="text-bullred font-800">✓</span> EN | ES switch for visitors</li>
-          <li class="flex gap-2"><span class="text-bullred font-800">✓</span> Built for local search in both languages</li>
+          <li class="flex gap-2"><span class="text-bullred font-800">✓</span> Second-language pages when you need them</li>
+          <li class="flex gap-2"><span class="text-bullred font-800">✓</span> Language switch for visitors</li>
+          <li class="flex gap-2"><span class="text-bullred font-800">✓</span> Same phone, hours, and map on both editions</li>
         </ul>
       </div>
     </div>
 
+    <div class="reveal mx-auto mt-12 max-w-5xl rounded-xl border border-[#3A4560] bg-bullcard p-6 sm:p-8">
+      <h3 class="text-center font-display text-2xl font-800">Buy the site, or lease site + Google monthly</h3>
+      <p class="mx-auto mt-2 max-w-2xl text-center text-sm text-white/60">Two paths. Buy the site and you own it. Site + GBP is a monthly lease with the live website and Google in one plan — with an option to buy.</p>
+      <div class="cmp-wrap mt-8">
+        <table class="cmp-table">
+          <thead>
+            <tr>
+              <th>Compare</th>
+              <th>Standard / Premium site</th>
+              <th class="rec">Site + GBP monthly</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>To start</td>
+              <td>$700 Standard · $900 Premium</td>
+              <td class="rec">$150 setup</td>
+            </tr>
+            <tr>
+              <td>Then</td>
+              <td>You own it. Domain + 1 year hosting.</td>
+              <td class="rec">$150/mo Standard · $250/mo Premium at go-live</td>
+            </tr>
+            <tr>
+              <td>Website</td>
+              <td>Included</td>
+              <td class="rec">Included in the monthly</td>
+            </tr>
+            <tr>
+              <td>Domain</td>
+              <td>Included year 1</td>
+              <td class="rec">Included</td>
+            </tr>
+            <tr>
+              <td>Google every month</td>
+              <td>Not included</td>
+              <td class="rec">Included</td>
+            </tr>
+            <tr>
+              <td>Lite Updates</td>
+              <td>4 per year</td>
+              <td class="rec">1 per month</td>
+            </tr>
+            <tr>
+              <td>You own the site</td>
+              <td>Yes</td>
+              <td class="rec">Lease with option to buy</td>
+            </tr>
+            <tr>
+              <td>Buyout</td>
+              <td>You already own it</td>
+              <td class="rec">50% off after 6 months · full price before</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
     <div class="reveal surface-panel mx-auto mt-12 max-w-3xl rounded-xl border p-8 text-center">
-      <h3 class="font-display text-xl font-800">Site + GBP. English or bilingual. That is our sweet spot.</h3>
-      <p class="mt-2 text-sm leading-relaxed text-white/60">Most clients pair a custom optimized website with professional Google Business Profile management. If your customers search in Spanish too, we build for that from day one. Transparent starting prices, personalized demos, no lock-in games.</p>
+      <h3 class="font-display text-xl font-800">Site + GBP. Standard or Premium. That is our sweet spot.</h3>
+      <p class="mt-2 text-sm leading-relaxed text-white/60">Buy the site and you own it. Or start at $150 setup with the website and Google in the monthly — a lease with an option to buy. Two paths, not a pile of add-ons.</p>
       <div class="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
         <button type="button" onclick="bookCall()" class="rounded-full bg-bullred px-8 py-3 font-800 transition hover:bg-red-600">Book a 15-min Call</button>
         <button type="button" onclick="bookCall()" class="rounded-full border border-[#3A4560] px-8 py-3 font-800 transition hover:border-bullred hover:bg-bullbg">Claim Free Demo</button>
@@ -318,7 +466,7 @@
   <div class="mx-auto max-w-6xl">
     <div class="reveal surface-panel mx-auto max-w-2xl rounded-xl border border-bullred p-8">
       <h3 class="text-center font-display text-2xl font-800">Quick ROI Calculator</h3>
-      <p class="mt-1 text-center text-sm text-white/65">See what a 250% lead lift could mean for you.</p>
+      <p class="mt-1 text-center text-sm text-white/65">See what a 250% lead lift could mean next to $150/mo Standard site + GBP.</p>
       <div class="mt-6 grid gap-4 sm:grid-cols-2 sm:items-end">
         <div>
           <label for="curLeads" class="mb-1 block text-sm font-600 text-white/70">Current leads / month</label>
@@ -332,6 +480,7 @@
       <div id="roiOut" class="mt-6 rounded-xl bg-bullred/10 p-5 text-center">
         <p class="text-sm text-white/60">Projected new revenue / month</p>
         <p class="mt-1 font-display text-4xl font-900 text-bullred">$2,800</p>
+        <p class="mt-2 text-xs text-white/45">Standard site + GBP is $150/mo. If this lift is real, one extra job can cover months of the site and Google care. Results still depend on your market.</p>
       </div>
     </div>
   </div>
@@ -348,17 +497,66 @@
     <div class="reveal mt-10 space-y-3">
       <details class="faq surface-card rounded-xl border px-5 py-4">
         <summary class="flex items-center justify-between gap-3 font-700">
+          What’s the difference between buying the site and Site + GBP?
+          <span class="chev text-white/40 transition">▾</span>
+        </summary>
+        <p class="mt-3 text-sm leading-relaxed text-white/65">Standard is $700. Premium is $900 with the Premium add-on. Both include domain, 1 year hosting, and 4 Lite Updates — you own the site. Site + GBP is the other path: $150 setup, then $150/mo Standard or $250/mo Premium, with the live site and Google in the monthly. Google is not an add-on if you buy the site.</p>
+      </details>
+      <details class="faq surface-card rounded-xl border px-5 py-4">
+        <summary class="flex items-center justify-between gap-3 font-700">
           Is the monthly plan required?
           <span class="chev text-white/40 transition">▾</span>
         </summary>
-        <p class="mt-3 text-sm leading-relaxed text-white/65">No. You can buy the website setup on its own. Most owners add Google Business Profile management because Maps is where local customers look first.</p>
+        <p class="mt-3 text-sm leading-relaxed text-white/65">No. Buying the site or Site + GBP are two separate plans. Pick one path.</p>
+      </details>
+      <details class="faq surface-card rounded-xl border px-5 py-4">
+        <summary class="flex items-center justify-between gap-3 font-700">
+          Is the $150 setup my first month too?
+          <span class="chev text-white/40 transition">▾</span>
+        </summary>
+        <p class="mt-3 text-sm leading-relaxed text-white/65">No. $150 to start. The $150 or $250 monthly begins when you are happy with the site and ready to go live.</p>
+      </details>
+      <details class="faq surface-card rounded-xl border px-5 py-4">
+        <summary class="flex items-center justify-between gap-3 font-700">
+          Do I own the site on the monthly plan?
+          <span class="chev text-white/40 transition">▾</span>
+        </summary>
+        <p class="mt-3 text-sm leading-relaxed text-white/65">Monthly is a lease with an option to buy. After 6 months you can buy the site at 50% off — $350 Standard or $450 Premium. Before 6 months, the buyout is full price.</p>
       </details>
       <details class="faq surface-card rounded-xl border px-5 py-4">
         <summary class="flex items-center justify-between gap-3 font-700">
           Can I cancel monthly care?
           <span class="chev text-white/40 transition">▾</span>
         </summary>
-        <p class="mt-3 text-sm leading-relaxed text-white/65">Yes. No long lock-in games on monthly GBP / light site care. You keep the site you paid to build; hosting after year one is discussed up front so you’re not surprised.</p>
+        <p class="mt-3 text-sm leading-relaxed text-white/65">Yes. You can stop anytime. If you want to keep the site, the buyout is full price before 6 months, and 50% off after 6 months.</p>
+      </details>
+      <details class="faq surface-card rounded-xl border px-5 py-4">
+        <summary class="flex items-center justify-between gap-3 font-700">
+          What is a Lite Update?
+          <span class="chev text-white/40 transition">▾</span>
+        </summary>
+        <p class="mt-3 text-sm leading-relaxed text-white/65">Small site edits: price changes, new photos, announcement banners. Buy the site and you get 4 per year. Site + GBP includes 1 per month.</p>
+      </details>
+      <details class="faq surface-card rounded-xl border px-5 py-4">
+        <summary class="flex items-center justify-between gap-3 font-700">
+          Where is the site hosted?
+          <span class="chev text-white/40 transition">▾</span>
+        </summary>
+        <p class="mt-3 text-sm leading-relaxed text-white/65">On a global edge network we use so sites stay fast and stay up, including in rural Texas with weak cell. Buy the site and the first year of hosting is included. Site + GBP includes hosting in the monthly.</p>
+      </details>
+      <details class="faq surface-card rounded-xl border px-5 py-4">
+        <summary class="flex items-center justify-between gap-3 font-700">
+          Is the domain included?
+          <span class="chev text-white/40 transition">▾</span>
+        </summary>
+        <p class="mt-3 text-sm leading-relaxed text-white/65">Yes. Buy the site and the first year of domain and hosting is included. Site + GBP includes domain and hosting in the monthly.</p>
+      </details>
+      <details class="faq surface-card rounded-xl border px-5 py-4">
+        <summary class="flex items-center justify-between gap-3 font-700">
+          Standard or Premium?
+          <span class="chev text-white/40 transition">▾</span>
+        </summary>
+        <p class="mt-3 text-sm leading-relaxed text-white/65">Standard is $700, or $150 setup + $150/mo. Premium is the add-on — $900, or $150 setup + $250/mo — with a second-language edition and a language switch. We recommend on the demo call.</p>
       </details>
       <details class="faq surface-card rounded-xl border px-5 py-4">
         <summary class="flex items-center justify-between gap-3 font-700">
@@ -369,17 +567,10 @@
       </details>
       <details class="faq surface-card rounded-xl border px-5 py-4">
         <summary class="flex items-center justify-between gap-3 font-700">
-          English only or bilingual?
-          <span class="chev text-white/40 transition">▾</span>
-        </summary>
-        <p class="mt-3 text-sm leading-relaxed text-white/65">Both options exist. We recommend based on your customers and market on the demo call. Bilingual means real Spanish pages and a language switch. Spanish is an add-on to the site setup.</p>
-      </details>
-      <details class="faq surface-card rounded-xl border px-5 py-4">
-        <summary class="flex items-center justify-between gap-3 font-700">
           How fast can we go live?
           <span class="chev text-white/40 transition">▾</span>
         </summary>
-        <p class="mt-3 text-sm leading-relaxed text-white/65">After you approve scope and send logo, photos, hours, and services, many straightforward sites launch in about <strong class="text-white/80">5 business days</strong>. Complex menus or missing assets take longer.</p>
+        <p class="mt-3 text-sm leading-relaxed text-white/65">Normally <strong class="text-white/80">3 to 5 days</strong>. We can go live as soon as you are happy with the site and pick a domain.</p>
       </details>
       <details class="faq surface-card rounded-xl border px-5 py-4">
         <summary class="flex items-center justify-between gap-3 font-700">
@@ -397,7 +588,7 @@
   <div class="reveal relative mx-auto max-w-3xl">
     <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-1-9pRF4CyBiygUYC6Rty3wOLirZ8AxIw.png" alt="Texas Bull Marketing logo" width="90" height="90" class="mx-auto h-20 w-20 object-contain" />
     <h2 class="mt-6 font-display text-4xl font-900 tracking-tight sm:text-6xl text-balance">Stop Losing Customers To The Competition.</h2>
-    <p class="mt-4 text-lg text-white/70">Let's talk about an optimized website - English or English + Spanish - and a Google Business Profile that help make your business the one locals call first.</p>
+    <p class="mt-4 text-lg text-white/70">Buy the site — $700 Standard or $900 Premium — or start at $150 with the website and Google in the monthly.</p>
     <div class="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
       <button type="button" onclick="bookCall()" class="rounded-full bg-bullred px-8 py-4 text-lg font-800 transition hover:bg-red-600">Get Started</button>
       <button type="button" onclick="bookCall()" class="rounded-full border border-[#3A4560] px-8 py-4 text-lg font-700 transition hover:border-bullred hover:bg-bullbg">Book a 15-min Call</button>
@@ -417,7 +608,7 @@
         <p class="text-xs text-white/40">More calls. More customers. Less hassle.</p>
       </div>
     </div>
-    <p class="text-sm text-white/40">© <span id="year"></span> Texas Bull Marketing. Built in Texas. Websites for local owners nationwide - English &amp; Spanish ready.</p>
+    <p class="text-sm text-white/40">© <span id="year"></span> Texas Bull Marketing. Built in Texas. Websites for local owners nationwide.</p>
   </div>
 </footer>
 
@@ -461,7 +652,8 @@
     const rev = newCustomers * val;
     document.getElementById('roiOut').innerHTML =
       '<p class="text-sm text-white/60">Projected new revenue / month</p>' +
-      '<p class="mt-1 font-display text-4xl font-900 text-bullred">$' + rev.toLocaleString() + '</p>';
+      '<p class="mt-1 font-display text-4xl font-900 text-bullred">$' + rev.toLocaleString() + '</p>' +
+      '<p class="mt-2 text-xs text-white/45">Standard site + GBP is $150/mo. If this lift is real, one extra job can cover months of the site and Google care. Results still depend on your market.</p>';
   }
   calcROI();
 
@@ -492,7 +684,7 @@
   sections.forEach(function(s){ navIO.observe(s); });
 
   // ---------- Language switch keeps current section ----------
-  const SECTION_IDS = ['home', 'process', 'pricing', 'roi', 'faq'];
+  const SECTION_IDS = ['home', 'process', 'services', 'pricing', 'roi', 'faq'];
   function getActiveSectionId(){
     if (location.hash) {
       const id = location.hash.slice(1);

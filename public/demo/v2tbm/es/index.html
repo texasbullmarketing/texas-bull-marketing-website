@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Texas Bull Marketing V2 (Demo) | Sitios web optimizados</title>
-  <meta name="description" content="Demo V2 de Texas Bull Marketing. Solo sandbox - el sitio principal no cambia." />
+  <title>Texas Bull Marketing V2 (Demo) | Sitios a la medida + Google</title>
+  <meta name="description" content="Sitio Standard $700 o Premium $900. O empiece mensual con el sitio + Google: $150 de alta y luego $150/mes Standard o $250/mes Premium. Hecho en Texas." />
   <meta name="robots" content="noindex, nofollow" />
   <meta name="theme-color" content="#161C2A" />
   <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -88,6 +88,13 @@
     details.faq summary { list-style: none; cursor: pointer; }
     details.faq summary::-webkit-details-marker { display: none; }
     details.faq[open] summary .chev { transform: rotate(180deg); }
+    .cmp-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .cmp-table { width: 100%; min-width: 640px; border-collapse: collapse; }
+    .cmp-table th, .cmp-table td { padding: 0.85rem 1rem; border-bottom: 1px solid #3A4560; text-align: left; vertical-align: top; }
+    .cmp-table th { font-size: 11px; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,.45); }
+    .cmp-table th.rec { color: #C8102E; }
+    .cmp-table td { font-size: 14px; color: rgba(255,255,255,.7); }
+    .cmp-table td.rec { color: rgba(255,255,255,.92); }
     @media (prefers-reduced-motion: reduce){ .reveal{opacity:1;transform:none;} #bullCanvas{display:none;} html{scroll-behavior:auto;} }
   </style>
 </head>
@@ -107,7 +114,8 @@
 
     <div class="hidden items-center gap-7 lg:flex">
       <a href="#process" class="nav-link text-sm font-600 text-white/70 transition hover:text-white" data-nav>Proceso</a>
-      <a href="#pricing" class="nav-link text-sm font-600 text-white/70 transition hover:text-white" data-nav>Servicios y precios</a>
+      <a href="#services" class="nav-link text-sm font-600 text-white/70 transition hover:text-white" data-nav>Servicios</a>
+      <a href="#pricing" class="nav-link text-sm font-600 text-white/70 transition hover:text-white" data-nav>Precios</a>
       <a href="#roi" class="nav-link text-sm font-600 text-white/70 transition hover:text-white" data-nav>ROI</a>
     </div>
 
@@ -132,7 +140,8 @@
         <a href="./" data-lang-href="./" hreflang="es" lang="es" aria-current="page">ES</a>
       </div>
       <a href="#process" onclick="toggleMobile()" class="text-white/80 hover:text-bullred">Proceso</a>
-      <a href="#pricing" onclick="toggleMobile()" class="text-white/80 hover:text-bullred">Servicios y precios</a>
+      <a href="#services" onclick="toggleMobile()" class="text-white/80 hover:text-bullred">Servicios</a>
+      <a href="#pricing" onclick="toggleMobile()" class="text-white/80 hover:text-bullred">Precios</a>
       <a href="#roi" onclick="toggleMobile()" class="text-white/80 hover:text-bullred">ROI</a>
       <button type="button" onclick="toggleMobile();bookCall()" class="mt-2 rounded-full bg-bullred px-5 py-3 font-700">Solicitar demo gratis</button>
     </div>
@@ -151,13 +160,10 @@
         Haga que su negocio sea <span class="text-bullred">al que llaman primero.</span>
       </h1>
       <p class="mt-6 max-w-xl text-lg leading-relaxed text-white/70">
-        Creamos <span class="font-700 text-white">sitios web optimizados</span> — en <span class="font-700 text-white">inglés</span>, o en <span class="font-700 text-white">inglés + español</span> cuando su mercado lo necesita — y nos encargamos del <span class="font-700 text-white">perfil de empresa en Google (GBP)</span>: configuración y gestión para que los clientes lo encuentren primero y confíen en usted.
+        Creamos <span class="font-700 text-white">sitios rápidos y ligeros</span>. Compre el sitio por <span class="font-700 text-white">$700</span> Standard o <span class="font-700 text-white">$900</span> Premium, o empiece con <span class="font-700 text-white">$150</span> y el sitio más el perfil de Google van en el mensual.
       </p>
       <div class="mt-5 flex flex-wrap items-center gap-2">
-        <span class="inline-flex items-center gap-1.5 rounded-full border border-[#3A4560] bg-bullcard px-3 py-1 text-xs font-800 tracking-wide text-white/90">
-          <span class="text-white">EN</span><span class="text-white/30">|</span><span class="text-bullred">ES</span>
-        </span>
-        <span class="text-sm text-white/50">Sitios bilingües reales donde importan ambos idiomas</span>
+        <span class="text-sm text-white/50">Menús en texto — no PDFs lentos.</span>
       </div>
       <div class="mt-8 flex flex-col gap-3 sm:flex-row">
         <button type="button" onclick="bookCall()" class="group rounded-full bg-bullred px-8 py-4 text-base font-800 transition hover:bg-red-600">
@@ -165,7 +171,7 @@
           <span class="ml-1 inline-block transition group-hover:translate-x-1">-&gt;</span>
         </button>
         <a href="#pricing" class="rounded-full border border-[#3A4560] px-8 py-4 text-center text-base font-700 text-white transition hover:border-bullred hover:bg-bullcard">
-          Ver servicios
+          Ver planes
         </a>
       </div>
       <div class="mt-8 flex items-center gap-4 text-sm text-white/50">
@@ -189,7 +195,7 @@
     <div class="reveal mx-auto max-w-2xl text-center">
       <p class="text-sm font-800 uppercase tracking-[0.28em] text-bullred">Cómo funciona</p>
       <h2 class="mt-3 font-display text-4xl font-900 tracking-tight sm:text-5xl text-balance">De la demo gratis a estar en vivo — camino simple</h2>
-      <p class="mt-4 text-white/60">Tiempo típico: demo gratis → llamada de 15 min → sitio en vivo en unos <span class="font-700 text-white">5 días hábiles</span> después de su aprobación (según fotos y datos que envíe).</p>
+      <p class="mt-4 text-white/60">Tiempo típico: demo gratis → llamada de 15 min → sitio en vivo en unos <span class="font-700 text-white">3 a 5 días</span> cuando esté contento con el sitio y elija un dominio.</p>
     </div>
 
     <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -200,19 +206,74 @@
       </div>
       <div class="reveal surface-card rounded-xl border p-6">
         <p class="font-display text-3xl font-900 text-bullred">02</p>
-        <h3 class="mt-2 font-display text-lg font-800">Llamada corta — usted elige qué comprar</h3>
-        <p class="mt-2 text-sm text-white/60">Solo sitio, o sitio + perfil de Google. Inglés o bilingüe. Precios claros.</p>
+        <h3 class="mt-2 font-display text-lg font-800">Llamada corta — compre el sitio o vaya mensual</h3>
+        <p class="mt-2 text-sm text-white/60">Compre Standard ($700) o Premium ($900), o empiece con $150 de alta y el sitio + Google. El mensual empieza cuando esté listo para salir en vivo.</p>
       </div>
       <div class="reveal surface-card rounded-xl border p-6">
         <p class="font-display text-3xl font-900 text-bullred">03</p>
         <h3 class="mt-2 font-display text-lg font-800">Construimos y lanzamos</h3>
-        <p class="mt-2 text-sm text-white/60">Usted envía logo, fotos, horarios y servicios. Nosotros la estructura, el celular y el go-live.</p>
+        <p class="mt-2 text-sm text-white/60">Usted envía logo, fotos, horarios y servicios. Salimos en vivo cuando esté contento con el sitio y elija un dominio.</p>
       </div>
       <div class="reveal surface-card rounded-xl border p-6">
         <p class="font-display text-3xl font-900 text-bullred">04</p>
         <h3 class="mt-2 font-display text-lg font-800">Aparece donde buscan los locales</h3>
-        <p class="mt-2 text-sm text-white/60">El sitio convierte visitas. El GBP mensual opcional mantiene Maps y su perfil al día.</p>
+        <p class="mt-2 text-sm text-white/60">El sitio convierte visitas. Sitio + GBP mensual mantiene Maps y su perfil trabajando.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="scroll-mt-24 px-4 pb-24 sm:px-6">
+  <div class="mx-auto max-w-6xl">
+    <div class="reveal mx-auto max-w-2xl text-center">
+      <p class="text-sm font-800 uppercase tracking-[0.28em] text-bullred">Lo que hacemos</p>
+      <h2 class="mt-3 font-display text-4xl font-900 tracking-tight sm:text-5xl text-balance">El trabajo que hace que lo llamen</h2>
+      <p class="mt-4 text-white/60">Un sitio rápido a la medida, un perfil de Google que se mantiene al día, y páginas que sí se leen en el celular. Standard, o con el complemento Premium.</p>
+    </div>
+
+    <div class="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <article class="reveal surface-card rounded-xl border p-6">
+        <div class="flex h-11 w-11 items-center justify-center rounded-lg bg-bullred">
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21s-7-4.5-7-10a7 7 0 1114 0c0 5.5-7 10-7 10z"/><circle cx="12" cy="11" r="2.5"/></svg>
+        </div>
+        <h3 class="mt-4 font-display text-xl font-800">Perfil de Google gestionado</h3>
+        <p class="mt-2 text-sm leading-relaxed text-white/60">Monitoreo mensual, optimización, publicaciones y estrategia de reseñas para que aparezca en Maps. Va incluido en Sitio + GBP mensual — no como extra si compra el sitio.</p>
+      </article>
+      <article class="reveal surface-card rounded-xl border p-6">
+        <div class="flex h-11 w-11 items-center justify-center rounded-lg bg-bullred">
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17v-6h13M3 7h18M3 12h4m-4 5h4"/></svg>
+        </div>
+        <h3 class="mt-4 font-display text-xl font-800">Sitios ligeros a la medida</h3>
+        <p class="mt-2 text-sm leading-relaxed text-white/60">Sitios que se quedan ligeros: llamada con un toque, botones claros y hosting rápido en una red global de edge.</p>
+      </article>
+      <article class="reveal surface-card rounded-xl border p-6">
+        <div class="flex h-11 w-11 items-center justify-center rounded-lg bg-bullred">
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M10 18a8 8 0 100-16 8 8 0 000 16z"/></svg>
+        </div>
+        <h3 class="mt-4 font-display text-xl font-800">Visibilidad en búsqueda local</h3>
+        <p class="mt-2 text-sm leading-relaxed text-white/60">Hecho para posicionar frases de cerca con intención de contratar. Schema, nombre, dirección, teléfono y servicios alineados con su perfil de Google.</p>
+      </article>
+      <article class="reveal surface-card rounded-xl border p-6">
+        <div class="flex h-11 w-11 items-center justify-center rounded-lg bg-bullred">
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h10M4 18h16"/></svg>
+        </div>
+        <h3 class="mt-4 font-display text-xl font-800">Menús y servicios en texto real</h3>
+        <p class="mt-2 text-sm leading-relaxed text-white/60">Se leen en el celular. Precios y servicios en texto — no un PDF lento ni la foto de un flyer que nadie puede agrandar.</p>
+      </article>
+      <article class="reveal surface-card rounded-xl border p-6">
+        <div class="flex h-11 w-11 items-center justify-center rounded-lg bg-bullred">
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path stroke-linecap="round" d="M12 3c2.5 3.2 4 6.5 4 9s-1.5 5.8-4 9c-2.5-3.2-4-6.5-4-9s1.5-5.8 4-9z"/><path stroke-linecap="round" d="M3.5 9h17M3.5 15h17"/></svg>
+        </div>
+        <h3 class="mt-4 font-display text-xl font-800">Complemento Premium</h3>
+        <p class="mt-2 text-sm leading-relaxed text-white/60">Páginas en un segundo idioma que espejean el sitio principal — no una tira traducida. Cambio de idioma limpio para el visitante.</p>
+      </article>
+      <article class="reveal surface-card rounded-xl border p-6">
+        <div class="flex h-11 w-11 items-center justify-center rounded-lg bg-bullred">
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h10M4 17h7"/></svg>
+        </div>
+        <h3 class="mt-4 font-display text-xl font-800">Actualizaciones Lite</h3>
+        <p class="mt-2 text-sm leading-relaxed text-white/60">Cambios de precio, fotos nuevas, avisos. Cuatro al año si compra el sitio. Una al mes en Sitio + GBP.</p>
+      </article>
     </div>
   </div>
 </section>
@@ -220,52 +281,86 @@
 <section id="pricing" class="scroll-mt-24 bg-bullsurface px-4 py-24 sm:px-6">
   <div class="mx-auto max-w-6xl">
     <div class="reveal mx-auto max-w-2xl text-center">
-      <p class="text-sm font-800 uppercase tracking-[0.28em] text-bullred">Lo que ofrecemos</p>
-      <h2 class="mt-3 font-display text-4xl font-900 tracking-tight sm:text-5xl text-balance">Presencia digital profesional — hecha y gestionada</h2>
-      <p class="mt-4 text-white/60">Sitios a la medida para dueños locales en cualquier ciudad — inglés o inglés + español — más trabajo en el perfil de Google para que se vea. Precios claros en el sitio; el idioma se define con usted en la llamada.</p>
+      <p class="text-sm font-800 uppercase tracking-[0.28em] text-bullred">Servicios y precios</p>
+      <h2 class="mt-3 font-display text-4xl font-900 tracking-tight sm:text-5xl text-balance">Compre el sitio. O empiece mensual con el sitio + Google.</h2>
+      <p class="mt-4 text-white/60">Cuatro planes claros. El mismo sitio hecho en Texas. Cómprelo por $700 o $900, o empiece con $150 de alta y el sitio más el perfil de Google van en el mensual.</p>
     </div>
 
-    <div class="mt-14 grid items-stretch gap-6 lg:grid-cols-2">
+    <div class="mt-14 grid items-stretch gap-6 sm:grid-cols-2">
       <div class="reveal surface-card flex flex-col rounded-xl border p-8">
-        <div class="flex flex-wrap items-center gap-2">
-          <h3 class="font-display text-2xl font-800">Sitios web optimizados a la medida</h3>
-          <span class="inline-flex items-center gap-1 rounded-full border border-[#3A4560] px-2 py-0.5 text-[10px] font-800 tracking-wide text-white/70">
-            EN <span class="text-white/30">·</span> <span class="text-bullred">EN+ES</span>
-          </span>
-        </div>
-        <p class="mt-3 font-display text-4xl font-900 text-white">$700 <span class="text-base font-700 text-white/50">desde</span></p>
-        <p class="mt-3 text-sm leading-relaxed text-white/60">Un sitio pulido y de alto rendimiento que representa su marca y convierte visitas en clientes — en inglés, o en inglés + español para mercados bilingües.</p>
+        <p class="text-xs font-800 uppercase tracking-[0.2em] text-white/45">Un pago</p>
+        <h3 class="mt-2 font-display text-2xl font-800">Sitio Standard</h3>
+        <p class="mt-3 font-display text-4xl font-900 text-white">$700 <span class="text-base font-700 text-white/50">un pago</span></p>
+        <p class="mt-3 text-sm leading-relaxed text-white/60">Sitio que convierte visitas en llamadas. Dominio, 1 año de hosting, 4 Actualizaciones Lite. Usted es dueño.</p>
         <ul class="mt-6 flex-1 space-y-3 text-sm text-white/70">
-          <li>✓ Sitio a la medida pensado para convertir</li>
-          <li>✓ Opciones en inglés o inglés + español completo</li>
-          <li>✓ Velocidad y llamada con un toque en el celular</li>
-          <li>✓ Páginas esenciales estructuradas para búsqueda local</li>
-          <li>✓ Dominio e integraciones incluidas</li>
-          <li>✓ 1 año completo de hosting premium de alta velocidad</li>
-          <li>✓ Ajustes continuos a medida que crece su negocio</li>
+          <li>✓ Sitio a la medida hecho para convertir</li>
+          <li>✓ Velocidad y llamada con un toque</li>
+          <li>✓ Schema y NAP alineados con su perfil de Google</li>
+          <li>✓ Menús y servicios en texto real</li>
+          <li>✓ Dominio incluido</li>
+          <li>✓ 1 año de hosting</li>
+          <li>✓ 4 Actualizaciones Lite este año</li>
         </ul>
-        <p class="mt-5 text-xs leading-relaxed text-white/45">El idioma se define según sus clientes en la demo — recomendamos solo inglés o bilingüe según su mercado.</p>
-        <button type="button" onclick="bookCall()" class="mt-6 w-full rounded-full border border-[#3A4560] py-3 font-700 transition hover:border-bullred hover:bg-bullbg">Pedir detalles del sitio</button>
+        <button type="button" onclick="bookCall()" class="mt-6 w-full rounded-full border border-[#3A4560] py-3 font-700 transition hover:border-bullred hover:bg-bullbg">Pedir sitio Standard</button>
+      </div>
+
+      <div class="reveal surface-card flex flex-col rounded-xl border p-8">
+        <p class="text-xs font-800 uppercase tracking-[0.2em] text-white/45">Un pago · complemento Premium</p>
+        <h3 class="mt-2 font-display text-2xl font-800">Sitio Premium</h3>
+        <p class="mt-3 font-display text-4xl font-900 text-white">$900 <span class="text-base font-700 text-white/50">un pago</span></p>
+        <p class="mt-3 text-sm leading-relaxed text-white/60">Sitio Standard más el complemento Premium. Dominio, 1 año de hosting, 4 Actualizaciones Lite. Usted es dueño.</p>
+        <ul class="mt-6 flex-1 space-y-3 text-sm text-white/70">
+          <li>✓ Todo lo del sitio Standard</li>
+          <li>✓ Complemento Premium incluido</li>
+          <li>✓ Páginas en un segundo idioma + cambio de idioma</li>
+          <li>✓ El mismo teléfono, horarios y mapa en ambas ediciones</li>
+          <li>✓ Dominio incluido</li>
+          <li>✓ 1 año de hosting</li>
+          <li>✓ 4 Actualizaciones Lite este año</li>
+        </ul>
+        <button type="button" onclick="bookCall()" class="mt-6 w-full rounded-full border border-[#3A4560] py-3 font-700 transition hover:border-bullred hover:bg-bullbg">Pedir sitio Premium</button>
       </div>
 
       <div class="reveal relative flex flex-col rounded-xl border-2 border-bullred bg-bullcard p-8">
-        <span class="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-bullred px-4 py-1 text-xs font-800 uppercase tracking-widest">Enfoque principal</span>
-        <h3 class="font-display text-2xl font-800">Perfil de empresa en Google (GBP)</h3>
-        <p class="mt-3 font-display text-4xl font-900 text-white">$100 <span class="text-base font-700 text-white/50">/ mes desde</span></p>
-        <p class="mt-3 text-sm leading-relaxed text-white/70">Configuración, optimización y gestión continua para que su negocio se vea bien y compita en Búsqueda y Maps — más mantenimiento ligero del sitio.</p>
+        <span class="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-bullred px-4 py-1 text-xs font-800 uppercase tracking-widest">Sitio + Google</span>
+        <h3 class="mt-2 font-display text-2xl font-800">Sitio Standard + GBP</h3>
+        <p class="mt-3 font-display text-4xl font-900 text-white">$150 <span class="text-base font-700 text-white/50">de alta</span></p>
+        <p class="mt-1 text-sm text-white/70">Luego <span class="font-800 text-white">$150/mes</span> cuando esté contento con el sitio y listo para salir en vivo.</p>
+        <p class="mt-4 text-sm leading-relaxed text-white/70">El sitio y el perfil de Google van en el mensual. Arrendamiento con opción de compra.</p>
         <ul class="mt-6 flex-1 space-y-3 text-sm text-white/80">
-          <li>✓ Alta, recuperación y apoyo para verificar el perfil</li>
-          <li>✓ Optimización completa (categorías, servicios, atributos, fotos)</li>
-          <li>✓ Gestión continua: publicaciones, actualizaciones, preguntas</li>
-          <li>✓ Estrategia de reseñas y reputación</li>
-          <li>✓ Reportes claros que sí puede usar</li>
-          <li>✓ Mantenimiento de hosting seguro</li>
-          <li>✓ Actualizaciones ligeras del sitio sin límite (precios, promociones)</li>
+          <li>✓ Sitio Standard incluido</li>
+          <li>✓ Dominio + hosting en el mensual</li>
+          <li>✓ Alta o recuperación de la ficha de Google</li>
+          <li>✓ Horarios, fotos, publicaciones, preguntas</li>
+          <li>✓ Pedidos de reseñas — nunca reseñas falsas</li>
+          <li>✓ El sitio se queda alineado con Google</li>
+          <li>✓ 1 Actualización Lite cada mes</li>
+          <li>✓ Sin blogs. Sin backlinks.</li>
         </ul>
         <p class="mt-5 rounded-lg border border-bullred/25 bg-bullred/10 px-4 py-3 text-xs leading-relaxed text-white/80">
-          <strong class="font-800 text-white">Alcance:</strong> se enfoca en maximizar el perfil y en actualizaciones ligeras del sitio. Sin blogs. Sin enlaces basura.
+          <strong class="font-800 text-white">$150 para empezar,</strong> luego $150/mes por el sitio en vivo y el cuidado de Google cada mes. Opción de compra a los 6 meses con 50% de descuento.
         </p>
-        <button type="button" onclick="bookCall()" class="mt-6 w-full rounded-full bg-bullred py-3 font-800 transition hover:bg-red-600">Pedir detalles de Google</button>
+        <button type="button" onclick="bookCall()" class="mt-6 w-full rounded-full bg-bullred py-3 font-800 transition hover:bg-red-600">Empezar Standard + GBP</button>
+      </div>
+
+      <div class="reveal relative flex flex-col rounded-xl border-2 border-bullred bg-bullcard p-8">
+        <span class="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-bullred px-4 py-1 text-xs font-800 uppercase tracking-widest">Premium</span>
+        <h3 class="mt-2 font-display text-2xl font-800">Sitio Premium + GBP</h3>
+        <p class="mt-3 font-display text-4xl font-900 text-white">$150 <span class="text-base font-700 text-white/50">de alta</span></p>
+        <p class="mt-1 text-sm text-white/70">Luego <span class="font-800 text-white">$250/mes</span> cuando esté contento con el sitio y listo para salir en vivo.</p>
+        <p class="mt-4 text-sm leading-relaxed text-white/70">Sitio con complemento Premium incluido, más Google y Apple Business Connect. Arrendamiento con opción de compra.</p>
+        <ul class="mt-6 flex-1 space-y-3 text-sm text-white/80">
+          <li>✓ Todo lo de Sitio Standard + GBP</li>
+          <li>✓ Complemento Premium + cambio de idioma</li>
+          <li>✓ Apple Business Connect (Apple Maps / Siri)</li>
+          <li>✓ Las fichas coinciden con el sitio Premium</li>
+          <li>✓ 1 Actualización Lite cada mes</li>
+          <li>✓ Sin blogs. Sin backlinks.</li>
+        </ul>
+        <p class="mt-5 rounded-lg border border-bullred/25 bg-bullred/10 px-4 py-3 text-xs leading-relaxed text-white/80">
+          <strong class="font-800 text-white">Premium mensual</strong> incluye el complemento Premium, Google y Apple Maps. Opción de compra a los 6 meses con 50% de descuento.
+        </p>
+        <button type="button" onclick="bookCall()" class="mt-6 w-full rounded-full bg-bullred py-3 font-800 transition hover:bg-red-600">Empezar Premium + GBP</button>
       </div>
     </div>
 
@@ -273,27 +368,82 @@
       <div class="flex flex-col items-start gap-5 sm:flex-row sm:items-center sm:justify-between">
         <div class="max-w-xl">
           <div class="flex items-center gap-2">
-            <span class="inline-flex items-center gap-1 rounded-md border border-[#3A4560] bg-bullbg px-2.5 py-1 font-display text-xs font-900 tracking-wider">
-              <span class="text-white">EN</span><span class="mx-0.5 text-white/30">|</span><span class="text-bullred">ES</span>
-            </span>
-            <p class="text-xs font-800 uppercase tracking-[0.2em] text-bullred">Sitios listos para dos idiomas</p>
+            <p class="text-xs font-800 uppercase tracking-[0.2em] text-bullred">Complemento Premium</p>
           </div>
-          <h3 class="mt-3 font-display text-xl font-800 text-white sm:text-2xl">Inglés. O inglés + español.</h3>
+          <h3 class="mt-3 font-display text-xl font-800 text-white sm:text-2xl">Standard. O sume Premium.</h3>
           <p class="mt-2 text-sm leading-relaxed text-white/65">
-            Muchos mercados grandes tienen una gran audiencia que habla español, y aun así la mayoría de sitios de pequeños negocios solo están en inglés. Creamos sitios en dos idiomas para que gane más de su mercado, con páginas completas en español y un cambio de idioma limpio.
+            Premium es el complemento: una edición en un segundo idioma del mismo sitio y un cambio de idioma limpio, para cubrir más de su mercado sin un segundo build.
           </p>
         </div>
         <ul class="w-full shrink-0 space-y-2 text-sm text-white/75 sm:w-56">
-          <li class="flex gap-2"><span class="text-bullred font-800">✓</span> Páginas completas en español cuando las necesite</li>
-          <li class="flex gap-2"><span class="text-bullred font-800">✓</span> Interruptor EN | ES para sus visitantes</li>
-          <li class="flex gap-2"><span class="text-bullred font-800">✓</span> Preparado para búsqueda local en ambos idiomas</li>
+          <li class="flex gap-2"><span class="text-bullred font-800">✓</span> Páginas en un segundo idioma cuando las necesite</li>
+          <li class="flex gap-2"><span class="text-bullred font-800">✓</span> Cambio de idioma para sus visitantes</li>
+          <li class="flex gap-2"><span class="text-bullred font-800">✓</span> El mismo teléfono, horarios y mapa en ambas ediciones</li>
         </ul>
       </div>
     </div>
 
+    <div class="reveal mx-auto mt-12 max-w-5xl rounded-xl border border-[#3A4560] bg-bullcard p-6 sm:p-8">
+      <h3 class="text-center font-display text-2xl font-800">Compre el sitio, o arriende sitio + Google cada mes</h3>
+      <p class="mx-auto mt-2 max-w-2xl text-center text-sm text-white/60">Dos caminos. Compre el sitio y es dueño. Sitio + GBP es un arrendamiento mensual con el sitio en vivo y Google en un plan — con opción de compra.</p>
+      <div class="cmp-wrap mt-8">
+        <table class="cmp-table">
+          <thead>
+            <tr>
+              <th>Compare</th>
+              <th>Sitio Standard / Premium</th>
+              <th class="rec">Sitio + GBP mensual</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Para empezar</td>
+              <td>$700 Standard · $900 Premium</td>
+              <td class="rec">$150 de alta</td>
+            </tr>
+            <tr>
+              <td>Después</td>
+              <td>Es dueño. Dominio + 1 año de hosting.</td>
+              <td class="rec">$150/mes Standard · $250/mes Premium al salir en vivo</td>
+            </tr>
+            <tr>
+              <td>Sitio web</td>
+              <td>Incluido</td>
+              <td class="rec">Incluido en el mensual</td>
+            </tr>
+            <tr>
+              <td>Dominio</td>
+              <td>Incluido el primer año</td>
+              <td class="rec">Incluido</td>
+            </tr>
+            <tr>
+              <td>Google cada mes</td>
+              <td>No incluido</td>
+              <td class="rec">Incluido</td>
+            </tr>
+            <tr>
+              <td>Actualizaciones Lite</td>
+              <td>4 al año</td>
+              <td class="rec">1 al mes</td>
+            </tr>
+            <tr>
+              <td>Es dueño del sitio</td>
+              <td>Sí</td>
+              <td class="rec">Arrendamiento con opción de compra</td>
+            </tr>
+            <tr>
+              <td>Compra del sitio</td>
+              <td>Ya es dueño</td>
+              <td class="rec">50% de descuento después de 6 meses · precio completo antes</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
     <div class="reveal surface-panel mx-auto mt-12 max-w-3xl rounded-xl border p-8 text-center">
-      <h3 class="font-display text-xl font-800">Sitio + GBP. Inglés o bilingüe. Ahí está nuestra fortaleza.</h3>
-      <p class="mt-2 text-sm leading-relaxed text-white/60">La mayoría de clientes combinan un sitio a la medida con la gestión profesional del perfil de Google. Si sus clientes también buscan en español, lo construimos así desde el primer día. Precios claros, demos personalizadas, sin trucos de contrato.</p>
+      <h3 class="font-display text-xl font-800">Sitio + GBP. Standard o Premium. Ahí está el punto dulce.</h3>
+      <p class="mt-2 text-sm leading-relaxed text-white/60">Compre el sitio y es dueño. O empiece con $150 de alta y el sitio más Google van en el mensual — un arrendamiento con opción de compra. Dos caminos, no un montón de extras.</p>
       <div class="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
         <button type="button" onclick="bookCall()" class="rounded-full bg-bullred px-8 py-3 font-800 transition hover:bg-red-600">Agendar llamada de 15 min</button>
         <button type="button" onclick="bookCall()" class="rounded-full border border-[#3A4560] px-8 py-3 font-800 transition hover:border-bullred hover:bg-bullbg">Solicitar demo gratis</button>
@@ -306,7 +456,7 @@
   <div class="mx-auto max-w-6xl">
     <div class="reveal surface-panel mx-auto max-w-2xl rounded-xl border border-bullred p-8">
       <h3 class="text-center font-display text-2xl font-800">Calculadora rápida de ROI</h3>
-      <p class="mt-1 text-center text-sm text-white/65">Vea qué podría significar un aumento del 250% en prospectos.</p>
+      <p class="mt-1 text-center text-sm text-white/65">Vea qué podría significar un aumento del 250% en prospectos frente a $150/mes de Sitio Standard + GBP.</p>
       <div class="mt-6 grid gap-4 sm:grid-cols-2 sm:items-end">
         <div>
           <label for="curLeads" class="mb-1 block text-sm font-600 text-white/70">Prospectos actuales / mes</label>
@@ -320,6 +470,7 @@
       <div id="roiOut" class="mt-6 rounded-xl bg-bullred/10 p-5 text-center">
         <p class="text-sm text-white/60">Ingresos nuevos proyectados / mes</p>
         <p class="mt-1 font-display text-4xl font-900 text-bullred">$2,800</p>
+        <p class="mt-2 text-xs text-white/45">Sitio Standard + GBP es $150/mes. Si este aumento es real, un trabajo extra puede cubrir meses del sitio y de Google. Los resultados siguen dependiendo de su mercado.</p>
       </div>
     </div>
   </div>
@@ -335,17 +486,66 @@
     <div class="reveal mt-10 space-y-3">
       <details class="faq surface-card rounded-xl border px-5 py-4">
         <summary class="flex items-center justify-between gap-3 font-700">
-          ¿El plan mensual es obligatorio?
+          ¿Cuál es la diferencia entre comprar el sitio y Sitio + GBP?
           <span class="chev text-white/40 transition">▾</span>
         </summary>
-        <p class="mt-3 text-sm leading-relaxed text-white/65">No. Puede comprar solo el sitio. La mayoría suma la gestión del perfil de Google porque en Maps es donde buscan primero los clientes locales.</p>
+        <p class="mt-3 text-sm leading-relaxed text-white/65">Standard es $700. Premium es $900 con el complemento Premium. Ambos incluyen dominio, 1 año de hosting y 4 Actualizaciones Lite — usted es dueño. Sitio + GBP es el otro camino: $150 de alta, luego $150/mes Standard o $250/mes Premium, con el sitio en vivo y Google en el mensual. Google no es un extra si compra el sitio.</p>
       </details>
       <details class="faq surface-card rounded-xl border px-5 py-4">
         <summary class="flex items-center justify-between gap-3 font-700">
-          ¿Puedo cancelar el plan mensual?
+          ¿El plan mensual es obligatorio?
           <span class="chev text-white/40 transition">▾</span>
         </summary>
-        <p class="mt-3 text-sm leading-relaxed text-white/65">Sí. Sin contratos largos en el cuidado mensual de GBP / sitio ligero. Se queda con el sitio que pagó por construir; el hosting después del año uno se habla claro desde el principio.</p>
+        <p class="mt-3 text-sm leading-relaxed text-white/65">No. Comprar el sitio o Sitio + GBP son dos planes aparte. Elija un camino.</p>
+      </details>
+      <details class="faq surface-card rounded-xl border px-5 py-4">
+        <summary class="flex items-center justify-between gap-3 font-700">
+          ¿Los $150 de alta son también el primer mes?
+          <span class="chev text-white/40 transition">▾</span>
+        </summary>
+        <p class="mt-3 text-sm leading-relaxed text-white/65">No. $150 para empezar. El mensual de $150 o $250 empieza cuando esté contento con el sitio y listo para salir en vivo.</p>
+      </details>
+      <details class="faq surface-card rounded-xl border px-5 py-4">
+        <summary class="flex items-center justify-between gap-3 font-700">
+          ¿Soy dueño del sitio en el plan mensual?
+          <span class="chev text-white/40 transition">▾</span>
+        </summary>
+        <p class="mt-3 text-sm leading-relaxed text-white/65">El mensual es un arrendamiento con opción de compra. A los 6 meses puede comprar el sitio con 50% de descuento — $350 Standard o $450 Premium. Antes de los 6 meses, la compra es a precio completo.</p>
+      </details>
+      <details class="faq surface-card rounded-xl border px-5 py-4">
+        <summary class="flex items-center justify-between gap-3 font-700">
+          ¿Puedo cancelar el mensual?
+          <span class="chev text-white/40 transition">▾</span>
+        </summary>
+        <p class="mt-3 text-sm leading-relaxed text-white/65">Sí. Puede parar cuando quiera. Si quiere quedarse con el sitio, la compra es a precio completo antes de 6 meses, y con 50% de descuento después de 6 meses.</p>
+      </details>
+      <details class="faq surface-card rounded-xl border px-5 py-4">
+        <summary class="flex items-center justify-between gap-3 font-700">
+          ¿Qué es una Actualización Lite?
+          <span class="chev text-white/40 transition">▾</span>
+        </summary>
+        <p class="mt-3 text-sm leading-relaxed text-white/65">Ediciones chicas: cambios de precio, fotos nuevas, avisos. Si compra el sitio, son 4 al año. Sitio + GBP incluye 1 al mes.</p>
+      </details>
+      <details class="faq surface-card rounded-xl border px-5 py-4">
+        <summary class="flex items-center justify-between gap-3 font-700">
+          ¿Dónde se hospeda el sitio?
+          <span class="chev text-white/40 transition">▾</span>
+        </summary>
+        <p class="mt-3 text-sm leading-relaxed text-white/65">En una red global de edge que usamos para que el sitio se quede rápido y en línea, incluso en el Texas rural con señal débil. Si compra el sitio, el primer año de hosting va incluido. Sitio + GBP incluye el hosting en el mensual.</p>
+      </details>
+      <details class="faq surface-card rounded-xl border px-5 py-4">
+        <summary class="flex items-center justify-between gap-3 font-700">
+          ¿El dominio viene incluido?
+          <span class="chev text-white/40 transition">▾</span>
+        </summary>
+        <p class="mt-3 text-sm leading-relaxed text-white/65">Sí. Si compra el sitio, el primer año de dominio y hosting va incluido. Sitio + GBP incluye dominio y hosting en el mensual.</p>
+      </details>
+      <details class="faq surface-card rounded-xl border px-5 py-4">
+        <summary class="flex items-center justify-between gap-3 font-700">
+          ¿Standard o Premium?
+          <span class="chev text-white/40 transition">▾</span>
+        </summary>
+        <p class="mt-3 text-sm leading-relaxed text-white/65">Standard es $700, o $150 de alta + $150/mes. Premium es el complemento — $900, o $150 de alta + $250/mes — con una edición en un segundo idioma y un cambio de idioma. Lo recomendamos en la demo.</p>
       </details>
       <details class="faq surface-card rounded-xl border px-5 py-4">
         <summary class="flex items-center justify-between gap-3 font-700">
@@ -356,17 +556,10 @@
       </details>
       <details class="faq surface-card rounded-xl border px-5 py-4">
         <summary class="flex items-center justify-between gap-3 font-700">
-          ¿Solo inglés o bilingüe?
-          <span class="chev text-white/40 transition">▾</span>
-        </summary>
-        <p class="mt-3 text-sm leading-relaxed text-white/65">Existen las dos opciones. Recomendamos según sus clientes en la demo. Bilingüe significa páginas reales en español y un cambio de idioma. El español es un complemento al sitio.</p>
-      </details>
-      <details class="faq surface-card rounded-xl border px-5 py-4">
-        <summary class="flex items-center justify-between gap-3 font-700">
           ¿Qué tan rápido salimos en vivo?
           <span class="chev text-white/40 transition">▾</span>
         </summary>
-        <p class="mt-3 text-sm leading-relaxed text-white/65">Después de aprobar el alcance y enviar logo, fotos, horarios y servicios, muchos sitios sencillos salen en unos <strong class="text-white/80">5 días hábiles</strong>. Menús complejos o faltan materiales tarda más.</p>
+        <p class="mt-3 text-sm leading-relaxed text-white/65">Normalmente <strong class="text-white/80">3 a 5 días</strong>. Podemos salir en vivo en cuanto esté contento con el sitio y elija un dominio.</p>
       </details>
       <details class="faq surface-card rounded-xl border px-5 py-4">
         <summary class="flex items-center justify-between gap-3 font-700">
@@ -383,7 +576,7 @@
   <div class="reveal relative mx-auto max-w-3xl">
     <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-1-9pRF4CyBiygUYC6Rty3wOLirZ8AxIw.png" alt="Logo de Texas Bull Marketing" width="90" height="90" class="mx-auto h-20 w-20 object-contain" />
     <h2 class="mt-6 font-display text-4xl font-900 tracking-tight sm:text-6xl text-balance">Deje de perder clientes a la competencia.</h2>
-    <p class="mt-4 text-lg text-white/70">Hablemos de un sitio optimizado — inglés o inglés + español — y un perfil de Google que ayuden a que su negocio sea al que llaman primero.</p>
+    <p class="mt-4 text-lg text-white/70">Compre el sitio — $700 Standard o $900 Premium — o empiece con $150 y el sitio más Google van en el mensual.</p>
     <div class="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
       <button type="button" onclick="bookCall()" class="rounded-full bg-bullred px-8 py-4 text-lg font-800 transition hover:bg-red-600">Empezar</button>
       <button type="button" onclick="bookCall()" class="rounded-full border border-[#3A4560] px-8 py-4 text-lg font-700 transition hover:border-bullred hover:bg-bullbg">Agendar llamada de 15 min</button>
@@ -402,7 +595,7 @@
         <p class="text-xs text-white/40">Más llamadas. Más clientes. Menos complicaciones.</p>
       </div>
     </div>
-    <p class="text-sm text-white/40">© <span id="year"></span> Texas Bull Marketing. Hecho en Texas. Sitios para dueños locales en todo el país — listos en inglés y español.</p>
+    <p class="text-sm text-white/40">© <span id="year"></span> Texas Bull Marketing. Hecho en Texas. Sitios para dueños locales en todo el país.</p>
   </div>
 </footer>
 
@@ -442,7 +635,8 @@
     const rev = newCustomers * val;
     document.getElementById('roiOut').innerHTML =
       '<p class="text-sm text-white/60">Ingresos nuevos proyectados / mes</p>' +
-      '<p class="mt-1 font-display text-4xl font-900 text-bullred">$' + rev.toLocaleString() + '</p>';
+      '<p class="mt-1 font-display text-4xl font-900 text-bullred">$' + rev.toLocaleString() + '</p>' +
+      '<p class="mt-2 text-xs text-white/45">Sitio Standard + GBP es $150/mes. Si este aumento es real, un trabajo extra puede cubrir meses del sitio y de Google. Los resultados siguen dependiendo de su mercado.</p>';
   }
   calcROI();
 
@@ -471,7 +665,7 @@
   sections.forEach(function(s){ navIO.observe(s); });
 
   // Language switch keeps current section
-  const SECTION_IDS = ['home', 'process', 'pricing', 'roi', 'faq'];
+  const SECTION_IDS = ['home', 'process', 'services', 'pricing', 'roi', 'faq'];
   function getActiveSectionId(){
     if (location.hash) {
       const id = location.hash.slice(1);
