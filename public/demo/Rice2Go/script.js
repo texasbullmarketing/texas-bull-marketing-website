@@ -101,10 +101,15 @@
       if (on) localStorage.setItem(STORAGE_HEADER, "1");
       else localStorage.removeItem(STORAGE_HEADER);
     } catch (e) {}
-    var btn = document.getElementById("headerColorBtn");
-    if (btn) {
-      btn.setAttribute("aria-pressed", on ? "true" : "false");
-      btn.classList.toggle("is-active", !!on);
+    var light = document.getElementById("headerLightBtn");
+    var dark = document.getElementById("headerDarkBtn");
+    if (light) {
+      light.setAttribute("aria-pressed", on ? "false" : "true");
+      light.classList.toggle("is-active", !on);
+    }
+    if (dark) {
+      dark.setAttribute("aria-pressed", on ? "true" : "false");
+      dark.classList.toggle("is-active", !!on);
     }
   }
   function applyCustomHex(hex, fromWheel) {
@@ -222,12 +227,13 @@
       picker.onclick = function (e) { e.stopPropagation(); };
       picker.oninput = function (e) { e.stopPropagation(); applyCustomHex(picker.value); };
     }
-    var headerBtn = document.getElementById("headerColorBtn");
-    if (headerBtn) {
-      headerBtn.onclick = function (e) {
-        e.stopPropagation();
-        applyHeader(document.documentElement.getAttribute("data-header") !== "accent");
-      };
+    var lightBtn = document.getElementById("headerLightBtn");
+    var darkBtn = document.getElementById("headerDarkBtn");
+    if (lightBtn) {
+      lightBtn.onclick = function (e) { e.stopPropagation(); applyHeader(false); };
+    }
+    if (darkBtn) {
+      darkBtn.onclick = function (e) { e.stopPropagation(); applyHeader(true); };
     }
     bindWheel();
     if (!window.__tbmThemeBound) {

@@ -474,18 +474,24 @@ html[data-accent] { --primary: var(--accent); --primary2: var(--accent-2); }
   width: 100%; accent-color: var(--accent);
   cursor: pointer;
 }
-.theme-header-btn {
-  display: flex; align-items: center; justify-content: center;
-  width: 100%; min-height: 40px; margin-top: 0.65rem; padding: 0.4rem 0.5rem;
-  border-radius: 8px; font-size: 0.78rem; font-weight: 700;
-  color: #f4f4f4; background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.16); cursor: pointer;
+.theme-mode {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0.3rem;
+  margin-top: 0.65rem; padding: 0.25rem;
+  border-radius: 10px; background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
 }
-.theme-header-btn:hover { background: rgba(255,255,255,0.1); }
-.theme-header-btn.is-active {
+.theme-mode-btn {
+  min-height: 36px; padding: 0.3rem 0.4rem; border-radius: 7px;
+  font-size: 0.78rem; font-weight: 700; color: #d8d8d8;
+  background: transparent; border: 0; cursor: pointer;
+}
+.theme-mode-btn:hover { color: #fff; background: rgba(255,255,255,0.08); }
+.theme-mode-btn.is-active {
+  color: #1a1400; background: #f3eee4;
+}
+#headerDarkBtn.is-active {
   background: var(--accent);
   color: var(--on-accent);
-  border-color: transparent;
 }
 @media (max-width: 900px) {
   .theme-custom.is-active .theme-custom__code {

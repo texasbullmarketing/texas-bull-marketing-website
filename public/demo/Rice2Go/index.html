@@ -19,7 +19,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Serif+SC:wght@600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="apple-touch-icon" href="favicon.png" />
-  <link rel="stylesheet" href="styles.css?v=3" />
+  <link rel="stylesheet" href="styles.css?v=4" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -96,7 +96,10 @@
                   Brightness
                   <input type="range" id="themeWheelValue" min="35" max="100" value="100" />
                 </label>
-                <button type="button" class="theme-header-btn" id="headerColorBtn" aria-pressed="false">Color the header</button>
+                <div class="theme-mode" role="group" aria-label="Header look">
+                  <button type="button" class="theme-mode-btn is-active" id="headerLightBtn" aria-pressed="true">Light</button>
+                  <button type="button" class="theme-mode-btn" id="headerDarkBtn" aria-pressed="false">Dark</button>
+                </div>
               </div>
             </div>
           </div>
@@ -341,6 +344,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=3"></script>
+  <script src="script.js?v=4"></script>
 </body>
 </html>
