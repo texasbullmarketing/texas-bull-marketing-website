@@ -94,13 +94,17 @@
     var rad = hsv.h * Math.PI / 180;
     knob.style.transform = "translate(" + (Math.sin(rad) * hsv.s * R) + "px," + (-Math.cos(rad) * hsv.s * R) + "px)";
   }
+  function headerIsDark() {
+    try {
+      var v = localStorage.getItem(STORAGE_HEADER);
+      if (v === "light" || v === "0") return false;
+      return true;
+    } catch (e) { return true; }
+  }
   function applyHeader(on) {
     if (on) document.documentElement.setAttribute("data-header", "accent");
     else document.documentElement.removeAttribute("data-header");
-    try {
-      if (on) localStorage.setItem(STORAGE_HEADER, "1");
-      else localStorage.removeItem(STORAGE_HEADER);
-    } catch (e) {}
+    try { localStorage.setItem(STORAGE_HEADER, on ? "dark" : "light"); } catch (e) {}
     var light = document.getElementById("headerLightBtn");
     var dark = document.getElementById("headerDarkBtn");
     if (light) {
@@ -211,7 +215,7 @@
     var menu = document.getElementById("themeMenu");
     if (!toggle || !menu) return;
     applyAccent(currentAccent());
-    try { applyHeader(!!localStorage.getItem(STORAGE_HEADER)); } catch (e) { applyHeader(false); }
+    try { applyHeader(headerIsDark()); } catch (e) { applyHeader(true); }
     toggle.onclick = function (e) {
       e.stopPropagation();
       var open = toggle.getAttribute("aria-expanded") === "true";
