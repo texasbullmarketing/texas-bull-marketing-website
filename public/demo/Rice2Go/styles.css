@@ -98,7 +98,10 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 
 .hero {
   position: relative;
-  min-height: min(78vh, 640px);
+  /* Wide night photo is 1600×634. A tall cover crop clips RICE / 楼. */
+  min-height: 0;
+  aspect-ratio: 1600 / 634;
+  max-height: min(72vh, 620px);
   display: grid;
   align-items: end;
   color: #fff;
@@ -108,18 +111,18 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .hero__bg {
   position: absolute; inset: 0;
   width: 100%; height: 100%;
-  object-fit: cover; object-position: center 42%;
+  object-fit: cover; object-position: center 28%;
 }
 .hero__shade {
   position: absolute; inset: 0;
   background:
-    linear-gradient(90deg, rgba(10,12,18,0.82) 0%, rgba(10,12,18,0.48) 42%, rgba(10,12,18,0.18) 100%),
-    linear-gradient(180deg, rgba(10,12,18,0.15) 0%, rgba(10,12,18,0.55) 100%);
+    linear-gradient(90deg, rgba(10,12,18,0.72) 0%, rgba(10,12,18,0.28) 30%, rgba(10,12,18,0.06) 48%, transparent 68%),
+    linear-gradient(180deg, rgba(10,12,18,0.1) 0%, transparent 38%, rgba(10,12,18,0.42) 100%);
 }
 .hero__copy {
   position: relative;
   z-index: 1;
-  padding: 4.2rem 0 2.6rem;
+  padding: 3rem 0 2.2rem;
   max-width: 40rem;
   margin-left: max(1rem, calc((100vw - var(--max)) / 2));
   margin-right: 1rem;
@@ -257,12 +260,31 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .footer [lang] { color: #8eb0ff; font-family: "Noto Serif SC", serif; }
 
 @media (max-width: 860px) {
-  .hero { min-height: min(88vh, 720px); }
-  .hero__shade {
-    background:
-      linear-gradient(180deg, rgba(10,12,18,0.2) 0%, rgba(10,12,18,0.78) 70%, rgba(10,12,18,0.9) 100%);
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-height: 0;
+    aspect-ratio: auto;
+    max-height: none;
   }
-  .hero__copy { max-width: none; margin-left: auto; padding-top: 6rem; }
+  .hero__bg {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2.15 / 1;
+    object-fit: cover;
+    object-position: center 28%;
+  }
+  .hero__shade { display: none; }
+  .hero__copy {
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5rem 0 1.85rem;
+    background: var(--night);
+  }
   .strip__grid, .menu-cols, .room, .visit {
     grid-template-columns: 1fr;
   }
@@ -285,7 +307,8 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 @media (max-width: 520px) {
   .strip__grid { grid-template-columns: 1fr; }
   .plates { grid-template-columns: 1fr; }
-  .hero { min-height: 92vh; }
+  .hero { min-height: 0; aspect-ratio: auto; max-height: none; }
+  .hero__bg { aspect-ratio: 2.15 / 1; }
   .hero__actions .btn { width: 100%; }
   .map-embed iframe { height: 220px; }
 }
