@@ -19,7 +19,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Serif+SC:wght@600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="apple-touch-icon" href="favicon.png" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=2" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -108,7 +108,10 @@
 
   <main id="top">
     <section class="hero">
-      <img class="hero__bg" src="images/storefront-hero.jpg" width="1600" height="634" alt="Night storefront of Rice 2 Go in La Vernia — neon red RICE 2 GO, blue 莲花楼, red lanterns, brick, and guardian lions" />
+      <picture>
+        <source media="(max-width: 860px)" srcset="images/storefront-hero-mobile.jpg" width="1000" height="420" />
+        <img class="hero__bg" src="images/storefront-hero.jpg" width="1600" height="634" alt="Night storefront of Rice 2 Go in La Vernia — neon red RICE 2 GO, blue 莲花楼, red lanterns, brick, and guardian lions" />
+      </picture>
       <div class="hero__shade" aria-hidden="true"></div>
       <div class="wrap hero__copy">
         <p class="eyebrow">La Vernia · Chihuahua Street</p>
