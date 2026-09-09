@@ -19,7 +19,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Serif+SC:wght@600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="apple-touch-icon" href="favicon.png" />
-  <link rel="stylesheet" href="styles.css?v=2" />
+  <link rel="stylesheet" href="styles.css?v=3" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -58,7 +58,7 @@
     "hasMenu": "https://texasbullmarketing.com/demo/Rice2Go/#menu"
   }
   </script>
-<script>try{var a=localStorage.getItem("rice2go-accent");if(a)document.documentElement.setAttribute("data-accent",a);}catch(e){}</script>
+<script>try{var a=localStorage.getItem("rice2go-accent");if(a)document.documentElement.setAttribute("data-accent",a);if(localStorage.getItem("rice2go-header"))document.documentElement.setAttribute("data-header","accent");}catch(e){}</script>
 </head>
 <body>
   <a class="skip" href="#top">Skip to content</a>
@@ -71,18 +71,34 @@
           </button>
           <div class="theme-menu" id="themeMenu" hidden role="menu" aria-label="Accent color">
             <p class="theme-menu__hint">Try a color</p>
-            <button type="button" role="menuitemradio" data-accent="original" aria-checked="true"><span class="swatch swatch--original" aria-hidden="true"></span> Original</button>
-            <button type="button" role="menuitemradio" data-accent="red" aria-checked="false"><span class="swatch swatch--red" aria-hidden="true"></span> Race car red</button>
-            <button type="button" role="menuitemradio" data-accent="green" aria-checked="false"><span class="swatch swatch--green" aria-hidden="true"></span> Flame green</button>
-            <button type="button" role="menuitemradio" data-accent="cobalt" aria-checked="false"><span class="swatch swatch--cobalt" aria-hidden="true"></span> Cobalt blue</button>
-            <button type="button" role="menuitemradio" data-accent="yellow" aria-checked="false"><span class="swatch swatch--yellow" aria-hidden="true"></span> Juicy Fruit yellow</button>
-            <button type="button" role="menuitemradio" data-accent="orange" aria-checked="false"><span class="swatch swatch--orange" aria-hidden="true"></span> Hemi orange</button>
-            <label class="theme-custom">
-              <span class="swatch" id="customSwatch" aria-hidden="true"></span>
-              Custom
-              <span class="theme-custom__code" id="customHex"></span>
-              <input type="color" id="themeColor" value="#ff2a32" />
-            </label>
+            <div class="theme-menu__row">
+              <div class="theme-menu__presets">
+                <button type="button" role="menuitemradio" data-accent="original" aria-checked="true"><span class="swatch swatch--original" aria-hidden="true"></span> Original</button>
+                <button type="button" role="menuitemradio" data-accent="red" aria-checked="false"><span class="swatch swatch--red" aria-hidden="true"></span> Race car red</button>
+                <button type="button" role="menuitemradio" data-accent="green" aria-checked="false"><span class="swatch swatch--green" aria-hidden="true"></span> Flame green</button>
+                <button type="button" role="menuitemradio" data-accent="cobalt" aria-checked="false"><span class="swatch swatch--cobalt" aria-hidden="true"></span> Cobalt blue</button>
+                <button type="button" role="menuitemradio" data-accent="yellow" aria-checked="false"><span class="swatch swatch--yellow" aria-hidden="true"></span> Juicy Fruit yellow</button>
+                <button type="button" role="menuitemradio" data-accent="orange" aria-checked="false"><span class="swatch swatch--orange" aria-hidden="true"></span> Hemi orange</button>
+                <label class="theme-custom">
+                  <span class="swatch" id="customSwatch" aria-hidden="true"></span>
+                  Custom
+                  <span class="theme-custom__code" id="customHex"></span>
+                  <input type="color" id="themeColor" value="#ff2a32" />
+                </label>
+              </div>
+              <div class="theme-menu__v2">
+                <p class="theme-menu__hint">v2 wheel</p>
+                <div class="theme-wheel" id="themeWheel" role="slider" tabindex="0" aria-label="Color wheel">
+                  <div class="theme-wheel__disc" aria-hidden="true"></div>
+                  <div class="theme-wheel__knob" id="themeWheelKnob" aria-hidden="true"></div>
+                </div>
+                <label class="theme-wheel__value">
+                  Brightness
+                  <input type="range" id="themeWheelValue" min="35" max="100" value="100" />
+                </label>
+                <button type="button" class="theme-header-btn" id="headerColorBtn" aria-pressed="false">Color the header</button>
+              </div>
+            </div>
           </div>
           <a class="brand" href="#top">
         <span>
@@ -325,6 +341,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=3"></script>
 </body>
 </html>
