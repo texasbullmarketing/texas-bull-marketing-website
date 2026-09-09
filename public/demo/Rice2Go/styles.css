@@ -122,10 +122,8 @@ html[data-header="accent"] .nav .btn--red:hover {
 
 .hero {
   position: relative;
-  /* Wide night photo is 1600×634. A tall cover crop clips RICE / 楼. */
-  min-height: 0;
-  aspect-ratio: 1600 / 634;
-  max-height: min(72vh, 620px);
+  width: 100%;
+  min-height: min(78vh, 640px);
   display: grid;
   align-items: end;
   color: #fff;
@@ -135,21 +133,23 @@ html[data-header="accent"] .nav .btn--red:hover {
 .hero picture {
   position: absolute; inset: 0;
   display: block;
+  width: 100%;
+  height: 100%;
 }
 .hero__bg {
   width: 100%; height: 100%;
-  object-fit: cover; object-position: center 28%;
+  object-fit: cover; object-position: center 42%;
 }
 .hero__shade {
   position: absolute; inset: 0;
   background:
-    linear-gradient(90deg, rgba(10,12,18,0.72) 0%, rgba(10,12,18,0.28) 30%, rgba(10,12,18,0.06) 48%, transparent 68%),
-    linear-gradient(180deg, rgba(10,12,18,0.1) 0%, transparent 38%, rgba(10,12,18,0.42) 100%);
+    linear-gradient(90deg, rgba(10,12,18,0.82) 0%, rgba(10,12,18,0.48) 42%, rgba(10,12,18,0.18) 100%),
+    linear-gradient(180deg, rgba(10,12,18,0.15) 0%, rgba(10,12,18,0.55) 100%);
 }
 .hero__copy {
   position: relative;
   z-index: 1;
-  padding: 3rem 0 2.2rem;
+  padding: 4.2rem 0 2.6rem;
   max-width: 40rem;
   margin-left: max(1rem, calc((100vw - var(--max)) / 2));
   margin-right: 1rem;
