@@ -94,27 +94,23 @@
     var rad = hsv.h * Math.PI / 180;
     knob.style.transform = "translate(" + (Math.sin(rad) * hsv.s * R) + "px," + (-Math.cos(rad) * hsv.s * R) + "px)";
   }
-  function headerIsDark() {
-    try {
-      var v = localStorage.getItem(STORAGE_HEADER);
-      if (v === "light" || v === "0") return false;
-      return true;
-    } catch (e) { return true; }
+  function normalizeHeader(v, fromStorage) {
+    if (v === "light" || v === "0") return "light";
+    if (v === "black") return "dark";
+    if (v === "dark" && !fromStorage) return "dark";
+    return "flex";
   }
-  function applyHeader(on) {
-    if (on) document.documentElement.setAttribute("data-header", "accent");
-    else document.documentElement.removeAttribute("data-header");
-    try { localStorage.setItem(STORAGE_HEADER, on ? "dark" : "light"); } catch (e) {}
-    var light = document.getElementById("headerLightBtn");
-    var dark = document.getElementById("headerDarkBtn");
-    if (light) {
-      light.setAttribute("aria-pressed", on ? "false" : "true");
-      light.classList.toggle("is-active", !on);
-    }
-    if (dark) {
-      dark.setAttribute("aria-pressed", on ? "true" : "false");
-      dark.classList.toggle("is-active", !!on);
-    }
+  function applyHeader(mode, fromStorage) {
+    mode = normalizeHeader(mode, fromStorage);
+    document.documentElement.setAttribute("data-header", mode);
+    try {
+      localStorage.setItem(STORAGE_HEADER, mode === "dark" ? "black" : mode);
+    } catch (e) {}
+    document.querySelectorAll("[data-header-mode]").forEach(function (btn) {
+      var on = btn.getAttribute("data-header-mode") === mode;
+      btn.setAttribute("aria-pressed", on ? "true" : "false");
+      btn.classList.toggle("is-active", on);
+    });
   }
   function applyCustomHex(hex, fromWheel) {
     if (!hex) return;
@@ -215,7 +211,7 @@
     var menu = document.getElementById("themeMenu");
     if (!toggle || !menu) return;
     applyAccent(currentAccent());
-    try { applyHeader(headerIsDark()); } catch (e) { applyHeader(true); }
+    try { applyHeader(localStorage.getItem(STORAGE_HEADER), true); } catch (e) { applyHeader("flex"); }
     toggle.onclick = function (e) {
       e.stopPropagation();
       var open = toggle.getAttribute("aria-expanded") === "true";
@@ -231,14 +227,12 @@
       picker.onclick = function (e) { e.stopPropagation(); };
       picker.oninput = function (e) { e.stopPropagation(); applyCustomHex(picker.value); };
     }
-    var lightBtn = document.getElementById("headerLightBtn");
-    var darkBtn = document.getElementById("headerDarkBtn");
-    if (lightBtn) {
-      lightBtn.onclick = function (e) { e.stopPropagation(); applyHeader(false); };
-    }
-    if (darkBtn) {
-      darkBtn.onclick = function (e) { e.stopPropagation(); applyHeader(true); };
-    }
+    document.querySelectorAll("[data-header-mode]").forEach(function (btn) {
+      btn.onclick = function (e) {
+        e.stopPropagation();
+        applyHeader(btn.getAttribute("data-header-mode"));
+      };
+    });
     bindWheel();
     if (!window.__tbmThemeBound) {
       window.__tbmThemeBound = true;

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-header="accent">
+<html lang="en" data-header="flex">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -19,7 +19,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Serif+SC:wght@600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="apple-touch-icon" href="favicon.png" />
-  <link rel="stylesheet" href="styles.css?v=5" />
+  <link rel="stylesheet" href="styles.css?v=6" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -58,7 +58,7 @@
     "hasMenu": "https://texasbullmarketing.com/demo/Rice2Go/#menu"
   }
   </script>
-<script>try{var a=localStorage.getItem("rice2go-accent");if(a)document.documentElement.setAttribute("data-accent",a);var h=localStorage.getItem("rice2go-header");if(h==="light"||h==="0")document.documentElement.removeAttribute("data-header");else document.documentElement.setAttribute("data-header","accent");}catch(e){}</script>
+<script>try{var a=localStorage.getItem("rice2go-accent");if(a)document.documentElement.setAttribute("data-accent",a);var h=localStorage.getItem("rice2go-header");if(h==="light"||h==="0")document.documentElement.setAttribute("data-header","light");else if(h==="black")document.documentElement.setAttribute("data-header","dark");else document.documentElement.setAttribute("data-header","flex");}catch(e){}</script>
 </head>
 <body>
   <a class="skip" href="#top">Skip to content</a>
@@ -97,8 +97,9 @@
                   <input type="range" id="themeWheelValue" min="35" max="100" value="100" />
                 </label>
                 <div class="theme-mode" role="group" aria-label="Header look">
-                  <button type="button" class="theme-mode-btn" id="headerLightBtn" aria-pressed="false">Light</button>
-                  <button type="button" class="theme-mode-btn is-active" id="headerDarkBtn" aria-pressed="true">Dark</button>
+                  <button type="button" class="theme-mode-btn" id="headerLightBtn" data-header-mode="light" aria-pressed="false">Light</button>
+                  <button type="button" class="theme-mode-btn" id="headerDarkBtn" data-header-mode="dark" aria-pressed="false">Dark</button>
+                  <button type="button" class="theme-mode-btn is-active" id="headerFlexBtn" data-header-mode="flex" aria-pressed="true">Flex</button>
                 </div>
               </div>
             </div>
@@ -344,6 +345,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=6"></script>
+  <script src="script.js?v=7"></script>
 </body>
 </html>

@@ -92,25 +92,44 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   flex-direction: column; justify-content: center; align-items: center; gap: 5px;
 }
 .burger span { width: 1.15rem; height: 2px; background: var(--nav-ink, var(--ink)); display: block; }
-html[data-header="accent"] {
+html[data-header="light"] {
+  --nav-bg: #fff;
+  --nav-ink: var(--ink);
+}
+html[data-header="dark"] {
+  --nav-bg: var(--night);
+  --nav-ink: #fff;
+}
+html[data-header="flex"] {
   --nav-bg: var(--accent);
   --nav-ink: var(--on-accent);
 }
-html[data-header="accent"] .brand small {
-  color: color-mix(in srgb, var(--on-accent) 78%, transparent);
+html[data-header="dark"] .brand small,
+html[data-header="flex"] .brand small {
+  color: color-mix(in srgb, var(--nav-ink) 78%, transparent);
 }
-html[data-header="accent"] .nav {
-  border-bottom-color: color-mix(in srgb, var(--on-accent) 22%, transparent);
+html[data-header="dark"] .nav,
+html[data-header="flex"] .nav {
+  border-bottom-color: color-mix(in srgb, var(--nav-ink) 22%, transparent);
 }
-html[data-header="accent"] .nav__links a:hover {
-  color: var(--on-accent);
+html[data-header="dark"] .nav__links a:hover,
+html[data-header="flex"] .nav__links a:hover {
+  color: var(--nav-ink);
   opacity: 0.82;
 }
-html[data-header="accent"] .nav .btn--red {
+html[data-header="dark"] .nav .btn--red {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+html[data-header="dark"] .nav .btn--red:hover {
+  background: var(--accent-2);
+  color: var(--on-accent);
+}
+html[data-header="flex"] .nav .btn--red {
   background: var(--on-accent);
   color: var(--accent);
 }
-html[data-header="accent"] .nav .btn--red:hover {
+html[data-header="flex"] .nav .btn--red:hover {
   background: color-mix(in srgb, var(--on-accent) 90%, #000);
   color: var(--accent);
 }
@@ -344,8 +363,8 @@ html[data-header="accent"] .nav .btn--red:hover {
   }
   .nav__links.is-open { display: flex; }
   .nav__links a { padding: 0.7rem 0.2rem; min-height: 44px; }
-  html[data-header="accent"] .nav__links a { color: var(--ink); opacity: 1; }
-  html[data-header="accent"] .nav__links a:hover { color: var(--neon); opacity: 1; }
+  html[data-header] .nav__links a { color: var(--ink); opacity: 1; }
+  html[data-header] .nav__links a:hover { color: var(--neon); opacity: 1; }
   .nav__right { margin-left: auto; }
   .burger { display: flex; flex-shrink: 0; }
   .nav__right .btn { display: none; }
@@ -475,21 +494,25 @@ html[data-accent] { --primary: var(--accent); --primary2: var(--accent-2); }
   cursor: pointer;
 }
 .theme-mode {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 0.3rem;
+  display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.3rem;
   margin-top: 0.65rem; padding: 0.25rem;
   border-radius: 10px; background: rgba(255,255,255,0.06);
   border: 1px solid rgba(255,255,255,0.12);
 }
 .theme-mode-btn {
-  min-height: 36px; padding: 0.3rem 0.4rem; border-radius: 7px;
-  font-size: 0.78rem; font-weight: 700; color: #d8d8d8;
+  min-height: 36px; padding: 0.3rem 0.25rem; border-radius: 7px;
+  font-size: 0.74rem; font-weight: 700; color: #d8d8d8;
   background: transparent; border: 0; cursor: pointer;
 }
 .theme-mode-btn:hover { color: #fff; background: rgba(255,255,255,0.08); }
-.theme-mode-btn.is-active {
-  color: #1a1400; background: #f3eee4;
+#headerLightBtn.is-active {
+  color: #1a1400; background: #fff;
 }
 #headerDarkBtn.is-active {
+  background: #0a0c12;
+  color: #fff;
+}
+#headerFlexBtn.is-active {
   background: var(--accent);
   color: var(--on-accent);
 }
