@@ -1168,39 +1168,31 @@ html[data-accent="orange"] {
 @media (max-width: 860px) {
   :root { --logo: 4.75rem; --nav-h: 4.75rem; }
   .brand-stack strong { font-size: 1.25rem; }
-  .nav__in { justify-content: space-between; }
-  .nav__right { margin-left: auto; }
-  .nav__right .btn { display: none; }
-  .burger { display: flex; margin-right: -0.35rem; }
+  .nav__in { justify-content: space-between; gap: 0.65rem; }
+  .nav__right { display: none; }
+  .burger { display: none; }
   .nav__links {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0; right: 0;
-    flex-direction: column;
-    gap: 0;
-    margin: 0;
-    padding: 0.45rem 1.2rem 0.7rem;
-    background: #f3eee4;
-    color: #16130f;
-    box-shadow: 0 16px 32px rgba(0,0,0,0.28);
-  }
-  .nav__links.is-open { display: flex; }
-  html[data-header] .nav__links.is-open a,
-  html[data-header] .nav__links.is-open .nav__menu-btn {
-    color: #16130f;
-    opacity: 1;
-    text-shadow: none;
-    font-size: 0.84rem;
-    padding: 0.85rem 0.15rem;
-    min-height: 2.85rem;
-    width: 100%;
-    text-align: left;
     display: flex;
+    position: static;
+    flex-direction: row;
+    flex-wrap: nowrap;
     align-items: center;
+    gap: 0.7rem;
+    margin-left: auto;
+    padding: 0;
+    background: none;
+    box-shadow: none;
+    color: inherit;
   }
-  html[data-header] .nav__links.is-open a:hover,
-  html[data-header] .nav__links.is-open .nav__menu-btn:hover { color: #3a2416; }
+  .nav__links a,
+  .nav__menu-btn {
+    font-size: 0.64rem;
+    letter-spacing: 0.06em;
+    padding: 0;
+    min-height: 0;
+    width: auto;
+    white-space: nowrap;
+  }
   .hero { min-height: 0; padding: 2.4rem 0 3.4rem; }
   .hero__actions .btn { width: 100%; }
   .hero__lead { font-size: 1rem; }
@@ -1228,5 +1220,8 @@ html[data-accent="orange"] {
   .strip__grid { grid-template-columns: 1fr 1fr; gap: 0.95rem 1rem; }
   .strip__grid strong { font-size: 1.08rem; }
   .strip__grid span { font-size: 0.8rem; }
+  .nav__links { gap: 0.55rem; }
+  .nav__links a,
+  .nav__menu-btn { font-size: 0.6rem; letter-spacing: 0.05em; }
   .hero__title { font-size: clamp(1.9rem, 9.5vw, 2.55rem); }
 }
