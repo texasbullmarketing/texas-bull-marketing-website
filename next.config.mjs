@@ -96,6 +96,21 @@ const nextConfig = {
         destination: '/demo/IronRootsServices/',
         permanent: true,
       },
+      {
+        source: '/emaillist',
+        destination: 'https://2.24.216.135.sslip.io/tbm-nl/',
+        permanent: false,
+      },
+      {
+        source: '/emaillist/',
+        destination: 'https://2.24.216.135.sslip.io/tbm-nl/',
+        permanent: false,
+      },
+      {
+        source: '/emaillist/:path*',
+        destination: 'https://2.24.216.135.sslip.io/tbm-nl/:path*',
+        permanent: false,
+      },
     ]
   },
   async rewrites() {

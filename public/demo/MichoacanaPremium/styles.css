@@ -926,6 +926,44 @@ a {
   margin-bottom: 0.5rem;
 }
 
+.newsletter-card {
+  margin-top: 2rem;
+  background: var(--white);
+  border: 2px solid var(--pink-card);
+  border-radius: var(--radius);
+  padding: 1.75rem 1.5rem;
+  box-shadow: var(--shadow);
+  max-width: 28rem;
+  margin-inline: auto;
+  text-align: center;
+}
+.newsletter-card .eyebrow { color: var(--pink); }
+.newsletter-card h3 {
+  font-family: var(--font-display);
+  color: var(--pink);
+  font-size: 1.45rem;
+  margin: 0.25rem 0 0.5rem;
+}
+.newsletter-card > p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+.newsletter-card .nl-form {
+  margin-inline: auto;
+  text-align: left;
+}
+.newsletter-card .nl-form input[type="email"],
+.newsletter-card .nl-form input[type="tel"] {
+  border: 2px solid var(--pink-card);
+  border-radius: 12px;
+  font-family: var(--font-body);
+}
+.newsletter-card .nl-form button {
+  font-family: var(--font-display);
+  border-radius: 12px;
+}
+
 .visit-card p {
   color: var(--muted);
   font-size: 0.98rem;
