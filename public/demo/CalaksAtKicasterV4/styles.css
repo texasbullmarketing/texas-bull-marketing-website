@@ -1199,9 +1199,10 @@ html[data-accent="orange"] {
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
-    justify-content: space-evenly;
-    gap: 0.2rem;
-    margin-left: 0;
+    justify-content: flex-end;
+    gap: clamp(0.55rem, 2.4vw, 1.05rem);
+    margin-left: auto;
+    padding-right: 0.1rem;
     padding: 0;
     background: none;
     box-shadow: none;
