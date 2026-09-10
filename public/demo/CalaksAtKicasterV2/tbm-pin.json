@@ -1,5 +1,5 @@
 {
-  "id": "calaks-at-kicaster-v4",
+  "id": "calaks-at-kicaster-v2",
   "name": "Calak's at Kicaster",
   "type": "restaurant",
   "schemaType": "Restaurant",
@@ -11,5 +11,5 @@
   "lat": 29.31075,
   "lng": -98.20706,
   "spanish": "no",
-  "demoUrl": "https://texasbullmarketing.com/demo/CalaksAtKicasterV4/"
+  "demoUrl": "https://texasbullmarketing.com/demo/CalaksAtKicasterV2/"
 }

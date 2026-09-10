@@ -6,8 +6,8 @@ Live demo sites for leads. Served as static folders under `public/demo/`.
 
 | Company | URL | Folder |
 |---------|-----|--------|
-| Calak’s at Kicaster V4 (EN) | `/demo/CalaksAtKicasterV4/` | `public/demo/CalaksAtKicasterV4/` |
-| Calak’s at Kicaster V3 (EN) | `/demo/CalaksAtKicasterV3/` | `public/demo/CalaksAtKicasterV3/` |
+| Calak’s at Kicaster (EN) | `/demo/CalaksAtKicaster/` | `public/demo/CalaksAtKicaster/` |
+| Calak’s at Kicaster V2 (EN) | `/demo/CalaksAtKicasterV2/` | `public/demo/CalaksAtKicasterV2/` |
 | V1TBM (previous live homepage) | `/demo/v1tbm/` | `public/demo/v1tbm/` |
 | Villaseñor Tire Shop #3 (EN+ES) | `/demo/VillasenorTireV2/` · `/demo/VillasenorTireV2/es/` | `public/demo/VillasenorTireV2/` |
 | Victoria’s Ink Room (EN+ES) | `/demo/VictoriasInkRoom/` · `/demo/VictoriasInkRoom/es/` | `public/demo/VictoriasInkRoom/` |
@@ -70,8 +70,8 @@ Hub page: `/demo/` → `public/demo/index.html`
 
 Live:
 
-- https://texasbullmarketing.com/demo/CalaksAtKicasterV4/
-- https://texasbullmarketing.com/demo/CalaksAtKicasterV3/
+- https://texasbullmarketing.com/demo/CalaksAtKicaster/
+- https://texasbullmarketing.com/demo/CalaksAtKicasterV2/
 - https://texasbullmarketing.com/demo/v1tbm/
 - https://texasbullmarketing.com/demo/
 - https://texasbullmarketing.com/demo/VillasenorTireV2/
@@ -89,7 +89,7 @@ Live:
 - https://texasbullmarketing.com/demo/TheLuckyTeaCup/
 - https://texasbullmarketing.com/demo/CRTireShop/
 - https://texasbullmarketing.com/demo/CRTireShop/es/
-- https://texasbullmarketing.com/demo/CalaksAtKicasterV3/
+- https://texasbullmarketing.com/demo/CalaksAtKicasterV2/
 - https://texasbullmarketing.com/demo/ArMandosPizzeria/
 - https://texasbullmarketing.com/demo/BaldysAmericanDiner/
 - https://texasbullmarketing.com/demo/CasasMetal/

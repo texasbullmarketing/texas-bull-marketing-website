@@ -156,9 +156,9 @@
 })();
 
 (function () {
-  var STORAGE_KEY = "calaks4-accent";
-  var STORAGE_HEX = "calaks4-accent-hex";
-  var STORAGE_HEADER = "calaks4-header";
+  var STORAGE_KEY = "calaks-accent";
+  var STORAGE_HEX = "calaks-accent-hex";
+  var STORAGE_HEADER = "calaks-header";
   var CUSTOM_VARS = ["--accent", "--accent-2", "--accent-3", "--accent-deep", "--accent-rgb", "--on-accent"];
   var ACCENTS = { original: "#c9a227", red: "#e10600", green: "#12b85a", cobalt: "#0047ab", yellow: "#e6b800", orange: "#ff5c00", custom: "#c9a227" };
   var ACCENT_KEYS = { original: 1, red: 1, green: 1, cobalt: 1, yellow: 1, orange: 1, custom: 1 };
