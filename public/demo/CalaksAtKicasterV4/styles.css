@@ -344,16 +344,6 @@ html[data-header="flex"] .nav .btn--gold:hover {
   overflow-wrap: break-word;
   max-width: 100%;
 }
-.hero__logo {
-  width: 108px;
-  height: 108px;
-  border-radius: 50%;
-  object-fit: contain;
-  margin: 0 0 1rem;
-  background: rgba(14, 12, 10, 0.42);
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45);
-  flex-shrink: 0;
-}
 .hero__title {
   font-size: clamp(2.05rem, 6.8vw, 4.4rem);
   margin-bottom: 1rem;
@@ -1210,7 +1200,6 @@ html[data-accent="orange"] {
   html[data-header] .nav__links.is-open a:hover,
   html[data-header] .nav__links.is-open .nav__menu-btn:hover { color: #3a2416; }
   .hero { min-height: 0; padding: 2.4rem 0 3.4rem; }
-  .hero__logo { width: 84px; height: 84px; }
   .hero__actions .btn { width: 100%; }
   .hero__lead { font-size: 1rem; }
   .hero__meta { font-size: 0.68rem; letter-spacing: 0.05em; }
