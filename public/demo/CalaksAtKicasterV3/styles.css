@@ -216,6 +216,8 @@ em { font-style: italic; color: var(--gold-2); }
 .theme-btn:focus { outline: none; }
 .theme-btn:focus-visible { outline: 2px solid var(--accent-2); outline-offset: 2px; }
 .brand-stack { display: flex; flex-direction: column; line-height: 1.05; color: inherit; }
+/* restore header name: delete the next line (Calak’s / at Kicaster · Adkins) */
+.brand-stack { display: none; }
 .brand-stack:hover { text-decoration: none; }
 .brand-stack strong {
   font-family: var(--serif);
