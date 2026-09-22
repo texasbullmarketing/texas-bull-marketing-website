@@ -6,6 +6,7 @@ Live demo sites for leads. Served as static folders under `public/demo/`.
 
 | Company | URL | Folder |
 |---------|-----|--------|
+| Texas Bull Auto Sales (EN · auto sales) | https://lotsite.2.24.216.135.sslip.io | LotSite on the VPS, not a `public/demo` folder |
 | Calak’s at Kicaster (EN) | `/demo/CalaksAtKicaster/` | `public/demo/CalaksAtKicaster/` |
 | Calak’s at Kicaster V2 (EN) | `/demo/CalaksAtKicasterV2/` | `public/demo/CalaksAtKicasterV2/` |
 | V1TBM (previous live homepage) | `/demo/v1tbm/` | `public/demo/v1tbm/` |
