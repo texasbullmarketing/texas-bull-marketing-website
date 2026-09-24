@@ -338,6 +338,8 @@ em { font-style: normal; color: var(--purple3); }
     padding: 0.9rem 0; border-bottom: 1px solid var(--line);
     font-size: 1.05rem; color: #fff;
   }
+  .nav__links { margin-left: 0; margin-right: 0; }
+  .nav__right { margin-left: auto; margin-right: 0; flex-shrink: 0; }
   .nav__burger { display: flex; }
   .nav__cta { display: none; }
   .svc-grid, .gallery__grid { grid-template-columns: 1fr 1fr; }
