@@ -44,6 +44,7 @@ Live demo sites for leads. Served as static folders under `public/demo/`.
 | J's Auto Shop (EN+ES) | `/demo/JSAutoShop/` · `/demo/JSAutoShop/es/` | `public/demo/JSAutoShop/` |
 | La Enchiladita (EN+ES) | `/demo/LaEnchiladita/` · `/demo/LaEnchiladita/es/` | `public/demo/LaEnchiladita/` |
 | Mendoza's Auto Repair (EN+ES) | `/demo/MendozasAutoRepair/` · `/demo/MendozasAutoRepair/es/` | `public/demo/MendozasAutoRepair/` |
+| Mendoza's Auto Repair v2 (EN+ES, brakes / radiators / transmissions) | `/demo/MendozasAutoRepairV2/` · `/demo/MendozasAutoRepairV2/es/` | `public/demo/MendozasAutoRepairV2/` |
 | Michoacana Premium (EN only) | `/demo/MichoacanaPremium/` | `public/demo/MichoacanaPremium/` |
 | Pape HVAC (EN+ES) | `/demo/PapeHVAC/` · `/demo/PapeHVAC/es/` | `public/demo/PapeHVAC/` |
 | Taqueria Atotonilco (EN+ES) | `/demo/TaqueriaAtotonilco/` · `/demo/TaqueriaAtotonilco/es/` | `public/demo/TaqueriaAtotonilco/` |
@@ -117,6 +118,8 @@ Live:
 - https://texasbullmarketing.com/demo/DoubleMCleaning/
 - https://texasbullmarketing.com/demo/MendozasAutoRepair/
 - https://texasbullmarketing.com/demo/MendozasAutoRepair/es/
+- https://texasbullmarketing.com/demo/MendozasAutoRepairV2/
+- https://texasbullmarketing.com/demo/MendozasAutoRepairV2/es/
 - https://texasbullmarketing.com/demo/JSAutoShop/
 - https://texasbullmarketing.com/demo/JSAutoShop/es/
 - https://texasbullmarketing.com/demo/WegenersWellService/

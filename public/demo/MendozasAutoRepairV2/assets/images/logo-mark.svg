@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Mendoza's Auto Repair — crossed wrenches">
+  <defs>
+    <linearGradient id="metal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0f2f6"/>
+      <stop offset="45%" stop-color="#c5cad3"/>
+      <stop offset="100%" stop-color="#8e96a3"/>
+    </linearGradient>
+    <linearGradient id="metalDark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#d8dce4"/>
+      <stop offset="100%" stop-color="#6f7684"/>
+    </linearGradient>
+    <radialGradient id="badge" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#2a1540"/>
+      <stop offset="100%" stop-color="#12091a"/>
+    </radialGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <!-- Badge -->
+  <circle cx="256" cy="256" r="242" fill="url(#badge)" stroke="#9b5de5" stroke-width="10"/>
+  <circle cx="256" cy="256" r="226" fill="none" stroke="#7b3fb8" stroke-width="3" opacity="0.55"/>
+
+  <!-- Crossed wrenches (crossbones X) -->
+  <g filter="url(#soft)">
+    <!-- Wrench A (\) -->
+    <g transform="translate(256 256) rotate(-42)">
+      <!-- shaft -->
+      <rect x="-150" y="-14" width="230" height="28" rx="8" fill="url(#metal)"/>
+      <!-- grip notches -->
+      <rect x="-130" y="-16" width="6" height="32" fill="#6f7684" opacity="0.55"/>
+      <rect x="-108" y="-16" width="6" height="32" fill="#6f7684" opacity="0.55"/>
+      <rect x="-86" y="-16" width="6" height="32" fill="#6f7684" opacity="0.55"/>
+      <!-- open head -->
+      <path d="M70 -40 L128 -40 Q150 -40 150 -18 L150 -10 L118 -10 L118 10 L150 10 L150 18 Q150 40 128 40 L70 40 Z" fill="url(#metalDark)"/>
+      <!-- open jaw cut -->
+      <path d="M122 -16 H146 V16 H122 V8 H134 V-8 H122 Z" fill="#12091a"/>
+      <!-- highlight -->
+      <rect x="-145" y="-10" width="200" height="5" rx="2" fill="#fff" opacity="0.28"/>
+    </g>
+
+    <!-- Wrench B (/) -->
+    <g transform="translate(256 256) rotate(42)">
+      <rect x="-150" y="-14" width="230" height="28" rx="8" fill="url(#metal)"/>
+      <rect x="-130" y="-16" width="6" height="32" fill="#6f7684" opacity="0.55"/>
+      <rect x="-108" y="-16" width="6" height="32" fill="#6f7684" opacity="0.55"/>
+      <rect x="-86" y="-16" width="6" height="32" fill="#6f7684" opacity="0.55"/>
+      <path d="M70 -40 L128 -40 Q150 -40 150 -18 L150 -10 L118 -10 L118 10 L150 10 L150 18 Q150 40 128 40 L70 40 Z" fill="url(#metalDark)"/>
+      <path d="M122 -16 H146 V16 H122 V8 H134 V-8 H122 Z" fill="#12091a"/>
+      <rect x="-145" y="-10" width="200" height="5" rx="2" fill="#fff" opacity="0.28"/>
+    </g>
+  </g>
+
+  <!-- Center medallion -->
+  <circle cx="256" cy="256" r="72" fill="#1e0f30" stroke="#c4a1f0" stroke-width="5"/>
+  <text x="256" y="272" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-size="78" font-weight="800" fill="#f4eef8">M</text>
+</svg>
