@@ -6,6 +6,7 @@ Live demo sites for leads. Served as static folders under `public/demo/`.
 
 | Company | URL | Folder |
 |---------|-----|--------|
+| Amaya's Mexican Restaurant (EN) | `/demo/AmayasMexicanRestaurant/` | `public/demo/AmayasMexicanRestaurant/` |
 | Texas Bull Auto Sales (EN · auto sales) | https://lotsite.2.24.216.135.sslip.io | LotSite on the VPS, not a `public/demo` folder |
 | Calak’s at Kicaster (EN) | `/demo/CalaksAtKicaster/` | `public/demo/CalaksAtKicaster/` |
 | Calak’s at Kicaster V2 (EN) | `/demo/CalaksAtKicasterV2/` | `public/demo/CalaksAtKicasterV2/` |
@@ -72,6 +73,7 @@ Hub page: `/demo/` → `public/demo/index.html`
 
 Live:
 
+- https://texasbullmarketing.com/demo/AmayasMexicanRestaurant/
 - https://texasbullmarketing.com/demo/CalaksAtKicaster/
 - https://texasbullmarketing.com/demo/CalaksAtKicasterV2/
 - https://texasbullmarketing.com/demo/v1tbm/
