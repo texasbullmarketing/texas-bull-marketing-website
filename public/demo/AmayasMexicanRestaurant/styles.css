@@ -162,6 +162,7 @@ html[data-header="flex"] { --nav-bg: var(--accent); --nav-ink: var(--on-accent);
 }
 .nav__links {
   display: flex; gap: 1.15rem; margin-left: auto; align-items: center;
+  flex-shrink: 0;
 }
 .nav__links a,
 .nav__menu-btn {
@@ -171,7 +172,7 @@ html[data-header="flex"] { --nav-bg: var(--accent); --nav-ink: var(--on-accent);
 }
 .nav__links a:hover,
 .nav__menu-btn:hover { color: var(--nav-ink); }
-.nav__right { display: flex; align-items: center; gap: 0.45rem; }
+.nav__right { display: flex; align-items: center; gap: 0.45rem; flex-shrink: 0; }
 .nav__phone { text-decoration: none; font-weight: 750; font-size: 0.9rem; color: var(--nav-ink); }
 html[data-header="flex"] .nav__cta { background: var(--on-accent); color: var(--accent); }
 .nav__burger {
@@ -513,30 +514,31 @@ html[data-accent] .items b {
 @media (max-width: 720px) {
   .theme-menu__row { grid-template-columns: 1fr; }
   .theme-menu__v2 { border-left: 0; border-top: 1px solid rgba(255, 255, 255, 0.08); padding-top: 0.45rem; }
-  .brand-stack small { display: block; font-size: 0.58rem; }
-  .nav__phone { display: none; }
-  .nav__right { margin-left: auto; flex-shrink: 0; }
+  .brand-stack small { display: block; font-size: 0.5rem; letter-spacing: 0.04em; }
+  .nav__inner { gap: 0.4rem; }
+  .nav__logo { height: 2.55rem; width: 2.55rem; }
+  .brand-stack strong { font-size: 0.98rem; }
   .nav__links {
-    display: none;
-    position: fixed; inset: var(--nav-h) 0 0 0;
-    margin: 0; padding: 0.4rem 1.2rem 5.5rem;
-    flex-direction: column; align-items: stretch; gap: 0;
-    background: #f6efe3; color: #1c140e; z-index: 85;
+    display: flex;
+    position: static;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.55rem;
+    margin-left: auto;
+    padding: 0;
+    background: none;
+    color: inherit;
   }
-  .nav__links.is-open { display: flex; }
-  #navLinks.is-open a,
-  #navLinks.is-open a:hover,
-  #navLinks.is-open a:visited,
-  #navLinks.is-open .nav__menu-btn,
-  #navLinks.is-open .nav__menu-btn:hover {
-    color: #1c140e !important;
-    padding: 0.95rem 0;
-    border-bottom: 1px solid rgba(28, 20, 14, 0.12);
-    font-size: 1.08rem;
-    text-align: left;
-    width: 100%;
+  .nav__links a,
+  .nav__menu-btn {
+    font-size: 0.78rem;
+    white-space: nowrap;
+    padding: 0;
+    border: 0;
+    width: auto;
+    color: color-mix(in srgb, var(--nav-ink) 88%, transparent);
   }
-  .nav__burger { display: flex; }
+  .nav__right { margin-left: 0.4rem; }
   .hero__bar { padding-top: 0.95rem; }
   .hero__actions { justify-content: center; }
   .visit__grid { grid-template-columns: 1fr; }
