@@ -1,0 +1,15 @@
+{
+  "id": "amayas-mexican-restaurant-v2",
+  "name": "Amaya's Mexican Restaurant v2",
+  "type": "restaurant",
+  "schemaType": "Restaurant",
+  "phone": "+18302352879",
+  "street": "8806 FM 775",
+  "city": "Seguin",
+  "region": "TX",
+  "zip": "78155",
+  "lat": 29.464552,
+  "lng": -98.101447,
+  "spanish": "no",
+  "demoUrl": "https://texasbullmarketing.com/demo/AmayasMexicanRestaurantV2/"
+}
