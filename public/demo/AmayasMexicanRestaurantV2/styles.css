@@ -331,6 +331,7 @@ html[data-header="light"] .nav { border-bottom-color: rgba(0, 0, 0, 0.08); }
 .hero__where a:hover { text-decoration: underline; }
 .hero__actions { display: flex; flex-wrap: wrap; gap: 0.65rem; margin-top: 1rem; justify-content: center; }
 .social { margin: 0.45rem 0 0; color: var(--muted); font-weight: 650; }
+.social a:hover { color: #fff; }
 .eyebrow {
   margin: 0 0 0.35rem;
   text-align: center;
