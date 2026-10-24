@@ -104,6 +104,8 @@
       removeHint: "Permanently deletes this item.",
       holdHint: "Keeps it off the public site for now. Does not delete it.",
       soldHint: "Marks it sold and hides it from the public site.",
+      soldBtn: "Sold",
+      soldConfirm: "Mark sold and hide from the public site?",
       removeConfirm: "Permanently delete {title}? This cannot be undone.",
       backInventory: "Back to inventory", gone: "This appliance is not on the public list.",
       brandLabel: "Brand", modelLabel: "Model", categoryLabel: "Category", typeLabel: "Type",
@@ -147,6 +149,8 @@
       removeHint: "Borra esta pieza para siempre.",
       holdHint: "La quita del sitio público por ahora. No la borra.",
       soldHint: "La marca vendida y la oculta del sitio público.",
+      soldBtn: "Vendido",
+      soldConfirm: "¿Marcar vendido y ocultarlo del sitio público?",
       removeConfirm: "¿Borrar {title} para siempre? No se puede deshacer.",
       backInventory: "Volver al inventario", gone: "Este aparato no está en la lista pública.",
       brandLabel: "Marca", modelLabel: "Modelo", categoryLabel: "Categoría", typeLabel: "Tipo",
@@ -629,29 +633,16 @@
     if (heading) heading.textContent = t("adminTitle");
     var items = loadItems();
     var tab = shopTab === "edit" ? "edit" : "list";
-    var list = '<p><button type="button" class="btn btn--line" data-add-item>' + esc(t("addItem")) + "</button></p>" +
+    var list = '<p class="shop-add"><button type="button" class="btn btn--line" data-add-item>' + esc(t("addItem")) + "</button></p>" +
       '<div class="admin-list">' + items.map(function (item) {
         var photo = (item.photos && item.photos[0]) || "assets/images/storefront.jpg";
-        var kindLine = laundryLabel(item);
-        var held = item.holdFor ? '<span class="admin-row__hold">' + esc(t("holdFor").replace("{name}", item.holdFor)) + "</span>" : "";
-        var holdForm = holding === item.id
-          ? '<form id="holdForm" class="hold-form"><input type="hidden" name="id" value="' + esc(item.id) + '">' +
-            '<input name="holdFor" required placeholder="' + esc(t("holdName")) + '" aria-label="' + esc(t("holdName")) + '" value="' + esc(item.holdFor || "") + '">' +
-            '<button class="btn btn--sm" type="submit">' + esc(t("holdSave")) + "</button>" +
-            '<button class="btn btn--line btn--sm" type="button" data-cancel-hold>' + esc(t("cancel")) + "</button>" +
-            '<p class="tiny" id="holdMsg"></p></form>'
-          : "";
-        var holdBtn = holding === item.id ? "" : (item.holdFor
-          ? '<button type="button" class="linkish" data-release="' + esc(item.id) + '">' + esc(t("release")) + "</button>"
-          : '<button type="button" class="linkish" data-hold="' + esc(item.id) + '">' + esc(t("hold")) + "</button>");
-        return '<div class="admin-row"><img class="admin-thumb" src="' + esc(src(photo)) + '" alt="' + esc(titleOf(item)) + '">' +
-          '<span class="admin-row__main"><span class="admin-row__name">' + esc(item.title || titleOf(item)) + (item.titleEs ? " · " + esc(item.titleEs) : "") + (kindLine ? " · " + esc(kindLine) : "") + (item.sold ? " · " + esc(t("sold")) : "") + "</span>" +
-          '<button type="button" class="linkish" data-edit="' + esc(item.id) + '">' + esc(t("edit")) + "</button>" +
-          held + holdForm + "</span>" +
+        return '<div class="admin-row"><img class="admin-thumb" src="' + esc(src(photo)) + '" alt="' + esc(item.title || "") + '">' +
+          '<span class="admin-row__main"><span class="admin-row__name">' + esc(item.title || "") + "</span>" +
+          (item.titleEs ? '<span class="admin-row__es">' + esc(item.titleEs) + "</span>" : "") +
+          "</span>" +
           '<div class="admin-actions">' +
-          '<div class="admin-action"><button type="button" class="linkish" data-remove="' + esc(item.id) + '">' + esc(t("remove")) + '</button><p class="tiny">' + esc(t("removeHint")) + "</p></div>" +
-          '<div class="admin-action"><div>' + holdBtn + '</div><p class="tiny">' + esc(t("holdHint")) + "</p></div>" +
-          '<div class="admin-action"><button type="button" class="linkish" data-mark-sold="' + esc(item.id) + '" aria-pressed="' + (item.sold ? "true" : "false") + '">' + esc(t("sold")) + '</button><p class="tiny">' + esc(t("soldHint")) + "</p></div>" +
+          '<button type="button" class="btn btn--line" data-edit="' + esc(item.id) + '">' + esc(t("edit")) + "</button>" +
+          '<button type="button" class="btn' + (item.sold ? "" : " btn--line") + '" data-mark-sold="' + esc(item.id) + '" aria-pressed="' + (item.sold ? "true" : "false") + '">' + esc(t("soldBtn")) + "</button>" +
           "</div></div>";
       }).join("") + "</div>";
     box.innerHTML = '<p class="tiny">' + esc(t("demoNote")) + "</p>" +
@@ -660,7 +651,7 @@
       '<button type="button" role="tab" data-shop-tab="edit" aria-selected="' + (tab === "edit" ? "true" : "false") + '">' + esc(t("tabEdit")) + "</button>" +
       "</div>" +
       (tab === "edit" ? shopForm(editing ? findItem(editing) : null) : list) +
-      '<p style="margin-top:.8rem"><button type="button" class="linkish" data-logout>' + esc(t("logout")) + "</button></p>";
+      '<p class="shop-logout"><button type="button" class="linkish" data-logout>' + esc(t("logout")) + "</button></p>";
     if (tab === "edit") paintPhotoStrip();
   }
 
@@ -796,8 +787,11 @@
     var markSold = e.target.closest("[data-mark-sold]");
     if (markSold) {
       var soldId = markSold.getAttribute("data-mark-sold");
+      var selling = findItem(soldId);
+      if (!selling || selling.sold) return;
+      if (!window.confirm(t("soldConfirm"))) return;
       saveItems(loadItems().map(function (item) {
-        return item.id === soldId ? Object.assign({}, item, { sold: !item.sold }) : item;
+        return item.id === soldId ? Object.assign({}, item, { sold: true }) : item;
       }));
       render();
       paintShop();
