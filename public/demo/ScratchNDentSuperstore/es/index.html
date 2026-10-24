@@ -151,41 +151,52 @@
             <button type="button" data-cat="Dishwashers">Lavavajillas</button>
             <button type="button" data-cat="Freezers">Congeladores</button>
           </div>
-          <p class="note">Estas ocho se quedan en esta página. La lista completa está en Inventario.</p>
+          <p class="note">Estas seis se quedan en esta página. La lista completa está en Inventario.</p>
           <p class="floor-more"><a class="btn btn--line" href="inventory.html">Inventario completo</a></p>
-          <div class="toolbar">
-            <input class="grow" id="q" type="search" placeholder="Busque marca, tipo o palabras" aria-label="Buscar aparatos" />
-            <button type="button" class="btn btn--line" data-filters>Filtros</button>
-            <label class="field" style="min-width:11rem">Orden
-              <select id="fSort">
-                <option value="new">Más nuevos</option>
-                <option value="low">Precio: menor a mayor</option>
-                <option value="high">Precio: mayor a menor</option>
-              </select>
-            </label>
-          </div>
-          <div class="filters" id="filters">
-            <button type="button" class="btn btn--line filter-close" data-close-filters>Cerrar</button>
-            <label class="field">Categoría<select id="fCat"></select></label>
-            <label class="field">Marca<select id="fBrand"></select></label>
-            <label class="field">Condición
-              <select id="fCond">
-                <option value="">Cualquier condición</option>
-                <option value="New - Scratch &amp; Dent">Nuevo, rayón y golpe</option>
-                <option value="New - Open Box">Nuevo, caja abierta</option>
-                <option value="New - Cosmetic Blemish">Nuevo, detalle de apariencia</option>
-              </select>
-            </label>
-            <label class="field">Precio
-              <span class="field field--row">
-                <input id="fMin" type="number" min="0" inputmode="numeric" placeholder="Mín" aria-label="Precio mínimo" />
-                <input id="fMax" type="number" min="0" inputmode="numeric" placeholder="Máx" aria-label="Precio máximo" />
-              </span>
-            </label>
+          <div class="inv-tools">
+            <div class="toolbar">
+              <input class="toolbar__search" id="q" type="search" placeholder="Busque marca, modelo o tipo" aria-label="Buscar aparatos" />
+              <div class="toolbar__actions">
+                <button type="button" class="btn btn--line toolbar__btn" data-filters aria-expanded="false" aria-controls="filters">Filtros</button>
+                <div class="sort-wrap">
+                  <button type="button" class="btn btn--line toolbar__btn" data-sort id="sortBtn" aria-expanded="false" aria-controls="sortMenu" aria-haspopup="listbox">Más nuevos</button>
+                  <div class="sort-menu" id="sortMenu" hidden role="listbox" aria-label="Orden">
+                    <button type="button" role="option" data-sort-pick="new" aria-pressed="true">Más nuevos</button>
+                    <button type="button" role="option" data-sort-pick="low">Precio menor a mayor</button>
+                    <button type="button" role="option" data-sort-pick="high">Precio mayor a menor</button>
+                    <button type="button" role="option" data-sort-pick="brand">Marca A–Z</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="filter-back" id="filterBack" hidden></div>
+            <div class="filter-sheet" id="filters" hidden role="dialog" aria-modal="true" aria-label="Filtros">
+              <label class="field">Categoría<select id="fCat"></select></label>
+              <label class="field">Marca<select id="fBrand"></select></label>
+              <label class="field">Precio
+                <span class="field field--row">
+                  <input id="fMin" type="number" min="0" inputmode="numeric" placeholder="Mín" aria-label="Precio mínimo" />
+                  <input id="fMax" type="number" min="0" inputmode="numeric" placeholder="Máx" aria-label="Precio máximo" />
+                </span>
+              </label>
+              <label class="field">Condición
+                <select id="fCond">
+                  <option value="">Cualquier condición</option>
+                  <option value="New - Scratch &amp; Dent">Nuevo, rayón y golpe</option>
+                  <option value="New - Open Box">Nuevo, caja abierta</option>
+                  <option value="New - Cosmetic Blemish">Nuevo, detalle de apariencia</option>
+                </select>
+              </label>
+              <div class="filter-sheet__actions">
+                <button type="button" class="btn btn--line" data-filter-reset>Restablecer</button>
+                <button type="button" class="btn" data-filter-apply>Aplicar</button>
+              </div>
+            </div>
+            <input type="hidden" id="fSort" value="new" />
           </div>
           <div class="results">
             <span id="resultCount"></span>
-            <button type="button" class="linkish" data-clear>Quitar filtros</button>
+            <button type="button" class="linkish" data-clear hidden>Quitar filtros</button>
           </div>
           <div class="grid" id="grid" data-scope="floor"></div>
         </div>

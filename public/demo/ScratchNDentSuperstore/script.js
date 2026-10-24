@@ -58,33 +58,23 @@
   }
 
   var SEED = [
-    { id: "s1", title: "Stainless French-door refrigerator", category: "Refrigerators", brand: "", model: "", condition: "New - Scratch & Dent", price: 1099, was: 1599, photos: ["assets/images/fridge-french-door.jpg"], description: "French-door refrigerator with a factory warranty.", sample: true, sold: false, floor: true, created: "2026-10-24T18:00:00" },
-    { id: "s2", title: "White top-freezer refrigerator", category: "Refrigerators", brand: "", model: "", condition: "New - Open Box", price: 749, was: 1099, photos: ["assets/images/fridge-topfreezer.jpg"], description: "Top-freezer refrigerator with a factory warranty.", sample: true, sold: false, floor: false, created: "2026-10-23T18:00:00" },
-    { id: "s3", title: "Samsung front-load washer", category: "Washers and Dryers", laundry: "washer", fuel: "", brand: "Samsung", model: "", condition: "New - Scratch & Dent", price: 649, was: 999, photos: ["assets/images/washer-samsung.jpg"], description: "Samsung front-load washer. Samsung is on the machine in this sales-floor photo.", sample: true, sold: false, floor: true, created: "2026-10-24T17:00:00" },
-    { id: "s4", title: "Top-load washer", category: "Washers and Dryers", laundry: "washer", fuel: "", brand: "", model: "", condition: "New - Cosmetic Blemish", price: 429, was: 699, photos: ["assets/images/washer-topload.jpg"], description: "Top-load washer with a factory warranty.", sample: true, sold: false, floor: false, created: "2026-10-22T17:00:00" },
-    { id: "s5", title: "White electric dryer", category: "Washers and Dryers", laundry: "dryer", fuel: "electric", brand: "", model: "", condition: "New - Scratch & Dent", price: 549, was: 849, photos: ["assets/images/dryer-electric.jpg"], description: "Electric dryer with a factory warranty.", sample: true, sold: false, floor: true, created: "2026-10-24T16:00:00" },
-    { id: "s6", title: "Gas dryer", category: "Washers and Dryers", laundry: "dryer", fuel: "gas", brand: "", model: "", condition: "New - Open Box", price: 499, was: 799, photos: ["assets/images/dryer-gas.jpg"], description: "Gas dryer with a factory warranty.", sample: true, sold: false, floor: false, created: "2026-10-21T16:00:00" },
-    { id: "s7", title: "Stainless gas range", category: "Gas Stoves", brand: "", model: "", condition: "New - Scratch & Dent", price: 699, was: 1099, photos: ["assets/images/gas-range-stainless.jpg"], description: "Gas range with a factory warranty.", sample: true, sold: false, floor: true, created: "2026-10-24T15:00:00" },
-    { id: "s8", title: "White gas range", category: "Gas Stoves", brand: "", model: "", condition: "New - Cosmetic Blemish", price: 579, was: 899, photos: ["assets/images/gas-range-white.jpg"], description: "White gas range with a factory warranty.", sample: true, sold: false, floor: false, created: "2026-10-20T15:00:00" },
-    { id: "s9", title: "Stainless electric range", category: "Electric Ranges", brand: "", model: "", condition: "New - Scratch & Dent", price: 529, was: 829, photos: ["assets/images/electric-range-stainless.jpg"], description: "Smooth-top electric range with a factory warranty.", sample: true, sold: false, floor: true, created: "2026-10-24T14:00:00" },
-    { id: "s10", title: "Black electric range", category: "Electric Ranges", brand: "", model: "", condition: "New - Open Box", price: 459, was: 749, photos: ["assets/images/electric-range-black.jpg"], description: "Black electric range with a factory warranty.", sample: true, sold: false, floor: false, created: "2026-10-19T14:00:00" },
-    { id: "s11", title: "Countertop microwave", category: "Microwaves", brand: "", model: "", condition: "New - Cosmetic Blemish", price: 129, was: 199, photos: ["assets/images/microwave-counter.jpg"], description: "Countertop microwave with a factory warranty.", sample: true, sold: false, floor: true, created: "2026-10-24T13:00:00" },
-    { id: "s12", title: "Over-the-range microwave", category: "Microwaves", brand: "", model: "", condition: "New - Scratch & Dent", price: 189, was: 299, photos: ["assets/images/microwave-otr.jpg"], description: "Over-the-range microwave with a factory warranty.", sample: true, sold: false, floor: false, created: "2026-10-18T13:00:00" },
-    { id: "s13", title: "Compact upright freezer", category: "Freezers", brand: "", model: "", condition: "New - Scratch & Dent", price: 449, was: 699, photos: ["assets/images/freezer-upright.jpg"], description: "Compact upright freezer with a factory warranty.", sample: true, sold: false, floor: true, created: "2026-10-24T12:00:00" },
-    { id: "s14", title: "Chest freezer", category: "Freezers", brand: "", model: "", condition: "New - Open Box", price: 399, was: 599, photos: ["assets/images/freezer-chest.jpg"], description: "Chest freezer with a factory warranty.", sample: true, sold: false, floor: false, created: "2026-10-17T12:00:00" },
-    { id: "s15", title: "Stainless dishwasher", category: "Dishwashers", brand: "", model: "", condition: "New - Scratch & Dent", price: 379, was: 599, photos: ["assets/images/dishwasher-stainless.jpg"], description: "Dishwasher with a factory warranty.", sample: true, sold: false, floor: true, created: "2026-10-24T11:00:00" },
-    { id: "s16", title: "White dishwasher", category: "Dishwashers", brand: "", model: "", condition: "New - Cosmetic Blemish", price: 329, was: 499, photos: ["assets/images/dishwasher-white.jpg"], description: "White dishwasher with a factory warranty.", sample: true, sold: true, floor: false, created: "2026-10-16T11:00:00" }
+    { id: "s3", slug: "samsung-front-load-washer", title: "Samsung front-load washer", titleEs: "Lavadora Samsung de carga frontal", category: "Washers and Dryers", laundry: "washer", fuel: "", brand: "Samsung", model: "WF45A6400AV", condition: "New - Scratch & Dent", price: 649, was: 999, photos: ["assets/images/washer-samsung.jpg"], description: "Front-load washer, dark finish. Scratch on the top panel. Samsung badge is on the front.", descriptionEs: "Lavadora de carga frontal, acabado oscuro. Rayón en la tapa. La placa Samsung está al frente.", sample: true, sold: false, floor: true, created: "2026-10-24T17:00:00" },
+    { id: "s5", slug: "white-electric-dryer", title: "White electric dryer", titleEs: "Secadora eléctrica blanca", category: "Washers and Dryers", laundry: "dryer", fuel: "electric", brand: "", model: "WED8127LC", condition: "New - Scratch & Dent", price: 549, was: 849, photos: ["assets/images/dryer-electric.jpg"], description: "Electric dryer, white. Small dent on the top left corner.", descriptionEs: "Secadora eléctrica, blanca. Golpe pequeño en la esquina superior izquierda.", sample: true, sold: false, floor: true, created: "2026-10-24T16:00:00" },
+    { id: "s6", slug: "gas-dryer", title: "Gas dryer", titleEs: "Secadora de gas", category: "Washers and Dryers", laundry: "dryer", fuel: "gas", brand: "", model: "MGD5030MW", condition: "New - Open Box", price: 499, was: 799, photos: ["assets/images/dryer-gas.jpg"], description: "Gas dryer. Scuff along the door edge.", descriptionEs: "Secadora de gas. Raspón en el borde de la puerta.", sample: true, sold: false, floor: true, created: "2026-10-24T15:30:00" },
+    { id: "s1", slug: "stainless-french-door-refrigerator", title: "Stainless French-door refrigerator", titleEs: "Refrigerador de acero, puertas francesas", category: "Refrigerators", brand: "", model: "WRF535SWHZ", condition: "New - Scratch & Dent", price: 1099, was: 1599, photos: ["assets/images/fridge-french-door.jpg"], description: "French-door refrigerator, stainless. Dent on the left door.", descriptionEs: "Refrigerador de puertas francesas, acero. Golpe en la puerta izquierda.", sample: true, sold: false, floor: true, created: "2026-10-24T18:00:00" },
+    { id: "s7", slug: "stainless-gas-range", title: "Stainless gas range", titleEs: "Estufa de gas de acero", category: "Gas Stoves", brand: "", model: "JGBS66REKSS", condition: "New - Scratch & Dent", price: 699, was: 1099, photos: ["assets/images/gas-range-stainless.jpg"], description: "Gas range, stainless. Scratch across the backguard.", descriptionEs: "Estufa de gas, acero. Rayón en el respaldo.", sample: true, sold: false, floor: true, created: "2026-10-24T15:00:00" },
+    { id: "s11", slug: "countertop-microwave", title: "Countertop microwave", titleEs: "Microondas de mostrador", category: "Microwaves", brand: "", model: "JES1095SMSS", condition: "New - Cosmetic Blemish", price: 129, was: 199, photos: ["assets/images/microwave-counter.jpg"], description: "Countertop microwave. Rub mark on the handle.", descriptionEs: "Microondas de mostrador. Marca en la agarradera.", sample: true, sold: false, floor: true, created: "2026-10-24T13:00:00" },
+    { id: "s16", slug: "white-dishwasher", title: "White dishwasher", titleEs: "Lavavajillas blanco", category: "Dishwashers", brand: "", model: "WDF520PADM", condition: "New - Cosmetic Blemish", price: 329, was: 499, photos: ["assets/images/dishwasher-white.jpg"], description: "White dishwasher. Mark on the top edge of the door.", descriptionEs: "Lavavajillas blanco. Marca en el borde superior de la puerta.", sample: true, sold: true, floor: false, created: "2026-10-16T11:00:00" }
   ];
 
   var COPY = {
     en: {
-      sample: "SAMPLE", sold: "SOLD", call: "Call", text: "Text", directions: "Get directions",
-      samplePrice: "Sample price", results: "{n} on this list", none: "Nothing matches. Clear the filters or call the store.",
+      sold: "SOLD", call: "Call", text: "Text", directions: "Get directions",
+      results: "{n} on this list", none: "Nothing matches. Clear the filters or call the store.",
       warranty: "New but blemished, with a factory warranty. Call for the terms on a specific unit.",
-      sampleNote: "Sample listing. Not current stock and not a real price.",
       close: "Close", filters: "Filters", loginTitle: "Shop login", user: "Username", pass: "Password",
       enter: "Log in", bad: "That username or password is not right.",
-      adminTitle: "Floor list", demoNote: "Demo login saved in this browser only. Not real security.",
+      adminTitle: "Floor list", demoNote: "This login stays in this browser only. It is not real security.",
       add: "Add to the list", save: "Save changes", cancel: "Cancel", remove: "Remove", edit: "Edit",
       hold: "Hold", release: "Take off hold", holdFor: "On hold for {name}", onHold: "On hold",
       holdName: "Name", holdSave: "Put on hold", holdNeed: "Add the name it is held for.",
@@ -99,23 +89,35 @@
       dryerFuel: "Gas or electric", fuelPick: "Choose gas or electric",
       needLaundry: "Choose washer or dryer.", needFuel: "Choose gas or electric.",
       showSold: "Show sold", brandAll: "All brands", catAll: "All categories",
-      sortNew: "Newest", sortLow: "Price: low to high", sortHigh: "Price: high to low",
+      sortNew: "Newest", sortLow: "Price low to high", sortHigh: "Price high to low", sortBrand: "Brand A–Z",
       open: "Open now · Closes at 5 PM",
       closedToday: "Closed · Opens today at 9 AM",
       closedSun: "Closed · Opens Monday at 9 AM",
       closedEve: "Closed · Opens tomorrow at 9 AM",
       sms: "Hi, I am asking about {title}.",
-      was: "Was", model: "Model on request", clear: "Clear filters",
-      sent: "Thanks. This preview does not send the form. Call 210-655-5442 and the store will help."
+      was: "Was", model: "Ask for model", askModel: "Ask for model", clear: "Clear filters",
+      titleEn: "Title in English", titleEs: "Title in Spanish",
+      descEn: "Description in English", descEs: "Description in Spanish",
+      needTitle: "Add the English title.", needTitleEs: "Add the Spanish title.",
+      needDesc: "Add the English description.", needDescEs: "Add the Spanish description.",
+      modelHint: "Leave this blank only if the card should say Ask for model.",
+      removeHint: "Permanently deletes this item.",
+      holdHint: "Keeps it off the public site for now. Does not delete it.",
+      soldHint: "Marks it sold and hides it from the public site.",
+      removeConfirm: "Permanently delete {title}? This cannot be undone.",
+      backInventory: "Back to inventory", gone: "This appliance is not on the public list.",
+      brandLabel: "Brand", modelLabel: "Model", categoryLabel: "Category", typeLabel: "Type",
+      conditionLabel: "Condition", priceLabel: "Price", listLabel: "List price",
+      noneBrand: "Not listed",
+      sent: "Thanks. Call 210-655-5442 and the store will help."
     },
     es: {
-      sample: "MUESTRA", sold: "VENDIDO", call: "Llamar", text: "Texto", directions: "Cómo llegar",
-      samplePrice: "Precio de muestra", results: "{n} en esta lista", none: "Nada coincide. Quite los filtros o llame a la tienda.",
+      sold: "VENDIDO", call: "Llamar", text: "Texto", directions: "Cómo llegar",
+      results: "{n} en esta lista", none: "Nada coincide. Quite los filtros o llame a la tienda.",
       warranty: "Nuevo, con detalles de apariencia, y con garantía de fábrica. Llame para saber los términos de una pieza.",
-      sampleNote: "Anuncio de muestra. No es inventario actual y el precio no es real.",
       close: "Cerrar", filters: "Filtros", loginTitle: "Entrada de la tienda", user: "Usuario", pass: "Contraseña",
       enter: "Entrar", bad: "Ese usuario o contraseña no es correcto.",
-      adminTitle: "Lista del piso", demoNote: "Entrada de demostración guardada solo en este navegador. No es seguridad real.",
+      adminTitle: "Lista del piso", demoNote: "Esta entrada se guarda solo en este navegador. No es seguridad real.",
       add: "Agregar a la lista", save: "Guardar cambios", cancel: "Cancelar", remove: "Quitar", edit: "Editar",
       hold: "Apartar", release: "Quitar el apartado", holdFor: "Apartado para {name}", onHold: "Apartado",
       holdName: "Nombre", holdSave: "Apartar", holdNeed: "Ponga el nombre de la persona.",
@@ -130,14 +132,27 @@
       dryerFuel: "Gas o eléctrica", fuelPick: "Elija gas o eléctrica",
       needLaundry: "Elija lavadora o secadora.", needFuel: "Elija gas o eléctrica.",
       showSold: "Ver vendidos", brandAll: "Todas las marcas", catAll: "Todas las categorías",
-      sortNew: "Más nuevos", sortLow: "Precio: menor a mayor", sortHigh: "Precio: mayor a menor",
+      sortNew: "Más nuevos", sortLow: "Precio menor a mayor", sortHigh: "Precio mayor a menor", sortBrand: "Marca A–Z",
       open: "Abierto ahora · Cierra a las 5 PM",
       closedToday: "Cerrado · Abre hoy a las 9 AM",
       closedSun: "Cerrado · Abre el lunes a las 9 AM",
       closedEve: "Cerrado · Abre mañana a las 9 AM",
       sms: "Hola, pregunto por {title}.",
-      was: "Antes", model: "Modelo a preguntar", clear: "Quitar filtros",
-      sent: "Gracias. Esta vista previa no envía el formulario. Llame al 210-655-5442 y la tienda le ayuda."
+      was: "Antes", model: "Pregunte el modelo", askModel: "Pregunte el modelo", clear: "Quitar filtros",
+      titleEn: "Título en inglés", titleEs: "Título en español",
+      descEn: "Descripción en inglés", descEs: "Descripción en español",
+      needTitle: "Ponga el título en inglés.", needTitleEs: "Ponga el título en español.",
+      needDesc: "Ponga la descripción en inglés.", needDescEs: "Ponga la descripción en español.",
+      modelHint: "Déjelo en blanco solo si la tarjeta debe decir Pregunte el modelo.",
+      removeHint: "Borra esta pieza para siempre.",
+      holdHint: "La quita del sitio público por ahora. No la borra.",
+      soldHint: "La marca vendida y la oculta del sitio público.",
+      removeConfirm: "¿Borrar {title} para siempre? No se puede deshacer.",
+      backInventory: "Volver al inventario", gone: "Este aparato no está en la lista pública.",
+      brandLabel: "Marca", modelLabel: "Modelo", categoryLabel: "Categoría", typeLabel: "Tipo",
+      conditionLabel: "Condición", priceLabel: "Precio", listLabel: "Precio de lista",
+      noneBrand: "Sin marca",
+      sent: "Gracias. Llame al 210-655-5442 y la tienda le ayuda."
     }
   };
 
@@ -168,34 +183,40 @@
       return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
     });
   }
+  function cloneSeed() {
+    return SEED.map(function (item) { return Object.assign({}, item, { photos: (item.photos || []).slice() }); });
+  }
+  function isSeedId(id) { return /^s\d+$/.test(String(id || "")); }
+  function seedNeedsSwap(parsed) {
+    var known = {};
+    SEED.forEach(function (item) { known[item.id] = 1; });
+    return parsed.some(function (item) {
+      if (!item || !isSeedId(item.id)) return false;
+      if (!known[item.id]) return true;
+      if (!String(item.titleEs || "").trim()) return true;
+      var desc = String(item.description || "") + " " + String(item.descriptionEs || "");
+      return /sample model|modelo de muestra/i.test(desc);
+    });
+  }
   function loadItems() {
     try {
       var raw = localStorage.getItem(STORE_KEY);
       if (raw) {
         var parsed = JSON.parse(raw);
         if (Array.isArray(parsed)) {
-          var changed = false;
-          parsed.forEach(function (item) {
-            var patch = SEED_LAUNDRY[item.id];
-            if (patch && item.category === "Washers and Dryers" && !item.laundry) {
-              item.laundry = patch.laundry;
-              item.fuel = patch.fuel;
-              changed = true;
-            }
-            var seed = null;
-            SEED.forEach(function (row) { if (row.id === item.id) seed = row; });
-            if (seed && String(item.description || "").indexOf("Sample listing") === 0) {
-              item.description = seed.description;
-              changed = true;
-            }
-          });
-          if (changed) saveItems(parsed);
+          if (seedNeedsSwap(parsed)) {
+            var shop = parsed.filter(function (item) { return item && !isSeedId(item.id); });
+            var items = cloneSeed().concat(shop);
+            saveItems(items);
+            return items;
+          }
           return parsed;
         }
       }
     } catch (e) {}
-    localStorage.setItem(STORE_KEY, JSON.stringify(SEED));
-    return SEED.map(function (item) { return Object.assign({}, item); });
+    var fresh = cloneSeed();
+    localStorage.setItem(STORE_KEY, JSON.stringify(fresh));
+    return fresh;
   }
   function saveItems(items) {
     localStorage.setItem(STORE_KEY, JSON.stringify(items));
@@ -232,20 +253,109 @@
     document.querySelectorAll("[data-year]").forEach(function (el) { el.textContent = String(year); });
   }
 
-  function filters() {
+  var filterDraft = null;
+  function fieldNode(id) {
     var root = document.getElementById("page-root");
-    function val(id) { var n = root.querySelector("#" + id); return n ? n.value : ""; }
-    function on(id) { var n = root.querySelector("#" + id); return !!(n && n.checked); }
-    return {
-      q: val("q").trim().toLowerCase(),
-      cat: val("fCat"),
-      brand: val("fBrand"),
-      cond: val("fCond"),
-      min: val("fMin"),
-      max: val("fMax"),
-      sold: on("fSold"),
-      sort: val("fSort") || "new"
+    return root ? root.querySelector("#" + id) : null;
+  }
+  function fieldVal(id) {
+    var n = fieldNode(id);
+    return n ? n.value : "";
+  }
+  function sheetOpen(id) {
+    var n = document.getElementById(id);
+    return !!(n && !n.hidden);
+  }
+  function sortLabel(sort) {
+    if (sort === "low") return t("sortLow");
+    if (sort === "high") return t("sortHigh");
+    if (sort === "brand") return t("sortBrand");
+    return t("sortNew");
+  }
+  function syncSheetBack() {
+    var back = document.getElementById("filterBack");
+    if (!back) return;
+    var narrow = window.matchMedia("(max-width: 900px)").matches;
+    back.hidden = !narrow || !(sheetOpen("filters") || sheetOpen("sortMenu"));
+  }
+  function hideSort() {
+    var menu = document.getElementById("sortMenu");
+    var btn = document.getElementById("sortBtn");
+    if (menu) menu.hidden = true;
+    if (btn) btn.setAttribute("aria-expanded", "false");
+    syncSheetBack();
+  }
+  function hideFilters(restore) {
+    if (restore && filterDraft) {
+      ["fCat", "fBrand", "fCond", "fMin", "fMax"].forEach(function (id) {
+        var n = fieldNode(id);
+        var key = { fCat: "cat", fBrand: "brand", fCond: "cond", fMin: "min", fMax: "max" }[id];
+        if (n) n.value = filterDraft[key];
+      });
+    }
+    filterDraft = null;
+    var sheet = document.getElementById("filters");
+    var btn = document.querySelector("[data-filters]");
+    if (sheet) sheet.hidden = true;
+    if (btn) btn.setAttribute("aria-expanded", "false");
+    syncSheetBack();
+  }
+  function toggleFilters() {
+    var sheet = document.getElementById("filters");
+    if (!sheet) return;
+    if (!sheet.hidden) { hideFilters(true); return; }
+    hideSort();
+    filterDraft = {
+      cat: fieldVal("fCat"),
+      brand: fieldVal("fBrand"),
+      cond: fieldVal("fCond"),
+      min: fieldVal("fMin"),
+      max: fieldVal("fMax")
     };
+    sheet.hidden = false;
+    var btn = document.querySelector("[data-filters]");
+    if (btn) btn.setAttribute("aria-expanded", "true");
+    syncSheetBack();
+    var first = sheet.querySelector("select");
+    if (first) first.focus();
+  }
+  function toggleSort() {
+    var menu = document.getElementById("sortMenu");
+    if (!menu) return;
+    if (!menu.hidden) { hideSort(); return; }
+    if (sheetOpen("filters")) hideFilters(true);
+    menu.hidden = false;
+    var btn = document.getElementById("sortBtn");
+    if (btn) btn.setAttribute("aria-expanded", "true");
+    syncSheetBack();
+  }
+  function filters() {
+    var drafting = filterDraft && sheetOpen("filters");
+    return {
+      q: fieldVal("q").trim().toLowerCase(),
+      cat: drafting ? filterDraft.cat : fieldVal("fCat"),
+      brand: drafting ? filterDraft.brand : fieldVal("fBrand"),
+      cond: drafting ? filterDraft.cond : fieldVal("fCond"),
+      min: drafting ? filterDraft.min : fieldVal("fMin"),
+      max: drafting ? filterDraft.max : fieldVal("fMax"),
+      sold: false,
+      sort: fieldVal("fSort") || "new"
+    };
+  }
+  function filtersDirty(f) {
+    return !!(f.q || f.cat || f.brand || f.cond || f.min !== "" || f.max !== "" || f.sort !== "new");
+  }
+  function paintToolbar() {
+    var f = filters();
+    var sortBtn = document.getElementById("sortBtn");
+    if (sortBtn) sortBtn.textContent = sortLabel(f.sort);
+    document.querySelectorAll("[data-sort-pick]").forEach(function (btn) {
+      var key = btn.getAttribute("data-sort-pick");
+      btn.textContent = sortLabel(key);
+      btn.setAttribute("aria-pressed", key === f.sort ? "true" : "false");
+    });
+    var clearBtn = document.querySelector("[data-clear]");
+    if (clearBtn) clearBtn.hidden = !filtersDirty(f);
   }
   function match(item, f) {
     if (!f.sold && item.sold) return false;
@@ -263,7 +373,7 @@
     if (f.min !== "" && price < Number(f.min)) return false;
     if (f.max !== "" && price > Number(f.max)) return false;
     if (f.q) {
-      var blob = [item.title, titleOf(item), catLabel(item.category), laundrySearch(item), item.brand, item.model, item.description, item.category, item.condition].join(" ").toLowerCase();
+      var blob = [item.title, titleOf(item), item.brand, item.model, item.category, catLabel(item.category), laundrySearch(item)].join(" ").toLowerCase();
       if (blob.indexOf(f.q) === -1) return false;
     }
     return true;
@@ -277,11 +387,10 @@
       if (item.brand) brands[item.brand] = 1;
       if (item.category) cats[item.category] = 1;
     });
-    var f = filters();
     var cat = document.getElementById("fCat");
     var brand = document.getElementById("fBrand");
     if (cat) {
-      var cur = f.cat;
+      var cur = cat.value;
       cat.innerHTML = '<option value="">' + esc(t("catAll")) + "</option>" + Object.keys(cats).map(function (c) {
         var row = '<option value="' + esc(c) + '">' + esc(catLabel(c)) + "</option>";
         if (c === "Washers and Dryers") {
@@ -300,7 +409,7 @@
       }
     }
     if (brand) {
-      var curB = f.brand;
+      var curB = brand.value;
       brand.innerHTML = '<option value="">' + esc(t("brandAll")) + "</option>" + Object.keys(brands).sort().map(function (b) {
         return '<option value="' + esc(b) + '">' + esc(b) + "</option>";
       }).join("");
@@ -322,14 +431,25 @@
     var f = filters();
     var scope = box.getAttribute("data-scope") || "all";
     var items = loadItems().filter(function (item) {
+      if (!isPublic(item)) return false;
       if (scope === "floor" && !item.floor) return false;
       return match(item, f);
     });
     items.sort(function (a, b) {
       if (f.sort === "low") return (Number(a.price) || 0) - (Number(b.price) || 0);
       if (f.sort === "high") return (Number(b.price) || 0) - (Number(a.price) || 0);
+      if (f.sort === "brand") {
+        var ba = String(a.brand || "").toLowerCase();
+        var bb = String(b.brand || "").toLowerCase();
+        if (!ba && bb) return 1;
+        if (ba && !bb) return -1;
+        var byBrand = ba.localeCompare(bb);
+        if (byBrand) return byBrand;
+        return titleOf(a).localeCompare(titleOf(b));
+      }
       return String(b.created || "").localeCompare(String(a.created || ""));
     });
+    paintToolbar();
     if (count) count.textContent = t("results").replace("{n}", String(items.length));
     if (!items.length) {
       box.innerHTML = '<p class="note">' + esc(t("none")) + "</p>";
@@ -337,62 +457,56 @@
     }
     box.innerHTML = items.map(function (item) {
       var photo = (item.photos && item.photos[0]) || "assets/images/storefront.jpg";
-      var meta = [item.brand, item.model].filter(Boolean).join(" · ");
       var kindLine = laundryLabel(item);
-      return '<button type="button" class="card" data-open="' + esc(item.id) + '">' +
-        (item.sold ? '<span class="sold">' + esc(t("sold")) + "</span>" : "") +
+      var modelText = item.model ? item.model : t("askModel");
+      var meta = [item.brand, modelText].filter(Boolean).join(" · ");
+      return '<a class="card" href="' + esc(detailHref(item)) + '">' +
         '<img src="' + esc(src(photo)) + '" alt="' + esc(titleOf(item)) + '" loading="lazy">' +
         '<span class="card__body"><span class="cond">' + esc(condLabel(item.condition || "")) + "</span>" +
         '<span class="card__title">' + esc(titleOf(item)) + "</span>" +
         (kindLine ? '<span class="cond">' + esc(kindLine) + "</span>" : "") +
-        (meta ? '<span class="card__meta">' + esc(meta) + "</span>" : '<span class="card__meta">' + esc(t("model")) + "</span>") +
+        '<span class="card__meta">' + esc(meta) + "</span>" +
         '<span class="price">' + esc(money(item.price)) + (item.was ? " <s>" + esc(money(item.was)) + "</s>" : "") + "</span>" +
-        (item.holdFor ? '<span class="card__meta">' + esc(t("onHold")) + "</span>" : "") +
-        "</span></button>";
+        "</span></a>";
     }).join("");
   }
-  var TITLE_ES = {
-    s1: "Refrigerador de acero, puertas francesas",
-    s2: "Refrigerador blanco con congelador arriba",
-    s3: "Lavadora de carga frontal Samsung",
-    s4: "Lavadora de carga superior",
-    s5: "Secadora eléctrica blanca",
-    s6: "Secadora de gas",
-    s7: "Estufa de gas de acero",
-    s8: "Estufa de gas blanca",
-    s9: "Estufa eléctrica de acero",
-    s10: "Estufa eléctrica negra",
-    s11: "Microondas de mostrador",
-    s12: "Microondas sobre la estufa",
-    s13: "Congelador vertical compacto",
-    s14: "Congelador horizontal",
-    s15: "Lavavajillas de acero",
-    s16: "Lavavajillas blanco"
-  };
-  function titleOf(item) {
-    if (currentLang() === "es" && item.sample && TITLE_ES[item.id]) return TITLE_ES[item.id];
-    return item.title;
+  function slugify(value) {
+    return String(value || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
   }
-  var DESC_ES = {
-    s1: "Refrigerador de puertas francesas, con garantía de fábrica.",
-    s2: "Refrigerador con congelador arriba y garantía de fábrica.",
-    s3: "Lavadora Samsung de carga frontal. Samsung se ve en la máquina de esta foto del piso.",
-    s4: "Lavadora de carga superior, con garantía de fábrica.",
-    s5: "Secadora eléctrica, con garantía de fábrica.",
-    s6: "Secadora de gas, con garantía de fábrica.",
-    s7: "Estufa de gas, con garantía de fábrica.",
-    s8: "Estufa de gas blanca, con garantía de fábrica.",
-    s9: "Estufa eléctrica de cubierta lisa, con garantía de fábrica.",
-    s10: "Estufa eléctrica negra, con garantía de fábrica.",
-    s11: "Microondas de mostrador, con garantía de fábrica.",
-    s12: "Microondas sobre la estufa, con garantía de fábrica.",
-    s13: "Congelador vertical compacto, con garantía de fábrica.",
-    s14: "Congelador horizontal, con garantía de fábrica.",
-    s15: "Lavavajillas, con garantía de fábrica.",
-    s16: "Lavavajillas blanco, con garantía de fábrica."
-  };
+  function slugOf(item) {
+    if (!item) return "";
+    if (item.slug) return item.slug;
+    return slugify(item.title) || item.id;
+  }
+  function uniqueSlug(title, id, items) {
+    var base = slugify(title) || id;
+    var slug = base;
+    var n = 2;
+    while (items.some(function (item) { return item.slug === slug && item.id !== id; })) {
+      slug = base + "-" + n;
+      n += 1;
+    }
+    return slug;
+  }
+  function detailHref(item) {
+    var slug = encodeURIComponent(slugOf(item));
+    if (currentLang() === "es") return "inventario/" + slug + "/";
+    return "en/inventory/" + slug + "/";
+  }
+  function hasSpanish(item) {
+    return !!(item && String(item.titleEs || "").trim() && String(item.descriptionEs || "").trim());
+  }
+  function isPublic(item) {
+    if (!item || item.sold || item.holdFor) return false;
+    if (currentLang() === "es" && !hasSpanish(item)) return false;
+    return true;
+  }
+  function titleOf(item) {
+    if (currentLang() === "es" && String(item.titleEs || "").trim()) return item.titleEs;
+    return item.title || "";
+  }
   function blurb(item) {
-    if (currentLang() === "es" && item.sample && DESC_ES[item.id]) return DESC_ES[item.id];
+    if (currentLang() === "es" && String(item.descriptionEs || "").trim()) return item.descriptionEs;
     return item.description || "";
   }
   function findItem(id) {
@@ -444,23 +558,24 @@
       : { title: "Title", category: "Category", brand: "Brand", model: "Model", condition: "Condition", price: "Price", was: "List price", sold: "Sold", description: "Description" };
     return '<form id="itemForm" class="form">' +
       '<input type="hidden" name="id" value="' + esc(item.id || "") + '">' +
-      '<label class="field">' + esc(L.title) + '<input name="title" required value="' + esc(item.title || "") + '"></label>' +
+      '<label class="field">' + esc(t("titleEn")) + '<input name="title" value="' + esc(item.title || "") + '"><span class="field-error" id="errTitle" hidden></span></label>' +
+      '<label class="field">' + esc(t("titleEs")) + '<input name="titleEs" value="' + esc(item.titleEs || "") + '"><span class="field-error" id="errTitleEs" hidden></span></label>' +
       '<label class="field">' + esc(L.category) + '<select name="category">' + cats.map(function (c) {
         return '<option value="' + esc(c) + '"' + (c === catNow ? " selected" : "") + ">" + esc(catLabel(c)) + "</option>";
       }).join("") + "</select></label>" +
       '<div class="laundry-fields" id="laundryFields"' + (catNow === "Washers and Dryers" ? "" : " hidden") + ">" +
-      '<label class="field">' + esc(t("laundryType")) + '<select name="laundry">' +
+      '<label class="field">' + esc(t("laundryType")) + '<select name="laundry" id="laundrySelect">' +
       '<option value="">' + esc(t("laundryPick")) + "</option>" +
       '<option value="washer"' + (kind === "washer" ? " selected" : "") + ">" + esc(t("washer")) + "</option>" +
       '<option value="dryer"' + (kind === "dryer" ? " selected" : "") + ">" + esc(t("dryer")) + "</option>" +
-      "</select></label>" +
+      '</select><span class="field-error" id="errLaundry" hidden></span></label>' +
       '<label class="field" id="fuelField"' + (kind === "dryer" ? "" : " hidden") + ">" + esc(t("dryerFuel")) + '<select name="fuel">' +
       '<option value="">' + esc(t("fuelPick")) + "</option>" +
       '<option value="electric"' + (fuel === "electric" ? " selected" : "") + ">" + esc(t("electric")) + "</option>" +
       '<option value="gas"' + (fuel === "gas" ? " selected" : "") + ">" + esc(t("gas")) + "</option>" +
-      "</select></label></div>" +
+      '</select><span class="field-error" id="errFuel" hidden></span></label></div>' +
       '<label class="field">' + esc(L.brand) + '<input name="brand" value="' + esc(item.brand || "") + '"></label>' +
-      '<label class="field">' + esc(L.model) + '<input name="model" value="' + esc(item.model || "") + '"></label>' +
+      '<label class="field">' + esc(L.model) + '<input name="model" value="' + esc(item.model || "") + '"><span class="tiny">' + esc(t("modelHint")) + "</span></label>" +
       '<label class="field">' + esc(L.condition) + '<select name="condition">' + CONDITIONS.map(function (c) {
         return '<option value="' + esc(c) + '"' + (c === item.condition ? " selected" : "") + ">" + esc(condLabel(c)) + "</option>";
       }).join("") + "</select></label>" +
@@ -468,8 +583,10 @@
       '<label class="field">' + esc(L.was) + '<input name="was" type="number" min="0" step="1" value="' + esc(item.was || "") + '"></label></div>' +
       '<label class="field">' + esc(t("photos")) + '<input name="photos" type="file" accept="image/*" multiple>' +
       '<span class="tiny">' + esc(t("photoHint")) + '</span><div id="photoStrip"></div></label>' +
-      '<label class="field">' + esc(L.description) + '<textarea name="description" rows="3">' + esc(item.description || "") + "</textarea></label>" +
+      '<label class="field">' + esc(t("descEn")) + '<textarea name="description" rows="3">' + esc(item.description || "") + '</textarea><span class="field-error" id="errDesc" hidden></span></label>' +
+      '<label class="field">' + esc(t("descEs")) + '<textarea name="descriptionEs" rows="3">' + esc(item.descriptionEs || "") + '</textarea><span class="field-error" id="errDescEs" hidden></span></label>' +
       '<label class="check"><input type="checkbox" name="sold"' + (item.sold ? " checked" : "") + "> " + esc(L.sold) + "</label>" +
+      '<p class="tiny">' + esc(t("soldHint")) + "</p>" +
       '<p class="tiny" id="itemMsg"></p>' +
       '<button class="btn" type="submit">' + esc(item.id ? t("save") : t("add")) + "</button>" +
       (item.id ? '<button class="btn btn--line" type="button" data-cancel-edit>' + esc(t("cancel")) + "</button>" : "") +
@@ -528,11 +645,14 @@
           ? '<button type="button" class="linkish" data-release="' + esc(item.id) + '">' + esc(t("release")) + "</button>"
           : '<button type="button" class="linkish" data-hold="' + esc(item.id) + '">' + esc(t("hold")) + "</button>");
         return '<div class="admin-row"><img class="admin-thumb" src="' + esc(src(photo)) + '" alt="' + esc(titleOf(item)) + '">' +
-          '<span class="admin-row__main"><span class="admin-row__name">' + esc(titleOf(item)) + (kindLine ? " · " + esc(kindLine) : "") + (item.sold ? " · " + esc(t("sold")) : "") + "</span>" +
+          '<span class="admin-row__main"><span class="admin-row__name">' + esc(item.title || titleOf(item)) + (item.titleEs ? " · " + esc(item.titleEs) : "") + (kindLine ? " · " + esc(kindLine) : "") + (item.sold ? " · " + esc(t("sold")) : "") + "</span>" +
+          '<button type="button" class="linkish" data-edit="' + esc(item.id) + '">' + esc(t("edit")) + "</button>" +
           held + holdForm + "</span>" +
-          '<span class="admin-row__actions"><button type="button" class="linkish" data-edit="' + esc(item.id) + '">' + esc(t("edit")) + "</button>" +
-          '<button type="button" class="linkish" data-remove="' + esc(item.id) + '">' + esc(t("remove")) + "</button>" +
-          holdBtn + "</span></div>";
+          '<div class="admin-actions">' +
+          '<div class="admin-action"><button type="button" class="linkish" data-remove="' + esc(item.id) + '">' + esc(t("remove")) + '</button><p class="tiny">' + esc(t("removeHint")) + "</p></div>" +
+          '<div class="admin-action"><div>' + holdBtn + '</div><p class="tiny">' + esc(t("holdHint")) + "</p></div>" +
+          '<div class="admin-action"><button type="button" class="linkish" data-mark-sold="' + esc(item.id) + '" aria-pressed="' + (item.sold ? "true" : "false") + '">' + esc(t("sold")) + '</button><p class="tiny">' + esc(t("soldHint")) + "</p></div>" +
+          "</div></div>";
       }).join("") + "</div>";
     box.innerHTML = '<p class="tiny">' + esc(t("demoNote")) + "</p>" +
       '<div class="shop-tabs" role="tablist">' +
@@ -570,17 +690,48 @@
     }
     var catBtn = e.target.closest("[data-cat]");
     if (catBtn) {
+      hideFilters(true);
+      hideSort();
       var sel = document.getElementById("fCat");
       if (sel) sel.value = catBtn.getAttribute("data-cat");
       render();
       var inv = document.getElementById("inventory");
       if (inv) inv.scrollIntoView({ behavior: "smooth" });
+      return;
+    }
+    if (e.target.closest("[data-filter-apply]")) {
+      filterDraft = null;
+      hideFilters(false);
+      render();
+      return;
+    }
+    if (e.target.closest("[data-filter-reset]")) {
+      ["fCat", "fBrand", "fCond", "fMin", "fMax"].forEach(function (id) {
+        var n = document.getElementById(id);
+        if (n) n.value = "";
+      });
+      return;
+    }
+    var sortPick = e.target.closest("[data-sort-pick]");
+    if (sortPick) {
+      var sortInput = document.getElementById("fSort");
+      if (sortInput) sortInput.value = sortPick.getAttribute("data-sort-pick") || "new";
+      hideSort();
+      render();
+      return;
     }
     if (e.target.closest("[data-filters]")) {
-      document.getElementById("filters").classList.add("is-open");
+      toggleFilters();
+      return;
     }
-    if (e.target.closest("[data-close-filters]")) {
-      document.getElementById("filters").classList.remove("is-open");
+    if (e.target.closest("#sortBtn")) {
+      toggleSort();
+      return;
+    }
+    if (e.target.id === "filterBack") {
+      if (sheetOpen("filters")) hideFilters(true);
+      hideSort();
+      return;
     }
     var openId = e.target.closest("[data-open]");
     if (openId) openDetail(openId.getAttribute("data-open"));
@@ -590,20 +741,24 @@
     }
     var photoBtn = e.target.closest("[data-swap-photo]");
     if (photoBtn) {
-      var img = document.querySelector("#detail .modal__photo");
+      var img = document.querySelector("#detailPhoto") || document.querySelector("#detail .modal__photo");
       if (img) img.src = src(photoBtn.getAttribute("data-swap-photo"));
     }
     if (e.target.closest("[data-clear]")) {
+      filterDraft = null;
+      hideFilters(false);
+      hideSort();
       ["q", "fCat", "fBrand", "fCond", "fMin", "fMax"].forEach(function (id) {
         var n = document.getElementById(id);
         if (n) n.value = "";
       });
-      var sold = document.getElementById("fSold");
-      if (sold) sold.checked = false;
       var sort = document.getElementById("fSort");
       if (sort) sort.value = "new";
       render();
+      return;
     }
+    if (sheetOpen("filters") && !e.target.closest("#filters") && !e.target.closest("[data-filters]")) hideFilters(true);
+    if (sheetOpen("sortMenu") && !e.target.closest("#sortMenu") && !e.target.closest("#sortBtn")) hideSort();
     var tabBtn = e.target.closest("[data-shop-tab]");
     if (tabBtn) {
       shopTab = tabBtn.getAttribute("data-shop-tab") === "edit" ? "edit" : "list";
@@ -629,10 +784,24 @@
     var remove = e.target.closest("[data-remove]");
     if (remove) {
       var id = remove.getAttribute("data-remove");
+      var doomed = findItem(id);
+      var label = doomed ? (doomed.title || titleOf(doomed)) : "";
+      if (!window.confirm(t("removeConfirm").replace("{title}", label))) return;
       saveItems(loadItems().filter(function (item) { return item.id !== id; }));
       if (editing === id) { editing = ""; editPhotos = []; shopTab = "list"; }
       render();
       paintShop();
+      return;
+    }
+    var markSold = e.target.closest("[data-mark-sold]");
+    if (markSold) {
+      var soldId = markSold.getAttribute("data-mark-sold");
+      saveItems(loadItems().map(function (item) {
+        return item.id === soldId ? Object.assign({}, item, { sold: !item.sold }) : item;
+      }));
+      render();
+      paintShop();
+      return;
     }
     var holdBtn = e.target.closest("[data-hold]");
     if (holdBtn) { holding = holdBtn.getAttribute("data-hold"); paintShop(); }
@@ -675,7 +844,7 @@
       }
       return;
     }
-    if (target.closest("#filters, #q, #fSort, #fSold")) render();
+    if (target.id === "q") render();
   }
   function onSubmit(e) {
     var login = e.target.closest("#loginForm");
@@ -717,33 +886,61 @@
       e.preventDefault();
       var data = new FormData(itemForm);
       var title = String(data.get("title") || "").trim();
+      var titleEs = String(data.get("titleEs") || "").trim();
+      var description = String(data.get("description") || "").trim();
+      var descriptionEs = String(data.get("descriptionEs") || "").trim();
       var price = Number(data.get("price"));
-      if (!title || !price) return;
       var category = String(data.get("category") || CATS[0]);
       var laundry = "";
       var fuel = "";
+      function setErr(id, msg) {
+        var node = document.getElementById(id);
+        if (!node) return;
+        node.hidden = !msg;
+        node.textContent = msg || "";
+      }
+      setErr("errTitle", title ? "" : t("needTitle"));
+      setErr("errTitleEs", titleEs ? "" : t("needTitleEs"));
+      setErr("errDesc", description ? "" : t("needDesc"));
+      setErr("errDescEs", descriptionEs ? "" : t("needDescEs"));
+      setErr("errLaundry", "");
+      setErr("errFuel", "");
       var itemMsg = document.getElementById("itemMsg");
+      if (itemMsg) itemMsg.textContent = "";
       if (category === "Washers and Dryers") {
         laundry = String(data.get("laundry") || "");
         if (laundry !== "washer" && laundry !== "dryer") {
-          if (itemMsg) itemMsg.textContent = t("needLaundry");
+          setErr("errLaundry", t("needLaundry"));
+          var laundryPick = document.getElementById("laundrySelect");
+          if (laundryPick) laundryPick.focus();
           return;
         }
         if (laundry === "dryer") {
           fuel = String(data.get("fuel") || "");
           if (fuel !== "gas" && fuel !== "electric") {
-            if (itemMsg) itemMsg.textContent = t("needFuel");
+            setErr("errFuel", t("needFuel"));
+            var fuelPick = itemForm.querySelector('[name="fuel"]');
+            if (fuelPick) fuelPick.focus();
             return;
           }
         }
       }
+      if (!title || !titleEs || !description || !descriptionEs || !price) {
+        var firstBad = document.querySelector("#itemForm .field-error:not([hidden])");
+        var field = firstBad && firstBad.closest(".field");
+        var input = field && field.querySelector("input, textarea, select");
+        if (input) input.focus();
+        return;
+      }
       readFiles(itemForm.querySelector('input[name="photos"]')).then(function (photos) {
         var items = loadItems();
-        var id = String(data.get("id") || "");
-        var prev = id ? findItem(id) : null;
+        var id = String(data.get("id") || "") || ("i" + Date.now());
+        var prev = findItem(id);
         var next = {
-          id: id || ("i" + Date.now()),
+          id: id,
+          slug: (prev && prev.slug) || uniqueSlug(title, id, items),
           title: title,
+          titleEs: titleEs,
           category: category,
           laundry: laundry,
           fuel: fuel,
@@ -753,7 +950,8 @@
           price: price,
           was: Number(data.get("was")) || 0,
           photos: editPhotos.concat(photos.filter(function (p) { return editPhotos.indexOf(p) === -1; })),
-          description: String(data.get("description") || "").trim(),
+          description: description,
+          descriptionEs: descriptionEs,
           sample: prev ? !!prev.sample : false,
           floor: prev ? !!prev.floor : false,
           sold: !!itemForm.querySelector('[name="sold"]').checked,
@@ -814,12 +1012,166 @@
     });
   }
 
+  var SITE = "https://texasbullmarketing.com/demo/ScratchNDentSuperstore/";
+  function pathSlug() {
+    var parts = location.pathname.split("/").filter(Boolean);
+    if (!parts.length) return "";
+    var last = parts[parts.length - 1];
+    if (/\.html$/i.test(last)) last = parts[parts.length - 2] || "";
+    if (last === "inventory" || last === "inventario" || last === "en" || last === "es") return "";
+    try { return decodeURIComponent(last); } catch (err) { return last; }
+  }
+  function detailSlug() {
+    var root = document.getElementById("page-root");
+    var set = root && root.getAttribute("data-detail");
+    if (set) return set;
+    if (!document.getElementById("detailPage")) return "";
+    return pathSlug();
+  }
+  function findBySlug(slug) {
+    if (!slug) return null;
+    var found = null;
+    loadItems().forEach(function (item) { if (slugOf(item) === slug) found = item; });
+    return found;
+  }
+  function absPhoto(path) {
+    if (!path || /^data:/.test(path)) return SITE + "assets/images/storefront.jpg";
+    if (/^https?:/.test(path)) return path;
+    return SITE + String(path).replace(/^\//, "");
+  }
+  function absDetail(item, lang) {
+    var slug = encodeURIComponent(slugOf(item));
+    if (lang === "es") return SITE + "es/inventario/" + slug + "/";
+    return SITE + "en/inventory/" + slug + "/";
+  }
+  function setMeta(name, content) {
+    var node = document.querySelector('meta[name="' + name + '"]');
+    if (node) node.setAttribute("content", content);
+  }
+  function setProp(prop, content) {
+    var node = document.querySelector('meta[property="' + prop + '"]');
+    if (node) node.setAttribute("content", content);
+  }
+  function setLink(rel, lang, href) {
+    var node = lang
+      ? document.querySelector('link[rel="' + rel + '"][hreflang="' + lang + '"]')
+      : document.querySelector('link[rel="' + rel + '"]');
+    if (node && href) node.setAttribute("href", href);
+  }
+  function factRow(label, value) {
+    return "<div><dt>" + esc(label) + "</dt><dd>" + esc(value) + "</dd></div>";
+  }
+  function detailMarkup(item) {
+    var photos = item.photos && item.photos.length ? item.photos : ["assets/images/storefront.jpg"];
+    var kind = laundryLabel(item);
+    var modelText = item.model ? item.model : t("askModel");
+    var thumbs = photos.length > 1 ? '<div class="detail-thumbs">' + photos.map(function (p) {
+      return '<button type="button" data-swap-photo="' + esc(p) + '"><img src="' + esc(src(p)) + '" alt=""></button>';
+    }).join("") + "</div>" : "";
+    return '<div class="detail-photo-wrap">' +
+      '<img id="detailPhoto" class="detail-photo" src="' + esc(src(photos[0])) + '" alt="' + esc(titleOf(item)) + '">' +
+      thumbs + "</div>" +
+      '<div class="detail-copy"><h1>' + esc(titleOf(item)) + "</h1>" +
+      "<dl class=\"detail-facts\">" +
+      factRow(t("brandLabel"), item.brand || t("noneBrand")) +
+      factRow(t("modelLabel"), modelText) +
+      factRow(t("categoryLabel"), catLabel(item.category || "")) +
+      (kind ? factRow(t("typeLabel"), kind) : "") +
+      factRow(t("conditionLabel"), condLabel(item.condition || "")) +
+      factRow(t("priceLabel"), money(item.price) || "—") +
+      (item.was ? factRow(t("listLabel"), money(item.was)) : "") +
+      "</dl><p class=\"detail-desc\">" + esc(blurb(item)) + "</p>" +
+      '<div class="actions"><a class="btn" href="tel:' + PHONE + '">' + esc(t("call")) + "</a>" +
+      '<a class="btn btn--ink" href="' + sms(item) + '">' + esc(t("text")) + "</a></div></div>";
+  }
+  function productSchema(item) {
+    var lang = currentLang();
+    var photos = (item.photos && item.photos.length ? item.photos : ["assets/images/storefront.jpg"]).map(absPhoto);
+    var data = {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": titleOf(item),
+      "description": blurb(item),
+      "image": photos,
+      "sku": item.model || item.id,
+      "category": catLabel(item.category || ""),
+      "itemCondition": "https://schema.org/NewCondition",
+      "url": absDetail(item, lang),
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "price": Number(item.price) || 0,
+        "url": absDetail(item, lang),
+        "availability": "https://schema.org/InStock",
+        "seller": { "@type": "ApplianceStore", "name": "Scratch-N-Dent Superstore", "telephone": PHONE }
+      }
+    };
+    if (item.brand) data.brand = { "@type": "Brand", "name": item.brand };
+    return data;
+  }
+  function syncDetailHead(item, ok) {
+    var lang = currentLang();
+    var other = lang === "es" ? "en" : "es";
+    if (!ok || !item) {
+      document.title = t("gone") + " | Scratch-N-Dent Superstore";
+      setMeta("description", t("gone"));
+      var block = document.getElementById("product-ld");
+      if (block) block.textContent = "";
+      return;
+    }
+    var pageTitle = titleOf(item) + " | Scratch-N-Dent Superstore";
+    var desc = blurb(item);
+    var url = absDetail(item, lang);
+    var otherUrl = hasSpanish(item) || lang === "en" ? absDetail(item, other) : (lang === "es" ? SITE + "es/inventory.html" : SITE + "inventory.html");
+    if (lang === "es" && !hasSpanish(item)) otherUrl = SITE + "inventory.html";
+    document.title = pageTitle;
+    setMeta("description", desc);
+    setProp("og:title", pageTitle);
+    setProp("og:description", desc);
+    setProp("og:url", url);
+    setProp("og:image", absPhoto(item.photos && item.photos[0]));
+    setLink("canonical", "", url);
+    setLink("alternate", "en", absDetail(item, "en"));
+    setLink("alternate", "es", hasSpanish(item) ? absDetail(item, "es") : SITE + "es/inventory.html");
+    setLink("alternate", "x-default", absDetail(item, "en"));
+    var block = document.getElementById("product-ld");
+    if (block) block.textContent = JSON.stringify(productSchema(item));
+    var esLink = document.querySelector('.lang-seg a[hreflang="es"]');
+    var enLink = document.querySelector('.lang-seg a[hreflang="en"]');
+    if (lang === "en" && esLink) {
+      var esHref = hasSpanish(item) ? "es/inventario/" + encodeURIComponent(slugOf(item)) + "/" : "es/inventory.html";
+      esLink.setAttribute("href", esHref);
+      esLink.setAttribute("hx-get", esHref);
+    }
+    if (lang === "es" && enLink) {
+      var enHref = "en/inventory/" + encodeURIComponent(slugOf(item)) + "/";
+      enLink.setAttribute("href", enHref);
+      enLink.setAttribute("hx-get", enHref);
+    }
+  }
+  function paintDetail() {
+    var page = document.getElementById("detailPage");
+    if (!page) return;
+    var slug = detailSlug();
+    var item = findBySlug(slug);
+    var back = currentLang() === "es" ? "es/inventory.html" : "inventory.html";
+    var backHtml = '<p class="detail-back"><a href="' + back + '">' + esc(t("backInventory")) + "</a></p>";
+    if (!item || !isPublic(item)) {
+      page.innerHTML = backHtml + '<p class="lede">' + esc(t("gone")) + "</p>";
+      syncDetailHead(item, false);
+      return;
+    }
+    page.innerHTML = backHtml + '<div class="detail-layout">' + detailMarkup(item) + "</div>";
+    syncDetailHead(item, true);
+  }
   function boot() {
+    filterDraft = null;
     bindPage();
     paintHours();
     paintYears();
     render();
     paintShop();
+    paintDetail();
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot);
   else boot();
@@ -1053,15 +1405,18 @@
         if (ev.key !== "Escape") return;
         var tg = document.getElementById("themeToggle");
         var mn = document.getElementById("themeMenu");
-        if (tg && mn && !mn.hidden) { mn.hidden = true; tg.setAttribute("aria-expanded", "false"); }
+        if (tg && mn && !mn.hidden) { mn.hidden = true; tg.setAttribute("aria-expanded", "false"); return; }
+        if (sheetOpen("filters") || sheetOpen("sortMenu")) {
+          if (sheetOpen("filters")) hideFilters(true);
+          hideSort();
+          return;
+        }
         ["detail", "shop"].forEach(function (id) {
           var node = document.getElementById(id);
           var back = document.getElementById(id + "Back");
           if (node) node.hidden = true;
           if (back) back.hidden = true;
         });
-        var filtersEl = document.getElementById("filters");
-        if (filtersEl) filtersEl.classList.remove("is-open");
       });
     }
   }

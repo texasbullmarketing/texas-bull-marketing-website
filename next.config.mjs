@@ -157,6 +157,16 @@ const nextConfig = {
           destination: '/demo/:slug/es/index.html',
         },
       ],
+      afterFiles: [
+        {
+          source: '/demo/ScratchNDentSuperstore/en/inventory/:item/',
+          destination: '/demo/ScratchNDentSuperstore/en/inventory/index.html',
+        },
+        {
+          source: '/demo/ScratchNDentSuperstore/es/inventario/:item/',
+          destination: '/demo/ScratchNDentSuperstore/es/inventario/index.html',
+        },
+      ],
     }
   },
 }
