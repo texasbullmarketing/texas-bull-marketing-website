@@ -345,6 +345,21 @@
     "spanish": "optional"
   },
   {
+    "id": "scratch-n-dent-superstore",
+    "name": "Scratch-N-Dent Superstore",
+    "type": "appliance-store",
+    "schemaType": "ApplianceStore",
+    "phone": "+12106555442",
+    "street": "11803 Perrin Beitel Road",
+    "city": "San Antonio",
+    "region": "TX",
+    "zip": "78217",
+    "lat": 29.5473248,
+    "lng": -98.4096417,
+    "demoUrl": "https://texasbullmarketing.com/demo/ScratchNDentSuperstore/",
+    "spanish": "required"
+  },
+  {
     "id": "amayas-mexican-restaurant",
     "name": "Amaya's Mexican Restaurant",
     "type": "restaurant",

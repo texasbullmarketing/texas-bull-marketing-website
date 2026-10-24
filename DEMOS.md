@@ -6,6 +6,7 @@ Live demo sites for leads. Served as static folders under `public/demo/`.
 
 | Company | URL | Folder |
 |---------|-----|--------|
+| Scratch-N-Dent Superstore (EN+ES) | `/demo/ScratchNDentSuperstore/` · `/demo/ScratchNDentSuperstore/es/` | `public/demo/ScratchNDentSuperstore/` |
 | Amaya's Mexican Restaurant (EN) | `/demo/AmayasMexicanRestaurant/` | `public/demo/AmayasMexicanRestaurant/` |
 | Amaya's Mexican Restaurant v2 (EN) | `/demo/AmayasMexicanRestaurantV2/` | `public/demo/AmayasMexicanRestaurantV2/` |
 | Texas Bull Auto Sales (EN · auto sales) | https://lotsite.2.24.216.135.sslip.io | LotSite on the VPS, not a `public/demo` folder |
