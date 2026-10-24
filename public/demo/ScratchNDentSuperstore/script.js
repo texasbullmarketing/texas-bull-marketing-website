@@ -58,22 +58,22 @@
   }
 
   var SEED = [
-    { id: "s1", title: "Stainless French-door refrigerator", category: "Refrigerators", brand: "", model: "", condition: "New - Scratch & Dent", price: 1099, was: 1599, photos: ["assets/images/fridge-french-door.jpg"], description: "Sample listing. The photo is a sample picture of a French-door refrigerator. It is not a unit on the floor, and the price is not real.", sample: true, sold: false, floor: true, created: "2026-10-24T18:00:00" },
-    { id: "s2", title: "White top-freezer refrigerator", category: "Refrigerators", brand: "", model: "", condition: "New - Open Box", price: 749, was: 1099, photos: ["assets/images/fridge-topfreezer.jpg"], description: "Sample listing. The photo is a sample picture of a top-freezer refrigerator. Not current stock and not a real price.", sample: true, sold: false, floor: false, created: "2026-10-23T18:00:00" },
-    { id: "s3", title: "Samsung front-load washer", category: "Washers and Dryers", laundry: "washer", fuel: "", brand: "Samsung", model: "", condition: "New - Scratch & Dent", price: 649, was: 999, photos: ["assets/images/washer-samsung.jpg"], description: "Sample listing. Samsung is on the machine in this sales-floor photo. The model and price are not a live offer.", sample: true, sold: false, floor: true, created: "2026-10-24T17:00:00" },
-    { id: "s4", title: "Top-load washer", category: "Washers and Dryers", laundry: "washer", fuel: "", brand: "", model: "", condition: "New - Cosmetic Blemish", price: 429, was: 699, photos: ["assets/images/washer-topload.jpg"], description: "Sample listing. The photo is a sample picture of a top-load washer. Not current stock and not a real price.", sample: true, sold: false, floor: false, created: "2026-10-22T17:00:00" },
-    { id: "s5", title: "White electric dryer", category: "Washers and Dryers", laundry: "dryer", fuel: "electric", brand: "", model: "", condition: "New - Scratch & Dent", price: 549, was: 849, photos: ["assets/images/dryer-electric.jpg"], description: "Sample listing. The photo is a sample picture of an electric dryer. Not current stock and not a real price.", sample: true, sold: false, floor: true, created: "2026-10-24T16:00:00" },
-    { id: "s6", title: "Gas dryer", category: "Washers and Dryers", laundry: "dryer", fuel: "gas", brand: "", model: "", condition: "New - Open Box", price: 499, was: 799, photos: ["assets/images/dryer-gas.jpg"], description: "Sample listing. The photo is a sample picture of a gas dryer. Not current stock and not a real price.", sample: true, sold: false, floor: false, created: "2026-10-21T16:00:00" },
-    { id: "s7", title: "Stainless gas range", category: "Gas Stoves", brand: "", model: "", condition: "New - Scratch & Dent", price: 699, was: 1099, photos: ["assets/images/gas-range-stainless.jpg"], description: "Sample listing. The photo is a sample picture of a gas range. Not current stock and not a real price.", sample: true, sold: false, floor: true, created: "2026-10-24T15:00:00" },
-    { id: "s8", title: "White gas range", category: "Gas Stoves", brand: "", model: "", condition: "New - Cosmetic Blemish", price: 579, was: 899, photos: ["assets/images/gas-range-white.jpg"], description: "Sample listing. The photo is a sample picture of a white gas range. Not current stock and not a real price.", sample: true, sold: false, floor: false, created: "2026-10-20T15:00:00" },
-    { id: "s9", title: "Stainless electric range", category: "Electric Ranges", brand: "", model: "", condition: "New - Scratch & Dent", price: 529, was: 829, photos: ["assets/images/electric-range-stainless.jpg"], description: "Sample listing. The photo is a sample picture of a smooth-top electric range. Not current stock and not a real price.", sample: true, sold: false, floor: true, created: "2026-10-24T14:00:00" },
-    { id: "s10", title: "Black electric range", category: "Electric Ranges", brand: "", model: "", condition: "New - Open Box", price: 459, was: 749, photos: ["assets/images/electric-range-black.jpg"], description: "Sample listing. The photo is a sample picture of a black electric range. Not current stock and not a real price.", sample: true, sold: false, floor: false, created: "2026-10-19T14:00:00" },
-    { id: "s11", title: "Countertop microwave", category: "Microwaves", brand: "", model: "", condition: "New - Cosmetic Blemish", price: 129, was: 199, photos: ["assets/images/microwave-counter.jpg"], description: "Sample listing. The photo is a sample picture of a countertop microwave. Not current stock and not a real price.", sample: true, sold: false, floor: true, created: "2026-10-24T13:00:00" },
-    { id: "s12", title: "Over-the-range microwave", category: "Microwaves", brand: "", model: "", condition: "New - Scratch & Dent", price: 189, was: 299, photos: ["assets/images/microwave-otr.jpg"], description: "Sample listing. The photo is a sample picture of an over-the-range microwave. Not current stock and not a real price.", sample: true, sold: false, floor: false, created: "2026-10-18T13:00:00" },
-    { id: "s13", title: "Compact upright freezer", category: "Freezers", brand: "", model: "", condition: "New - Scratch & Dent", price: 449, was: 699, photos: ["assets/images/freezer-upright.jpg"], description: "Sample listing. The photo is a sample picture of an upright freezer. Not current stock and not a real price.", sample: true, sold: false, floor: true, created: "2026-10-24T12:00:00" },
-    { id: "s14", title: "Chest freezer", category: "Freezers", brand: "", model: "", condition: "New - Open Box", price: 399, was: 599, photos: ["assets/images/freezer-chest.jpg"], description: "Sample listing. The photo is a sample picture of a chest freezer. Not current stock and not a real price.", sample: true, sold: false, floor: false, created: "2026-10-17T12:00:00" },
-    { id: "s15", title: "Stainless dishwasher", category: "Dishwashers", brand: "", model: "", condition: "New - Scratch & Dent", price: 379, was: 599, photos: ["assets/images/dishwasher-stainless.jpg"], description: "Sample listing. The photo is a sample picture of a dishwasher. Not current stock and not a real price.", sample: true, sold: false, floor: true, created: "2026-10-24T11:00:00" },
-    { id: "s16", title: "White dishwasher", category: "Dishwashers", brand: "", model: "", condition: "New - Cosmetic Blemish", price: 329, was: 499, photos: ["assets/images/dishwasher-white.jpg"], description: "Sample listing marked sold so the sold ribbon can be previewed. Not a live dishwasher.", sample: true, sold: true, floor: false, created: "2026-10-16T11:00:00" }
+    { id: "s1", title: "Stainless French-door refrigerator", category: "Refrigerators", brand: "", model: "", condition: "New - Scratch & Dent", price: 1099, was: 1599, photos: ["assets/images/fridge-french-door.jpg"], description: "French-door refrigerator with a factory warranty.", sample: true, sold: false, floor: true, created: "2026-10-24T18:00:00" },
+    { id: "s2", title: "White top-freezer refrigerator", category: "Refrigerators", brand: "", model: "", condition: "New - Open Box", price: 749, was: 1099, photos: ["assets/images/fridge-topfreezer.jpg"], description: "Top-freezer refrigerator with a factory warranty.", sample: true, sold: false, floor: false, created: "2026-10-23T18:00:00" },
+    { id: "s3", title: "Samsung front-load washer", category: "Washers and Dryers", laundry: "washer", fuel: "", brand: "Samsung", model: "", condition: "New - Scratch & Dent", price: 649, was: 999, photos: ["assets/images/washer-samsung.jpg"], description: "Samsung front-load washer. Samsung is on the machine in this sales-floor photo.", sample: true, sold: false, floor: true, created: "2026-10-24T17:00:00" },
+    { id: "s4", title: "Top-load washer", category: "Washers and Dryers", laundry: "washer", fuel: "", brand: "", model: "", condition: "New - Cosmetic Blemish", price: 429, was: 699, photos: ["assets/images/washer-topload.jpg"], description: "Top-load washer with a factory warranty.", sample: true, sold: false, floor: false, created: "2026-10-22T17:00:00" },
+    { id: "s5", title: "White electric dryer", category: "Washers and Dryers", laundry: "dryer", fuel: "electric", brand: "", model: "", condition: "New - Scratch & Dent", price: 549, was: 849, photos: ["assets/images/dryer-electric.jpg"], description: "Electric dryer with a factory warranty.", sample: true, sold: false, floor: true, created: "2026-10-24T16:00:00" },
+    { id: "s6", title: "Gas dryer", category: "Washers and Dryers", laundry: "dryer", fuel: "gas", brand: "", model: "", condition: "New - Open Box", price: 499, was: 799, photos: ["assets/images/dryer-gas.jpg"], description: "Gas dryer with a factory warranty.", sample: true, sold: false, floor: false, created: "2026-10-21T16:00:00" },
+    { id: "s7", title: "Stainless gas range", category: "Gas Stoves", brand: "", model: "", condition: "New - Scratch & Dent", price: 699, was: 1099, photos: ["assets/images/gas-range-stainless.jpg"], description: "Gas range with a factory warranty.", sample: true, sold: false, floor: true, created: "2026-10-24T15:00:00" },
+    { id: "s8", title: "White gas range", category: "Gas Stoves", brand: "", model: "", condition: "New - Cosmetic Blemish", price: 579, was: 899, photos: ["assets/images/gas-range-white.jpg"], description: "White gas range with a factory warranty.", sample: true, sold: false, floor: false, created: "2026-10-20T15:00:00" },
+    { id: "s9", title: "Stainless electric range", category: "Electric Ranges", brand: "", model: "", condition: "New - Scratch & Dent", price: 529, was: 829, photos: ["assets/images/electric-range-stainless.jpg"], description: "Smooth-top electric range with a factory warranty.", sample: true, sold: false, floor: true, created: "2026-10-24T14:00:00" },
+    { id: "s10", title: "Black electric range", category: "Electric Ranges", brand: "", model: "", condition: "New - Open Box", price: 459, was: 749, photos: ["assets/images/electric-range-black.jpg"], description: "Black electric range with a factory warranty.", sample: true, sold: false, floor: false, created: "2026-10-19T14:00:00" },
+    { id: "s11", title: "Countertop microwave", category: "Microwaves", brand: "", model: "", condition: "New - Cosmetic Blemish", price: 129, was: 199, photos: ["assets/images/microwave-counter.jpg"], description: "Countertop microwave with a factory warranty.", sample: true, sold: false, floor: true, created: "2026-10-24T13:00:00" },
+    { id: "s12", title: "Over-the-range microwave", category: "Microwaves", brand: "", model: "", condition: "New - Scratch & Dent", price: 189, was: 299, photos: ["assets/images/microwave-otr.jpg"], description: "Over-the-range microwave with a factory warranty.", sample: true, sold: false, floor: false, created: "2026-10-18T13:00:00" },
+    { id: "s13", title: "Compact upright freezer", category: "Freezers", brand: "", model: "", condition: "New - Scratch & Dent", price: 449, was: 699, photos: ["assets/images/freezer-upright.jpg"], description: "Compact upright freezer with a factory warranty.", sample: true, sold: false, floor: true, created: "2026-10-24T12:00:00" },
+    { id: "s14", title: "Chest freezer", category: "Freezers", brand: "", model: "", condition: "New - Open Box", price: 399, was: 599, photos: ["assets/images/freezer-chest.jpg"], description: "Chest freezer with a factory warranty.", sample: true, sold: false, floor: false, created: "2026-10-17T12:00:00" },
+    { id: "s15", title: "Stainless dishwasher", category: "Dishwashers", brand: "", model: "", condition: "New - Scratch & Dent", price: 379, was: 599, photos: ["assets/images/dishwasher-stainless.jpg"], description: "Dishwasher with a factory warranty.", sample: true, sold: false, floor: true, created: "2026-10-24T11:00:00" },
+    { id: "s16", title: "White dishwasher", category: "Dishwashers", brand: "", model: "", condition: "New - Cosmetic Blemish", price: 329, was: 499, photos: ["assets/images/dishwasher-white.jpg"], description: "White dishwasher with a factory warranty.", sample: true, sold: true, floor: false, created: "2026-10-16T11:00:00" }
   ];
 
   var COPY = {
@@ -93,6 +93,7 @@
       photoHint: "The front photo is the one on the product card. Move photos left or right.",
       front: "Front", moveLeft: "Left", moveRight: "Right",
       washer: "Washer", dryer: "Dryer", gasDryer: "Gas dryer", electricDryer: "Electric dryer",
+      optWashers: "Washers", optDryers: "Dryers", optGasDryers: "Gas dryers", optElectricDryers: "Electric dryers",
       gas: "Gas", electric: "Electric",
       laundryType: "Washer or dryer", laundryPick: "Choose washer or dryer",
       dryerFuel: "Gas or electric", fuelPick: "Choose gas or electric",
@@ -123,6 +124,7 @@
       photoHint: "La foto de enfrente es la que sale en la tarjeta. Muévalas a la izquierda o a la derecha.",
       front: "Frente", moveLeft: "Izquierda", moveRight: "Derecha",
       washer: "Lavadora", dryer: "Secadora", gasDryer: "Secadora de gas", electricDryer: "Secadora eléctrica",
+      optWashers: "Lavadoras", optDryers: "Secadoras", optGasDryers: "Secadoras de gas", optElectricDryers: "Secadoras eléctricas",
       gas: "Gas", electric: "Eléctrica",
       laundryType: "Lavadora o secadora", laundryPick: "Elija lavadora o secadora",
       dryerFuel: "Gas o eléctrica", fuelPick: "Elija gas o eléctrica",
@@ -175,10 +177,17 @@
           var changed = false;
           parsed.forEach(function (item) {
             var patch = SEED_LAUNDRY[item.id];
-            if (!patch || item.category !== "Washers and Dryers" || item.laundry) return;
-            item.laundry = patch.laundry;
-            item.fuel = patch.fuel;
-            changed = true;
+            if (patch && item.category === "Washers and Dryers" && !item.laundry) {
+              item.laundry = patch.laundry;
+              item.fuel = patch.fuel;
+              changed = true;
+            }
+            var seed = null;
+            SEED.forEach(function (row) { if (row.id === item.id) seed = row; });
+            if (seed && String(item.description || "").indexOf("Sample listing") === 0) {
+              item.description = seed.description;
+              changed = true;
+            }
           });
           if (changed) saveItems(parsed);
           return parsed;
@@ -230,7 +239,6 @@
     return {
       q: val("q").trim().toLowerCase(),
       cat: val("fCat"),
-      laundry: val("fLaundry"),
       brand: val("fBrand"),
       cond: val("fCond"),
       min: val("fMin"),
@@ -241,11 +249,14 @@
   }
   function match(item, f) {
     if (!f.sold && item.sold) return false;
-    if (f.cat && item.category !== f.cat) return false;
-    if (f.laundry === "washer" && laundryKind(item) !== "washer") return false;
-    if (f.laundry === "dryer" && laundryKind(item) !== "dryer") return false;
-    if (f.laundry === "gas" && dryerFuel(item) !== "gas") return false;
-    if (f.laundry === "electric" && dryerFuel(item) !== "electric") return false;
+    if (f.cat.indexOf("laundry:") === 0) {
+      if (item.category !== "Washers and Dryers") return false;
+      var pick = f.cat.slice(8);
+      if (pick === "washer" && laundryKind(item) !== "washer") return false;
+      if (pick === "dryer" && laundryKind(item) !== "dryer") return false;
+      if (pick === "gas" && dryerFuel(item) !== "gas") return false;
+      if (pick === "electric" && dryerFuel(item) !== "electric") return false;
+    } else if (f.cat && item.category !== f.cat) return false;
     if (f.brand && item.brand !== f.brand) return false;
     if (f.cond && item.condition !== f.cond) return false;
     var price = Number(item.price) || 0;
@@ -272,7 +283,14 @@
     if (cat) {
       var cur = f.cat;
       cat.innerHTML = '<option value="">' + esc(t("catAll")) + "</option>" + Object.keys(cats).map(function (c) {
-        return '<option value="' + esc(c) + '">' + esc(catLabel(c)) + "</option>";
+        var row = '<option value="' + esc(c) + '">' + esc(catLabel(c)) + "</option>";
+        if (c === "Washers and Dryers") {
+          row += '<option value="laundry:washer">' + esc(t("optWashers")) + "</option>" +
+            '<option value="laundry:dryer">' + esc(t("optDryers")) + "</option>" +
+            '<option value="laundry:gas">' + esc(t("optGasDryers")) + "</option>" +
+            '<option value="laundry:electric">' + esc(t("optElectricDryers")) + "</option>";
+        }
+        return row;
       }).join("");
       if (window.__sndPendingCat) {
         cat.value = window.__sndPendingCat;
@@ -322,7 +340,6 @@
       var meta = [item.brand, item.model].filter(Boolean).join(" · ");
       var kindLine = laundryLabel(item);
       return '<button type="button" class="card" data-open="' + esc(item.id) + '">' +
-        (item.sample ? '<span class="flag">' + esc(t("sample")) + "</span>" : "") +
         (item.sold ? '<span class="sold">' + esc(t("sold")) + "</span>" : "") +
         '<img src="' + esc(src(photo)) + '" alt="' + esc(titleOf(item)) + '" loading="lazy">' +
         '<span class="card__body"><span class="cond">' + esc(condLabel(item.condition || "")) + "</span>" +
@@ -330,7 +347,6 @@
         (kindLine ? '<span class="cond">' + esc(kindLine) + "</span>" : "") +
         (meta ? '<span class="card__meta">' + esc(meta) + "</span>" : '<span class="card__meta">' + esc(t("model")) + "</span>") +
         '<span class="price">' + esc(money(item.price)) + (item.was ? " <s>" + esc(money(item.was)) + "</s>" : "") + "</span>" +
-        (item.sample ? '<span class="card__meta">' + esc(t("samplePrice")) + "</span>" : "") +
         (item.holdFor ? '<span class="card__meta">' + esc(t("onHold")) + "</span>" : "") +
         "</span></button>";
     }).join("");
@@ -357,8 +373,26 @@
     if (currentLang() === "es" && item.sample && TITLE_ES[item.id]) return TITLE_ES[item.id];
     return item.title;
   }
+  var DESC_ES = {
+    s1: "Refrigerador de puertas francesas, con garantía de fábrica.",
+    s2: "Refrigerador con congelador arriba y garantía de fábrica.",
+    s3: "Lavadora Samsung de carga frontal. Samsung se ve en la máquina de esta foto del piso.",
+    s4: "Lavadora de carga superior, con garantía de fábrica.",
+    s5: "Secadora eléctrica, con garantía de fábrica.",
+    s6: "Secadora de gas, con garantía de fábrica.",
+    s7: "Estufa de gas, con garantía de fábrica.",
+    s8: "Estufa de gas blanca, con garantía de fábrica.",
+    s9: "Estufa eléctrica de cubierta lisa, con garantía de fábrica.",
+    s10: "Estufa eléctrica negra, con garantía de fábrica.",
+    s11: "Microondas de mostrador, con garantía de fábrica.",
+    s12: "Microondas sobre la estufa, con garantía de fábrica.",
+    s13: "Congelador vertical compacto, con garantía de fábrica.",
+    s14: "Congelador horizontal, con garantía de fábrica.",
+    s15: "Lavavajillas, con garantía de fábrica.",
+    s16: "Lavavajillas blanco, con garantía de fábrica."
+  };
   function blurb(item) {
-    if (currentLang() === "es" && item.sample) return "Anuncio de muestra. La foto es del piso de ventas. No es inventario actual y el precio no es real.";
+    if (currentLang() === "es" && item.sample && DESC_ES[item.id]) return DESC_ES[item.id];
     return item.description || "";
   }
   function findItem(id) {
@@ -375,7 +409,6 @@
     modal.innerHTML =
       '<button type="button" class="linkish" data-close="detail">' + esc(t("close")) + "</button>" +
       (photos[0] ? '<img class="modal__photo" src="' + esc(src(photos[0])) + '" alt="' + esc(titleOf(item)) + '">' : "") +
-      (item.sample ? '<p class="flag" style="position:static;display:inline-block;margin-top:.6rem">' + esc(t("sample")) + "</p>" : "") +
       (item.sold ? '<p class="cond">' + esc(t("sold")) + "</p>" : "") +
       (item.holdFor ? '<p class="cond">' + esc(t("onHold")) + "</p>" : "") +
       "<h3>" + esc(titleOf(item)) + "</h3>" +
@@ -539,8 +572,6 @@
     if (catBtn) {
       var sel = document.getElementById("fCat");
       if (sel) sel.value = catBtn.getAttribute("data-cat");
-      var laundrySel = document.getElementById("fLaundry");
-      if (laundrySel) laundrySel.value = "";
       render();
       var inv = document.getElementById("inventory");
       if (inv) inv.scrollIntoView({ behavior: "smooth" });
@@ -563,7 +594,7 @@
       if (img) img.src = src(photoBtn.getAttribute("data-swap-photo"));
     }
     if (e.target.closest("[data-clear]")) {
-      ["q", "fCat", "fLaundry", "fBrand", "fCond", "fMin", "fMax"].forEach(function (id) {
+      ["q", "fCat", "fBrand", "fCond", "fMin", "fMax"].forEach(function (id) {
         var n = document.getElementById(id);
         if (n) n.value = "";
       });
@@ -643,14 +674,6 @@
         if (fuelBox) fuelBox.hidden = target.value !== "dryer";
       }
       return;
-    }
-    if (target.id === "fLaundry") {
-      var cat = document.getElementById("fCat");
-      if (cat && target.value && cat.value && cat.value !== "Washers and Dryers") cat.value = "Washers and Dryers";
-    }
-    if (target.id === "fCat") {
-      var pickedLaundry = document.getElementById("fLaundry");
-      if (pickedLaundry && target.value && target.value !== "Washers and Dryers") pickedLaundry.value = "";
     }
     if (target.closest("#filters, #q, #fSort, #fSold")) render();
   }
