@@ -6,6 +6,9 @@ const PLANS = new Set([
   'demo',
   'standard-site',
   'premium-site',
+  'gbp-essentials',
+  'startup',
+  'local-129',
   'standard-gbp',
   'premium-gbp',
 ])

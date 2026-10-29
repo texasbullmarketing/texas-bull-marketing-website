@@ -129,6 +129,38 @@ const nextConfig = {
           destination: '/es/index.html',
         },
         {
+          source: '/service-techs',
+          destination: '/service-techs/index.html',
+        },
+        {
+          source: '/service-techs/',
+          destination: '/service-techs/index.html',
+        },
+        {
+          source: '/local-shops',
+          destination: '/local-shops/index.html',
+        },
+        {
+          source: '/local-shops/',
+          destination: '/local-shops/index.html',
+        },
+        {
+          source: '/es/service-techs',
+          destination: '/es/service-techs/index.html',
+        },
+        {
+          source: '/es/service-techs/',
+          destination: '/es/service-techs/index.html',
+        },
+        {
+          source: '/es/local-shops',
+          destination: '/es/local-shops/index.html',
+        },
+        {
+          source: '/es/local-shops/',
+          destination: '/es/local-shops/index.html',
+        },
+        {
           source: '/billing',
           destination: '/billing.html',
         },

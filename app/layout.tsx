@@ -5,7 +5,7 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'Texas Bull Marketing | Custom Websites + Google for Local Businesses',
   description:
-    'Standard site $700 or Premium $900. Or start monthly with the site + Google: $150 setup then $150/mo Standard or $250/mo Premium. Texas-built websites for local owners nationwide.',
+    'Buy the site: Standard $700 or Premium $900. Or GBP Management & Web Essentials at $250 a month for the website and Google Business Profile. Stockdale / San Antonio area, Texas.',
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: 'any' },

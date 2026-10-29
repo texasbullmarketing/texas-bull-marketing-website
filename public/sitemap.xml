@@ -17,4 +17,36 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://texasbullmarketing.com/es/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://texasbullmarketing.com/" />
   </url>
+  <url>
+    <loc>https://texasbullmarketing.com/service-techs/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://texasbullmarketing.com/service-techs/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://texasbullmarketing.com/es/service-techs/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://texasbullmarketing.com/service-techs/" />
+  </url>
+  <url>
+    <loc>https://texasbullmarketing.com/es/service-techs/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://texasbullmarketing.com/service-techs/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://texasbullmarketing.com/es/service-techs/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://texasbullmarketing.com/service-techs/" />
+  </url>
+  <url>
+    <loc>https://texasbullmarketing.com/local-shops/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://texasbullmarketing.com/local-shops/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://texasbullmarketing.com/es/local-shops/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://texasbullmarketing.com/local-shops/" />
+  </url>
+  <url>
+    <loc>https://texasbullmarketing.com/es/local-shops/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://texasbullmarketing.com/local-shops/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://texasbullmarketing.com/es/local-shops/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://texasbullmarketing.com/local-shops/" />
+  </url>
 </urlset>
