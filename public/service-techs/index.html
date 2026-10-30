@@ -39,6 +39,7 @@
         "url": "https://texasbullmarketing.com/",
         "image": "https://texasbullmarketing.com/bull-logo-square.webp",
         "logo": "https://texasbullmarketing.com/bull-logo.webp",
+        "telephone": "+15123000000",
         "priceRange": "$100-$900",
         "address": { "@type": "PostalAddress", "addressRegion": "TX", "addressCountry": "US" },
         "areaServed": { "@type": "State", "name": "Texas" }
@@ -131,6 +132,7 @@
       <a href="#contact" class="nav-link text-sm font-600 text-white/70 transition hover:text-white">Contact</a>
     </div>
     <div class="flex items-center gap-3">
+      <a href="tel:+15123000000" class="hidden whitespace-nowrap text-sm font-800 text-white hover:text-bullred lg:inline">(512) 300-0000</a>
       <div class="lang-seg" role="group" aria-label="Language">
         <a href="/service-techs/" hreflang="en" lang="en" aria-current="page">EN</a>
         <a href="/es/" hreflang="es" lang="es">ES</a>
@@ -147,7 +149,7 @@
         <a href="/service-techs/" hreflang="en" lang="en" aria-current="page">EN</a>
         <a href="/es/" hreflang="es" lang="es">ES</a>
       </div>
-      <button type="button" onclick="toggleMobile();bookCall()" class="text-left text-white hover:text-bullred">Book a 15-min call</button>
+      <a href="tel:+15123000000" onclick="toggleMobile()" class="inline-flex min-h-11 items-center text-white hover:text-bullred">Call (512) 300-0000</a>
       <a href="/#pricing" onclick="toggleMobile()" class="text-white/80 hover:text-bullred">Pricing</a>
       <a href="/service-techs/" onclick="toggleMobile()" class="text-white hover:text-bullred">Service Techs</a>
       <a href="/local-shops/" onclick="toggleMobile()" class="text-white/80 hover:text-bullred">Local Shops</a>
@@ -171,7 +173,7 @@
         <button type="button" onclick="openLead('startup')" class="rounded-full bg-bullred px-8 py-4 text-base font-800 transition hover:bg-red-600">Start the Startup Plan</button>
         <a href="#plans" class="rounded-full border border-[#3A4560] px-8 py-4 text-center text-base font-700 transition hover:border-bullred hover:bg-bullcard">See both prices</a>
       </div>
-      <p class="mt-8 hidden sm:block"><button type="button" onclick="bookCall()" class="inline-flex min-h-11 items-center rounded-full border border-white/30 px-5 py-2 text-base font-800 text-white">Book a 15-min call</button></p>
+      <p class="mt-8 hidden sm:block"><a href="tel:+15123000000" class="inline-flex min-h-11 items-center rounded-full border border-white/30 px-5 py-2 text-base font-800 text-white">Call (512) 300-0000</a></p>
     </div>
     <div class="reveal flex justify-center lg:justify-end">
       <img src="/bull-mascot.webp" alt="Texas Bull Marketing red and blue bull mascot" width="640" height="960" class="w-[260px] sm:w-[380px]" />
@@ -269,7 +271,7 @@
       <p class="text-sm font-800 uppercase tracking-[0.28em] text-bullred">Get started</p>
       <h2 class="mt-3 font-display text-4xl font-900 tracking-tight text-balance">Tell us the trade. We’ll send a demo.</h2>
       <p class="mt-4 text-white/60">HVAC, plumbing, electrical, roofing, or a similar shop. We follow up within one business day.</p>
-      <p class="mt-6"><button type="button" onclick="bookCall()" class="inline-flex min-h-11 items-center rounded-full border border-[#3A4560] px-5 py-2 text-sm font-800">Book a 15-min call</button></p>
+      <p class="mt-6"><a href="tel:+15123000000" class="inline-flex min-h-11 items-center text-lg font-800 text-white">(512) 300-0000</a></p>
     </div>
     <form id="leadForm" class="reveal surface-card space-y-3 rounded-xl border p-6 sm:p-8" onsubmit="submitLead(event)">
       <input type="text" name="website" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true" />
@@ -312,13 +314,14 @@
     </div>
     <div class="text-sm text-white/40">
       <p>© <span id="year"></span> Texas Bull Marketing. Built in Texas.</p>
+      <p class="mt-1"><a href="tel:+15123000000" class="font-800 text-white hover:text-white">(512) 300-0000</a></p>
       <p class="mt-1">Local businesses across Texas.</p>
       <p class="mt-2"><a href="/" class="text-white/70 hover:text-white">Home</a> · <a href="/local-shops/" class="text-white/70 hover:text-white">Local Shops</a> · <a href="https://calendly.com/texasbullmarketing/call" class="text-white/70 hover:text-white">Book a call</a></p>
     </div>
   </div>
 </footer>
 
-<button type="button" onclick="bookCall()" class="fixed inset-x-0 bottom-0 z-40 flex h-11 items-center justify-center bg-bullred px-4 text-base font-800 text-white sm:hidden">Book a 15-min call</button>
+<a href="tel:+15123000000" class="fixed inset-x-0 bottom-0 z-40 flex h-11 items-center justify-center bg-bullred px-4 text-base font-800 text-white sm:hidden">Call (512) 300-0000</a>
 <button type="button" onclick="bookCall()" class="fixed bottom-5 right-5 z-40 hidden items-center gap-2 rounded-full bg-bullred px-5 py-3 font-800 text-white sm:flex">Book 15-min Call</button>
 
 <div id="modal" class="fixed inset-0 z-[60] hidden items-center justify-center bg-black/70 p-4">

@@ -49,6 +49,7 @@
         "description": "Texas Bull Marketing builds light custom websites and manages Google Business Profiles for local businesses in Texas. Buy the site for $700, or $900 with second-language pages. Or GBP Management and Web Essentials at $250 a month.",
         "priceRange": "$250-$900",
         "currenciesAccepted": "USD",
+        "telephone": "+15123000000",
         "paymentAccepted": "Credit Card, Debit Card",
         "areaServed": { "@type": "State", "name": "Texas" },
         "address": {
@@ -60,6 +61,7 @@
         "sameAs": ["https://calendly.com/texasbullmarketing/call"],
         "contactPoint": {
           "@type": "ContactPoint",
+          "telephone": "+15123000000",
           "contactType": "sales",
           "url": "https://texasbullmarketing.com/#contact",
           "availableLanguage": ["English", "Spanish"]
@@ -381,6 +383,7 @@
     </div>
 
     <div class="flex shrink-0 items-center gap-2 sm:gap-3">
+      <a href="tel:+15123000000" class="hidden whitespace-nowrap text-sm font-800 text-white hover:text-bullred lg:inline">(512) 300-0000</a>
       <div class="lang-seg" role="group" aria-label="Language">
         <a href="/" data-lang-href="/" hreflang="en" lang="en" aria-current="page">EN</a>
         <a href="/es/" data-lang-href="/es/" hreflang="es" lang="es">ES</a>
@@ -401,6 +404,7 @@
         <a href="/" data-lang-href="/" hreflang="en" lang="en" aria-current="page">EN</a>
         <a href="/es/" data-lang-href="/es/" hreflang="es" lang="es">ES</a>
       </div>
+      <a href="tel:+15123000000" onclick="toggleMobile()" class="inline-flex min-h-11 items-center text-white hover:text-bullred">Call (512) 300-0000</a>
       <a href="#process" onclick="toggleMobile()" class="text-white/80 hover:text-bullred">Process</a>
       <a href="#services" onclick="toggleMobile()" class="text-white/80 hover:text-bullred">Services</a>
       <a href="#pricing" onclick="toggleMobile()" class="text-white/80 hover:text-bullred">Pricing</a>
@@ -441,7 +445,7 @@
         </a>
       </div>
       <p class="mt-4 hidden sm:mt-6 sm:block">
-        <button type="button" onclick="bookCall()" class="inline-flex min-h-11 items-center rounded-full border border-white/30 px-5 py-2 text-base font-800 text-white transition hover:border-bullred hover:text-white">Book a 15-min call</button>
+        <a href="tel:+15123000000" class="inline-flex min-h-11 items-center rounded-full border border-white/30 px-5 py-2 text-base font-800 text-white transition hover:border-bullred hover:text-white">Call (512) 300-0000</a>
       </p>
     </div>
 
@@ -800,7 +804,8 @@
         <li>✓ Live site in about 3 to 5 days once you approve</li>
         <li>✓ English, or Premium second-language pages with their own URLs</li>
       </ul>
-      <button type="button" onclick="bookCall()" class="mt-8 rounded-full border border-[#3A4560] px-6 py-3 text-sm font-700 transition hover:border-bullred hover:bg-bullcard">Prefer to book the call first?</button>
+      <p class="mt-6"><a href="tel:+15123000000" class="inline-flex min-h-11 items-center text-lg font-800 text-white hover:text-bullred">(512) 300-0000</a></p>
+      <button type="button" onclick="bookCall()" class="mt-4 rounded-full border border-[#3A4560] px-6 py-3 text-sm font-700 transition hover:border-bullred hover:bg-bullcard">Prefer to book the call first?</button>
     </div>
     <div class="reveal">
     <form id="leadForm" class="surface-card rounded-xl border p-6 sm:p-8 space-y-3" onsubmit="submitLead(event)">
@@ -885,10 +890,12 @@
     </div>
     <div class="w-full text-sm text-white/40 sm:w-auto">
       <p>© <span id="year"></span> Texas Bull Marketing. Built in Texas.</p>
+      <p class="mt-1"><a href="tel:+15123000000" class="font-800 text-white hover:text-bullred">(512) 300-0000</a></p>
       <p class="mt-1">Local businesses across Texas.</p>
       <p class="footer-inline mt-2"><a href="#contact" class="text-white/70 hover:text-white">Get a demo</a> · <a href="https://calendly.com/texasbullmarketing/call" class="text-white/70 hover:text-white">Book a call</a></p>
       <p class="footer-inline mt-2"><a href="/service-techs/" class="text-white/70 hover:text-white">Service Techs</a> · <a href="/local-shops/" class="text-white/70 hover:text-white">Local Shops</a></p>
       <nav class="footer-rows mt-4" aria-label="Footer">
+        <a href="tel:+15123000000">Call (512) 300-0000</a>
         <a href="#contact">Get a demo</a>
         <a href="https://calendly.com/texasbullmarketing/call">Book a call</a>
         <a href="/service-techs/">Service Techs</a>
@@ -899,7 +906,7 @@
 </footer>
 
 <!-- ============ STICKY CTA ============ -->
-<button type="button" id="callBar" onclick="bookCall()" class="call-bar fixed inset-x-0 bottom-0 z-40 flex items-center justify-center bg-bullred px-4 text-base font-800 text-white sm:hidden">Book a 15-min call</button>
+<a href="tel:+15123000000" id="callBar" class="call-bar fixed inset-x-0 bottom-0 z-40 flex items-center justify-center bg-bullred px-4 text-base font-800 text-white sm:hidden">Call (512) 300-0000</a>
 <button type="button" onclick="bookCall()" class="fixed bottom-5 right-5 z-40 hidden items-center gap-2 rounded-full bg-bullred px-5 py-3 font-800 text-white transition hover:bg-red-600 sm:flex">
   <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h2.6a1 1 0 01.95.68l1 3a1 1 0 01-.27 1L8 9.5a12 12 0 006.5 6.5l1.8-1.3a1 1 0 011-.27l3 1a1 1 0 01.7.95V19a2 2 0 01-2 2A16 16 0 013 5z"/></svg>
   Book 15-min Call
