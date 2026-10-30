@@ -1,0 +1,24 @@
+@import "tailwindcss" source(none);
+@source "../public/index.html";
+@source "../public/service-techs/index.html";
+@source "../public/local-shops/index.html";
+
+@theme {
+  --color-bullred: #c8102e;
+  --color-bullnavy: #1e3a7a;
+  --color-bullink: #151c2c;
+  --color-bullbg: #161c2a;
+  --color-bullsurface: #1f2738;
+  --color-bullcard: #242d40;
+  --font-display: "Archivo", system-ui, sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-weight-600: 600;
+  --font-weight-700: 700;
+  --font-weight-800: 800;
+  --font-weight-900: 900;
+}
+
+/* Header and footer wordmark only. Brand red stays on buttons. */
+.wordmark-bull {
+  color: #f04558;
+}

@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/build-marketing-css.mjs",
     "build": "next build",
+    "build:marketing-css": "node scripts/build-marketing-css.mjs",
     "start": "next start",
     "lint": "eslint ."
   },

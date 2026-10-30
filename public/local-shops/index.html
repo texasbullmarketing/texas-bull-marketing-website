@@ -59,14 +59,10 @@
     ]
   }
   </script>
-  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
-  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/tbm.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <script>
-    tailwind.config = { theme: { extend: { colors: { bullred:'#C8102E', bullbg:'#161C2A', bullsurface:'#1F2738', bullcard:'#242D40' }, fontFamily: { display:['Archivo','system-ui','sans-serif'], sans:['Inter','system-ui','sans-serif'] } } } };
-  </script>
   <style>
     html, body { background:#161C2A; }
     ::selection { background:#C8102E; color:#fff; }
@@ -96,8 +92,8 @@
 <header class="fixed top-0 inset-x-0 z-50 border-b border-[#3A4560] bg-bullbg">
   <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6" aria-label="Primary">
     <a href="/" class="flex items-center gap-3">
-      <img src="/bull-logo.webp" alt="Texas Bull Marketing logo" width="192" height="288" class="h-11 w-11 object-contain" />
-      <span class="font-display text-[15px] font-900 leading-none tracking-tight sm:text-lg">TEXAS <span class="text-bullred">BULL</span><br /><span class="brand-sub text-[10px] font-700 tracking-[0.14em] text-white/60 sm:text-xs sm:tracking-[0.28em]">MARKETING</span></span>
+      <img src="/media/brand/bull-logo-88.webp" srcset="/media/brand/bull-logo-88.webp 88w, /media/brand/bull-logo-176.webp 176w" sizes="44px" alt="Texas Bull Marketing logo" width="44" height="66" class="h-11 w-11 object-contain" />
+      <span class="font-display text-[15px] font-900 leading-none tracking-tight sm:text-lg">TEXAS <span class="wordmark-bull">BULL</span><br /><span class="brand-sub text-[10px] font-700 tracking-[0.14em] text-white/60 sm:text-xs sm:tracking-[0.28em]">MARKETING</span></span>
     </a>
     <div class="hidden items-center gap-5 xl:flex">
       <a href="/#pricing" class="nav-link text-sm font-600 text-white/70 hover:text-white">Pricing</a>
@@ -141,7 +137,7 @@
       <p class="mt-8 hidden sm:block"><a href="tel:+15123000000" class="inline-flex min-h-11 items-center rounded-full border border-white/30 px-5 py-2 text-base font-800 text-white">Call (512) 300-0000</a></p>
     </div>
     <div class="reveal flex justify-center lg:justify-end">
-      <img src="/bull-mascot.webp" alt="Texas Bull Marketing bull" width="640" height="960" class="w-[260px] sm:w-[380px]" />
+      <img src="/media/brand/bull-mascot-480.webp" srcset="/media/brand/bull-mascot-192.webp 192w, /media/brand/bull-mascot-480.webp 480w, /media/brand/bull-mascot-640.webp 640w" sizes="(min-width: 640px) 380px, 260px" alt="Texas Bull Marketing bull" width="480" height="720" class="w-[260px] sm:w-[380px]" />
     </div>
   </div>
 </section>
@@ -257,8 +253,8 @@
 <footer class="border-t border-[#3A4560] px-4 py-12 sm:px-6">
   <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 text-center text-sm text-white/50 sm:flex-row sm:text-left">
     <div class="flex items-center gap-3 text-white">
-      <img src="/bull-logo.webp" alt="" width="192" height="288" class="h-10 w-10 object-contain" />
-      <p class="font-display font-900">TEXAS <span class="text-bullred">BULL</span> MARKETING</p>
+      <img src="/media/brand/bull-logo-88.webp" srcset="/media/brand/bull-logo-88.webp 88w, /media/brand/bull-logo-176.webp 176w" sizes="40px" alt="" width="40" height="60" class="h-10 w-10 object-contain" />
+      <p class="font-display font-900">TEXAS <span class="wordmark-bull">BULL</span> MARKETING</p>
     </div>
     <div>
       <p>© <span id="year"></span> Texas Bull Marketing. Built in Texas.</p>
@@ -294,7 +290,30 @@
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
   var CALENDLY_URL = 'https://calendly.com/texasbullmarketing/call', lastLead = { name:'', email:'' };
-  function bookCall(){ var url = CALENDLY_URL; if (window.Calendly) { Calendly.initPopupWidget({ url: url }); return; } window.open(url, '_blank', 'noopener'); }
+  var calendlyLoading = null;
+  function ensureCalendly(){
+    if (window.Calendly && typeof Calendly.initPopupWidget === 'function') return Promise.resolve();
+    if (calendlyLoading) return calendlyLoading;
+    calendlyLoading = new Promise(function(resolve){
+      var link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = 'https://assets.calendly.com/assets/external/widget.css';
+      document.head.appendChild(link);
+      var script = document.createElement('script');
+      script.src = 'https://assets.calendly.com/assets/external/widget.js';
+      script.async = true;
+      script.onload = function(){ resolve(); };
+      script.onerror = function(){ resolve(); };
+      document.head.appendChild(script);
+    });
+    return calendlyLoading;
+  }
+  function bookCall(){
+    ensureCalendly().then(function(){
+      if (window.Calendly && typeof Calendly.initPopupWidget === 'function') Calendly.initPopupWidget({ url: CALENDLY_URL });
+      else window.open(CALENDLY_URL, '_blank', 'noopener');
+    });
+  }
   function openLead(plan){ document.getElementById('modalForm').classList.remove('hidden'); document.getElementById('modalSuccess').classList.add('hidden'); document.getElementById('modalForm').reset(); document.querySelectorAll('select[name="plan"]').forEach(function(s){ if (plan) s.value = plan; }); var m = document.getElementById('modal'); m.classList.remove('hidden'); m.classList.add('flex'); }
   function closeLead(){ var m = document.getElementById('modal'); m.classList.add('hidden'); m.classList.remove('flex'); }
   document.getElementById('modal').addEventListener('click', function(e){ if (e.target.id === 'modal') closeLead(); });
