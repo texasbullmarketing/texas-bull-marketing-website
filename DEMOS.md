@@ -58,6 +58,7 @@ Live demo sites for leads. Served as static folders under `public/demo/`.
 | Wageners Well Service (EN+ES) | `/demo/WegenersWellService/` · `/demo/WegenersWellService/es/` | `public/demo/WegenersWellService/` |
 | V2TBM (TBM redesign sandbox; live homepage is now this design) | `/demo/v2tbm/` | `public/demo/v2tbm/` |
 | V3TBM (CRO landing sandbox, EN+ES) | `/demo/v3tbm/` | `public/demo/v3tbm/` |
+| V4TBM (static laptop site) | `/demo/v4tbm/` · `/demo/v4tbm/service-techs/` · `/demo/v4tbm/local-shops/` | `public/demo/v4tbm/` |
 
 ## TBM Drive pin list
 
@@ -80,6 +81,7 @@ Live:
 - https://texasbullmarketing.com/demo/CalaksAtKicaster/
 - https://texasbullmarketing.com/demo/CalaksAtKicasterV2/
 - https://texasbullmarketing.com/demo/v1tbm/
+- https://texasbullmarketing.com/demo/v4tbm/
 - https://texasbullmarketing.com/demo/
 - https://texasbullmarketing.com/demo/VillasenorTireV2/
 - https://texasbullmarketing.com/demo/VillasenorTireV2/es/

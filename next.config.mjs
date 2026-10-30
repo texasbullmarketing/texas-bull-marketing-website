@@ -188,6 +188,22 @@ const nextConfig = {
           source: '/demo/:slug/es/',
           destination: '/demo/:slug/es/index.html',
         },
+        {
+          source: '/demo/v4tbm/service-techs/',
+          destination: '/demo/v4tbm/service-techs/index.html',
+        },
+        {
+          source: '/demo/v4tbm/local-shops/',
+          destination: '/demo/v4tbm/local-shops/index.html',
+        },
+        {
+          source: '/demo/v4tbm/es/service-techs/',
+          destination: '/demo/v4tbm/es/service-techs/index.html',
+        },
+        {
+          source: '/demo/v4tbm/es/local-shops/',
+          destination: '/demo/v4tbm/es/local-shops/index.html',
+        },
       ],
       afterFiles: [
         {
