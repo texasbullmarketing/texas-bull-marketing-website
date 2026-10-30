@@ -146,19 +146,19 @@ const nextConfig = {
         },
         {
           source: '/es/service-techs',
-          destination: '/es/service-techs/index.html',
+          destination: '/es/index.html',
         },
         {
           source: '/es/service-techs/',
-          destination: '/es/service-techs/index.html',
+          destination: '/es/index.html',
         },
         {
           source: '/es/local-shops',
-          destination: '/es/local-shops/index.html',
+          destination: '/es/index.html',
         },
         {
           source: '/es/local-shops/',
-          destination: '/es/local-shops/index.html',
+          destination: '/es/index.html',
         },
         {
           source: '/billing',
