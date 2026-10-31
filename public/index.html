@@ -285,7 +285,13 @@
     .cmp-table th, .cmp-table td { overflow-wrap: anywhere; }
     .field-label { display: block; margin-bottom: 0.25rem; color: rgba(255,255,255,.92); font-size: 0.875rem; font-weight: 700; }
     .field-label .req { color: #ffb3bd; }
-    #premiumToggle { accent-color: #C8102E; width: 1.25rem; height: 1.25rem; }
+    .prem-chip { display: flex; align-items: center; justify-content: center; width: 100%; min-height: 44px; margin-top: 1rem; padding: 0.45rem 1rem; border-radius: 999px; border: 1px solid #3A4560; background: transparent; color: #fff; font-size: 0.875rem; font-weight: 800; cursor: pointer; }
+    .prem-chip:hover { border-color: #C8102E; }
+    .prem-chip[aria-pressed="true"] { background: #C8102E; border-color: #C8102E; }
+    .prem-chip:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+    .price-kicker { margin: 1.35rem 0 0; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,.5); }
+    .price-card { display: flex; flex-direction: column; height: 100%; }
+    .price-spacer { flex: 1 1 auto; min-height: 1.5rem; }
     details.faq > summary { display: flex; align-items: center; min-height: 44px; }
     details.faq > p { display: none; }
     details.faq[open] > p { display: block; }
@@ -591,36 +597,61 @@
       <p class="mt-4 text-white/60">Buy the site, or Website + Google for the site and your Google profile.</p>
     </div>
 
-    <div class="mt-8 grid grid-cols-2 gap-2 sm:hidden">
-      <p class="rounded-xl border border-[#3A4560] bg-bullcard px-2 py-3 text-center font-display text-xl font-900">$700<span class="mt-1 block text-xs font-700 tracking-normal text-white/80">Buy the site</span><span class="mt-1 block text-[11px] font-700 tracking-normal text-white/70">Premium +$200</span></p>
-      <p class="rounded-xl border border-bullred bg-bullcard px-2 py-3 text-center font-display text-xl font-900">$250<span class="mt-1 block text-xs font-700 tracking-normal text-white/80">/mo</span></p>
-    </div>
-
-    <div class="mx-auto mt-6 grid max-w-5xl items-stretch gap-6 sm:mt-14 lg:grid-cols-2">
-      <div class="reveal surface-card flex flex-col rounded-xl border p-5 sm:p-8">
+    <div class="mx-auto mt-14 grid max-w-5xl items-stretch gap-6 lg:grid-cols-2">
+      <div class="price-card reveal surface-card flex flex-col rounded-xl border p-8">
         <p class="text-xs font-800 uppercase tracking-[0.2em] text-white/45">One time</p>
         <h3 class="mt-2 font-display text-2xl font-800">Buy the site</h3>
         <p class="mt-3 font-display text-4xl font-900 text-white"><span id="buyPrice">$700</span> <span class="text-base font-700 text-white/50">one time</span></p>
         <p id="buyName" class="mt-1 text-sm font-700 text-white/80">Standard</p>
-        <label class="mt-4 flex min-h-11 cursor-pointer items-center gap-3 rounded-lg border border-[#3A4560] px-4 py-2">
-          <input id="premiumToggle" type="checkbox" class="shrink-0" />
-          <span class="text-sm font-700">Add Premium <span class="font-600 text-white/70">+$200</span></span>
-        </label>
-        <p id="buyDetailPrem" class="mt-3 hidden text-sm leading-relaxed text-white/80">Everything in Standard, plus full second-language pages with their own URLs, such as /es/, extra standalone pages, and schema for those language pages. Same phone, hours, and map.</p>
-        <p class="mt-4 text-sm leading-relaxed text-white/80"><span class="font-800 text-white">You get:</span> custom website (fast, mobile click-to-call, real-text services and menus) · domain · 1 year hosting · you own it · basic schema so Google knows your name, address, phone, and services · 4 Lite Updates year 1</p>
-        <p class="mt-3 text-sm leading-relaxed text-white/80"><span class="font-800 text-white">Not included:</span> monthly Google Business Profile management</p>
-        <button type="button" id="buyCta" data-plan="standard-site" onclick="openLead(this.getAttribute('data-plan'))" class="mt-6 w-full rounded-full border border-[#3A4560] py-3 font-700 transition hover:border-bullred hover:bg-bullbg">Request Standard</button>
+        <button type="button" id="premiumToggle" class="prem-chip" aria-pressed="false">Add Premium +$200</button>
+        <p id="buyDetailPrem" class="mt-3 hidden text-sm leading-relaxed text-white/80">Second-language pages with their own URLs, such as /es/. Same phone, hours, and map.</p>
+        <p class="mt-4 text-sm leading-relaxed text-white/70">Domain, 1 year hosting, 4 Lite Updates. You own it.</p>
+        <p class="price-kicker">You get</p>
+        <ul class="mt-3 space-y-3 text-sm text-white/80">
+          <li>✓ Custom website (fast, mobile click-to-call, real-text services and menus)</li>
+          <li>✓ Domain + 1 year hosting</li>
+          <li>✓ You own it</li>
+          <li>✓ 4 Lite Updates year 1</li>
+        </ul>
+        <p class="price-kicker">Not included</p>
+        <ul class="mt-3 space-y-3 text-sm text-white/80">
+          <li>✓ Monthly Google Business Profile management</li>
+        </ul>
+        <div class="price-spacer" aria-hidden="true"></div>
+        <button type="button" id="buyCta" data-plan="standard-site" onclick="openLead(this.getAttribute('data-plan'))" class="w-full rounded-full border border-[#3A4560] py-3 font-700 transition hover:border-bullred hover:bg-bullbg">Request Standard</button>
       </div>
 
-      <div class="reveal relative flex flex-col rounded-xl border-2 border-bullred bg-bullcard p-5 sm:p-8">
+      <div class="price-card reveal relative flex flex-col rounded-xl border-2 border-bullred bg-bullcard p-8">
         <span class="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-bullred px-4 py-1 text-xs font-800 uppercase tracking-widest">Monthly</span>
         <h3 class="mt-2 font-display text-2xl font-800">Website + Google</h3>
         <p class="mt-3 font-display text-4xl font-900 text-white">$250 <span class="text-base font-700 text-white/50">/ month</span></p>
-        <p class="mt-4 text-sm leading-relaxed text-white/80"><span class="font-800 text-white">You get:</span> the same custom website · domain + hosting in the monthly · unlimited Lite Updates</p>
-        <p class="mt-3 text-sm leading-relaxed text-white/80"><span class="font-800 text-white">Google we handle:</span> business name, address, phone · hours and categories · photos · posts and Q&amp;A · services on Google match the site</p>
-        <p class="mt-3 text-sm leading-relaxed text-white/80"><span class="font-800 text-white">Sync:</span> same phone, hours, and service names on the site and Google · when you change hours, a price, or a service we update both · we line up the words locals search (services + town) on the site with your Google categories and services</p>
-        <p class="mt-3 text-sm leading-relaxed text-white/80"><span class="font-800 text-white">You do not own the site</span> while you are subscribed.</p>
-        <button type="button" onclick="openLead('gbp-essentials')" class="mt-6 w-full rounded-full bg-bullred py-3 font-800 transition hover:bg-red-600">Start Website + Google</button>
+        <p class="mt-4 text-sm leading-relaxed text-white/70">The website and Google Business Profile management, in one monthly.</p>
+        <p class="price-kicker">You get</p>
+        <ul class="mt-3 space-y-3 text-sm text-white/80">
+          <li>✓ The same custom website (not a lesser site)</li>
+          <li>✓ Domain + hosting in the monthly</li>
+          <li>✓ Unlimited Lite Updates</li>
+        </ul>
+        <p class="price-kicker">Google we handle</p>
+        <ul class="mt-3 space-y-3 text-sm text-white/80">
+          <li>✓ Business name, address, phone</li>
+          <li>✓ Hours and categories</li>
+          <li>✓ Photos</li>
+          <li>✓ Posts and Q&amp;A</li>
+          <li>✓ Services on Google match the site</li>
+        </ul>
+        <p class="price-kicker">Sync</p>
+        <ul class="mt-3 space-y-3 text-sm text-white/80">
+          <li>✓ Same phone, hours, and service names on the site and Google</li>
+          <li>✓ When you change hours, a price, or a service, we update both</li>
+          <li>✓ We line up the words locals search (services + town) on the site with your Google categories and services</li>
+        </ul>
+        <p class="price-kicker">Tradeoff</p>
+        <ul class="mt-3 space-y-3 text-sm text-white/80">
+          <li>✓ You do not own the site while subscribed</li>
+        </ul>
+        <div class="price-spacer" aria-hidden="true"></div>
+        <button type="button" onclick="openLead('gbp-essentials')" class="w-full rounded-full bg-bullred py-3 font-800 transition hover:bg-red-600">Start Website + Google</button>
       </div>
     </div>
 
@@ -1091,7 +1122,7 @@
   var premiumToggle = document.getElementById('premiumToggle');
   function syncBuyCard() {
     if (!premiumToggle) return;
-    var on = premiumToggle.checked;
+    var on = premiumToggle.getAttribute('aria-pressed') === 'true';
     var price = document.getElementById('buyPrice');
     var name = document.getElementById('buyName');
     var prem = document.getElementById('buyDetailPrem');
@@ -1104,7 +1135,11 @@
       btn.setAttribute('data-plan', on ? 'premium-site' : 'standard-site');
     }
   }
-  if (premiumToggle) premiumToggle.addEventListener('change', syncBuyCard);
+  if (premiumToggle) premiumToggle.addEventListener('click', function () {
+    var on = premiumToggle.getAttribute('aria-pressed') === 'true';
+    premiumToggle.setAttribute('aria-pressed', on ? 'false' : 'true');
+    syncBuyCard();
+  });
 
   // ---------- Mobile menu ----------
   function toggleMobile(){
