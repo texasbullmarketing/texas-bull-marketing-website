@@ -6,7 +6,7 @@ const PLANS = new Set([
   'demo',
   'standard-site',
   'premium-site',
-  'gbp-essentials',
+  'website-google',
   'startup',
   'local-129',
   'standard-gbp',
@@ -108,13 +108,14 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: true })
   }
 
+  const rawPlan = clean(body.plan, 40) || 'demo'
   const lead = {
     name: clean(body.name, 80),
     business: clean(body.business, 120),
     email: clean(body.email, 120).toLowerCase(),
     phone: clean(body.phone, 40),
     city: clean(body.city, 80),
-    plan: clean(body.plan, 40) || 'demo',
+    plan: rawPlan === 'gbp-essentials' ? 'website-google' : rawPlan,
     notes: clean(body.notes, 1000),
     lang: clean(body.lang, 8) === 'es' ? 'es' : 'en',
     source: clean(body.source, 200) || '/',

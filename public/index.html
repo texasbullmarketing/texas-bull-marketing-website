@@ -158,7 +158,7 @@
             "name": "Can I cancel the monthly plan?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes, anytime. A site you already bought stays yours."
+              "text": "Yes, anytime."
             }
           },
           {
@@ -290,6 +290,8 @@
     .prem-chip[aria-pressed="true"] { background: #C8102E; border-color: #C8102E; }
     .prem-chip:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
     .price-kicker { margin: 1.35rem 0 0; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,.5); }
+    .price-miss { color: rgba(255,255,255,.8); }
+    .price-miss span { color: #C8102E; font-weight: 800; margin-right: 0.35rem; }
     .price-card { display: flex; flex-direction: column; height: 100%; }
     .price-spacer { flex: 1 1 auto; min-height: 1.5rem; }
     details.faq > summary { display: flex; align-items: center; min-height: 44px; }
@@ -615,7 +617,7 @@
         </ul>
         <p class="price-kicker">Not included</p>
         <ul class="mt-3 space-y-3 text-sm text-white/80">
-          <li>✓ Monthly Google Business Profile management</li>
+          <li class="price-miss"><span aria-hidden="true">✗</span> Monthly Google Business Profile management</li>
         </ul>
         <div class="price-spacer" aria-hidden="true"></div>
         <button type="button" id="buyCta" data-plan="standard-site" onclick="openLead(this.getAttribute('data-plan'))" class="w-full rounded-full border border-[#3A4560] py-3 font-700 transition hover:border-bullred hover:bg-bullbg">Request Standard</button>
@@ -646,12 +648,8 @@
           <li>✓ When you change hours, a price, or a service, we update both</li>
           <li>✓ We line up the words locals search (services + town) on the site with your Google categories and services</li>
         </ul>
-        <p class="price-kicker">Tradeoff</p>
-        <ul class="mt-3 space-y-3 text-sm text-white/80">
-          <li>✓ You do not own the site while subscribed</li>
-        </ul>
         <div class="price-spacer" aria-hidden="true"></div>
-        <button type="button" onclick="openLead('gbp-essentials')" class="w-full rounded-full bg-bullred py-3 font-800 transition hover:bg-red-600">Start Website + Google</button>
+        <button type="button" onclick="openLead('website-google')" class="w-full rounded-full bg-bullred py-3 font-800 transition hover:bg-red-600">Start Website + Google</button>
       </div>
     </div>
 
@@ -687,8 +685,8 @@
             </tr>
             <tr>
               <td>Domain</td>
-              <td>Included year 1</td>
-              <td class="rec">Included</td>
+              <td>Domain is yours. First year included. You renew at normal market rates after that.</td>
+              <td class="rec">Domain included in the monthly.</td>
             </tr>
             <tr>
               <td>Google every month</td>
@@ -757,7 +755,7 @@
           Can I cancel the monthly plan?
           <span class="chev text-white/40 transition">▾</span>
         </summary>
-        <p class="mt-3 text-sm leading-relaxed text-white/65">Yes, anytime. A site you already bought stays yours.</p>
+        <p class="mt-3 text-sm leading-relaxed text-white/65">Yes, anytime.</p>
       </details>
       <details class="faq surface-card rounded-xl border px-5 py-4">
         <summary class="flex items-center justify-between gap-3 font-700">
@@ -866,7 +864,7 @@
           <option value="demo">Free demo — not sure yet</option>
           <option value="standard-site">Buy the site · Standard $700</option>
           <option value="premium-site">Buy the site · Premium $900</option>
-          <option value="gbp-essentials">Website + Google · $250/mo</option>
+          <option value="website-google">Website + Google · $250/mo</option>
         </select>
       </label>
       <label class="block">
@@ -966,7 +964,7 @@
         <option value="demo">Free demo — not sure yet</option>
         <option value="standard-site">Standard site · $700</option>
         <option value="premium-site">Premium site · $900</option>
-        <option value="gbp-essentials">Website + Google · $250/mo</option>
+        <option value="website-google">Website + Google · $250/mo</option>
       </select>
       <button type="submit" class="w-full rounded-full bg-bullred py-3.5 font-800 transition hover:bg-red-600">
         <span class="btn-label">Send →</span>
