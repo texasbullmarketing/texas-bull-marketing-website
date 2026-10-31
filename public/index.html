@@ -76,7 +76,7 @@
               "url": "https://texasbullmarketing.com/#pricing",
               "price": "700",
               "priceCurrency": "USD",
-              "description": "One-time custom website. Domain, 1 year hosting, 4 Lite Updates the first year. You own it. After year 1, hosting is $20 a month or $200 a year, or hosting and unlimited Lite Updates for $29 a month or $290 a year."
+              "description": "One-time custom website. Domain, 1 year hosting, 4 Lite Updates the first year. You own it. Basic schema is included, so Google gets the business name, address, phone, and services. After year 1, hosting is $20 a month or $200 a year, or hosting and unlimited Lite Updates for $29 a month or $290 a year."
             },
             {
               "@type": "Offer",
@@ -84,7 +84,7 @@
               "url": "https://texasbullmarketing.com/#pricing",
               "price": "900",
               "priceCurrency": "USD",
-              "description": "Standard site plus $200. Second-language pages with their own URLs, such as /es/, so locals searching in Spanish can find the business. Room for schema and extra pages. Same phone, hours, and map. After year 1, hosting is $20 a month or $200 a year, or hosting and unlimited Lite Updates for $29 a month or $290 a year."
+              "description": "Standard site plus $200. Everything in Standard, plus full second-language pages with their own URLs, such as /es/, extra standalone pages, and schema for those language pages. Same phone, hours, and map. After year 1, hosting is $20 a month or $200 a year, or hosting and unlimited Lite Updates for $29 a month or $290 a year."
             },
             {
               "@type": "Offer",
@@ -190,7 +190,7 @@
             "name": "Standard or Premium?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Standard is $700. Premium is +$200, so the total is $900. Premium adds second-language pages with their own URLs, such as /es/, so locals searching in Spanish can find the business, plus room for schema and extra pages. Same phone, hours, and map. We recommend on the demo call."
+              "text": "Standard is $700. It includes basic schema, so Google gets your name, address, phone, and services. Premium is +$200, so the total is $900. Premium includes everything in Standard, plus full second-language pages with their own URLs, such as /es/, extra standalone pages, and schema for those language pages. Same phone, hours, and map. We recommend on the demo call."
             }
           },
           {
@@ -300,8 +300,27 @@
     .cmp-table td { font-size: 14px; color: rgba(255,255,255,.7); }
     .cmp-table td.rec { color: rgba(255,255,255,.92); }
     .surface-input { font-size: 16px; }
+    .phone-split { display: grid; grid-template-columns: 1fr 1fr; overflow: hidden; border-radius: 999px; min-height: 44px; border: 1px solid rgba(255,255,255,.28); }
+    .phone-split a { display: flex; align-items: center; justify-content: center; min-height: 44px; padding: 0 0.9rem; font-weight: 800; color: #fff; text-decoration: none; background: #1e3a7a; }
+    .phone-split a + a { background: #C8102E; border-left: 1px solid rgba(255,255,255,.28); }
+    .phone-split a:hover { filter: brightness(1.08); }
+    .phone-split--header { min-width: 8.5rem; }
+    .phone-split--header a { font-size: 0.875rem; padding: 0 0.75rem; }
+    .phone-split--wide { width: min(100%, 20rem); }
+    .phone-note { margin-top: 0.35rem; max-width: 22rem; font-size: 0.75rem; line-height: 1.35; color: rgba(255,255,255,.78); }
+    .phone-note a { color: #fff; font-weight: 800; text-decoration: none; white-space: nowrap; }
+    .phone-head { display: none; position: relative; flex-direction: column; align-items: flex-end; }
+    @media (min-width: 1024px) { .phone-head { display: flex; } }
+    .phone-note--tight { display: none; }
+    .phone-split a:focus-visible { outline: 2px solid #fff; outline-offset: -2px; }
     .call-bar { height: 44px; transition: transform .2s ease; }
+    .call-bar.phone-split { border: 0; border-radius: 0; }
     .call-bar.is-hidden { transform: translateY(100%); pointer-events: none; }
+    @media (min-width: 640px) { #callBar { display: none; } }
+    @media (min-width: 1280px) {
+      .phone-note--tight { display: block; position: absolute; top: 100%; right: 0; z-index: 50; margin-top: 0.35rem; width: 16rem; padding: 0.3rem 0.45rem; text-align: right; background: #161C2A; border: 1px solid rgba(255,255,255,.16); border-radius: 8px; }
+      .phone-note--hero { display: none; }
+    }
     .footer-rows { display: none; }
     @media (min-width: 640px) {
       details.price-more > summary { display: none; }
@@ -327,6 +346,8 @@
       .footer-inline { display: none; }
       .footer-rows { display: block; width: 100%; }
       .footer-rows a { display: flex; align-items: center; min-height: 48px; padding: 0 4px; border-top: 1px solid #3A4560; color: rgba(255,255,255,.9); }
+      .footer-rows .phone-split { margin-top: 0.35rem; border-radius: 12px; }
+      .footer-rows .phone-split a { width: auto; border-top: 0; justify-content: center; }
       details.price-more > summary { display: flex; align-items: center; min-height: 44px; font-weight: 700; cursor: pointer; }
     }
     @media (prefers-reduced-motion: reduce){ .reveal{opacity:1;transform:none;} #bullCanvas{display:none;} html{scroll-behavior:auto;} }
@@ -358,7 +379,13 @@
     </div>
 
     <div class="flex shrink-0 items-center gap-2 sm:gap-3">
-      <a href="tel:+15123000000" class="hidden whitespace-nowrap text-sm font-800 text-white hover:text-bullred lg:inline">(512) 300-0000</a>
+      <div class="phone-head">
+        <div class="phone-split phone-split--header" role="group" aria-label="Text or call (512) 300-0000">
+          <a href="sms:+15123000000">Text</a>
+          <a href="tel:+15123000000">Call</a>
+        </div>
+        <p class="phone-note phone-note--tight">Yes, that's our real number. <a href="tel:+15123000000">(512) 300-0000</a>. Save it — it's easy to remember.</p>
+      </div>
       <div class="lang-seg" role="group" aria-label="Language">
         <a href="/" data-lang-href="/" hreflang="en" lang="en" aria-current="page">EN</a>
         <a href="/es/" data-lang-href="/es/" hreflang="es" lang="es">ES</a>
@@ -379,7 +406,13 @@
         <a href="/" data-lang-href="/" hreflang="en" lang="en" aria-current="page">EN</a>
         <a href="/es/" data-lang-href="/es/" hreflang="es" lang="es">ES</a>
       </div>
-      <a href="tel:+15123000000" onclick="toggleMobile()" class="inline-flex min-h-11 items-center text-white hover:text-bullred">Call (512) 300-0000</a>
+      <div>
+        <div class="phone-split phone-split--wide" role="group" aria-label="Text or call (512) 300-0000">
+          <a href="sms:+15123000000" onclick="toggleMobile()">Text</a>
+          <a href="tel:+15123000000" onclick="toggleMobile()">Call</a>
+        </div>
+        <p class="phone-note">Yes, that's our real number. <a href="tel:+15123000000">(512) 300-0000</a>. Save it — it's easy to remember.</p>
+      </div>
       <a href="#process" onclick="toggleMobile()" class="text-white/80 hover:text-bullred">Process</a>
       <a href="#services" onclick="toggleMobile()" class="text-white/80 hover:text-bullred">Services</a>
       <a href="#pricing" onclick="toggleMobile()" class="text-white/80 hover:text-bullred">Pricing</a>
@@ -421,9 +454,13 @@
           See Plans
         </a>
       </div>
-      <p class="mt-4 hidden sm:mt-6 sm:block">
-        <a href="tel:+15123000000" class="inline-flex min-h-11 items-center rounded-full border border-white/30 px-5 py-2 text-base font-800 text-white transition hover:border-bullred hover:text-white">Call (512) 300-0000</a>
-      </p>
+      <div class="mt-4 hidden sm:mt-6 sm:block">
+        <div class="phone-split phone-split--wide" role="group" aria-label="Text or call (512) 300-0000">
+          <a href="sms:+15123000000">Text</a>
+          <a href="tel:+15123000000">Call</a>
+        </div>
+        <p class="phone-note phone-note--hero">Yes, that's our real number. <a href="tel:+15123000000">(512) 300-0000</a>. Save it — it's easy to remember.</p>
+      </div>
     </div>
 
     <div class="reveal pointer-events-none absolute right-2 top-24 w-24 sm:pointer-events-auto sm:static sm:flex sm:w-auto sm:justify-center lg:justify-end">
@@ -498,21 +535,21 @@
           <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M10 18a8 8 0 100-16 8 8 0 000 16z"/></svg>
         </div>
         <h3 class="mt-4 font-display text-xl font-800">Local search visibility</h3>
-        <p class="mt-2 text-sm leading-relaxed text-white/60">Built to rank for high-intent nearby phrases. Schema, name, address, phone, and services lined up with your Google Business Profile.</p>
+        <p class="mt-2 text-sm leading-relaxed text-white/60">Schema code (under-the-hood data that tells Google exactly where and who you are), name, address, phone, and services perfectly aligned with your Google Business Profile.</p>
       </article>
       <article class="reveal surface-card rounded-xl border p-6">
         <div class="flex h-11 w-11 items-center justify-center rounded-lg bg-bullred">
           <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h10M4 18h16"/></svg>
         </div>
         <h3 class="mt-4 font-display text-xl font-800">Real-text menus &amp; service grids</h3>
-        <p class="mt-2 text-sm leading-relaxed text-white/60">Readable on a phone. Prices and services as real text — not a slow PDF or a photo of a flyer nobody can pinch-zoom.</p>
+        <p class="mt-2 text-sm leading-relaxed text-white/60">Prices and services written as real website text. Google cannot read text trapped inside a PDF menu or an image of a flyer. We make sure Google reads every service you offer so you rank higher.</p>
       </article>
       <article class="reveal surface-card rounded-xl border p-6">
         <div class="flex h-11 w-11 items-center justify-center rounded-lg bg-bullred">
           <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path stroke-linecap="round" d="M12 3c2.5 3.2 4 6.5 4 9s-1.5 5.8-4 9c-2.5-3.2-4-6.5-4-9s1.5-5.8 4-9z"/><path stroke-linecap="round" d="M3.5 9h17M3.5 15h17"/></svg>
         </div>
         <h3 class="mt-4 font-display text-xl font-800">Premium add-on</h3>
-        <p class="mt-2 text-sm leading-relaxed text-white/60">+$200 on the buy. Second-language pages with their own URLs, such as /es/, so locals searching in Spanish can find the business. Room for schema and extra pages. Same phone, hours, and map.</p>
+        <p class="mt-2 text-sm leading-relaxed text-white/60">+$200 on the buy. Everything in Standard, plus full second-language pages with their own URLs, such as /es/, extra standalone pages, and schema for those language pages. Same phone, hours, and map.</p>
       </article>
       <article class="reveal surface-card rounded-xl border p-6">
         <div class="flex h-11 w-11 items-center justify-center rounded-lg bg-bullred">
@@ -569,8 +606,8 @@
           <input id="premiumToggle" type="checkbox" class="shrink-0" />
           <span class="text-sm font-700">Add Premium <span class="font-600 text-white/70">+$200</span></span>
         </label>
-        <p id="buyDetailPrem" class="mt-3 hidden text-sm leading-relaxed text-white/80">Second-language pages with their own URLs, such as /es/. Same phone, hours, and map.</p>
-        <p class="mt-4 text-sm leading-relaxed text-white/80"><span class="font-800 text-white">You get:</span> custom website (fast, mobile click-to-call, real-text services and menus) · domain · 1 year hosting · you own it · 4 Lite Updates year 1</p>
+        <p id="buyDetailPrem" class="mt-3 hidden text-sm leading-relaxed text-white/80">Everything in Standard, plus full second-language pages with their own URLs, such as /es/, extra standalone pages, and schema for those language pages. Same phone, hours, and map.</p>
+        <p class="mt-4 text-sm leading-relaxed text-white/80"><span class="font-800 text-white">You get:</span> custom website (fast, mobile click-to-call, real-text services and menus) · domain · 1 year hosting · you own it · basic schema so Google knows your name, address, phone, and services · 4 Lite Updates year 1</p>
         <p class="mt-3 text-sm leading-relaxed text-white/80"><span class="font-800 text-white">Not included:</span> monthly Google Business Profile management</p>
         <button type="button" id="buyCta" data-plan="standard-site" onclick="openLead(this.getAttribute('data-plan'))" class="mt-6 w-full rounded-full border border-[#3A4560] py-3 font-700 transition hover:border-bullred hover:bg-bullbg">Request Standard</button>
       </div>
@@ -717,7 +754,7 @@
           Standard or Premium?
           <span class="chev text-white/40 transition">▾</span>
         </summary>
-        <p class="mt-3 text-sm leading-relaxed text-white/65">Standard is $700. Premium is +$200, so the total is $900. Premium adds second-language pages with their own URLs, such as /es/, so locals searching in Spanish can find the business, plus room for schema and extra pages. Same phone, hours, and map. We recommend on the demo call.</p>
+        <p class="mt-3 text-sm leading-relaxed text-white/65">Standard is $700. It includes basic schema, so Google gets your name, address, phone, and services. Premium is +$200, so the total is $900. Premium includes everything in Standard, plus full second-language pages with their own URLs, such as /es/, extra standalone pages, and schema for those language pages. Same phone, hours, and map. We recommend on the demo call.</p>
       </details>
       <details class="faq surface-card rounded-xl border px-5 py-4">
         <summary class="flex items-center justify-between gap-3 font-700">
@@ -754,9 +791,15 @@
       <ul class="mt-6 space-y-3 text-sm text-white/70">
         <li>✓ Free personalized demo — no obligation</li>
         <li>✓ Live site in about 3 to 5 days once you approve</li>
-        <li>✓ English, or Premium second-language pages with their own URLs</li>
+        <li>✓ English, or Premium: second-language pages, extra pages, and schema for those pages</li>
       </ul>
-      <p class="mt-6"><a href="tel:+15123000000" class="inline-flex min-h-11 items-center text-lg font-800 text-white hover:text-bullred">(512) 300-0000</a></p>
+      <div class="mt-6">
+        <div class="phone-split phone-split--wide" role="group" aria-label="Text or call (512) 300-0000">
+          <a href="sms:+15123000000">Text</a>
+          <a href="tel:+15123000000">Call</a>
+        </div>
+        <p class="phone-note">Yes, that's our real number. <a href="tel:+15123000000">(512) 300-0000</a>. Save it — it's easy to remember.</p>
+      </div>
       <button type="button" onclick="bookCall()" class="mt-4 rounded-full border border-[#3A4560] px-6 py-3 text-sm font-700 transition hover:border-bullred hover:bg-bullcard">Prefer to book the call first?</button>
     </div>
     <div class="reveal">
@@ -842,12 +885,17 @@
     </div>
     <div class="w-full text-sm text-white/40 sm:w-auto">
       <p>© <span id="year"></span> Texas Bull Marketing. Built in Texas.</p>
-      <p class="mt-1"><a href="tel:+15123000000" class="font-800 text-white hover:text-bullred">(512) 300-0000</a></p>
+      <div class="mt-3 flex flex-col items-center sm:items-start">
+        <div class="phone-split phone-split--wide" role="group" aria-label="Text or call (512) 300-0000">
+          <a href="sms:+15123000000">Text</a>
+          <a href="tel:+15123000000">Call</a>
+        </div>
+        <p class="phone-note">Yes, that's our real number. <a href="tel:+15123000000">(512) 300-0000</a>. Save it — it's easy to remember.</p>
+      </div>
       <p class="mt-1">Local businesses across Texas.</p>
       <p class="footer-inline mt-2"><a href="#contact" class="text-white/70 hover:text-white">Get a demo</a> · <a href="https://calendly.com/texasbullmarketing/call" class="text-white/70 hover:text-white">Book a call</a></p>
       <p class="footer-inline mt-2"><a href="/service-techs/" class="text-white/70 hover:text-white">Service Techs</a> · <a href="/local-shops/" class="text-white/70 hover:text-white">Local Shops</a></p>
       <nav class="footer-rows mt-4" aria-label="Footer">
-        <a href="tel:+15123000000">Call (512) 300-0000</a>
         <a href="#contact">Get a demo</a>
         <a href="https://calendly.com/texasbullmarketing/call">Book a call</a>
         <a href="/service-techs/">Service Techs</a>
@@ -858,7 +906,10 @@
 </footer>
 
 <!-- ============ STICKY CTA ============ -->
-<a href="tel:+15123000000" id="callBar" class="call-bar fixed inset-x-0 bottom-0 z-40 flex items-center justify-center bg-bullred px-4 text-base font-800 text-white sm:hidden">Call (512) 300-0000</a>
+<div id="callBar" class="call-bar phone-split fixed inset-x-0 bottom-0 z-40 sm:hidden" role="group" aria-label="Text or call (512) 300-0000">
+  <a href="sms:+15123000000">Text</a>
+  <a href="tel:+15123000000">Call</a>
+</div>
 <button type="button" onclick="bookCall()" class="fixed bottom-5 right-5 z-40 hidden items-center gap-2 rounded-full bg-bullred px-5 py-3 font-800 text-white transition hover:bg-red-600 sm:flex">
   <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h2.6a1 1 0 01.95.68l1 3a1 1 0 01-.27 1L8 9.5a12 12 0 006.5 6.5l1.8-1.3a1 1 0 011-.27l3 1a1 1 0 01.7.95V19a2 2 0 01-2 2A16 16 0 013 5z"/></svg>
   Book 15-min Call

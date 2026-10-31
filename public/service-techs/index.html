@@ -106,6 +106,25 @@
     details.faq summary { list-style:none; cursor:pointer; }
     details.faq summary::-webkit-details-marker { display:none; }
     details.faq[open] summary .chev { transform:rotate(180deg); }
+    .phone-split { display: grid; grid-template-columns: 1fr 1fr; overflow: hidden; border-radius: 999px; min-height: 44px; border: 1px solid rgba(255,255,255,.28); }
+    .phone-split a { display: flex; align-items: center; justify-content: center; min-height: 44px; padding: 0 0.9rem; font-weight: 800; color: #fff; text-decoration: none; background: #1e3a7a; }
+    .phone-split a + a { background: #C8102E; border-left: 1px solid rgba(255,255,255,.28); }
+    .phone-split a:hover { filter: brightness(1.08); }
+    .phone-split a:focus-visible { outline: 2px solid #fff; outline-offset: -2px; }
+    .phone-split--header { min-width: 8.5rem; }
+    .phone-split--header a { font-size: 0.875rem; padding: 0 0.75rem; }
+    .phone-split--wide { width: min(100%, 20rem); }
+    .phone-note { margin-top: 0.35rem; max-width: 22rem; font-size: 0.75rem; line-height: 1.35; color: rgba(255,255,255,.78); }
+    .phone-note a { color: #fff; font-weight: 800; text-decoration: none; white-space: nowrap; }
+    .phone-head { display: none; position: relative; flex-direction: column; align-items: flex-end; }
+    @media (min-width: 1024px) { .phone-head { display: flex; } }
+    .phone-note--tight { display: none; }
+    .call-bar.phone-split { border: 0; border-radius: 0; height: 44px; }
+    @media (min-width: 640px) { #callBar { display: none; } }
+    @media (min-width: 1280px) {
+      .phone-note--tight { display: block; position: absolute; top: 100%; right: 0; z-index: 50; margin-top: 0.35rem; width: 16rem; padding: 0.3rem 0.45rem; text-align: right; background: #161C2A; border: 1px solid rgba(255,255,255,.16); border-radius: 8px; }
+      .phone-note--hero { display: none; }
+    }
     @media (max-width: 430px) { .brand-sub { display: none; } }
     @media (max-width: 639px) { body { padding-bottom: 52px; } }
     @media (prefers-reduced-motion: reduce){ .reveal{opacity:1;transform:none;} #bullCanvas{display:none;} html{scroll-behavior:auto;} }
@@ -127,7 +146,13 @@
       <a href="#contact" class="nav-link text-sm font-600 text-white/70 transition hover:text-white">Contact</a>
     </div>
     <div class="flex items-center gap-3">
-      <a href="tel:+15123000000" class="hidden whitespace-nowrap text-sm font-800 text-white hover:text-bullred lg:inline">(512) 300-0000</a>
+      <div class="phone-head">
+        <div class="phone-split phone-split--header" role="group" aria-label="Text or call (512) 300-0000">
+          <a href="sms:+15123000000">Text</a>
+          <a href="tel:+15123000000">Call</a>
+        </div>
+        <p class="phone-note phone-note--tight">Yes, that's our real number. <a href="tel:+15123000000">(512) 300-0000</a>. Save it — it's easy to remember.</p>
+      </div>
       <div class="lang-seg" role="group" aria-label="Language">
         <a href="/service-techs/" hreflang="en" lang="en" aria-current="page">EN</a>
         <a href="/es/" hreflang="es" lang="es">ES</a>
@@ -144,7 +169,13 @@
         <a href="/service-techs/" hreflang="en" lang="en" aria-current="page">EN</a>
         <a href="/es/" hreflang="es" lang="es">ES</a>
       </div>
-      <a href="tel:+15123000000" onclick="toggleMobile()" class="inline-flex min-h-11 items-center text-white hover:text-bullred">Call (512) 300-0000</a>
+      <div>
+        <div class="phone-split phone-split--wide" role="group" aria-label="Text or call (512) 300-0000">
+          <a href="sms:+15123000000" onclick="toggleMobile()">Text</a>
+          <a href="tel:+15123000000" onclick="toggleMobile()">Call</a>
+        </div>
+        <p class="phone-note">Yes, that's our real number. <a href="tel:+15123000000">(512) 300-0000</a>. Save it — it's easy to remember.</p>
+      </div>
       <a href="/#pricing" onclick="toggleMobile()" class="text-white/80 hover:text-bullred">Pricing</a>
       <a href="/service-techs/" onclick="toggleMobile()" class="text-white hover:text-bullred">Service Techs</a>
       <a href="/local-shops/" onclick="toggleMobile()" class="text-white/80 hover:text-bullred">Local Shops</a>
@@ -168,7 +199,13 @@
         <button type="button" onclick="openLead('startup')" class="rounded-full bg-bullred px-8 py-4 text-base font-800 transition hover:bg-red-600">Start the Startup Plan</button>
         <a href="#plans" class="rounded-full border border-[#3A4560] px-8 py-4 text-center text-base font-700 transition hover:border-bullred hover:bg-bullcard">See both prices</a>
       </div>
-      <p class="mt-8 hidden sm:block"><a href="tel:+15123000000" class="inline-flex min-h-11 items-center rounded-full border border-white/30 px-5 py-2 text-base font-800 text-white">Call (512) 300-0000</a></p>
+      <div class="mt-8 hidden sm:block">
+        <div class="phone-split phone-split--wide" role="group" aria-label="Text or call (512) 300-0000">
+          <a href="sms:+15123000000">Text</a>
+          <a href="tel:+15123000000">Call</a>
+        </div>
+        <p class="phone-note phone-note--hero">Yes, that's our real number. <a href="tel:+15123000000">(512) 300-0000</a>. Save it — it's easy to remember.</p>
+      </div>
     </div>
     <div class="reveal flex justify-center lg:justify-end">
       <img src="/media/brand/bull-mascot-480.webp" srcset="/media/brand/bull-mascot-192.webp 192w, /media/brand/bull-mascot-480.webp 480w, /media/brand/bull-mascot-640.webp 640w" sizes="(min-width: 640px) 380px, 260px" alt="Texas Bull Marketing red and blue bull mascot" width="480" height="720" class="w-[260px] sm:w-[380px]" />
@@ -226,7 +263,7 @@
     </div>
     <div class="reveal surface-panel mx-auto mt-10 max-w-3xl rounded-xl border p-6 text-center">
       <h3 class="font-display text-xl font-800">Prefer to own the site?</h3>
-      <p class="mt-2 text-sm leading-relaxed text-white/65">Buy the site for $700. Premium is +$200 ($900): second-language pages with their own URLs, such as /es/, so locals searching in Spanish can find the business. Same phone, hours, and map. After year 1, hosting is $20/mo or $200/year, or hosting and unlimited Lite Updates $29/mo or $290/year. Those buy prices are on the main page. Google management is the $250 monthly, not part of the buy.</p>
+      <p class="mt-2 text-sm leading-relaxed text-white/65">Buy the site for $700. Standard includes basic schema, so Google gets your name, address, phone, and services. Premium is +$200 ($900). It includes everything in Standard, plus full second-language pages with their own URLs, such as /es/, extra standalone pages, and schema for those language pages. Same phone, hours, and map. After year 1, hosting is $20/mo or $200/year, or hosting and unlimited Lite Updates $29/mo or $290/year. Those buy prices are on the main page. Google management is the $250 monthly, not part of the buy.</p>
       <a href="/#pricing" class="mt-5 inline-block rounded-full border border-[#3A4560] px-6 py-3 text-sm font-700 transition hover:border-bullred hover:bg-bullbg">See $700 and $900</a>
     </div>
   </div>
@@ -265,7 +302,13 @@
       <p class="text-sm font-800 uppercase tracking-[0.28em] text-bullred">Get started</p>
       <h2 class="mt-3 font-display text-4xl font-900 tracking-tight text-balance">Tell us the trade. We’ll send a demo.</h2>
       <p class="mt-4 text-white/60">HVAC, plumbing, electrical, roofing, or a similar shop. We follow up within one business day.</p>
-      <p class="mt-6"><a href="tel:+15123000000" class="inline-flex min-h-11 items-center text-lg font-800 text-white">(512) 300-0000</a></p>
+      <div class="mt-6">
+        <div class="phone-split phone-split--wide" role="group" aria-label="Text or call (512) 300-0000">
+          <a href="sms:+15123000000">Text</a>
+          <a href="tel:+15123000000">Call</a>
+        </div>
+        <p class="phone-note">Yes, that's our real number. <a href="tel:+15123000000">(512) 300-0000</a>. Save it — it's easy to remember.</p>
+      </div>
     </div>
     <form id="leadForm" class="reveal surface-card space-y-3 rounded-xl border p-6 sm:p-8" onsubmit="submitLead(event)">
       <input type="text" name="website" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true" />
@@ -306,16 +349,25 @@
         <p class="text-xs text-white/40">More calls. More customers. Less hassle.</p>
       </div>
     </div>
-    <div class="text-sm text-white/40">
+    <div class="w-full text-sm text-white/40 sm:w-auto">
       <p>© <span id="year"></span> Texas Bull Marketing. Built in Texas.</p>
-      <p class="mt-1"><a href="tel:+15123000000" class="font-800 text-white hover:text-white">(512) 300-0000</a></p>
+      <div class="mt-3 flex flex-col items-center sm:items-start">
+        <div class="phone-split phone-split--wide" role="group" aria-label="Text or call (512) 300-0000">
+          <a href="sms:+15123000000">Text</a>
+          <a href="tel:+15123000000">Call</a>
+        </div>
+        <p class="phone-note">Yes, that's our real number. <a href="tel:+15123000000">(512) 300-0000</a>. Save it — it's easy to remember.</p>
+      </div>
       <p class="mt-1">Local businesses across Texas.</p>
       <p class="mt-2"><a href="/" class="text-white/70 hover:text-white">Home</a> · <a href="/local-shops/" class="text-white/70 hover:text-white">Local Shops</a> · <a href="https://calendly.com/texasbullmarketing/call" class="text-white/70 hover:text-white">Book a call</a></p>
     </div>
   </div>
 </footer>
 
-<a href="tel:+15123000000" class="fixed inset-x-0 bottom-0 z-40 flex h-11 items-center justify-center bg-bullred px-4 text-base font-800 text-white sm:hidden">Call (512) 300-0000</a>
+<div id="callBar" class="call-bar phone-split fixed inset-x-0 bottom-0 z-40 sm:hidden" role="group" aria-label="Text or call (512) 300-0000">
+  <a href="sms:+15123000000">Text</a>
+  <a href="tel:+15123000000">Call</a>
+</div>
 <button type="button" onclick="bookCall()" class="fixed bottom-5 right-5 z-40 hidden items-center gap-2 rounded-full bg-bullred px-5 py-3 font-800 text-white sm:flex">Book 15-min Call</button>
 
 <div id="modal" class="fixed inset-0 z-[60] hidden items-center justify-center bg-black/70 p-4">
