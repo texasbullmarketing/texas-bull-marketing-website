@@ -321,6 +321,8 @@
     .cmp-table th.rec { color: #C8102E; }
     .cmp-table td { font-size: 14px; color: rgba(255,255,255,.7); }
     .cmp-table td.rec { color: rgba(255,255,255,.92); }
+    .hero-price { margin-top: 1rem; text-align: center; font-size: 0.875rem; color: rgba(255,255,255,.6); }
+    @media (min-width: 769px) { .hero-price { text-align: left; } }
     .phone-split { display: grid; grid-template-columns: 1fr 1fr; overflow: hidden; border-radius: 999px; min-height: 44px; border: 1px solid rgba(255,255,255,.28); }
     .phone-split a { display: flex; align-items: center; justify-content: center; min-height: 44px; padding: 0 0.9rem; font-weight: 800; color: #fff; text-decoration: none; background: #1e3a7a; }
     .phone-split a + a { background: #C8102E; border-left: 1px solid rgba(255,255,255,.28); }
@@ -449,6 +451,7 @@
           See Plans
         </a>
       </div>
+      <p class="hero-price">$129 setup. Standard $129/mo. Premium $250/mo.</p>
       <div class="hero-phone mt-6">
         <div class="phone-split phone-split--wide" role="group" aria-label="Text or call (512) 300-0000">
           <a href="sms:+15123000000">Text</a>
