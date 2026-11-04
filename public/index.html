@@ -834,7 +834,7 @@
     <div class="reveal">
       <p class="text-sm font-800 uppercase tracking-[0.28em] text-bullred">Get started</p>
       <h2 class="mt-3 font-display text-4xl font-900 tracking-tight sm:text-5xl text-balance">Tell us about the business. We’ll send a demo.</h2>
-      <p class="mt-4 text-white/88">Name, phone, and a little about the shop is enough. We follow up within one business day — then you can book the 15-minute call when you’re ready.</p>
+      <p class="mt-4 text-white/88">Name, phone, and a little about the shop is enough. We follow up within one business day. Request the demo, or book a call — whichever you want.</p>
       <ul class="mt-6 space-y-3 text-sm text-white/90">
         <li>✓ Free personalized demo — no obligation</li>
         <li>✓ Live site in about 3 to 5 days once you approve</li>
@@ -885,7 +885,7 @@
         <textarea name="notes" rows="3" placeholder="Restaurant, HVAC, already have a site, need Spanish…" class="surface-input w-full rounded-lg border px-4 py-3 outline-none placeholder:text-white/35 focus:border-bullred"></textarea>
       </label>
       <button type="submit" class="w-full rounded-full bg-bullred py-3.5 font-800 transition hover:bg-red-600">
-        <span class="btn-label">Send — then book a call</span>
+        <span class="btn-label">Send</span>
         <span class="btn-spinner">Sending…</span>
       </button>
       <p class="form-error hidden text-center text-sm font-700 text-bullred" role="alert"></p>
@@ -895,8 +895,7 @@
     <div id="leadSuccess" class="hidden surface-card rounded-xl border border-bullred p-8 text-center">
       <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-bullred/20 text-3xl text-bullred">✓</div>
       <h3 class="mt-4 font-display text-2xl font-800">You’re in. 🐂</h3>
-      <p class="mt-2 text-sm text-white/88">We’ll reach out within 1 business day. Book the 15-minute call now if you want to move faster.</p>
-      <button type="button" onclick="bookCallPrefill()" class="mt-6 rounded-full bg-bullred px-8 py-3 font-800 transition hover:bg-red-600">Book 15-min Call</button>
+      <p class="mt-2 text-sm text-white/88">We’ll reach out within 1 business day.</p>
     </div>
     </div>
   </div>
@@ -949,7 +948,7 @@
     <div class="flex items-start justify-between">
       <div>
         <h3 class="font-display text-2xl font-900">Claim your free demo</h3>
-        <p class="mt-1 text-sm text-white/88">We’ll follow up within 1 business day. Or book the 15-min call after you send this.</p>
+        <p class="mt-1 text-sm text-white/88">We’ll follow up within 1 business day.</p>
       </div>
       <button type="button" onclick="closeLead()" aria-label="Close" class="rounded-lg p-1 text-white/85 hover:text-white">✕</button>
     </div>
@@ -968,7 +967,7 @@
       </select>
       <textarea name="notes" rows="2" placeholder="Anything we should know?" class="surface-input w-full rounded-lg border px-4 py-3 outline-none placeholder:text-white/35 focus:border-bullred"></textarea>
       <button type="submit" class="w-full rounded-full bg-bullred py-3.5 font-800 transition hover:bg-red-600">
-        <span class="btn-label">Send →</span>
+        <span class="btn-label">Send</span>
         <span class="btn-spinner">Sending…</span>
       </button>
       <p class="form-error hidden text-center text-sm font-700 text-bullred" role="alert"></p>
@@ -977,9 +976,8 @@
     <div id="modalSuccess" class="hidden py-6 text-center">
       <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-bullred/20 text-3xl text-bullred">✓</div>
       <h4 class="mt-4 font-display text-xl font-800">You're in! 🐂</h4>
-      <p class="mt-2 text-sm text-white/88">We'll reach out within 1 business day. Book the short call if you want to go faster.</p>
+      <p class="mt-2 text-sm text-white/88">We'll reach out within 1 business day.</p>
       <div class="mt-5 flex flex-col gap-2 sm:flex-row sm:justify-center">
-        <button type="button" onclick="closeLead();bookCallPrefill()" class="rounded-full bg-bullred px-6 py-2 font-700 hover:bg-red-600">Book 15-min Call</button>
         <button type="button" onclick="closeLead()" class="rounded-full border border-[#3A4560] px-6 py-2 font-700 hover:border-bullred hover:bg-bullbg">Done</button>
       </div>
     </div>
