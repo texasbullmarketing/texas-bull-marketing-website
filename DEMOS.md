@@ -6,6 +6,7 @@ Live demo sites for leads. Served as static folders under `public/demo/`.
 
 | Company | URL | Folder |
 |---------|-----|--------|
+| Full Moon Tattoos v2 (EN+ES) | `/demo/FullMoonTattoosV2/` · `/demo/FullMoonTattoosV2/es/` | `public/demo/FullMoonTattoosV2/` |
 | V5TBM (saved homepage, before the Dropbox restore) | `/demo/v5tbm/` | `public/demo/v5tbm/` |
 | Scratch-N-Dent Superstore (EN+ES) | `/demo/ScratchNDentSuperstore/` · `/demo/ScratchNDentSuperstore/es/` | `public/demo/ScratchNDentSuperstore/` |
 | Amaya's Mexican Restaurant (EN) | `/demo/AmayasMexicanRestaurant/` | `public/demo/AmayasMexicanRestaurant/` |
@@ -91,6 +92,8 @@ Live:
 - https://texasbullmarketing.com/demo/VictoriasInkRoom/es/
 - https://texasbullmarketing.com/demo/FullMoonTattoos/
 - https://texasbullmarketing.com/demo/FullMoonTattoos/es/
+- https://texasbullmarketing.com/demo/FullMoonTattoosV2/
+- https://texasbullmarketing.com/demo/FullMoonTattoosV2/es/
 - https://texasbullmarketing.com/demo/MJLTireService/
 - https://texasbullmarketing.com/demo/MJLTireService/es/
 - https://texasbullmarketing.com/demo/SmallTownJump/

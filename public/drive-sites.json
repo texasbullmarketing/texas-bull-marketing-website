@@ -75,6 +75,21 @@
     "spanish": "required"
   },
   {
+    "id": "full-moon-tattoos-v2",
+    "name": "Full Moon Tattoos v2",
+    "type": "signs-other",
+    "schemaType": "TattooParlor",
+    "phone": "+17012138216",
+    "street": "1311 3rd St",
+    "city": "Floresville",
+    "region": "TX",
+    "zip": "78114",
+    "lat": 29.1341573,
+    "lng": -98.1592245,
+    "demoUrl": "https://texasbullmarketing.com/demo/FullMoonTattoosV2/",
+    "spanish": "required"
+  },
+  {
     "id": "armandos-pizzeria",
     "name": "ArMando's Pizzeria",
     "type": "restaurant",
