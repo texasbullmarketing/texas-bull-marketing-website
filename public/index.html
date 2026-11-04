@@ -324,8 +324,8 @@
     .cmp-table td.rec { color: rgba(255,255,255,.92); }
 
     .phone-split { display: grid; grid-template-columns: 1fr 1fr; overflow: hidden; border-radius: 999px; min-height: 44px; border: 1px solid rgba(255,255,255,.28); }
-    .phone-split a { display: flex; align-items: center; justify-content: center; min-height: 44px; padding: 0 0.9rem; font-weight: 800; color: #fff; text-decoration: none; background: #1e3a7a; }
-    .phone-split a + a { background: #C8102E; border-left: 1px solid rgba(255,255,255,.28); }
+    .phone-split a { display: flex; align-items: center; justify-content: center; min-height: 44px; padding: 0 0.9rem; font-weight: 800; color: #fff; text-decoration: none; background: #1F2738; }
+    .phone-split a + a { background: #1F2738; border-left: 1px solid #3A4560; }
     .phone-split a:hover { filter: brightness(1.08); }
     .phone-split--wide { width: min(100%, 20rem); }
     .phone-note { margin-top: 0.35rem; max-width: 22rem; font-size: 0.75rem; line-height: 1.35; color: rgba(255,255,255,.78); }
@@ -340,9 +340,12 @@
     .prem-box li { color: rgba(255,255,255,.88); }
     .call-bar { height: 44px; transition: transform .2s ease; }
     .call-bar.phone-split { border: 0; border-radius: 0; }
-    .call-bar.is-hidden { transform: translateY(100%); pointer-events: none; }
+    .call-bar.is-hidden, .book-float.is-hidden { transform: translateY(120%); pointer-events: none; }
+    .book-float { border: 1px solid #3A4560; background: #161C2A; color: #fff; }
+    .book-float:hover { border-color: #C8102E; background: #1F2738; }
     @media (max-width: 768px) {
-      body { padding-bottom: 52px; }
+      body { height: 100dvh; overflow: hidden; padding-bottom: 0; }
+      #pageScroll { position: fixed; top: 72px; right: 0; bottom: 44px; left: 0; overflow: auto; }
       .hero-copy { padding-right: 7rem; }
       .hero-actions { align-items: center; }
       .hero-actions > * { width: 100%; max-width: 20rem; }
@@ -397,7 +400,7 @@
         <a href="/es/" data-lang-href="/es/" hreflang="es" lang="es">ES</a>
       </div>
       <button type="button" onclick="openLead('demo')" class="hidden rounded-full bg-bullred px-5 py-2.5 text-sm font-700 transition hover:bg-red-600 sm:block">
-        Claim Free Demo
+        Claim free demo
       </button>
       <button type="button" onclick="toggleMobile()" aria-label="Open menu" class="rounded-lg border border-[#3A4560] p-2 xl:hidden">
         <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
@@ -422,11 +425,12 @@
         <a href="tel:+15123000000" onclick="toggleMobile()">Call</a>
       </div>
       <p class="phone-note">Yes, that's our real number. <a href="tel:+15123000000">(512) 300-0000</a>. Save it — it's easy to remember.</p>
-      <button type="button" onclick="toggleMobile();openLead('demo')" class="mt-2 rounded-full bg-bullred px-5 py-3 font-700">Claim Free Demo</button>
+      <button type="button" onclick="toggleMobile();openLead('demo')" class="mt-2 rounded-full bg-bullred px-5 py-3 font-700">Claim free demo</button>
     </div>
   </div>
 </header>
 
+<div id="pageScroll">
 <main id="home" class="relative z-10">
 
 <!-- ============ HERO (exact live top page + big bull) ============ -->
@@ -449,7 +453,7 @@
       </div>
       <div class="hero-actions mt-8 flex flex-col items-center gap-3 max-[768px]:mt-4 min-[769px]:flex-row min-[769px]:items-center min-[769px]:justify-start">
         <button type="button" onclick="openLead('demo')" class="group w-full max-w-xs rounded-full bg-bullred px-8 py-4 text-base font-800 transition hover:bg-red-600 min-[769px]:w-auto">
-          Claim your free demo
+          Claim free demo
           <span class="ml-1 inline-block transition group-hover:translate-x-1">-&gt;</span>
         </button>
         <a href="#pricing" class="w-full max-w-xs rounded-full border border-[#3A4560] px-8 py-4 text-center text-base font-700 text-white transition hover:border-bullred hover:bg-bullcard min-[769px]:w-auto">
@@ -561,6 +565,16 @@
   </div>
 </section>
 
+<!-- ============ PROOF ============ -->
+<section id="proof" class="scroll-mt-24 px-4 pt-4 pb-2 sm:px-6">
+  <div class="reveal mx-auto max-w-6xl">
+    <p class="text-sm font-800 uppercase tracking-[0.28em] text-bullred">A real job</p>
+    <h2 class="mt-3 font-display text-3xl font-900 tracking-tight sm:text-4xl">Auto Worx, Seguin</h2>
+    <p class="mt-3 max-w-2xl text-lg text-white/90">A Ram came in with the front bumper crushed. It left repaired.</p>
+    <img src="/media/proof/ba-ram-960.webp" srcset="/media/proof/ba-ram-640.webp 640w, /media/proof/ba-ram-960.webp 960w, /media/proof/ba-ram-1280.webp 1280w" sizes="(min-width: 1024px) 720px, 100vw" alt="Ram truck at Auto Worx in Seguin. The front bumper is crushed on the left and repaired on the right." width="960" height="361" loading="lazy" decoding="async" class="mt-6 w-full max-w-3xl rounded-xl object-cover" />
+  </div>
+</section>
+
 <!-- ============ PRICING — SITE OR SITE + GBP ============ -->
 <section id="pricing" class="scroll-mt-24 bg-bullsurface px-4 py-24 sm:px-6">
   <div class="mx-auto max-w-6xl">
@@ -594,7 +608,7 @@
           </ul>
           <p class="mt-2 text-xs leading-relaxed text-white/90">The header EN | ES switch is the same native bilingual build clients get.</p>
         </div>
-        <button type="button" id="buyBtn" onclick="openLead('standard-site')" class="mt-6 w-full rounded-full bg-bullred py-3 font-800 transition hover:bg-red-600">Claim your free demo</button>
+        <button type="button" id="buyBtn" onclick="openLead('standard-site')" class="mt-6 w-full rounded-full bg-bullred py-3 font-800 transition hover:bg-red-600">Claim free demo</button>
       </div>
 
       <div class="reveal relative flex flex-col rounded-xl border-2 border-bullred bg-bullcard p-8">
@@ -616,8 +630,8 @@
         <p class="mt-5 rounded-lg border border-bullred/25 bg-bullred/10 px-4 py-3 text-xs leading-relaxed text-white/80">
           The live site and monthly Google care are in the $129/mo.
         </p>
-        <a href="https://buy.stripe.com/3cI14n8jobUB4xSgI74ko02" target="_blank" rel="noopener noreferrer" class="mt-6 block w-full rounded-full bg-bullred py-3 text-center font-800 transition hover:bg-red-600">Start — pay the $129 setup</a>
-        <button type="button" onclick="openLead('standard-gbp')" class="mt-3 w-full rounded-full border border-[#3A4560] py-3 font-800 transition hover:border-bullred hover:bg-bullbg">Claim free demo</button>
+        <button type="button" onclick="openLead('standard-gbp')" class="mt-6 w-full rounded-full bg-bullred py-3 font-800 transition hover:bg-red-600">Claim free demo</button>
+        <a href="https://buy.stripe.com/3cI14n8jobUB4xSgI74ko02" target="_blank" rel="noopener noreferrer" class="mt-3 block w-full rounded-full border border-[#3A4560] py-3 text-center font-800 transition hover:border-bullred hover:bg-bullbg">Start — pay the $129 setup</a>
       </div>
 
       <div class="reveal relative flex flex-col rounded-xl border-2 border-bullred bg-bullcard p-8">
@@ -638,8 +652,8 @@
         <p class="mt-5 rounded-lg border border-bullred/25 bg-bullred/10 px-4 py-3 text-xs leading-relaxed text-white/80">
           Premium add-on, Google, and Apple Maps are in the $250/mo.
         </p>
-        <a href="https://buy.stripe.com/3cI14n8jobUB4xSgI74ko02" target="_blank" rel="noopener noreferrer" class="mt-6 block w-full rounded-full bg-bullred py-3 text-center font-800 transition hover:bg-red-600">Start — pay the $129 setup</a>
-        <button type="button" onclick="openLead('premium-gbp')" class="mt-3 w-full rounded-full border border-[#3A4560] py-3 font-800 transition hover:border-bullred hover:bg-bullbg">Claim free demo</button>
+        <button type="button" onclick="openLead('premium-gbp')" class="mt-6 w-full rounded-full bg-bullred py-3 font-800 transition hover:bg-red-600">Claim free demo</button>
+        <a href="https://buy.stripe.com/3cI14n8jobUB4xSgI74ko02" target="_blank" rel="noopener noreferrer" class="mt-3 block w-full rounded-full border border-[#3A4560] py-3 text-center font-800 transition hover:border-bullred hover:bg-bullbg">Start — pay the $129 setup</a>
       </div>
     </div>
 
@@ -724,8 +738,8 @@
       <h3 class="font-display text-xl font-800">Site + GBP. Standard or Premium. That is our sweet spot.</h3>
       <p class="mt-2 text-sm leading-relaxed text-white/88">Buy the site and you own it. Or start with a $129 setup, then $129/mo Standard or $250/mo Premium, with the website and Google in the monthly. Two paths, not a pile of add-ons.</p>
       <div class="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
-        <button type="button" onclick="bookCall()" class="rounded-full bg-bullred px-8 py-3 font-800 transition hover:bg-red-600">Book a 15-min Call</button>
-        <button type="button" onclick="openLead('demo')" class="rounded-full border border-[#3A4560] px-8 py-3 font-800 transition hover:border-bullred hover:bg-bullbg">Claim Free Demo</button>
+        <button type="button" onclick="openLead('demo')" class="rounded-full bg-bullred px-8 py-3 font-800 transition hover:bg-red-600">Claim free demo</button>
+        <button type="button" onclick="bookCall()" class="rounded-full border border-[#3A4560] px-8 py-3 font-800 transition hover:border-bullred hover:bg-bullbg">Book 15-min Call</button>
       </div>
     </div>
   </div>
@@ -896,7 +910,7 @@
       <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-bullred/20 text-3xl text-bullred">✓</div>
       <h3 class="mt-4 font-display text-2xl font-800">You’re in. 🐂</h3>
       <p class="mt-2 text-sm text-white/88">We’ll reach out within 1 business day.</p>
-      <button type="button" onclick="bookCall()" class="mt-6 rounded-full bg-bullred px-8 py-3 font-800 transition hover:bg-red-600">Book 15-min Call</button>
+      <button type="button" onclick="bookCall()" class="mt-6 rounded-full border border-[#3A4560] px-8 py-3 font-800 transition hover:border-bullred hover:bg-bullbg">Book 15-min Call</button>
     </div>
     </div>
   </div>
@@ -909,7 +923,7 @@
     <h2 class="mt-6 font-display text-4xl font-900 tracking-tight sm:text-6xl text-balance">Stop Losing Customers To The Competition.</h2>
     <p class="mt-4 text-lg text-white/90">Buy the site — $700 Standard or $900 Premium — or start with a $129 setup. Standard is $129/mo and Premium is $250/mo.</p>
     <div class="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
-      <button type="button" onclick="openLead('demo')" class="rounded-full bg-bullred px-8 py-4 text-lg font-800 transition hover:bg-red-600">Claim your free demo</button>
+      <button type="button" onclick="openLead('demo')" class="rounded-full bg-bullred px-8 py-4 text-lg font-800 transition hover:bg-red-600">Claim free demo</button>
       <button type="button" onclick="bookCall()" class="rounded-full border border-[#3A4560] px-8 py-4 text-lg font-700 transition hover:border-bullred hover:bg-bullbg">Book a 15-min Call</button>
     </div>
   </div>
@@ -933,13 +947,14 @@
     </div>
   </div>
 </footer>
+</div>
 
 <!-- ============ STICKY CTA (exact live) ============ -->
 <div id="callBar" class="call-bar phone-split fixed inset-x-0 bottom-0 z-40 min-[769px]:hidden" role="group" aria-label="Text or call (512) 300-0000">
   <a href="sms:+15123000000">Text</a>
   <a href="tel:+15123000000">Call</a>
 </div>
-<button type="button" onclick="bookCall()" class="book-float fixed bottom-5 right-5 z-40 items-center gap-2 rounded-full bg-bullred px-5 py-3 font-800 transition hover:bg-red-600">
+<button type="button" onclick="bookCall()" class="book-float fixed bottom-5 right-5 z-40 items-center gap-2 rounded-full px-5 py-3 font-800 transition">
   <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h2.6a1 1 0 01.95.68l1 3a1 1 0 01-.27 1L8 9.5a12 12 0 006.5 6.5l1.8-1.3a1 1 0 011-.27l3 1a1 1 0 01.7.95V19a2 2 0 01-2 2A16 16 0 013 5z"/></svg>
   Book 15-min Call
 </button>
@@ -948,7 +963,7 @@
   <div class="w-full max-w-md rounded-xl border border-bullred bg-bullcard p-8 shadow-xl">
     <div class="flex items-start justify-between">
       <div>
-        <h3 class="font-display text-2xl font-900">Claim your free demo</h3>
+        <h3 class="font-display text-2xl font-900">Claim free demo</h3>
         <p class="mt-1 text-sm text-white/88">We’ll follow up within 1 business day.</p>
       </div>
       <button type="button" onclick="closeLead()" aria-label="Close" class="rounded-lg p-1 text-white/85 hover:text-white">✕</button>
@@ -979,7 +994,7 @@
       <h4 class="mt-4 font-display text-xl font-800">You're in! 🐂</h4>
       <p class="mt-2 text-sm text-white/88">We'll reach out within 1 business day.</p>
       <div class="mt-5 flex flex-col gap-2 sm:flex-row sm:justify-center">
-        <button type="button" onclick="closeLead();bookCall()" class="rounded-full bg-bullred px-6 py-2 font-700 hover:bg-red-600">Book 15-min Call</button>
+        <button type="button" onclick="closeLead();bookCall()" class="rounded-full border border-[#3A4560] px-6 py-2 font-700 hover:border-bullred hover:bg-bullbg">Book 15-min Call</button>
         <button type="button" onclick="closeLead()" class="rounded-full border border-[#3A4560] px-6 py-2 font-700 hover:border-bullred hover:bg-bullbg">Done</button>
       </div>
     </div>
@@ -989,22 +1004,77 @@
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 
+  function slotRect(el){
+    var r = el.getBoundingClientRect();
+    if (!el.classList.contains('is-hidden')) return r;
+    return { left: r.left, right: r.right, top: r.top - r.height, bottom: r.bottom - r.height, width: r.width, height: r.height };
+  }
+  function isPageContent(node){
+    if (!node || !node.closest || !node.closest('#pageScroll')) return false;
+    if (node.id === 'pageScroll' || node.tagName === 'MAIN' || node.tagName === 'SECTION' || node.tagName === 'FOOTER') return false;
+    if (node.closest('#leadForm, #leadSuccess, #modalForm, #modalSuccess')) return true;
+    var tag = node.tagName;
+    if (/^(P|H1|H2|H3|H4|LI|A|BUTTON|INPUT|SELECT|TEXTAREA|IMG|LABEL|SUMMARY|TD|TH|SPAN|STRONG|UL|OL|ARTICLE|TABLE|FORM)$/.test(tag)) return true;
+    if (node.classList && (node.classList.contains('surface-card') || node.classList.contains('prem-box') || node.classList.contains('rounded-xl'))) return true;
+    if (tag === 'DIV') {
+      var kids = node.childNodes;
+      for (var i = 0; i < kids.length; i++) {
+        if (kids[i].nodeType === 3 && kids[i].textContent.trim()) return true;
+      }
+    }
+    return false;
+  }
+  function coversSomething(el){
+    if (!el) return false;
+    var style = window.getComputedStyle(el);
+    if (style.display === 'none') return false;
+    var slot = slotRect(el);
+    if (slot.width < 2 || slot.height < 2) return false;
+    var prev = el.style.pointerEvents;
+    el.style.pointerEvents = 'none';
+    var points = [
+      [slot.left + 8, slot.top + 8],
+      [slot.right - 8, slot.top + 8],
+      [slot.left + slot.width / 2, slot.top + slot.height / 2],
+      [slot.left + 8, slot.bottom - 8],
+      [slot.right - 8, slot.bottom - 8]
+    ];
+    var hit = false;
+    for (var p = 0; p < points.length && !hit; p++) {
+      var x = points[p][0], y = points[p][1];
+      if (x < 0 || y < 0 || x > window.innerWidth || y > window.innerHeight) continue;
+      var stack = document.elementsFromPoint(x, y);
+      for (var i = 0; i < stack.length; i++) {
+        if (isPageContent(stack[i])) { hit = true; break; }
+      }
+    }
+    el.style.pointerEvents = prev;
+    return hit;
+  }
   function syncCallBar(){
     var bar = document.getElementById('callBar');
-    var form = document.getElementById('leadForm');
+    var book = document.querySelector('.book-float');
+    var pane = document.getElementById('pageScroll');
+    var header = document.querySelector('header');
     var modal = document.getElementById('modal');
-    if (!bar) return;
     var modalOpen = modal && !modal.classList.contains('hidden');
-    var formSeen = false;
-    if (form) {
-      var r = form.getBoundingClientRect();
-      formSeen = r.top < window.innerHeight * 0.8 && r.bottom > 64;
+    if (pane && window.innerWidth <= 768) {
+      var top = header ? Math.ceil(header.getBoundingClientRect().height) : 72;
+      var bottom = 44;
+      pane.style.top = top + 'px';
+      pane.style.bottom = bottom + 'px';
+    } else if (pane) {
+      pane.style.top = '';
+      pane.style.bottom = '';
     }
-    bar.classList.toggle('is-hidden', modalOpen || formSeen);
+    if (bar) bar.classList.toggle('is-hidden', modalOpen);
+    if (book) book.classList.toggle('is-hidden', modalOpen || coversSomething(book));
   }
   syncCallBar();
   window.addEventListener('scroll', syncCallBar, { passive: true });
   window.addEventListener('resize', syncCallBar);
+  var pagePane = document.getElementById('pageScroll');
+  if (pagePane) pagePane.addEventListener('scroll', syncCallBar, { passive: true });
 
   const CALENDLY_URL = 'https://calendly.com/texasbullmarketing/call';
   let lastLead = { name: '', email: '' };
