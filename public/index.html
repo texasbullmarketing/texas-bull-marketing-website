@@ -158,6 +158,14 @@
           },
           {
             "@type": "Question",
+            "name": "How do I pay, and is it safe?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We use Stripe, the same secure checkout used by millions of businesses. You pay with a credit or debit card on Stripe's encrypted page, so your card details never touch our site. Monthly plans bill automatically through Stripe, and you'll get an email receipt every time."
+            }
+          },
+          {
+            "@type": "Question",
             "name": "Do I own the site on the monthly plan?",
             "acceptedAnswer": {
               "@type": "Answer",
@@ -315,6 +323,22 @@
     details.faq summary { list-style: none; cursor: pointer; }
     details.faq summary::-webkit-details-marker { display: none; }
     details.faq[open] summary .chev { transform: rotate(180deg); }
+    .pay-block { container-type: inline-size; }
+    .pay-trust {
+      margin: 0.65rem 0 0;
+      padding: 0 0.15rem;
+      text-align: center;
+      font-size: 0.75rem;
+      line-height: 1.35;
+      font-weight: 500;
+      color: #8E98AA;
+      text-wrap: balance;
+    }
+    .pay-trust__line { display: inline; }
+    @container (max-width: 22rem) {
+      .pay-trust { font-size: 0.6875rem; line-height: 1.4; }
+      .pay-trust__line { display: block; }
+    }
     .cmp-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
     .cmp-table { width: 100%; min-width: 640px; border-collapse: collapse; }
     .cmp-table th, .cmp-table td { padding: 0.85rem 1rem; border-bottom: 1px solid #3A4560; text-align: left; vertical-align: top; }
@@ -323,10 +347,10 @@
     .cmp-table td { font-size: 14px; color: rgba(255,255,255,.9); }
     .cmp-table td.rec { color: rgba(255,255,255,.92); }
 
-    .phone-split { display: grid; grid-template-columns: 1fr 1fr; overflow: hidden; border-radius: 999px; min-height: 44px; border: 1px solid rgba(255,255,255,.28); }
-    .phone-split a { display: flex; align-items: center; justify-content: center; min-height: 44px; padding: 0 0.9rem; font-weight: 800; color: #fff; text-decoration: none; background: #1F2738; }
-    .phone-split a + a { background: #1F2738; border-left: 1px solid #3A4560; }
-    .phone-split a:hover { filter: brightness(1.08); }
+    .phone-split { display: grid; grid-template-columns: 1fr 1fr; overflow: hidden; border-radius: 999px; min-height: 44px; border: 0; }
+    .phone-split a { display: flex; align-items: center; justify-content: center; min-height: 44px; padding: 0 0.9rem; font-weight: 800; color: #fff; text-decoration: none; background: #1E3A7A; }
+    .phone-split a[href^="tel:"] { background: #C8102E; }
+    .phone-split a:hover { filter: brightness(1.08); color: #fff; }
     .phone-split--wide { width: min(100%, 20rem); }
     .phone-note { margin-top: 0.35rem; max-width: 22rem; font-size: 0.75rem; line-height: 1.35; color: rgba(255,255,255,.78); }
     .phone-note a { color: #fff; font-weight: 800; text-decoration: none; white-space: nowrap; }
@@ -648,7 +672,10 @@
           The live site and monthly Google care are in the $129/mo.
         </p>
         <button type="button" onclick="openLead('standard-gbp')" class="mt-6 w-full rounded-full bg-bullred py-3 font-800 transition hover:bg-red-600">Claim free demo</button>
-        <a href="https://buy.stripe.com/3cI14n8jobUB4xSgI74ko02" target="_blank" rel="noopener noreferrer" class="mt-3 block w-full rounded-full border border-[#3A4560] py-3 text-center font-800 transition hover:border-bullred hover:bg-bullbg">Start — pay the $129 setup</a>
+        <div class="pay-block">
+          <a href="https://buy.stripe.com/3cI14n8jobUB4xSgI74ko02" target="_blank" rel="noopener noreferrer" class="mt-3 block w-full rounded-full border border-[#3A4560] py-3 text-center font-800 transition hover:border-bullred hover:bg-bullbg">Start — pay the $129 setup</a>
+          <p class="pay-trust"><span class="pay-trust__line">🔒 Secure checkout by Stripe.</span> <span class="pay-trust__line">Card details never touch our site.</span></p>
+        </div>
       </div>
 
       <div class="reveal relative flex flex-col rounded-xl border-2 border-bullred bg-bullcard p-8">
@@ -670,7 +697,10 @@
           Premium add-on, Google, and Apple Maps are in the $250/mo.
         </p>
         <button type="button" onclick="openLead('premium-gbp')" class="mt-6 w-full rounded-full bg-bullred py-3 font-800 transition hover:bg-red-600">Claim free demo</button>
-        <a href="https://buy.stripe.com/3cI14n8jobUB4xSgI74ko02" target="_blank" rel="noopener noreferrer" class="mt-3 block w-full rounded-full border border-[#3A4560] py-3 text-center font-800 transition hover:border-bullred hover:bg-bullbg">Start — pay the $129 setup</a>
+        <div class="pay-block">
+          <a href="https://buy.stripe.com/3cI14n8jobUB4xSgI74ko02" target="_blank" rel="noopener noreferrer" class="mt-3 block w-full rounded-full border border-[#3A4560] py-3 text-center font-800 transition hover:border-bullred hover:bg-bullbg">Start — pay the $129 setup</a>
+          <p class="pay-trust"><span class="pay-trust__line">🔒 Secure checkout by Stripe.</span> <span class="pay-trust__line">Card details never touch our site.</span></p>
+        </div>
       </div>
     </div>
 
@@ -791,6 +821,13 @@
           <span class="chev text-white/85 transition">▾</span>
         </summary>
         <p class="mt-3 text-sm leading-relaxed text-white/88">No. $129 to start. Standard is $129 a month and Premium is $250 a month. The monthly begins when you are happy with the site and ready to go live.</p>
+      </details>
+      <details class="faq surface-card rounded-xl border px-5 py-4">
+        <summary class="flex items-center justify-between gap-3 font-700">
+          How do I pay, and is it safe?
+          <span class="chev text-white/85 transition">▾</span>
+        </summary>
+        <p class="mt-3 text-sm leading-relaxed text-white/88">We use Stripe, the same secure checkout used by millions of businesses. You pay with a credit or debit card on Stripe's encrypted page, so your card details never touch our site. Monthly plans bill automatically through Stripe, and you'll get an email receipt every time.</p>
       </details>
       <details class="faq surface-card rounded-xl border px-5 py-4">
         <summary class="flex items-center justify-between gap-3 font-700">
@@ -961,6 +998,12 @@
     <div class="text-sm text-white/85">
       <p>© <span id="year"></span> Texas Bull Marketing. Built in Texas. Websites for local owners nationwide.</p>
       <p class="mt-2">Texas, USA · <a href="#contact" class="text-white/90 hover:text-white">Get a demo</a> · <a href="https://calendly.com/texasbullmarketing/call" class="text-white/90 hover:text-white">Book 15-min Call</a></p>
+      <div class="mt-4 flex justify-center sm:justify-start">
+        <div class="phone-split phone-split--wide" role="group" aria-label="Text or call (512) 300-0000">
+          <a href="sms:+15123000000">Text</a>
+          <a href="tel:+15123000000">Call</a>
+        </div>
+      </div>
     </div>
   </div>
 </footer>
