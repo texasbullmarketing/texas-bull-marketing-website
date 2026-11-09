@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en" data-header="light" data-ombre="1">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Maham Corporation | Hardware Store · Stockdale</title>
+  <meta name="description" content="Hardware store in Stockdale, Texas. Feed and hardware since 1983. 116 US-87. Call (830) 996-3159." />
+  <meta name="theme-color" content="#174f89" />
+  <link rel="canonical" href="https://texasbullmarketing.com/demo/MahamCorporation/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="Maham Corporation | Hardware Store · Stockdale" />
+  <meta property="og:description" content="Hardware store in Stockdale, Texas. Feed and hardware since 1983. Call (830) 996-3159." />
+  <meta property="og:url" content="https://texasbullmarketing.com/demo/MahamCorporation/" />
+  <meta property="og:image" content="https://texasbullmarketing.com/demo/MahamCorporation/assets/maham-storefront-wide-1280w.jpg" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HardwareStore",
+    "name": "Maham Corporation",
+    "url": "https://texasbullmarketing.com/demo/MahamCorporation/",
+    "telephone": "+1-830-996-3159",
+    "image": "https://texasbullmarketing.com/demo/MahamCorporation/assets/maham-storefront-wide-1280w.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "116 US-87",
+      "addressLocality": "Stockdale",
+      "addressRegion": "TX",
+      "postalCode": "78160",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 29.2308403,
+      "longitude": -97.9655946
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "17:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "08:00",
+        "closes": "13:00"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "69"
+    },
+    "amenityFeature": [
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Wheelchair accessible entrance",
+        "value": true
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Wheelchair accessible parking lot",
+        "value": true
+      }
+    ],
+    "sameAs": "https://www.facebook.com/1664025460539834"
+  }
+  </script>
+  <script>
+    try {
+      var a = localStorage.getItem("maham-accent");
+      if (a) document.documentElement.setAttribute("data-accent", a);
+      var h = localStorage.getItem("maham-header");
+      if (h === "flex") document.documentElement.setAttribute("data-header", "flex");
+      else if (h === "black" || h === "dark") document.documentElement.setAttribute("data-header", "dark");
+      else document.documentElement.setAttribute("data-header", "light");
+      document.documentElement.setAttribute("data-ombre", localStorage.getItem("maham-ombre") === "0" ? "0" : "1");
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip" href="#top">Skip to content</a>
+  <header class="topbar">
+    <div class="wrap topbar__in">
+      <div class="brand-wrap">
+        <button type="button" class="theme-btn wordmark" id="themeToggle" aria-haspopup="true" aria-expanded="false" aria-controls="themeMenu" aria-label="Maham Corporation">
+          <span class="brand-stack">
+            <span class="wordmark__name">Maham Corporation</span>
+            <small>Stockdale, Texas</small>
+          </span>
+        </button>
+        <div class="theme-menu" id="themeMenu" hidden role="menu" aria-label="Accent color">
+          <p class="theme-menu__hint">Try a color</p>
+          <div class="theme-menu__row">
+            <div class="theme-menu__presets">
+              <button type="button" role="menuitemradio" data-accent="original" aria-checked="true"><span class="swatch swatch--original" aria-hidden="true"></span> Original</button>
+              <button type="button" role="menuitemradio" data-accent="red" aria-checked="false"><span class="swatch swatch--red" aria-hidden="true"></span> Race car red</button>
+              <button type="button" role="menuitemradio" data-accent="green" aria-checked="false"><span class="swatch swatch--green" aria-hidden="true"></span> Flame green</button>
+              <button type="button" role="menuitemradio" data-accent="cobalt" aria-checked="false"><span class="swatch swatch--cobalt" aria-hidden="true"></span> Cobalt blue</button>
+              <button type="button" role="menuitemradio" data-accent="yellow" aria-checked="false"><span class="swatch swatch--yellow" aria-hidden="true"></span> Juicy Fruit yellow</button>
+              <button type="button" role="menuitemradio" data-accent="orange" aria-checked="false"><span class="swatch swatch--orange" aria-hidden="true"></span> Hemi orange</button>
+              <label class="theme-custom">
+                <span class="swatch" id="customSwatch" aria-hidden="true"></span>
+                Custom
+                <span class="theme-custom__code" id="customHex"></span>
+                <input type="color" id="themeColor" value="#174f89" />
+              </label>
+            </div>
+            <div class="theme-menu__v2">
+              <p class="theme-menu__hint">v2 wheel</p>
+              <div class="theme-wheel" id="themeWheel" role="slider" tabindex="0" aria-label="Color wheel">
+                <div class="theme-wheel__disc" aria-hidden="true"></div>
+                <div class="theme-wheel__knob" id="themeWheelKnob" aria-hidden="true"></div>
+              </div>
+              <label class="theme-wheel__value">
+                Brightness
+                <input type="range" id="themeWheelValue" min="35" max="100" value="100" />
+              </label>
+              <button type="button" class="theme-ombre-btn is-active" id="ombreToggle" aria-pressed="true">Ombre</button>
+              <div class="theme-mode" role="group" aria-label="Header look">
+                <button type="button" class="theme-mode-btn is-active" id="headerLightBtn" data-header-mode="light" aria-pressed="true">Light</button>
+                <button type="button" class="theme-mode-btn" id="headerDarkBtn" data-header-mode="dark" aria-pressed="false">Dark</button>
+                <button type="button" class="theme-mode-btn" id="headerFlexBtn" data-header-mode="flex" aria-pressed="false">Flex</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="nav__links" id="navLinks" aria-label="Primary">
+        <a href="#carry">What we carry</a>
+        <a href="#feed-prices">Feed price list</a>
+        <a href="#hours">Hours</a>
+        <a href="#visit">Visit</a>
+      </nav>
+      <div class="nav__right">
+        <a class="header-call" href="tel:+18309963159">Call</a>
+        <button class="burger" id="navToggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero wrap">
+      <div class="hero-grid">
+        <div>
+          <p class="eyebrow">Stockdale, Texas · Since 1983</p>
+          <h1>
+            <span class="name">Maham Corporation</span>
+            <span class="descriptor">Hardware store in Stockdale, Texas.</span>
+          </h1>
+          <p class="intro">Feed and hardware since 1983. Find us on US Highway 87 East.</p>
+          <div class="actions">
+            <a class="button primary" href="tel:+18309963159">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h4l2 5-3 2c1 3 3 5 6 6l2-3 5 2v4c0 2-2 3-4 2C9 19 5 15 3 7c-1-2 0-4 2-4Z"/></svg>
+              Call (830) 996-3159
+            </a>
+            <a class="button secondary" href="https://www.google.com/maps/search/?api=1&amp;query=Maham%20Corporation%2C%20116%20US-87%2C%20Stockdale%2C%20TX%2078160">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 11-8 11S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              Get Directions
+            </a>
+          </div>
+        </div>
+        <div>
+          <figure class="store-photo">
+            <picture>
+              <source type="image/webp" media="(max-width: 799px)" srcset="assets/maham-storefront-mobile-crop-400w.webp 400w, assets/maham-storefront-mobile-crop-800w.webp 800w" sizes="(max-width: 799px) calc(100vw - 48px), 640px" />
+              <source type="image/webp" srcset="assets/maham-storefront-wide-480w.webp 480w, assets/maham-storefront-wide-800w.webp 800w, assets/maham-storefront-wide-1280w.webp 1280w" sizes="(max-width: 799px) calc(100vw - 48px), 640px" />
+              <source media="(max-width: 799px)" srcset="assets/maham-storefront-mobile-crop-400w.jpg 400w, assets/maham-storefront-mobile-crop-800w.jpg 800w" sizes="(max-width: 799px) calc(100vw - 48px), 640px" />
+              <img src="assets/maham-storefront-wide-1280w.jpg" srcset="assets/maham-storefront-wide-480w.jpg 480w, assets/maham-storefront-wide-800w.jpg 800w, assets/maham-storefront-wide-1280w.jpg 1280w" sizes="(max-width: 799px) calc(100vw - 48px), 640px" width="1280" height="464" alt="Maham Feed and Hardware storefront in Stockdale" loading="eager" fetchpriority="high" decoding="async" />
+            </picture>
+          </figure>
+          <div class="location-strip">
+            <span>116 US Hwy 87 E</span>
+            <span>Est. 1983</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="carry">
+      <p class="kicker">What we carry</p>
+      <h2>Around the farm.<br />Around the house.</h2>
+      <div class="categories">
+        <div class="category"><span>01</span><strong>Animal feed</strong></div>
+        <div class="category"><span>02</span><strong>PVC &amp; farm products</strong></div>
+        <div class="category"><span>03</span><strong>Hardware</strong></div>
+        <div class="category"><span>04</span><strong>Lumber</strong></div>
+        <div class="category"><span>05</span><strong>Plumbing</strong></div>
+        <div class="category"><span>06</span><strong>Cedar posts</strong></div>
+      </div>
+      <p class="small-note">Thomas Moore Feed dealer. Equine, cattle, wildlife, and poultry feed.</p>
+      <p class="rating">Google rating 4.8 (69 reviews)</p>
+    </section>
+
+    <section class="section wrap" id="feed-prices">
+      <p class="kicker">Feed price list</p>
+      <h2>Thomas Moore feed.</h2>
+      <p class="intro">Equine, cattle, wildlife, and poultry feed. Ask at the counter or call for today's prices.</p>
+      <table class="hours" aria-label="Feed price list">
+        <tbody>
+          <tr><td>Equine feed</td><td>Ask at the counter</td></tr>
+          <tr><td>Cattle feed</td><td>Ask at the counter</td></tr>
+          <tr><td>Wildlife feed</td><td>Ask at the counter</td></tr>
+          <tr><td>Poultry feed</td><td>Ask at the counter</td></tr>
+        </tbody>
+      </table>
+      <p class="small-note"><a href="tel:+18309963159">Call (830) 996-3159</a> for today's prices.</p>
+    </section>
+
+    <section class="section wrap" id="why">
+      <p class="kicker">Why locals shop here</p>
+      <h2>A Stockdale hardware store since 1983.</h2>
+      <div class="facts">
+        <div class="fact"><strong>Since 1983</strong><span>Feed and hardware on US Highway 87 East.</span></div>
+        <div class="fact"><strong>Google rating 4.8</strong><span>69 reviews</span></div>
+        <div class="fact"><strong>Wheelchair accessible entrance</strong></div>
+        <div class="fact"><strong>Wheelchair accessible parking lot</strong></div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="hours">
+      <p class="kicker">Plan your visit</p>
+      <h2>Store hours</h2>
+      <table class="hours" aria-label="Store hours">
+        <tbody>
+          <tr><td>Monday–Friday</td><td>8 AM–5 PM</td></tr>
+          <tr><td>Saturday</td><td>8 AM–1 PM</td></tr>
+          <tr><td>Sunday</td><td>Closed</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section wrap" id="visit">
+      <p class="kicker">Find us in Stockdale</p>
+      <h2>Come on by.</h2>
+      <div class="visit-grid">
+        <div>
+          <div class="address-panel">
+            <p>116 US-87<br />Stockdale, TX 78160</p>
+          </div>
+          <a class="button secondary" href="https://www.google.com/maps/search/?api=1&amp;query=Maham%20Corporation%2C%20116%20US-87%2C%20Stockdale%2C%20TX%2078160">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 11-8 11S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            Get Directions
+          </a>
+          <p class="small-note">Opens Google Maps for directions. US Highway 87 East.</p>
+        </div>
+        <div class="map-frame">
+          <iframe title="Map of Maham Corporation at 116 US-87, Stockdale, Texas" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=29.2308403,-97.9655946&amp;z=16&amp;output=embed"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" aria-label="Call or visit">
+      <div class="wrap">
+      <h2>Call or come by the store.</h2>
+      <p>116 US-87, Stockdale, TX 78160</p>
+      <div class="actions">
+        <a class="button primary" href="tel:+18309963159">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h4l2 5-3 2c1 3 3 5 6 6l2-3 5 2v4c0 2-2 3-4 2C9 19 5 15 3 7c-1-2 0-4 2-4Z"/></svg>
+          Call (830) 996-3159
+        </a>
+        <a class="button secondary" href="https://www.google.com/maps/search/?api=1&amp;query=Maham%20Corporation%2C%20116%20US-87%2C%20Stockdale%2C%20TX%2078160">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 11-8 11S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          Get Directions
+        </a>
+      </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer wrap">
+    <div class="wordmark">
+      <span class="wordmark__name">Maham Corporation</span>
+      <small>Stockdale, Texas</small>
+    </div>
+    <p>116 US-87, Stockdale, TX 78160<br />
+      <a href="tel:+18309963159">(830) 996-3159</a>
+    </p>
+    <p>Monday–Friday 8 AM–5 PM<br />Saturday 8 AM–1 PM<br />Sunday closed</p>
+    <p><a href="https://www.facebook.com/1664025460539834" target="_blank" rel="noopener">Facebook</a></p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
