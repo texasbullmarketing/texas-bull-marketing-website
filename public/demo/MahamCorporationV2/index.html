@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en" data-header="flex" data-ombre="1">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Maham Corporation | Feed &amp; Hardware · Stockdale</title>
+  <meta name="description" content="Maham Feed &amp; Hardware in Stockdale, Texas. Feed, hardware, lumber, and farm supplies at 116 US-87. Call (830) 996-3159." />
+  <meta name="theme-color" content="#174f89" />
+  <link rel="canonical" href="https://texasbullmarketing.com/demo/MahamCorporationV2/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="Maham Corporation | Feed &amp; Hardware · Stockdale" />
+  <meta property="og:description" content="Feed and hardware in Stockdale since 1983. Call (830) 996-3159." />
+  <meta property="og:url" content="https://texasbullmarketing.com/demo/MahamCorporationV2/" />
+  <meta property="og:image" content="https://texasbullmarketing.com/demo/MahamCorporationV2/assets/maham-storefront-900w.jpg" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HardwareStore",
+    "name": "Maham Corporation",
+    "url": "https://texasbullmarketing.com/demo/MahamCorporationV2/",
+    "telephone": "+1-830-996-3159",
+    "image": "https://texasbullmarketing.com/demo/MahamCorporationV2/assets/maham-storefront-900w.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "116 US-87",
+      "addressLocality": "Stockdale",
+      "addressRegion": "TX",
+      "postalCode": "78160",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 29.2308403,
+      "longitude": -97.9655946
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "17:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "08:00",
+        "closes": "13:00"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "69"
+    },
+    "amenityFeature": [
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Wheelchair accessible entrance",
+        "value": true
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Wheelchair accessible parking lot",
+        "value": true
+      }
+    ],
+    "sameAs": "https://www.facebook.com/1664025460539834"
+  }
+  </script>
+  <script>
+    try {
+      var a = localStorage.getItem("maham-v2-accent");
+      if (a) document.documentElement.setAttribute("data-accent", a);
+      var h = localStorage.getItem("maham-v2-header");
+      if (h === "light" || h === "0") document.documentElement.setAttribute("data-header", "light");
+      else if (h === "black" || h === "dark") document.documentElement.setAttribute("data-header", "dark");
+      else document.documentElement.setAttribute("data-header", "flex");
+      document.documentElement.setAttribute("data-ombre", localStorage.getItem("maham-v2-ombre") === "0" ? "0" : "1");
+    } catch (e) {}
+  </script>
+</head>
+<body data-lang="en">
+  <a class="skip" href="#top">Skip to content</a>
+  <header class="topbar">
+    <div class="wrap topbar__in">
+      <div class="brand-wrap">
+        <button type="button" class="theme-btn wordmark" id="themeToggle" aria-haspopup="true" aria-expanded="false" aria-controls="themeMenu" aria-label="Maham Corporation">
+          <span class="brand-stack">
+            <span class="wordmark__name">Maham</span>
+            <small>Feed &amp; Hardware</small>
+          </span>
+        </button>
+        <div class="theme-menu" id="themeMenu" hidden role="menu" aria-label="Accent color">
+          <p class="theme-menu__hint">Try a color</p>
+          <div class="theme-menu__row">
+            <div class="theme-menu__presets">
+              <button type="button" role="menuitemradio" data-accent="original" aria-checked="true"><span class="swatch swatch--original" aria-hidden="true"></span> Original</button>
+              <button type="button" role="menuitemradio" data-accent="red" aria-checked="false"><span class="swatch swatch--red" aria-hidden="true"></span> Race car red</button>
+              <button type="button" role="menuitemradio" data-accent="green" aria-checked="false"><span class="swatch swatch--green" aria-hidden="true"></span> Flame green</button>
+              <button type="button" role="menuitemradio" data-accent="cobalt" aria-checked="false"><span class="swatch swatch--cobalt" aria-hidden="true"></span> Cobalt blue</button>
+              <button type="button" role="menuitemradio" data-accent="yellow" aria-checked="false"><span class="swatch swatch--yellow" aria-hidden="true"></span> Juicy Fruit yellow</button>
+              <button type="button" role="menuitemradio" data-accent="orange" aria-checked="false"><span class="swatch swatch--orange" aria-hidden="true"></span> Hemi orange</button>
+              <label class="theme-custom">
+                <span class="swatch" id="customSwatch" aria-hidden="true"></span>
+                Custom
+                <span class="theme-custom__code" id="customHex"></span>
+                <input type="color" id="themeColor" value="#174f89" />
+              </label>
+            </div>
+            <div class="theme-menu__v2">
+              <p class="theme-menu__hint">v2 wheel</p>
+              <div class="theme-wheel" id="themeWheel" role="slider" tabindex="0" aria-label="Color wheel">
+                <div class="theme-wheel__disc" aria-hidden="true"></div>
+                <div class="theme-wheel__knob" id="themeWheelKnob" aria-hidden="true"></div>
+              </div>
+              <label class="theme-wheel__value">
+                Brightness
+                <input type="range" id="themeWheelValue" min="35" max="100" value="100" />
+              </label>
+              <button type="button" class="theme-ombre-btn is-active" id="ombreToggle" aria-pressed="true">Ombre</button>
+              <div class="theme-mode" role="group" aria-label="Header look">
+                <button type="button" class="theme-mode-btn" id="headerLightBtn" data-header-mode="light" aria-pressed="false">Light</button>
+                <button type="button" class="theme-mode-btn" id="headerDarkBtn" data-header-mode="dark" aria-pressed="false">Dark</button>
+                <button type="button" class="theme-mode-btn is-active" id="headerFlexBtn" data-header-mode="flex" aria-pressed="true">Flex</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="nav__links" id="navLinks" aria-label="Primary">
+        <a href="#inside">In the store</a>
+        <button type="button" data-open-feed>Feed prices</button>
+        <a href="#pictures">The store</a>
+        <a href="#hours">Hours</a>
+        <a href="#visit">Visit</a>
+      </nav>
+      <div class="nav__right">
+        <a class="header-call" href="tel:+18309963159">Call</a>
+        <button class="burger" id="navToggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Stockdale, Texas · Since 1983</p>
+          <h1>Feed and hardware in Stockdale.</h1>
+          <p class="lede">Animal feed, hardware, lumber, plumbing, PVC, and cedar posts. Maham Feed &amp; Hardware at 116 US-87.</p>
+          <p class="fine">Maham Corporation. The sign says Maham Feed &amp; Hardware.</p>
+          <div class="actions">
+            <a class="button primary" href="tel:+18309963159">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h4l2 5-3 2c1 3 3 5 6 6l2-3 5 2v4c0 2-2 3-4 2C9 19 5 15 3 7c-1-2 0-4 2-4Z"/></svg>
+              Call (830) 996-3159
+            </a>
+            <a class="button secondary" href="https://www.google.com/maps/search/?api=1&amp;query=Maham%20Corporation%2C%20116%20US-87%2C%20Stockdale%2C%20TX%2078160">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 11-8 11S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              Get Directions
+            </a>
+          </div>
+          <ul class="trust" aria-label="Store facts">
+            <li><strong>4.8</strong><span>69 Google reviews</span></li>
+            <li><strong>1983</strong><span>Feed and hardware</span></li>
+            <li><strong>Accessible</strong><span>Wheelchair entrance and parking lot</span></li>
+          </ul>
+        </div>
+        <figure class="store-photo">
+          <picture>
+            <source type="image/webp" srcset="assets/maham-storefront-400w.webp 400w, assets/maham-storefront-800w.webp 800w, assets/maham-storefront-900w.webp 900w" sizes="(max-width: 799px) calc(100vw - 40px), 540px" />
+            <img src="assets/maham-storefront-900w.jpg" srcset="assets/maham-storefront-400w.jpg 400w, assets/maham-storefront-800w.jpg 800w, assets/maham-storefront-900w.jpg 900w" sizes="(max-width: 799px) calc(100vw - 40px), 540px" width="900" height="960" alt="Maham Feed and Hardware storefront at 116 US-87 in Stockdale" />
+          </picture>
+          <figcaption>
+            <span>116 US Hwy 87 E</span>
+            <span>Est. 1983</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="inside">
+      <div class="wrap">
+        <p class="kicker">What we carry</p>
+        <h2>In the store.</h2>
+        <p class="section-lead">Animal feed, PVC and farm products, hardware, lumber, plumbing, and cedar posts. Ask at the counter if you do not see it.</p>
+        <div class="aisles">
+          <article class="aisle">
+            <span>01</span>
+            <h3>Animal feed</h3>
+            <p>Thomas Moore dealer. Horses, cattle, goats, poultry, and wildlife. Open Feed prices for the list. Ask at the counter for today's price.</p>
+          </article>
+          <article class="aisle">
+            <span>02</span>
+            <h3>PVC &amp; farm products</h3>
+            <p>PVC pipe and farm products.</p>
+          </article>
+          <article class="aisle">
+            <span>03</span>
+            <h3>Hardware</h3>
+            <p>Hardware in the store. Ask at the counter if you do not see it.</p>
+          </article>
+          <article class="aisle">
+            <span>04</span>
+            <h3>Lumber</h3>
+            <p>Lumber in stock.</p>
+          </article>
+          <article class="aisle">
+            <span>05</span>
+            <h3>Plumbing</h3>
+            <p>Plumbing supplies.</p>
+          </article>
+          <article class="aisle">
+            <span>06</span>
+            <h3>Cedar posts</h3>
+            <p>Cedar posts.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="feed">
+      <div class="wrap feed-grid">
+        <div>
+          <p class="kicker">Feed price list</p>
+          <h2>Ask at the counter.</h2>
+          <p class="section-lead">Thomas Moore feed for horses, cows, goats, sheep, hogs, chickens, ducks, turkeys, rabbits, and deer. Prices are not listed on this page.</p>
+          <p class="phone-line"><a href="tel:+18309963159">(830) 996-3159</a></p>
+        </div>
+        <button type="button" class="feed-open" data-open-feed>
+          <span>Horses, goats, cows, ducks, rabbits, and the rest of the feed list.</span>
+          <strong>Open feed prices</strong>
+        </button>
+      </div>
+    </section>
+
+    <section class="section" id="pictures">
+      <div class="wrap">
+        <p class="kicker">The store</p>
+        <h2>On US-87 in Stockdale.</h2>
+        <p class="section-lead">Feed, hardware, lumber, plumbing, PVC, and cedar posts at 116 US-87.</p>
+        <div class="shots">
+          <figure class="shot">
+            <div class="shot__mat">
+              <span class="shot__flag">Store</span>
+              <strong>On US-87</strong>
+            </div>
+            <figcaption>116 US Highway 87 East, Stockdale.</figcaption>
+          </figure>
+          <figure class="shot">
+            <div class="shot__mat">
+              <span class="shot__flag">Feed</span>
+              <strong>Animal feed</strong>
+            </div>
+            <figcaption>Thomas Moore feed. Open Feed prices for horses, cows, goats, and the rest.</figcaption>
+          </figure>
+          <figure class="shot">
+            <div class="shot__mat">
+              <span class="shot__flag">Hardware</span>
+              <strong>Hardware</strong>
+            </div>
+            <figcaption>Hardware in the store. Ask at the counter if you do not see it.</figcaption>
+          </figure>
+          <figure class="shot">
+            <div class="shot__mat">
+              <span class="shot__flag">Lumber</span>
+              <strong>Lumber</strong>
+            </div>
+            <figcaption>Lumber in stock.</figcaption>
+          </figure>
+          <figure class="shot">
+            <div class="shot__mat">
+              <span class="shot__flag">Posts</span>
+              <strong>Cedar posts</strong>
+            </div>
+            <figcaption>Cedar posts in stock.</figcaption>
+          </figure>
+          <figure class="shot">
+            <div class="shot__mat">
+              <span class="shot__flag">Pipe</span>
+              <strong>PVC and plumbing</strong>
+            </div>
+            <figcaption>PVC and plumbing supplies.</figcaption>
+          </figure>
+          <figure class="shot">
+            <div class="shot__mat">
+              <span class="shot__flag">Counter</span>
+              <strong>The counter</strong>
+            </div>
+            <figcaption>Feed prices are at the counter. Call (830) 996-3159.</figcaption>
+          </figure>
+          <figure class="shot">
+            <div class="shot__mat">
+              <span class="shot__flag">Lot</span>
+              <strong>Door and lot</strong>
+            </div>
+            <figcaption>Wheelchair accessible entrance and parking lot.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight" id="hours">
+      <div class="wrap hours-grid">
+        <div class="door-sign">
+          <p class="kicker">Hours</p>
+          <h2>Store hours.</h2>
+          <table class="hours" aria-label="Store hours">
+            <tbody>
+              <tr><td>Monday–Friday</td><td>8 AM–5 PM</td></tr>
+              <tr><td>Saturday</td><td>8 AM–1 PM</td></tr>
+              <tr><td>Sunday</td><td>Closed</td></tr>
+            </tbody>
+          </table>
+          <p class="saturday">Saturday we close at 1 PM.</p>
+        </div>
+        <aside class="why">
+          <p class="kicker">At a glance</p>
+          <ul>
+            <li><strong>Since 1983.</strong> Feed and hardware on US Highway 87 East in Stockdale.</li>
+            <li><strong>4.8 on Google.</strong> 69 reviews.</li>
+            <li><strong>Wheelchair accessible.</strong> Entrance and parking lot.</li>
+            <li><strong>Thomas Moore feed.</strong> Ask at the counter for today's price.</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="visit">
+      <div class="wrap">
+        <p class="kicker">Visit</p>
+        <h2>116 US-87, Stockdale.</h2>
+        <div class="visit-grid">
+          <div>
+            <div class="address-panel">
+              <p class="address-name">Maham Corporation</p>
+              <p>116 US-87<br />Stockdale, TX 78160</p>
+              <p class="address-note">US Highway 87 East.</p>
+            </div>
+            <a class="button secondary" href="https://www.google.com/maps/search/?api=1&amp;query=Maham%20Corporation%2C%20116%20US-87%2C%20Stockdale%2C%20TX%2078160">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 11-8 11S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              Get Directions
+            </a>
+            <p class="small-note">Opens Google Maps for 116 US-87, Stockdale.</p>
+          </div>
+          <div class="map-frame">
+            <iframe title="Map of Maham Corporation at 116 US-87, Stockdale, Texas" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=29.2308403,-97.9655946&amp;z=16&amp;output=embed"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" aria-label="Call or visit">
+      <div class="wrap">
+        <p class="kicker kicker--light">Stop by</p>
+        <h2>Call the store, or come by.</h2>
+        <p>116 US-87, Stockdale, TX 78160. Monday–Friday 8 AM–5 PM. Saturday 8 AM–1 PM. Closed Sunday.</p>
+        <div class="actions">
+          <a class="button primary" href="tel:+18309963159">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h4l2 5-3 2c1 3 3 5 6 6l2-3 5 2v4c0 2-2 3-4 2C9 19 5 15 3 7c-1-2 0-4 2-4Z"/></svg>
+            Call (830) 996-3159
+          </a>
+          <a class="button secondary button--on-dark" href="https://www.google.com/maps/search/?api=1&amp;query=Maham%20Corporation%2C%20116%20US-87%2C%20Stockdale%2C%20TX%2078160">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 11-8 11S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            Get Directions
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__in">
+      <div class="wordmark">
+        <span class="wordmark__name">Maham</span>
+        <small>Feed &amp; Hardware</small>
+      </div>
+      <p><strong>Maham Corporation</strong><br />116 US-87, Stockdale, TX 78160<br /><a href="tel:+18309963159">(830) 996-3159</a></p>
+      <p>Monday–Friday 8 AM–5 PM<br />Saturday 8 AM–1 PM<br />Sunday closed</p>
+      <p><a href="https://www.facebook.com/1664025460539834" target="_blank" rel="noopener">Facebook</a></p>
+    </div>
+  </footer>
+  <a class="callbar" href="tel:+18309963159">Call (830) 996-3159</a>
+
+  <div class="feed-modal" id="feedModal" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="feedModalTitle">
+    <div class="feed-modal__backdrop" data-close-feed></div>
+    <div class="feed-modal__sheet" role="document">
+      <header class="feed-modal__head">
+        <div>
+          <p class="kicker">Thomas Moore feed</p>
+          <h2 id="feedModalTitle">Feed prices</h2>
+          <p class="feed-modal__blurb">Prices are at the counter. Ask which bag is in stock.</p>
+        </div>
+        <button type="button" class="feed-modal__close" data-close-feed aria-label="Close feed prices">
+          <span></span><span></span>
+        </button>
+      </header>
+      <div class="feed-modal__tabs">
+        <div class="tabs" role="tablist" aria-label="Animals">
+          <button type="button" role="tab" id="tab-horses" data-tab="horses" aria-controls="panel-horses" aria-selected="true" tabindex="0">Horses</button>
+          <button type="button" role="tab" id="tab-goats" data-tab="goats" aria-controls="panel-goats" aria-selected="false" tabindex="-1">Goats</button>
+          <button type="button" role="tab" id="tab-cows" data-tab="cows" aria-controls="panel-cows" aria-selected="false" tabindex="-1">Cows</button>
+          <button type="button" role="tab" id="tab-ducks" data-tab="ducks" aria-controls="panel-ducks" aria-selected="false" tabindex="-1">Ducks</button>
+          <button type="button" role="tab" id="tab-rabbits" data-tab="rabbits" aria-controls="panel-rabbits" aria-selected="false" tabindex="-1">Rabbits</button>
+          <button type="button" role="tab" id="tab-sheep" data-tab="sheep" aria-controls="panel-sheep" aria-selected="false" tabindex="-1">Sheep</button>
+          <button type="button" role="tab" id="tab-hogs" data-tab="hogs" aria-controls="panel-hogs" aria-selected="false" tabindex="-1">Hogs</button>
+          <button type="button" role="tab" id="tab-chickens" data-tab="chickens" aria-controls="panel-chickens" aria-selected="false" tabindex="-1">Chickens</button>
+          <button type="button" role="tab" id="tab-turkeys" data-tab="turkeys" aria-controls="panel-turkeys" aria-selected="false" tabindex="-1">Turkeys</button>
+          <button type="button" role="tab" id="tab-deer" data-tab="deer" aria-controls="panel-deer" aria-selected="false" tabindex="-1">Deer</button>
+        </div>
+      </div>
+      <div class="feed-modal__body">
+        <div class="panel" id="panel-horses" role="tabpanel" data-panel="horses" aria-labelledby="tab-horses">
+          <div class="group"><h3>Horse feed</h3><ul class="items">
+            <li><div><strong>Sweet feed</strong></div><b>Ask</b></li>
+            <li><div><strong>Pellets</strong></div><b>Ask</b></li>
+            <li><div><strong>Senior feed</strong></div><b>Ask</b></li>
+            <li><div><strong>Horse mineral</strong></div><b>Ask</b></li>
+          </ul></div>
+        </div>
+        <div class="panel" id="panel-goats" role="tabpanel" data-panel="goats" aria-labelledby="tab-goats" hidden>
+          <div class="group"><h3>Goat feed</h3><ul class="items">
+            <li><div><strong>Goat feed</strong></div><b>Ask</b></li>
+            <li><div><strong>Kid starter</strong></div><b>Ask</b></li>
+            <li><div><strong>Goat mineral</strong></div><b>Ask</b></li>
+          </ul></div>
+        </div>
+        <div class="panel" id="panel-cows" role="tabpanel" data-panel="cows" aria-labelledby="tab-cows" hidden>
+          <div class="group"><h3>Cattle feed</h3><ul class="items">
+            <li><div><strong>Range cubes</strong></div><b>Ask</b></li>
+            <li><div><strong>Creep feed</strong></div><b>Ask</b></li>
+            <li><div><strong>Textured feed</strong></div><b>Ask</b></li>
+            <li><div><strong>Cattle mineral</strong></div><b>Ask</b></li>
+          </ul></div>
+        </div>
+        <div class="panel" id="panel-ducks" role="tabpanel" data-panel="ducks" aria-labelledby="tab-ducks" hidden>
+          <div class="group"><h3>Duck feed</h3><ul class="items">
+            <li><div><strong>Duck starter</strong></div><b>Ask</b></li>
+            <li><div><strong>Duck grower</strong></div><b>Ask</b></li>
+            <li><div><strong>Waterfowl feed</strong></div><b>Ask</b></li>
+          </ul></div>
+        </div>
+        <div class="panel" id="panel-rabbits" role="tabpanel" data-panel="rabbits" aria-labelledby="tab-rabbits" hidden>
+          <div class="group"><h3>Rabbit feed</h3><ul class="items">
+            <li><div><strong>Rabbit pellets</strong></div><b>Ask</b></li>
+            <li><div><strong>Rabbit grower</strong></div><b>Ask</b></li>
+          </ul></div>
+        </div>
+        <div class="panel" id="panel-sheep" role="tabpanel" data-panel="sheep" aria-labelledby="tab-sheep" hidden>
+          <div class="group"><h3>Sheep feed</h3><ul class="items">
+            <li><div><strong>Sheep feed</strong></div><b>Ask</b></li>
+            <li><div><strong>Lamb starter</strong></div><b>Ask</b></li>
+            <li><div><strong>Sheep mineral</strong></div><b>Ask</b></li>
+          </ul></div>
+        </div>
+        <div class="panel" id="panel-hogs" role="tabpanel" data-panel="hogs" aria-labelledby="tab-hogs" hidden>
+          <div class="group"><h3>Hog feed</h3><ul class="items">
+            <li><div><strong>Pig starter</strong></div><b>Ask</b></li>
+            <li><div><strong>Hog grower</strong></div><b>Ask</b></li>
+            <li><div><strong>Hog finisher</strong></div><b>Ask</b></li>
+          </ul></div>
+        </div>
+        <div class="panel" id="panel-chickens" role="tabpanel" data-panel="chickens" aria-labelledby="tab-chickens" hidden>
+          <div class="group"><h3>Chicken feed</h3><ul class="items">
+            <li><div><strong>Chick starter</strong></div><b>Ask</b></li>
+            <li><div><strong>Grower</strong></div><b>Ask</b></li>
+            <li><div><strong>Layer feed</strong></div><b>Ask</b></li>
+            <li><div><strong>Scratch</strong></div><b>Ask</b></li>
+          </ul></div>
+        </div>
+        <div class="panel" id="panel-turkeys" role="tabpanel" data-panel="turkeys" aria-labelledby="tab-turkeys" hidden>
+          <div class="group"><h3>Turkey and game bird feed</h3><ul class="items">
+            <li><div><strong>Turkey starter</strong></div><b>Ask</b></li>
+            <li><div><strong>Turkey grower</strong></div><b>Ask</b></li>
+            <li><div><strong>Game bird feed</strong></div><b>Ask</b></li>
+          </ul></div>
+        </div>
+        <div class="panel" id="panel-deer" role="tabpanel" data-panel="deer" aria-labelledby="tab-deer" hidden>
+          <div class="group"><h3>Deer and wildlife feed</h3><ul class="items">
+            <li><div><strong>Deer corn</strong></div><b>Ask</b></li>
+            <li><div><strong>Protein pellets</strong></div><b>Ask</b></li>
+            <li><div><strong>Wildlife feed</strong></div><b>Ask</b></li>
+          </ul></div>
+        </div>
+      </div>
+      <footer class="feed-modal__foot">
+        <p>Ask at the counter. No prices on this page.</p>
+        <a class="button primary" href="tel:+18309963159">Call (830) 996-3159</a>
+      </footer>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

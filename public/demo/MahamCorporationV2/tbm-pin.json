@@ -1,0 +1,15 @@
+{
+  "id": "maham-corporation-v2",
+  "name": "Maham Corporation v2",
+  "type": "hardware-store",
+  "schemaType": "HardwareStore",
+  "phone": "+18309963159",
+  "street": "116 US-87",
+  "city": "Stockdale",
+  "region": "TX",
+  "zip": "78160",
+  "lat": 29.2308403,
+  "lng": -97.9655946,
+  "demoUrl": "https://texasbullmarketing.com/demo/MahamCorporationV2/",
+  "spanish": "no"
+}

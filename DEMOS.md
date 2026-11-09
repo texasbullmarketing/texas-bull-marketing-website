@@ -6,6 +6,7 @@ Live demo sites for leads. Served as static folders under `public/demo/`.
 
 | Company | URL | Folder |
 |---------|-----|--------|
+| Maham Corporation v2 (EN) | `/demo/MahamCorporationV2/` | `public/demo/MahamCorporationV2/` |
 | Maham Corporation (EN) | `/demo/MahamCorporation/` | `public/demo/MahamCorporation/` |
 | Full Moon Tattoos v2 (EN+ES) | `/demo/FullMoonTattoosV2/` · `/demo/FullMoonTattoosV2/es/` | `public/demo/FullMoonTattoosV2/` |
 | V5TBM (saved homepage, before the Dropbox restore) | `/demo/v5tbm/` | `public/demo/v5tbm/` |
