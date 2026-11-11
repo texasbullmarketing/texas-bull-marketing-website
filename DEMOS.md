@@ -6,6 +6,8 @@ Live demo sites for leads. Served as static folders under `public/demo/`.
 
 | Company | URL | Folder |
 |---------|-----|--------|
+| We Wash You Shine v2 (EN+ES) | `/demo/WeWashYouShineV2/` · `/demo/WeWashYouShineV2/es.html` | `public/demo/WeWashYouShineV2/` |
+| We Wash You Shine (EN+ES) | `/demo/WeWashYouShine/` · `/demo/WeWashYouShine/es.html` | `public/demo/WeWashYouShine/` |
 | Maham Corporation v2 (EN) | `/demo/MahamCorporationV2/` | `public/demo/MahamCorporationV2/` |
 | Maham Corporation (EN) | `/demo/MahamCorporation/` | `public/demo/MahamCorporation/` |
 | Full Moon Tattoos v2 (EN+ES) | `/demo/FullMoonTattoosV2/` · `/demo/FullMoonTattoosV2/es/` | `public/demo/FullMoonTattoosV2/` |

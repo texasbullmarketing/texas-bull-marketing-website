@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="We Wash You Shine">
+  <rect width="64" height="64" rx="16" fill="#0C2F6B"/>
+  <path d="M18 18c2.2 3.6 2.2 6 0 6s-2.2-2.4 0-6z" fill="#9BE7FF"/>
+  <path d="M32 12c3 5.2 3 8.4 0 8.4s-3-3.2 0-8.4z" fill="#1B6FE5"/>
+  <path d="M46 20c2 3.2 2 5.2 0 5.2s-2-2 0-5.2z" fill="#7ED4FF"/>
+  <path d="M32 28 48 40v14H16V40L32 28z" fill="#F4FBFF"/>
+  <path d="M32 28 48 40H16L32 28z" fill="#1B6FE5"/>
+</svg>
